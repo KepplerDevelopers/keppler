@@ -8,15 +8,15 @@ TODO: Delete this and the text above, and describe your gem
 
 Step 1
 
-    $ gem install keppler
+    gem install keppler
 
 Step 2
 	
-	$ sh ~/.rvm/gems/ruby-2.5.1/gems/keppler-2.0.1/installer/run.sh
+	sh ~/.rvm/gems/ruby-2.5.1/gems/keppler-2.0.1/installer/run.sh
 
 Step 3
 
-	$ source ~/.keppler/scripts/bin.sh
+	source ~/.keppler/scripts/bin.sh
 
 ## Usage
 
