@@ -1,4 +1,4 @@
-# Keppler 2.0.1
+# Keppler 2.0.2
 
 Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/keppler`. To experiment with that code, run `bin/console` for an interactive prompt.
 
@@ -12,7 +12,7 @@ Step 1
 
 Step 2
 	
-	sh ~/.rvm/gems/ruby-2.5.1/gems/keppler-2.0.1/installer/run.sh
+	sh ~/.rvm/gems/ruby-2.5.1/gems/keppler-2.0.2/installer/run.sh
 
 Step 3
 

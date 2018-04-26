@@ -5,7 +5,7 @@ require "keppler/version"
 
 Gem::Specification.new do |spec|
   spec.name          = "keppler"
-  spec.version       = '2.0.1'
+  spec.version       = '2.0.2'
   spec.authors     = ["Luis Perez"]
   spec.email       = 'luis.prz7@gmail.com'
   spec.summary       = "Keppler Administrator"
