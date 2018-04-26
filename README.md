@@ -6,22 +6,18 @@ TODO: Delete this and the text above, and describe your gem
 
 ## Installation
 
-Add this line to your application's Gemfile:
-
-```ruby
-gem 'keppler'
-```
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
+Step 1
 
     $ gem install keppler
+
+Step 2
 	
 	$ sh /.rvm/gems/ruby-2.5.1/gems/keppler-2.0.0/installer/run.sh
-	
+
+Step 3
+
+	$ source ~/.keppler/scripts/bin.sh
+
 ## Usage
 
 TODO: Write usage instructions here
