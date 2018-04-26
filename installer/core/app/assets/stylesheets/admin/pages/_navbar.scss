@@ -1,0 +1,36 @@
+header.main-header{
+  a.logo{
+    span{
+      font-size: 2.3rem !important;
+      span{
+        font-family: 'Patua One', cursive;
+      }
+    }
+  }
+  .nav-profile-img{
+    @extend %circle-img;
+    width: 90px;
+    height: 90px;
+    margin: 0 auto;
+  }
+  .small-profile-img{
+    @extend %circle-img;
+    float: left;
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+    margin-top: -2px;
+  }
+}
+
+.dropdown-toggle {
+  height: 50px;
+}
+
+.navbar-nav {
+  transition: .4s .5s ease-in-out;
+}
+
+.main-header .sidebar-toggle:before {
+  display: none;
+}

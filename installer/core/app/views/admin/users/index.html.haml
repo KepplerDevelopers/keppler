@@ -1,0 +1,72 @@
+#index-container{ :controller => 'users' }
+  .container
+    .row
+      .listing.col-lg-12.col-xs-12
+        %section.content-header.index-header
+          %h1{ style: 'display: inline-block' }
+            = t("keppler.modules.#{controller_path.underscore}")
+          = entries(@total, @objects)
+          .toolbar
+            .toolbar-item
+              = link_to admin_users_path(:format => :xls), class: "tool-btn", title: t('keppler.actions.download_records') do
+                %i.icon-cloud-download
+            .toolbar-item
+              = link_to reload_admin_users_path, class: "tool-btn", remote: true do
+                %i.icon-reload
+            - if Pundit.policy(current_user, User).destroy_multiple?
+              .toolbar-item
+                .checkbox
+                  %label{ for: 'checkbox-all' }
+                    %input{ type: 'checkbox', id: 'checkbox-all', ':disabled' => 'checkItems ? disabled : ""', '@click' => 'selectAll()' }
+                    %span.cr
+                      %i.cr-icon.glyphicon.glyphicon-ok
+            .toolbar-item
+              %a.tool-btn{"data-confirm" => "¿Estás seguro?", "data-method" => "delete", "v-bind:href" => "link", :rel => "nofollow", ":class" => "{disabled: !checks}" }
+                %i.icon-trash
+          %ol.breadcrumb
+            %li
+              %a{ href: '#' }
+                %i.icon-directions
+                = t("keppler.modules.#{action_name.underscore}")
+        .box.slice-box
+          .box-body.no-padding
+            %table.table.table-striped
+              %thead
+                - if @objects.size.zero?
+                  %tr
+                    %th.center
+                      %h6= t('keppler.messages.not_found_records', model:  t('keppler.models.pluralize.user'))
+                - else
+                  %tr
+                    %th
+                    %th
+                    %th.visible-lg.visible-md= t('activerecord.attributes.name')
+                    %th= t('activerecord.attributes.email')
+                    %th.visible-lg.visible-md= t('activerecord.attributes.role')
+                    %th.center{ style: 'padding-right: 30px' }
+                      Actions
+              %tbody#objects-container
+                = render 'admin/layouts/listing_preloader'
+                = render 'listing', objects: @objects
+        %center#paginator-module
+          = paginate @objects, window: 1
+
+  .listing-show.hidden-xs
+    = render 'description'
+  %aside#index-show.control-sidebar
+  - if Pundit.policy(current_user, User).create?
+    .mixed-btn
+      = link_to new_admin_user_path, class: 'btn-float' do
+        +
+:javascript
+  $(document).ready(function(){
+    $('#user').click(function() {
+      $('#import_file_user').click()
+      $('#import_file_user').change(function() {
+        $('.waiting').css('display', 'block')
+        $('#import_form_user').submit()
+      })
+    });
+
+    renderImg();
+  });

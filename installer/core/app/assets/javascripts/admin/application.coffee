@@ -1,0 +1,15 @@
+#= require bounce.min
+#= require noty
+#= require jquery
+#= require jquery-ui
+#= require jquery_ujs
+#= require nprogress
+#= require nprogress-turbolinks
+#= require ckeditor/init
+#= require cocoon
+#= require bootstrap-sprockets
+#= require adminlte/app
+#= require jquery.minicolors
+#= require vue
+#= require jquery.remotipart
+#= require_tree .

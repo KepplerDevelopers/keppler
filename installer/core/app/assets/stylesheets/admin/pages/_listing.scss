@@ -1,0 +1,29 @@
+.new-menu{
+  padding: 12px;
+}
+
+.icon-delete {
+  color: $keppler-color;
+  font-size: 14px;
+}
+
+.material-icons {
+  color: #999;
+}
+
+.show-row {
+  img {
+    width: 25px;
+    border-radius: 2px;
+    object-fit: cover;
+  }
+  a {
+    position: absolute;
+    display: block;
+    width: 20%;
+    height: 20px;
+  }
+}
+.ui-sortable-handle{
+  width: 50px;
+}

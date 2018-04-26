@@ -1,0 +1,82 @@
+#index-container{ :controller => "scripts" }
+  .container
+    .row
+      .listing.col-lg-12.col-xs-12
+        %section.content-header.index-header
+          %h1{ style: 'display: inline-block' }
+            = t("keppler.modules.#{controller_path.underscore}")
+          = entries(@total, @objects)
+          .toolbar
+            - if Pundit.policy(current_user, Script).download?
+              .toolbar-item
+                = link_to admin_script_download_path(Script, :format => :xls), class: "tool-btn", title: t('keppler.actions.download_records') do
+                  %i.icon-cloud-download
+            - if Pundit.policy(current_user, Script).import?
+              .toolbar-item
+                = link_to "", class: "tool-btn", title: t('keppler.actions.upload_records'), id: "script" do
+                  %i.icon-cloud-upload
+            .toolbar-item
+              = link_to reload_admin_scripts_path, class: "tool-btn", remote: true do
+                %i.icon-reload
+            - if Pundit.policy(current_user, Script).destroy_multiple?
+              .toolbar-item
+                .checkbox
+                  %label{ for: 'checkbox-all' }
+                    %input{ type: 'checkbox', id: 'checkbox-all', ':disabled' => 'checkItems ? disabled : ""', '@click' => 'selectAll()' }
+                    %span.cr
+                      %i.cr-icon.glyphicon.glyphicon-ok
+            .toolbar-item
+              %a.tool-btn{"data-confirm" => "¿Estás seguro?", "data-method" => "delete", "v-bind:href" => "link", :rel => "nofollow", ":class" => "{disabled: !checks}" }
+                %i.icon-trash
+          .hide
+            = form_tag admin_script_import_path(@objects), id: "import_form_script", multipart: true, method: :post do
+              = file_field_tag :file, id: "import_file_script"
+          %ol.breadcrumb
+            %li
+              %a{ href: '#' }
+                %i.icon-directions
+                = t("keppler.modules.#{action_name.underscore}")
+
+        .box.slice-box
+          .box-body.no-padding
+            %table.table
+              %thead
+                - if @objects.size.zero?
+                  %tr
+                    %th{style: 'text-align: center;'}
+                      %h6= t('keppler.messages.not_found_records', model:  t("keppler.models.pluralize.script"))
+
+                - else
+                  %tr
+                    %td
+                    %th= t('activerecord.attributes.name')
+                    %th= t('activerecord.attributes.script')
+                    %th= t('activerecord.attributes.role')
+                    %th{style: "text-align: center;padding-right: 30px;"}
+                      Actions
+              %tbody#objects-container
+                = render 'admin/layouts/listing_preloader'
+                = render 'listing', objects: @objects
+
+        %center#paginator-module
+          = paginate @objects, window: 1
+  .listing-show.col.l3.m12.hide-on-small-and-down.hide-on-med-and-down
+    = render "description"
+  %aside#index-show.control-sidebar
+  - if Pundit.policy(current_user, Script).create?
+    .mixed-btn
+      = link_to new_admin_script_path, class: "btn-float" do
+        +
+
+
+:javascript
+  $(document).ready(function(){
+    $('#script').click(function(e) {
+      e.preventDefault()
+      $('#import_file_script').click()
+      $('#import_file_script').change(function() {
+        $('.waiting').css('display', 'block')
+        $('#import_form_script').submit()
+      })
+    });
+  });
