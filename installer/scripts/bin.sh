@@ -57,10 +57,10 @@ function keppler_new_project() {
 }
 
 function keppler_new_plugin () {
-  rails plugin new $PLUGIN_NAME --mountable
-  cd $PLUGIN_NAME
-  ruby ~/.keppler/plugins/install.rb $PLUGIN_NAME
+  rails plugin new keppler_$PLUGIN_NAME --mountable
+  cd keppler_$PLUGIN_NAME
   scp -r ~/.keppler/plugins/generators lib/generators
+  ruby ~/.keppler/plugins/install.rb keppler_$PLUGIN_NAME
   mkdir app/policies
   echo"$PLUGIN_NAME has been created"
 }

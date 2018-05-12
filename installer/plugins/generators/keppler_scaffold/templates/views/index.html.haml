@@ -7,18 +7,18 @@
             = t("keppler.modules.#{controller_path.underscore}")
           = entries(@total, @objects)
           .toolbar
-            - if can?(<%= singular_table_name.camelcase %>).download?
+            - if can?(<%= namespaced_path.split('_').map(&:capitalize).join('') %>::<%= singular_table_name.camelcase %>).download?
               .toolbar-item
-                = link_to admin_<%= singular_table_name %>_download_path(<%= singular_table_name.camelcase %>, :format => :xls), class: "tool-btn", title: t('keppler.actions.download_records') do
+                = link_to admin_<%= namespaced_path.split('_').drop(1).join('_') %>_<%= singular_table_name %>_download_path(<%= singular_table_name.camelcase %>, :format => :xls), class: "tool-btn", title: t('keppler.actions.download_records') do
                   %i.icon-cloud-download
-            - if can?(<%= singular_table_name.camelcase %>).import?
+            - if can?(<%= namespaced_path.split('_').map(&:capitalize).join('') %>::<%= singular_table_name.camelcase %>).upload?
               .toolbar-item
                 = link_to "", class: "tool-btn", title: t('keppler.actions.upload_records'), id: "<%= singular_table_name %>" do
                   %i.icon-cloud-upload
             .toolbar-item
-              = link_to reload_admin_<%= plural_table_name %>_path, class: "tool-btn", remote: true do
+              = link_to reload_admin_<%= namespaced_path.split('_').drop(1).join('_') %>_<%= plural_table_name %>_path, class: "tool-btn", remote: true do
                 %i.icon-reload
-            - if can?(<%= singular_table_name.camelcase %>).destroy_multiple?
+            - if can?(<%= namespaced_path.split('_').map(&:capitalize).join('') %>::<%= singular_table_name.camelcase %>).destroy_multiple?
               .toolbar-item
                 .checkbox
                   %label{ for: 'checkbox-all' }
@@ -29,7 +29,7 @@
               %a.tool-btn{"data-confirm" => "¿Estás seguro?", "data-method" => "delete", "v-bind:href" => "link", :rel => "nofollow", ":class" => "{disabled: !checks}" }
                 %i.icon-trash
           .hide
-            = form_tag admin_<%= singular_table_name %>_import_path(@objects), id: "import_form_<%= plural_table_name %>", multipart: true, method: :post do
+            = form_tag admin_<%= namespaced_path.split('_').drop(1).join('_') %>_<%= singular_table_name %>_import_path(@objects), id: "import_form_<%= plural_table_name %>", multipart: true, method: :post do
               = file_field_tag :file, id: "import_file_<%= singular_table_name %>"
           %ol.breadcrumb
             %li
@@ -69,7 +69,7 @@
                     <%- end -%>
                     %th.center Menu
                     %th
-              %tbody#objects-container{ "data-update-url" => "#{sort_admin_<%= plural_table_name %>_path}" }
+              %tbody#objects-container
                 = render 'admin/layouts/listing_preloader'
                 = render 'listing', objects: @<%= plural_table_name %>
         %center#paginator-module
@@ -79,8 +79,8 @@
   %aside#index-show.control-sidebar
 
   .mixed-btn
-    - if can?(<%= singular_table_name.camelcase %>).create?
-      = link_to new_admin_<%= singular_table_name %>_path, class: "btn-float" do
+    - if can?(<%= namespaced_path.split('_').map(&:capitalize).join('') %>::<%= singular_table_name.camelcase %>).create?
+      = link_to new_admin_<%= namespaced_path.split('_').drop(1).join('_') %>_<%= singular_table_name %>_path, class: "btn-float" do
         +
 
 :javascript

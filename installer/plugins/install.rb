@@ -39,7 +39,9 @@ File.write("lib/#{ARGV[0]}/engine.rb", engine)
 route = File.readlines("config/routes.rb")
 
 route.insert(1, "  namespace :admin do\n")
-route.insert(2, "  end\n")
+route.insert(2, "    scope :#{ARGV[0].split('_').drop(1).join('')}, as: :#{ARGV[0].split('_').drop(1).join('')} do\n")
+route.insert(3, "    end\n")
+route.insert(4, "  end\n")
 
 route = route.join("")
 
@@ -110,7 +112,6 @@ File.write("app/controllers/#{ARGV[0]}/concerns/history.rb", history)
 application = File.readlines("app/controllers/#{ARGV[0]}/application_controller.rb")
 
 application[1] = "  class ApplicationController < ::ApplicationController\n"
-# application.insert(3, "    include Pundit\n")
 
 application = application.join("")
 
@@ -122,3 +123,10 @@ dummy_test[7] = "  adapter: postgresql\n"
 dummy_test = dummy_test.join("")
 
 File.write("test/dummy/config/database.yml", dummy_test)
+
+generator_routes = File.readlines('lib/generators/keppler_scaffold/keppler_scaffold_generator.rb')
+
+generator_routes[37] = "          after: 'scope :#{ARGV[0].split('_').drop(1).join('')}, as: :#{ARGV[0].split('_').drop(1).join('')} do'\n"
+generator_routes = generator_routes.join("")
+
+File.write('lib/generators/keppler_scaffold/keppler_scaffold_generator.rb', generator_routes)
