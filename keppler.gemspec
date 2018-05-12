@@ -5,7 +5,7 @@ require "keppler/version"
 
 Gem::Specification.new do |spec|
   spec.name          = "keppler"
-  spec.version       = '2.0.2'
+  spec.version       = '2.0.3'
   spec.authors     = ["Luis Perez"]
   spec.email       = 'luis.prz7@gmail.com'
   spec.summary       = "Keppler Administrator"
@@ -32,5 +32,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_dependency 'thor', "~> 0.20.0"
   spec.add_dependency 'httparty', "~> 0.16.2"
-  
+
 end

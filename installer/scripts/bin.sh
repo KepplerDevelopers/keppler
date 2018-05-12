@@ -1,11 +1,12 @@
 #! /bin/bash
 
 function keppler() {
-  if [ $1 == 'new' ]
-  then    
+  rvm use 2.5.1
+  if [ $1 = 'new' ]
+  then
     PROJECT_NAME=$2
     keppler_new_project
-  elif [ $1 == 'help' ]
+  elif [ $1 = 'help' ]
   then
     echo ""
     echo "Global Comands:"
@@ -14,31 +15,30 @@ function keppler() {
     echo "- Keppler plugin [plugin_name]"
     echo ""
     echo "Project Comands:"
-    echo "-----------------"    
+    echo "-----------------"
     echo "- Keppler new_module [module_name] [field_name]:[type]"
     echo "- Keppler delete_module [module_name]"
     echo "- Keppler install"
     echo "- Keppler reset"
     echo "- Keppler server"
     echo ""
-  elif [ $1 == 'server' ]
+  elif [ $1 = 'server' ]
   then
     rails s -p 4000
-  elif [ $1 == 'install' ]
+  elif [ $1 = 'install' ]
   then
     bundle install
-  elif [ $1 == 'reset' ]
+  elif [ $1 = 'reset' ]
   then
     rake db:drop db:create db:migrate db:seed
-  elif [ $1 == 'plugin' ]
+  elif [ $1 = 'plugin' ]
   then
     PLUGIN_NAME=$2
     keppler_new_plugin
-  elif [ $1 == 'new_module' ]
+  elif [ $1 = 'new_module' ]
   then
     ruby ~/.keppler/lib/scaffold.rb $*
-    rake db:migrate
-  elif [ $1 == 'delete_module' ]
+  elif [ $1 = 'delete_module' ]
   then
     ruby ~/.keppler/lib/scaffold.rb $*
   else
@@ -57,5 +57,10 @@ function keppler_new_project() {
 }
 
 function keppler_new_plugin () {
+  rails plugin new $PLUGIN_NAME --mountable
+  cd $PLUGIN_NAME
+  ruby ~/.keppler/plugins/install.rb $PLUGIN_NAME
+  scp -r ~/.keppler/plugins/generators lib/generators
+  mkdir app/policies
   echo"$PLUGIN_NAME has been created"
 }
