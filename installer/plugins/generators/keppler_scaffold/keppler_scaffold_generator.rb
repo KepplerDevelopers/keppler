@@ -35,7 +35,7 @@ module Rails
         inject_into_file(
           'config/routes.rb',
           "\n #{indent(str_route)}",
-          after: 'namespace :admin do'
+          after: 'scope :store, as: :store do'
         )
       end
 
@@ -136,7 +136,7 @@ module Rails
       end
 
       def str_route
-        " resources :#{controller_file_name} do\n    get '(page/:page)', action: :index, on: :collection, as: ''\n    get '/clone', action: 'clone'\n    post '/import', action: 'import', as: 'import'\n    get(\n      '/reload',\n      action: :reload,\n      on: :collection,\n    )\n     delete(\n      '/destroy_multiple',\n      action: :destroy_multiple,\n      on: :collection,\n      as: :destroy_multiple\n    )\n  end\n"
+        "   resources :#{controller_file_name} do\n      get '(page/:page)', action: :index, on: :collection, as: ''\n      get '/clone', action: 'clone'\n      post '/upload', action: 'upload', as: 'upload'\n      get '/download', action: 'download', as: 'download'\n      get(\n        '/reload',\n        action: :reload,\n        on: :collection,\n      )\n      delete(\n        '/destroy_multiple',\n        action: :destroy_multiple,\n        on: :collection,\n        as: :destroy_multiple\n      )\n    end\n"
       end
 
       def str_menu

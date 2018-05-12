@@ -15,7 +15,7 @@
             %h3.box-title= t("keppler.modules.#{controller_path.underscore}")
             .box-tools.pull-right
               - if can?(<%= namespaced_path.split('_').map(&:capitalize).join('') %>::<%= singular_table_name.camelcase %>).update?
-                = link_to edit_admin_<%= singular_table_name %>_path(@<%= singular_table_name %>), class: "btn btn-box-tool", title: "#{t('keppler.actions.edit') }" do
+                = link_to edit_admin_<%= namespaced_path.split('_').drop(1).join('_') %>_<%= singular_table_name %>_path(@<%= singular_table_name %>), class: "btn btn-box-tool", title: "#{t('keppler.actions.edit') }" do
                   %i.icon-pencil
               - if can?(<%= namespaced_path.split('_').map(&:capitalize).join('') %>::<%= singular_table_name.camelcase %>).destroy?
                 = link_to admin_<%= namespaced_path.split('_').drop(1).join('_') %>_<%= singular_table_name %>_path(@<%= singular_table_name %>), class: "btn btn-box-tool", title: "#{t('keppler.actions.delete')}", method: :delete, data: { confirm: t("keppler.messages.data_confirm") } do

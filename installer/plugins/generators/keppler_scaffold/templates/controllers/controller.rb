@@ -5,7 +5,7 @@ require_dependency "<%= namespaced_path %>/application_controller"
 module Admin
   # <%= controller_class_name %>Controller
   class <%= controller_class_name %>Controller < ApplicationController
-    layout 'admin/layouts/application'
+    layout '<%= namespaced_path %>/admin/layouts/application'
     before_action :set_<%= singular_table_name %>, only: [:show, :edit, :update, :destroy]
     before_action :show_history, only: [:index]
     before_action :set_attachments
@@ -69,7 +69,7 @@ module Admin
       @<%= singular_table_name %> = <%= class_name %>.clone_record params[:<%=singular_table_name%>_id]
 
       if @<%= singular_table_name %>.save
-        redirect_to admin_<%= index_helper %>_path
+        redirect_to admin_<%= namespaced_path.split('_').drop(1).join('_') %>_<%= index_helper %>_path
       else
         render :new
       end
@@ -78,7 +78,7 @@ module Admin
     # DELETE <%= route_url %>/1
     def destroy
       @<%= orm_instance.destroy %>
-      redirect_to admin_<%= index_helper %>_path, notice: actions_messages(@<%= singular_table_name %>)
+      redirect_to admin_<%= namespaced_path.split('_').drop(1).join('_') %>_<%= index_helper %>_path, notice: actions_messages(@<%= singular_table_name %>)
     end
 
     def destroy_multiple
@@ -89,12 +89,21 @@ module Admin
       )
     end
 
-    def import
-      <%= class_name %>.import(params[:file])
+    def upload
+      <%= class_name %>.upload(params[:file])
       redirect_to(
         admin_<%= index_helper %>_path(page: @current_page, search: @query),
         notice: actions_messages(<%= orm_class.build(class_name) %>)
       )
+    end
+
+    def download
+      @<%= plural_table_name %> = <%= class_name %>.all
+      respond_to do |format|
+        format.html
+        format.xls { send_data(@<%= plural_table_name %>.to_xls) }
+        format.json { render json: @<%= plural_table_name %> }
+      end
     end
 
     def reload
@@ -146,10 +155,10 @@ module Admin
     # Get submit key to redirect, only [:create, :update]
     def redirect(object, commit)
       if commit.key?('_save')
-        redirect_to([:admin, object], notice: actions_messages(object))
+        redirect_to([:admin, :<%= namespaced_path.split('_').drop(1).join('_') %>, object], notice: actions_messages(object))
       elsif commit.key?('_add_other')
         redirect_to(
-          send("new_admin_#{underscore(object)}_path"),
+          send("new_admin_<%= namespaced_path.split('_').drop(1).join('_') %>_#{underscore(object)}_path"),
           notice: actions_messages(object)
         )
       end

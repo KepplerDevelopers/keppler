@@ -60,6 +60,9 @@ function keppler_new_plugin () {
   rails plugin new keppler_$PLUGIN_NAME --mountable
   cd keppler_$PLUGIN_NAME
   scp -r ~/.keppler/plugins/generators lib/generators
+  mkdir app/views/keppler_$PLUGIN_NAME
+  mkdir app/views/keppler_$PLUGIN_NAME/admin
+  scp -r ~/.keppler/plugins/layouts app/views/keppler_$PLUGIN_NAME/admin/layouts
   ruby ~/.keppler/plugins/install.rb keppler_$PLUGIN_NAME
   mkdir app/policies
   echo"$PLUGIN_NAME has been created"

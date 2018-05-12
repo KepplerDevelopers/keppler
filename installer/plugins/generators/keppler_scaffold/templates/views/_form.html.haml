@@ -1,4 +1,4 @@
-= simple_form_for [:admin, @<%= singular_table_name %>] do |f|
+= simple_form_for [:admin, :<%= namespaced_path.split('_').drop(1).join('_') %>, @<%= singular_table_name %>] do |f|
   .container
     .row
       .col-lg-2
