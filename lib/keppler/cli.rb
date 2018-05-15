@@ -1,6 +1,5 @@
 #!/usr/bin/env ruby
 require 'thor'
-require 'keppler/cli/generate'
 
 module Keppler
 	class Cli < Thor
