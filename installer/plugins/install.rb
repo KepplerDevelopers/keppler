@@ -135,20 +135,20 @@ File.write("#{ARGV[0]}/lib/generators/keppler_scaffold/keppler_scaffold_generato
 
 
 
-layouts = File.readlines("app/views/#{ARGV[0]}/admin/layouts/application.html.haml")
+layouts = File.readlines("#{ARGV[0]}/app/views/#{ARGV[0]}/admin/layouts/application.html.haml")
 
 layouts[8] ="        = render '#{ARGV[0]}/admin/layouts/navigation'\n"
 
 layouts = layouts.join("")
 
-File.write("app/views/#{ARGV[0]}/admin/layouts/application.html.haml", layouts)
+File.write("#{ARGV[0]}/app/views/#{ARGV[0]}/admin/layouts/application.html.haml", layouts)
 
 
 
-layouts = File.readlines("app/views/#{ARGV[0]}/admin/layouts/_navigation.html.haml")
+layouts = File.readlines("#{ARGV[0]}/app/views/#{ARGV[0]}/admin/layouts/_navigation.html.haml")
 
 layouts[13] ="          = search_form_for [:admin, :#{ARGV[0].split('_').drop(1).join('')}, @q], html: { method: :get } do |f|\n"
 
 layouts = layouts.join("")
 
-File.write("app/views/#{ARGV[0]}/admin/layouts/_navigation.html.haml", layouts)
+File.write("#{ARGV[0]}/app/views/#{ARGV[0]}/admin/layouts/_navigation.html.haml", layouts)
