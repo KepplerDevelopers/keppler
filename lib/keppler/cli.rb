@@ -6,7 +6,8 @@ module Keppler
     desc 'new NAME', 'Create a new keppler app'
 
     def new(name)
-      puts "Hello #{name} #{$GEM_HOME}"
+      path = gem path keppler
+      puts "Hello #{name} #{path}"
     end
 	end
 end
