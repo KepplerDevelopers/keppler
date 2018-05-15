@@ -83,7 +83,7 @@ locales = locales.join("")
 File.write("#{ARGV[0]}/config/locales/es.yml", locales)
 
 
-system("scp -r $GEM_HOME/gems/keppler-#{Keppler::VERSION}/installer/plugins/concerns app/controllers/#{ARGV[0]}")
+system("scp -r $GEM_HOME/gems/keppler-#{Keppler::VERSION}/installer/plugins/concerns #{ARGV[0]}/app/controllers/#{ARGV[0]}")
 
 commons = File.readlines("#{ARGV[0]}/app/controllers/#{ARGV[0]}/concerns/commons.rb")
 
@@ -91,7 +91,7 @@ commons[0] = "module #{ARGV[0].split('_').map(&:capitalize).join('')}\n"
 
 commons = commons.join("")
 
-File.write("#{ARGV[0]}/pp/controllers/#{ARGV[0]}/concerns/commons.rb", commons)
+File.write("#{ARGV[0]}/app/controllers/#{ARGV[0]}/concerns/commons.rb", commons)
 
 
 destroy = File.readlines("#{ARGV[0]}/app/controllers/#{ARGV[0]}/concerns/destroy_multiple.rb")
