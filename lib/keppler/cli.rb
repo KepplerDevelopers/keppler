@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 require 'thor'
 require "keppler/version"
-require_relative 'generate'
+require_relative 'new'
 require_relative 'delete'
 
 module Keppler
@@ -122,7 +122,7 @@ module Keppler
     end
 
     desc "generate module NAME attr:type attr:type", "Create a new keppler module"
-    subcommand "generate", Generate
+    subcommand "new", New
 
     desc "delete module NAME attr:type attr:type", "Delete a keppler module"
     subcommand "delete", Delete

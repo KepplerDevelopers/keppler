@@ -1,7 +1,7 @@
 require 'thor'
 
 module Keppler
-  class Generate < Thor
+  class New < Thor
 
     desc 'module', 'Create a new keppler module'
     def module(*params)
