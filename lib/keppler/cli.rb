@@ -4,7 +4,7 @@ require "keppler/version"
 
 module Keppler
 	class Cli < Thor
-
+    desc 'Global Comands:'
     desc 'new NAME', 'Create a new keppler app'
 
     def new(project_name)
@@ -63,6 +63,61 @@ module Keppler
       system("mkdir keppler_#{plugin_name}/app/policies")
       puts "> Installed policies"
       puts "#{plugin_name} has been created"
+    end
+
+    desc 'server', 'Initialize puma server'
+
+    def server
+      system("rails s")
+    end
+
+    desc 'dep', 'Install dependencies'
+
+    def dep
+      system("bundle install")
+    end
+
+    desc 'Project Comands:'
+    desc 'db_conf', 'Install dependencies'
+
+    def db_conf
+      system("scp -r $GEM_HOME/gems/keppler-#{Keppler::VERSION}/installer/db_conf/conf.yml config/secrets.yml")
+
+      puts "----------------------------------------------------------"
+      puts "Database name"
+      puts "----------------------------------------------------------"
+      db_name = STDIN.gets.chomp
+      puts "----------------------------------------------------------"
+      puts "Database username"
+      puts "----------------------------------------------------------"
+      db_username = STDIN.gets.chomp
+      puts "----------------------------------------------------------"
+      puts "Database password"
+      puts "----------------------------------------------------------"
+      db_password = STDIN.gets.chomp
+
+
+      db_conf = File.readlines("config/secrets.yml")
+      new_file = []
+      db_conf.each do |line|
+        if line.eql?("    :name: database\n")
+          line = "    :name: #{db_name}\n"
+        elsif line.eql?("    :username: username\n")
+          line = "    :username: #{db_username}\n"
+        elsif line.eql?("    :password: password\n")
+          line = "    :password: #{db_password}\n"
+        end
+        new_file.push(line)
+      end
+      new_file = new_file.join("")
+      File.write("config/secrets.yml", new_file)
+      puts '> Configured database'
+
+      system("crake db:create db:migrate db:seed")
+    end
+
+    def reset
+      system("rake db:drop db:create db:migrate db:seed")
     end
 	end
 end
