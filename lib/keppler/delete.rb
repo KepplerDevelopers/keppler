@@ -4,10 +4,10 @@ module Keppler
   class Delete < Thor
 
     desc 'module', 'Delete a keppler module'
-    def module(params)
-      fields = params
-      fields = fields[2..fields.length]
-      system("rails d keppler_scaffold #{params[0]} #{fields} position:integer deleted_at:datetime:index -y")
+    def module(*params)
+      module_name = params[0]
+      fields = params[2..params.length].join(" ")
+      system("rails d keppler_scaffold #{module_name} #{fields} position:integer deleted_at:datetime:index -y")
     end
   end
 end
