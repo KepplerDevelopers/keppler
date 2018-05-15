@@ -126,7 +126,7 @@ module Keppler
       system("rake db:migrate")
     end
 
-    desc "new module NAME attr:type attr:type", "Create a new keppler module"
+    desc "add module NAME attr:type attr:type", "Create a new keppler module"
     subcommand "add", Add
 
     desc "delete module NAME attr:type attr:type", "Delete a keppler module"
