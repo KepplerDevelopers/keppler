@@ -65,59 +65,59 @@ module Keppler
       puts "#{plugin_name} has been created"
     end
 
-    desc 'server', 'Initialize puma server'
+    # desc 'server', 'Initialize puma server'
 
-    def server(server)
-      system("rails s")
-    end
+    # def server(server)
+    #   system("rails s")
+    # end
 
-    desc 'dep', 'Install dependencies'
+    # desc 'dep', 'Install dependencies'
 
-    def dep(dep)
-      system("bundle install")
-    end
+    # def dep(dep)
+    #   system("bundle install")
+    # end
 
-    desc 'Project Comands:'
-    desc 'db_conf', 'Install dependencies'
+    # desc 'Project Comands:'
+    # desc 'db_conf', 'Install dependencies'
 
-    def db_conf(db_conf)
-      system("scp -r $GEM_HOME/gems/keppler-#{Keppler::VERSION}/installer/db_conf/conf.yml config/secrets.yml")
+    # def db_conf(db_conf)
+    #   system("scp -r $GEM_HOME/gems/keppler-#{Keppler::VERSION}/installer/db_conf/conf.yml config/secrets.yml")
 
-      puts "----------------------------------------------------------"
-      puts "Database name"
-      puts "----------------------------------------------------------"
-      db_name = STDIN.gets.chomp
-      puts "----------------------------------------------------------"
-      puts "Database username"
-      puts "----------------------------------------------------------"
-      db_username = STDIN.gets.chomp
-      puts "----------------------------------------------------------"
-      puts "Database password"
-      puts "----------------------------------------------------------"
-      db_password = STDIN.gets.chomp
+    #   puts "----------------------------------------------------------"
+    #   puts "Database name"
+    #   puts "----------------------------------------------------------"
+    #   db_name = STDIN.gets.chomp
+    #   puts "----------------------------------------------------------"
+    #   puts "Database username"
+    #   puts "----------------------------------------------------------"
+    #   db_username = STDIN.gets.chomp
+    #   puts "----------------------------------------------------------"
+    #   puts "Database password"
+    #   puts "----------------------------------------------------------"
+    #   db_password = STDIN.gets.chomp
 
 
-      db_conf = File.readlines("config/secrets.yml")
-      new_file = []
-      db_conf.each do |line|
-        if line.eql?("    :name: database\n")
-          line = "    :name: #{db_name}\n"
-        elsif line.eql?("    :username: username\n")
-          line = "    :username: #{db_username}\n"
-        elsif line.eql?("    :password: password\n")
-          line = "    :password: #{db_password}\n"
-        end
-        new_file.push(line)
-      end
-      new_file = new_file.join("")
-      File.write("config/secrets.yml", new_file)
-      puts '> Configured database'
+    #   db_conf = File.readlines("config/secrets.yml")
+    #   new_file = []
+    #   db_conf.each do |line|
+    #     if line.eql?("    :name: database\n")
+    #       line = "    :name: #{db_name}\n"
+    #     elsif line.eql?("    :username: username\n")
+    #       line = "    :username: #{db_username}\n"
+    #     elsif line.eql?("    :password: password\n")
+    #       line = "    :password: #{db_password}\n"
+    #     end
+    #     new_file.push(line)
+    #   end
+    #   new_file = new_file.join("")
+    #   File.write("config/secrets.yml", new_file)
+    #   puts '> Configured database'
 
-      system("crake db:create db:migrate db:seed")
-    end
+    #   system("crake db:create db:migrate db:seed")
+    # end
 
-    def reset(reset)
-      system("rake db:drop db:create db:migrate db:seed")
-    end
+    # def reset(reset)
+    #   system("rake db:drop db:create db:migrate db:seed")
+    # end
 	end
 end
