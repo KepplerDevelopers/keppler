@@ -1,9 +1,9 @@
 require 'thor'
 
 module Keppler
-  class New < Thor
+  class Add < Thor
 
-    desc 'module', 'Create a new keppler module'
+    desc 'module', 'Add a new keppler module'
     def module(*params)
       module_name = params[0]
       fields = params[1..params.length].join(" ")
