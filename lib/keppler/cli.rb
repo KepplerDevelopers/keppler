@@ -67,20 +67,20 @@ module Keppler
 
     desc 'server', 'Initialize puma server'
 
-    def server
+    def server(arg)
       system("rails s")
     end
 
     desc 'dep', 'Install dependencies'
 
-    def dep
+    def dep(arg)
       system("bundle install")
     end
 
     desc 'Project Comands:'
     desc 'db_conf', 'Install dependencies'
 
-    def db_conf
+    def db_conf(arg)
       system("scp -r $GEM_HOME/gems/keppler-#{Keppler::VERSION}/installer/db_conf/conf.yml config/secrets.yml")
 
       puts "----------------------------------------------------------"
@@ -116,7 +116,7 @@ module Keppler
       system("crake db:create db:migrate db:seed")
     end
 
-    def reset
+    def reset(arg)
       system("rake db:drop db:create db:migrate db:seed")
     end
 	end
