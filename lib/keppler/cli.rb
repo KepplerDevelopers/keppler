@@ -1,10 +1,10 @@
 #!/usr/bin/env ruby
 require 'thor'
 require "keppler/version"
+require_relative 'generator'
 
 module Keppler
 	class Cli < Thor
-    desc 'Global Comands:', ''
     desc 'new NAME', 'Create a new keppler app'
 
     def new(project_name)
@@ -65,25 +65,21 @@ module Keppler
       puts "#{plugin_name} has been created"
     end
 
-
-
-    desc 'Project Comands:', ''
-
     desc 'server', 'Initialize puma server'
 
-    def server(server)
+    def server
       system("rails s")
     end
 
     desc 'dep', 'Install dependencies'
 
-    def dep(dep)
+    def dep
       system("bundle install")
     end
 
-    desc 'db_conf', 'Install dependencies'
+    desc 'db_conf', 'Create secrets file'
 
-    def db_conf(db_conf)
+    def db_conf
       system("scp -r $GEM_HOME/gems/keppler-#{Keppler::VERSION}/installer/db_conf/conf.yml config/secrets.yml")
 
       puts "----------------------------------------------------------"
@@ -119,8 +115,11 @@ module Keppler
       system("crake db:create db:migrate db:seed")
     end
 
-    def reset(reset)
+    def reset
       system("rake db:drop db:create db:migrate db:seed")
     end
+
+    desc "g new_module NAME attr:type attr:type", "Create new keppler module"
+    subcommand "generators", Generator
 	end
 end
