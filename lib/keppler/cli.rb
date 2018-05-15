@@ -27,7 +27,7 @@ module Keppler
       db_password = STDIN.gets.chomp
 
 
-      db_conf = File.readlines("config/secrets.yml")
+      db_conf = File.readlines("#{project_name}/config/secrets.yml")
       new_file = []
       db_conf.each do |line|
         if line.eql?("    :name: database\n")
@@ -40,10 +40,10 @@ module Keppler
         new_file.push(line)
       end
       new_file = new_file.join("")
-      File.write("config/secrets.yml", new_file)
+      File.write("#{project_name}/config/secrets.yml", new_file)
       puts '> Configured database'
 
-      system("rake db:create db:migrate db:seed")
+      system("cd #{project_name} && rake db:create db:migrate db:seed")
       puts '> Created database'
       puts "#{project_name} has been created"
     end
