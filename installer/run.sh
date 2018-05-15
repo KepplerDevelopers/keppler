@@ -1,4 +1,4 @@
-GEM_VERSION=2.0.2
+GEM_VERSION=2.0.3
 GEM_DIR=$(gem environment gemdir)
 
 rm -rf ~/.keppler

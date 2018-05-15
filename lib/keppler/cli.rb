@@ -3,10 +3,11 @@ require 'thor'
 require 'keppler/cli/generate'
 
 module Keppler
-	class Generate < Thor
-		# [...]
+	class Cli < Thor
+    desc 'sayHello NAME', 'Say hello to NAME'
 
-    desc "g new [project name]", "Create a new keppler project"
-    subcommand "generate", Keppler::CLI::Generate
+    def sayHello(name)
+      puts "Hello #{name}"
+    end
 	end
 end
