@@ -6,6 +6,8 @@ module Keppler
 	class Cli < Thor
 
     desc 'new NAME', 'Create a new keppler app'
+    desc 'plugin NAME', 'Create a new keppler plugin'
+
     def new(project_name)
       system("scp -r $GEM_HOME/gems/keppler-#{Keppler::VERSION}/installer/core #{project_name}")
       puts '> Created project'
@@ -49,7 +51,6 @@ module Keppler
     end
 	end
 
-  desc 'plugin NAME', 'Create a new keppler plugin'
   def plugin(plugin_name)
     system("rails plugin new keppler_#{plugin_name} --mountable")
     puts "> Created scaffold"
