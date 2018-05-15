@@ -131,7 +131,7 @@ generator_routes = File.readlines("#{ARGV[0]}/lib/generators/keppler_scaffold/ke
 generator_routes[37] = "          after: 'scope :#{ARGV[0].split('_').drop(1).join('')}, as: :#{ARGV[0].split('_').drop(1).join('')} do'\n"
 generator_routes = generator_routes.join("")
 
-File.write('#{ARGV[0]}/lib/generators/keppler_scaffold/keppler_scaffold_generator.rb', generator_routes)
+File.write("#{ARGV[0]}/lib/generators/keppler_scaffold/keppler_scaffold_generator.rb", generator_routes)
 
 
 
