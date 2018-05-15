@@ -115,11 +115,12 @@ module Keppler
       system("crake db:create db:migrate db:seed")
     end
 
+    desc 'reset', 'Reset to database'
     def reset
       system("rake db:drop db:create db:migrate db:seed")
     end
 
-    desc "g new_module NAME attr:type attr:type", "Create new keppler module"
+    desc "g new_module NAME attr:type attr:type", "Keppler scaffold"
     subcommand "generators", Generator
 	end
 end
