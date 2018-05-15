@@ -3,10 +3,10 @@ require 'thor'
 
 module Keppler
 	class Cli < Thor
-    desc 'sayHello NAME', 'Say hello to NAME'
+    desc 'new NAME', 'Create a new keppler app'
 
-    def sayHello(name)
-      puts "Hello #{name}"
+    def new(name)
+      puts "Hello #{name} #{$GEM_HOME}"
     end
 	end
 end
