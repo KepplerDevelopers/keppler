@@ -1,7 +1,8 @@
 #!/usr/bin/env ruby
 require 'thor'
 require "keppler/version"
-require_relative 'generator'
+require_relative 'generate'
+require_relative 'delete'
 
 module Keppler
 	class Cli < Thor
@@ -120,7 +121,10 @@ module Keppler
       system("rake db:drop db:create db:migrate db:seed")
     end
 
-    desc "g new_module NAME attr:type attr:type", "Keppler scaffold"
-    subcommand "generators", Generator
+    desc "generate module NAME attr:type attr:type", "Create a new keppler module"
+    subcommand "generate", Generate
+
+    desc "delete module NAME attr:type attr:type", "Delete a keppler module"
+    subcommand "delete", Delete
 	end
 end
