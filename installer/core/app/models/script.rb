@@ -13,7 +13,7 @@ class Script < ApplicationRecord
     :name_or_script_cont
   end
 
-  def self.import(file)
+  def self.upload(file)
     CSV.foreach(file.path, headers: true) do |row|
       begin
         Script.create! row.to_hash
@@ -23,8 +23,6 @@ class Script < ApplicationRecord
   end
 
   def self.sorter(params)
-    params.each_with_index do |id, idx|
-      self.find(id).update(position: idx.to_i+1)
-    end
+    params.each_with_index { |id, idx| find(id).update(position: idx.to_i + 1) }
   end
 end

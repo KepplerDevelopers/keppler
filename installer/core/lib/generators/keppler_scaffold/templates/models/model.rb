@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # <%= class_name %> Model
 <% module_namespacing do -%>
 class <%= class_name %> < ApplicationRecord
@@ -10,13 +12,15 @@ class <%= class_name %> < ApplicationRecord
     <%- end -%>
   <%- end -%>
   acts_as_list
+  acts_as_paranoid
+
   # Fields for the search form in the navbar
   def self.search_field
     fields = <%= attributes_names.map { |name| name } %>
     build_query(fields, :or, :cont)
   end
 
-  def self.import(file)
+  def self.upload(file)
     CSV.foreach(file.path, headers: true) do |row|
       begin
         self.create! row.to_hash

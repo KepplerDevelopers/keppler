@@ -3,27 +3,27 @@
     / Sidebar user panel
     .user-panel{ style: @appearance.image_background? ? "background-image: url(#{@appearance.image_background})" : nil  }
       .pull-left.image
-        .img-circle.side-img-profile{:alt => "User Image", style: "background-image: url(#{current_user.avatar? ? current_user.avatar : 'https://thumbs.dreamstime.com/t/profile-icon-male-avatar-portrait-casual-person-silhouette-face-flat-design-vector-46846326.jpg'})" }
+        = image_tag (current_user.avatar.url || 'admin/user.png'), class: 'img-circle side-img-profile keppler-background', alt: current_user.name
       .info
         %p= current_user.name
         %small= current_user.rol.humanize
     / sidebar menu: : style can be found in sidebar.less
     %ul.sidebar-menu.tree{"data-widget" => "tree" }
-      %li.header MAIN NAVIGATION
-      -# %li
+      -# %li.header MAIN NAVIGATION
+      %li
         = link_to '/admin/dashboard' do
           %i.icon-pie-chart
           %span= t('keppler.sidebar-menu.dashboard')
       - @sidebar.each do |menu|
         - menu.each do |key, value|
           - unless menu[key]["submenu"] # ontetab sidebar linkbyg
-            - if menu[key]["model"] && Pundit.policy(current_user, menu[key]["model"].constantize).index?
+            - if menu[key]["model"] && can?(menu[key]["model"].constantize).index?
               %li.treeview{ class: ('active' if controller_name.eql?(menu[key]['name']))}
                 = link_to menu[key]['url_path'], class: "collapsible-header #{'current' if menu[key]['current'].include?(controller_path)}", :'data-no-turbolink'=> true do
                   %i{ class: "icon-#{menu[key]["icon"]}" }
                   %span= t("keppler.sidebar-menu.#{menu[key]['name'].parameterize}")
           - else # tree sidebar links
-            - if menu[key]["model"] && Pundit.policy(current_user, menu[key]["model"].constantize).index?
+            - if menu[key]["model"] && can?(menu[key]["model"].constantize).index?
               %li{ class: ('active' if menu[key]['current'].include?(controller_path))}
                 %a{ href: "#", class: "#{'active current' if menu[key]['current'].include?(controller_path)}" }
                   %i{ class: "icon-#{menu[key]['icon']}" }
@@ -37,23 +37,7 @@
                           = link_to t("keppler.sidebar-menu.#{menu[key]['name'].parameterize}-submenu.#{submenu[name]['name'].parameterize}"), submenu[name]['url_path'], class: "#{'current' if submenu[name]['current'].include?(@render)}", :'data-no-turbolink'=>true, class: (submenu[name]['url_path'].eql?("/admin/settings/email_setting") ? 'cut-text' : '')
                         - else
                           = link_to t("keppler.sidebar-menu.#{menu[key]['name'].parameterize}-submenu.#{submenu[name]['name'].parameterize}"), submenu[name]['url_path'], class: "#{'current' if submenu[name]['current'].include?(controller_path)}", :'data-no-turbolink'=> true, class: (submenu[name]['url_path'].eql?("/admin/settings/email_setting") ? 'cut-text' : '')
-      %li
-        = link_to '#' do
-          %i.icon-settings
-          %span= t('keppler.sidebar-menu.setting')
-          %ul{class: "treeview-menu", style:"display: none;"}
-            %li
-              %a{"data-no-turbolink"=>"true", href:"/admin/settings/basic_information"}
-                = t('keppler.sidebar-menu.setting-submenu.basic-information')
-            %li
-              %a{"data-no-turbolink"=>"true", href:"/admin/settings/email_setting"}
-                = t('keppler.sidebar-menu.setting-submenu.email-setting-smtp')
-            %li
-              %a{"data-no-turbolink"=>"true", href:"/admin/settings/google_analytics_setting"}
-                = t('keppler.sidebar-menu.setting-submenu.google-analytics')
-            %li
-              %a{"data-no-turbolink"=>"true", href:"/admin/settings/social_accounts"}
-                = t('keppler.sidebar-menu.setting-submenu.social-accounts')
+
   #sidebar-footer
     %a{:href=>"http://slicegroup.xyz", target: "_blank" }
       #slice.brand.pull-left
