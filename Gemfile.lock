@@ -2,8 +2,8 @@ PATH
   remote: .
   specs:
     keppler (2.0.3)
-      httparty (~> 0.16.2)
-      thor (~> 0.20.0)
+      httparty
+      thor
 
 GEM
   remote: https://rubygems.org/
