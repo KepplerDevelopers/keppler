@@ -58,7 +58,7 @@ module Keppler
       puts "> Installed generators"
       system("mkdir keppler_#{plugin_name}/app/views/keppler_$PLUGIN_NAME")
       system("mkdir keppler_#{plugin_name}/app/views/keppler_$PLUGIN_NAME/admin")
-      system("scp -r $GEM_HOME/gems/keppler-#{Keppler::VERSION}/installer/plugins/layouts keppler_#{plugin_name}/app/views/keppler_$PLUGIN_NAME/admin/layouts")
+      system("scp -r $GEM_HOME/gems/keppler-#{Keppler::VERSION}/installer/plugins/layouts keppler_#{plugin_name}/app/views/keppler_#{plugin_name}/admin/layouts")
       system("ruby $GEM_HOME/gems/keppler-#{Keppler::VERSION}/installer/plugins/install.rb keppler_#{plugin_name}")
       system("mkdir keppler_#{plugin_name}/app/policies")
       puts "> Installed policies"
