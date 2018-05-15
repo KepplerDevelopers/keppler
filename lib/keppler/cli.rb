@@ -121,6 +121,11 @@ module Keppler
       system("rake db:drop db:create db:migrate db:seed")
     end
 
+    desc 'migrate', 'Migrate database'
+    def migrate
+      system("rake db:migrate")
+    end
+
     desc "new module NAME attr:type attr:type", "Create a new keppler module"
     subcommand "new", New
 
