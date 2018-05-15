@@ -6,8 +6,7 @@ module Keppler
     desc 'new NAME', 'Create a new keppler app'
 
     def new(name)
-      path = gem path keppler
-      puts "Hello #{name} #{path}"
+      system("scp -r $GEM_HOME/keppler-#{Keppler::VERSION}/installer/core $PROJECT_NAME")
     end
 	end
 end

@@ -2,12 +2,14 @@ PATH
   remote: .
   specs:
     keppler (2.0.3)
+      gem-path
       httparty
       thor
 
 GEM
   remote: https://rubygems.org/
   specs:
+    gem-path (0.6.2)
     httparty (0.16.2)
       multi_xml (>= 0.5.2)
     multi_xml (0.6.0)
