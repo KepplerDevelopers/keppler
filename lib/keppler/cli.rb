@@ -1,5 +1,6 @@
 #!/usr/bin/env ruby
 require 'thor'
+require "keppler/version"
 
 module Keppler
 	class Cli < Thor
