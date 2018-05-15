@@ -109,7 +109,7 @@ history[0] = "module #{ARGV[0].split('_').map(&:capitalize).join('')}\n"
 
 history = history.join("")
 
-File.write("#{ARGV[0]}/pp/controllers/#{ARGV[0]}/concerns/history.rb", history)
+File.write("#{ARGV[0]}/app/controllers/#{ARGV[0]}/concerns/history.rb", history)
 
 application = File.readlines("#{ARGV[0]}/app/controllers/#{ARGV[0]}/application_controller.rb")
 
