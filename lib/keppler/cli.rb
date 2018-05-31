@@ -127,6 +127,11 @@ module Keppler
       system("rake db:migrate")
     end
 
+    desc 'console', 'Use ruby console'
+    def console
+      system("rails c")
+    end
+
     desc "add module NAME attr:type attr:type", "Create a new keppler module"
     subcommand "add", Add
 
