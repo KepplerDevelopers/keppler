@@ -49,6 +49,8 @@ route = route.join("")
 
 File.write("#{ARGV[0]}/config/routes.rb", route)
 
+system("scp -r $GEM_HOME/gems/keppler-#{Keppler::VERSION}/installer/plugins/config/permissions.yml #{ARGV[0]}/config/permissions.yml")
+
 system("scp -r $GEM_HOME/gems/keppler-#{Keppler::VERSION}/installer/plugins/config/menu.yml #{ARGV[0]}/config/menu.yml")
 
 menu = File.readlines("#{ARGV[0]}/config/menu.yml")

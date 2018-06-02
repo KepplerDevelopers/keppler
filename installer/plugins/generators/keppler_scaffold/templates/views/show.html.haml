@@ -29,9 +29,9 @@
                       %th.display-label= t("activerecord.attributes.#{attribute}")
                       %td.display-value.fs-body-1.tc-black-2
                         - if @attachments.include?(attribute)
-                          = image_tag value
+                          = image_tag value.url unless value.url.blank?
                         - else
-                          = value
+                          = value.blank? ? '-----------' : value
       <%- else -%>
       <%- @attr = attributes.map{|attr| attr.name}.select{|attr| @attachments.include?(attr)} %>
       .col-lg-5
@@ -61,6 +61,5 @@
                 - @<%= singular_table_name %>.as_json(only: <%= attributes.map{|attr| attr.name}.select{|attr| !@attachments.include?(attr)} %>).each do |attribute, value|
                   %tr.list-row
                     %th.display-label= t("activerecord.attributes.#{attribute}")
-                    %td.display-value.fs-body-1.tc-black-2
-                      = value
+                    %td.display-value.fs-body-1.tc-black-2.text-overflow= value.blank? ? '-----------' : value
       <%- end -%>

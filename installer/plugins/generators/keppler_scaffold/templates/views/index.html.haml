@@ -71,7 +71,7 @@
                     %th
               %tbody#objects-container
                 = render 'admin/layouts/listing_preloader'
-                = render 'listing', objects: @<%= plural_table_name %>
+                = render 'listing', objects: @objects
         %center#paginator-module
           = paginate @objects, window: 1
   %aside.control-sidebar
