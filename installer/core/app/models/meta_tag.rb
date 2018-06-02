@@ -4,6 +4,9 @@
 class MetaTag < ApplicationRecord
   include ActivityHistory
   include CloneRecord
+  include Uploadable
+  include Downloadable
+  include Sortable
   acts_as_list
   before_save :split_url
   validates_uniqueness_of :url
@@ -15,29 +18,37 @@ class MetaTag < ApplicationRecord
     find_by_url(url)
   end
 
+  def self.title(post_param, product_param, setting)
+    post = post_param&.title
+    product = product_param&.title || product_param&.name
+    post || product || setting.name
+  end
+
+  def self.description(post_param, product_param, setting)
+    unless post_param&.body.blank?
+      body = post_param.body
+      post = sanitize(body, tags: []).truncate(300)
+    end
+    product = product_param&.description || product_param&.body
+    post || product || setting.description
+  end
+
+  def self.image(request, post_param, product_param, setting_param)
+    post = post_param&.image
+    product = product_param&.image || product_param&.photo
+    setting = setting_param&.logo unless setting_param&.logo.blank?
+    image = '/assets/admin/slice.png'
+    url = request.protocol + request.host_with_port
+    url + (post || product || setting || image).to_s
+  end
+
   def self.search_field
     :title_or_description_or_url_cont_any
-  end
-
-  def self.upload(file)
-    CSV.foreach(file.path, headers: true) do |row|
-      begin
-        self.create! row.to_hash
-      rescue => err
-      end
-    end
-  end
-
-  def self.sorter(params)
-    params.each_with_index do |id, idx|
-      self.find(id).update(position: idx.to_i+1)
-    end
   end
 
   private
 
   def split_url
-    self.url = self.url.split('//').last.split('/').join('/').split('www.').last
+    self.url = url.split('//').last.split('/').join('/').split('www.').last
   end
-
 end

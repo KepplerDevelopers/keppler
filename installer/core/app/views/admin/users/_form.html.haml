@@ -17,13 +17,7 @@
                 = link_to admin_user_delete_avatar_path(@user), remote: true do
                   %i.icon-trash
           .box-body.box-profile
-            .upload-image
-              .files.form-group.trigger{ class: "#{'files-absolute' unless @user.avatar.blank?}" }
-                #icon-file
-                  +
-                = f.file_field :avatar, class: 'photo_upload'
-              %center#image
-                = image_tag "#{@user.avatar.blank? ? 'admin/user.png' : @user.avatar}", class: "#{'hidden' if @user.avatar.blank?} image_to_upload"
+            = f.input :avatar, as: :keppler_file
 
 
 
@@ -44,15 +38,7 @@
                       = f.input :email, label: t('simple_form.labels.defaults.email'), placeholder: 'Email', input_html: {class: 'form-control'}, required: true
                   .row
                     .col-xs-12
-                      - unless @user.role_ids.include?(1)
-                        .form-group
-                          %label.control-label.string.required{ for: 'user_name' }
-                            %abbr{ title: 'required' } *
-                            = t('simple_form.labels.defaults.select_role')
-                          %select#user_role_ids.form-control.select.required.form-control{'aria-required' => 'true', name: 'user[role_ids]', required: 'required'}
-                            - @roles.each do |role|
-                              %option{ value: role.last }= role.first
-
+                      = f.input :role_ids, collection: @roles, label: false, include_blank: "Selecione un rol"
                   .row
                     .col-lg-6
                       = f.input :password, label: t('simple_form.labels.defaults.password'), placeholder: 'Password', input_html: {class: 'form-control'}, required: true

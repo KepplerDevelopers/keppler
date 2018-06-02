@@ -2,7 +2,7 @@ module Admin
   # SettingsController
   class SettingsController < AdminController
     before_action :set_setting, only: %i[edit update appearance_default]
-    before_action :authorization, only: %i[edit update]
+    before_action :authorization, except: %i[reload appearance_default]
 
     def edit
       @social_medias = social_account_permit_attributes
@@ -22,7 +22,8 @@ module Admin
 
     def appearance_default
       appearance = Appearance.last
-      appearance.update(image_background: nil)
+      appearance.remove_image_background!
+      appearance.save
       get_apparience_colors(['#f44336'])
       redirect_to(
         admin_settings_path(@render), notice: actions_messages(@setting)
