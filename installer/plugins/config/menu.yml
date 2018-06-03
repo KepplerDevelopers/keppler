@@ -2,7 +2,8 @@ menu:
   plugin:
     name: keppler menu
     current: ['']
-    icon: calendar
+    url_path: /
+    icon: layers
     model: User
     # submenu:
     #   - option:
