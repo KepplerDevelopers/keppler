@@ -35,7 +35,7 @@ module Rails
         inject_into_file(
           'config/routes.rb',
           "\n #{indent(str_route)}",
-          after: 'scope :store, as: :store do'
+          after: 'scope :checkin, as: :checkin do'
         )
       end
 
@@ -68,7 +68,7 @@ module Rails
         inject_into_file(
           'config/permissions.yml',
           str_permissions,
-          before: 'scripts:'
+          after: 'modules:'
         )
       end
 
@@ -156,7 +156,7 @@ module Rails
       end
 
       def str_permissions
-       "#{controller_file_name.pluralize}:\n    name: #{controller_file_name.singularize.camelize}\n    actions: [\n      'index', 'create', 'update',\n      'destroy', 'download', 'upload',\n      'clone'\n    ]\n  "
+       "\n #{controller_file_name.pluralize}:\n    name: #{controller_file_name.singularize.camelize}\n    actions: [\n      'index', 'create', 'update',\n      'destroy', 'download', 'upload',\n      'clone'\n    ]\n  "
       end
 
       def str_locales(switch)
