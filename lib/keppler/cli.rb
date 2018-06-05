@@ -54,6 +54,7 @@ module Keppler
     desc 'plugin NAME', 'Create a new keppler plugin'
 
     def plugin(plugin_name)
+      plugin_name = plugin_name.downcase
       system("rails plugin new keppler_#{plugin_name} --mountable")
       puts "> Created scaffold"
       system("cd keppler_#{plugin_name} && scp -r $GEM_HOME/gems/keppler-#{Keppler::VERSION}/installer/plugins/generators lib/generators")

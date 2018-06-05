@@ -41,7 +41,7 @@ File.write("#{ARGV[0]}/lib/#{ARGV[0]}/engine.rb", engine)
 route = File.readlines("#{ARGV[0]}/config/routes.rb")
 
 route.insert(1, "  namespace :admin do\n")
-route.insert(2, "    scope :#{ARGV[0].split('_').drop(1).join('')}, as: :#{ARGV[0].split('_').drop(1).join('')} do\n")
+route.insert(2, "    scope :#{ARGV[0].split('_').drop(1).join('_')}, as: :#{ARGV[0].split('_').drop(1).join('_')} do\n")
 route.insert(3, "    end\n")
 route.insert(4, "  end\n")
 
