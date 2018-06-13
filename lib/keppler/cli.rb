@@ -51,9 +51,9 @@ module Keppler
       puts "#{project_name} has been created"
     end
 
-    desc 'plugin NAME', 'Create a new keppler plugin'
+    desc 'rocket NAME', 'Create a new keppler plugin'
 
-    def plugin(plugin_name)
+    def rocket(plugin_name)
       plugin_name = plugin_name.downcase
       system("rails plugin new keppler_#{plugin_name} --mountable")
       puts "> Created scaffold"
