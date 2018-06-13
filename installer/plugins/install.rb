@@ -154,3 +154,17 @@ layouts[13] ="          = search_form_for [:admin, :#{ARGV[0].split('_').drop(1)
 layouts = layouts.join("")
 
 File.write("#{ARGV[0]}/app/views/#{ARGV[0]}/admin/layouts/_navigation.html.haml", layouts)
+
+layouts = File.readlines("#{ARGV[0]}/app/views/#{ARGV[0]}/admin/layouts/_navigation.html.haml")
+
+application = File.readlines("#{ARGV[0]}/app/controllers/#{ARGV[0]}/application_controller.rb")
+
+application.insert(3, "    before_action :user_signed_in?\n")
+application.insert(4, "    def user_signed_in?\n")
+application.insert(5, "      return if current_user\n")
+application.insert(6, "      redirect_to main_app.new_user_session_path\n")
+application.insert(7, "    end\n")
+
+application = application.join("")
+
+File.write("#{ARGV[0]}/app/controllers/#{ARGV[0]}/application_controller.rb", application)
