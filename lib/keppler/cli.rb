@@ -141,8 +141,10 @@ module Keppler
 
     desc 'rocket_build NAME', 'Build a keppler plugin'
 
-    def rocket_build(plugin_name)
-      system("zip -r #{plugin_name}.rocket #{plugin_name}/*")
+    def rocket_build
+      rocket_name = File.basename(Dir.getwd)
+      system("mkdir pkg")
+      system("zip -r pkg/#{rocket_name}.rocket *")
     end
 	end
 end
