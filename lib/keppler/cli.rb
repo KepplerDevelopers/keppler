@@ -139,7 +139,7 @@ module Keppler
       puts "#{plugin_name} has been created"
     end
 
-    desc 'rocket_build NAME', 'Build a keppler plugin'
+    desc 'rocket_build', 'Build a keppler plugin'
 
     def rocket_build
       rocket_name = File.basename(Dir.getwd)
