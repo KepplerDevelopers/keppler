@@ -6,7 +6,7 @@
 
     - if loggedin?
       .wrapper{style:"height: auto; min-height: 100%;"}
-        = render 'module/admin/layouts/navigation'
+        = render 'module/admin/layouts/navigation', q: @q, appearance: @appearance
         = render 'admin/layouts/sidebar'
         = render 'admin/layouts/messages'
         .content-wrapper{ style: "min-height: 901px;" }
