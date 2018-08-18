@@ -26,7 +26,7 @@
                     <%- elsif attribute.reference? -%>
                     = f.association :<%= attribute.name %>, include_blank: false
                     <%- elsif attribute.type.to_s == 'text' -%>
-                    = f.input :<%= attribute.name %>, as: :ckeditor, input_html: { ckeditor: { toolbar: 'mini' } }
+                    = f.input :<%= attribute.name %>, input_html: { ckeditor: { toolbar: 'mini' } }
                     <%- elsif %[position deleted_at].include?(attribute.name.to_s) || attribute.type.to_s == 'timestamp' -%>
                     = f.input :<%= attribute.name %>, as: :hidden
                     <%- elsif attribute.type.to_s == 'date' -%>
