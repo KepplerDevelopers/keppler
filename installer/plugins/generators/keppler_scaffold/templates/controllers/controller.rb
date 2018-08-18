@@ -84,7 +84,7 @@ module Admin
     def destroy_multiple
       <%= class_name %>.destroy redefine_ids(params[:multiple_ids])
       redirect_to(
-        admin_<%= index_helper %>_path(page: @current_page, search: @query),
+        admin_<%= namespaced_path.split('_').drop(1).join('_') %>_<%= index_helper %>_path(page: @current_page, search: @query),
         notice: actions_messages(<%= orm_class.build(class_name) %>)
       )
     end
