@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module Admin
   # UsersController
   class UsersController < AdminController
@@ -5,27 +7,18 @@ module Admin
     before_action :set_roles, only: %i[index new edit create update]
     before_action :show_history, only: %i[index]
     before_action :authorization, except: %i[reload filter_by_role]
-    before_action :set_objects, only: %i[index filter_by_role reload]
+    before_action :set_users, only: %i[index filter_by_role reload]
+    include ObjectQuery
 
     def index
       @users = User.all.drop(1)
-
-      if !@objects.first_page? && @objects.size.zero?
-        redirect_to users_path(page: @current_page.to_i.pred, search: @query)
-      end
-
-      respond_to do |format|
-        format.html
-        format.json { render :json => @objects }
-      end
+      redirect_to_index(users_path) if nothing_in_first_page?(@objects)
+      respond_to_formats(@users)
     end
 
     def filter_by_role
-      if params[:role].eql?('all')
-        @users = User.all.drop(1)
-      else
-        @users = User.filter_by_role(@objects, params[:role])
-      end
+      return @users = User.all.drop(1) if params[:role].eql?('all')
+      @users = User.filter_by_role(@objects, params[:role])
     end
 
     def new
@@ -84,9 +77,10 @@ module Admin
       end
     end
 
-    def set_objects
+    def set_users
       @q = User.ransack(params[:q])
-      users = @q.result(distinct: true).where('id != ?', User.first.id).order(created_at: :desc)
+      users = @q.result(distinct: true).where('id != ?', User.first.id)
+      users = users.order(created_at: :desc)
       @objects = users.page(@current_page)
       @total = users.size
     end
