@@ -1,23 +1,25 @@
+# frozen_string_literal: true
+
 module Admin
   # MetaTagController
   class MetaTagsController < AdminController
     before_action :set_meta_tag, only: %i[show edit update destroy]
     before_action :show_history, only: %i[index]
     before_action :authorization, except: %i[reload]
+    include ObjectQuery
 
     # GET /meta_tags
     def index
       @q = MetaTag.ransack(params[:q])
-      @meta_tags = @q.result(distinct: true).order(:position)
-      @objects = @meta_tags.page(@current_page)
+      @meta_tags = @q.result(distinct: true)
+      @objects = @meta_tags.page(@current_page).order(position: :desc)
       @total = @meta_tags.size
       redirect_to_index(meta_tags_path) if nothing_in_first_page?(@objects)
       respond_to_formats(@meta_tags)
     end
 
     # GET /meta_tags/1
-    def show
-    end
+    def show; end
 
     # GET /meta_tags/new
     def new
@@ -25,8 +27,7 @@ module Admin
     end
 
     # GET /meta_tags/1/edit
-    def edit
-    end
+    def edit; end
 
     # POST /meta_tags
     def create
@@ -81,15 +82,11 @@ module Admin
 
     def download
       @meta_tags = MetaTag.all
-      respond_to do |format|
-        format.html
-        format.xls { send_data(@meta_tags.to_xls) }
-        format.json { render :json => @meta_tags }
-      end
+      respond_to_formats(@meta_tags)
     end
 
     def reload
-      @meta_tags = MetaTag.order(:position)
+      @objects = MetaTag.order(:position)
     end
 
     def sort
@@ -110,7 +107,8 @@ module Admin
 
     # Only allow a trusted parameter "white list" through.
     def meta_tag_params
-      params.require(:meta_tag).permit(:title, :description, :meta_tags, :url, :position)
+      params.require(:meta_tag).permit(:title, :description,
+                                       :meta_tags, :url, :position)
     end
 
     def show_history
