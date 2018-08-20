@@ -1,15 +1,18 @@
+# frozen_string_literal: true
+
 module Admin
   # ScriptsController
   class ScriptsController < AdminController
     before_action :set_ga_track, only: %i[show edit update destroy]
     before_action :show_history, only: %i[index]
     before_action :authorization, except: %i[reload]
+    include ObjectQuery
 
     # GET /scripts
     def index
       @q = Script.ransack(params[:q])
       @scripts = @q.result(distinct: true)
-      @objects = @scripts.page(@current_page)
+      @objects = @scripts.page(@current_page).order(position: :desc)
       @total = @scripts.size
       redirect_to_index(scripts_path) if nothing_in_first_page?(@objects)
       respond_to_formats(@scripts)
@@ -72,7 +75,7 @@ module Admin
         admin_scripts_path(page: @current_page, search: @query),
         notice: actions_messages(Script.new)
       )
-      authorize @script
+      authorize Script
     end
 
     def upload
@@ -86,7 +89,7 @@ module Admin
     def reload
       @q = Script.ransack(params[:q])
       scripts = @q.result(distinct: true)
-      @objects = scripts.page(@current_page)
+      @objects = scripts.page(@current_page).order(position: :desc)
     end
 
     private

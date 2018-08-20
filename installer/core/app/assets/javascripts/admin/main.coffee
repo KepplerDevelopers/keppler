@@ -1,9 +1,4 @@
-$(window).load ->
-
-  hidePreloader = ->
-    preloader = $('#spinner')
-    preloader.fadeOut preloaderFadeOutTime
-    return
+$(document).on 'turbolinks:load', ->
 
   toggleMenu = ->
     $slice = $('#sidebar-footer .brand')
@@ -47,7 +42,20 @@ $(window).load ->
     # Ver documentación en https://jqueryui.com/datepicker
   })
 
-  preloaderFadeOutTime = 500
-  hidePreloader()
+  $('.close-index-show').click ->
+    $('.index-show').css 'right', -$('.index-show').outerWidth()
+
+  $('#open-historial').click ->
+    $('.listing-show .control-sidebar').toggleClass 'control-sidebar-open'
+
+  $('.customize-index .icon-trash').click ->
+    $('.spinner').css('display', 'block')
+  
   searchButton()
   return
+
+$(document).ready ->
+  $('.spinner').css 'display', 'block'
+
+$(window).load ->
+  $('.spinner').fadeOut 500

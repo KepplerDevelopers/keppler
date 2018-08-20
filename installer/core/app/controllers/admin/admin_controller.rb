@@ -1,8 +1,11 @@
+# frozen_string_literal: true
+
 module Admin
   # AdminController
   class AdminController < ::ApplicationController
     layout 'admin/layouts/application'
     before_action :authenticate_user!
+    before_action :validate_permissions
     before_action :paginator_params
     before_action :set_setting
     before_action :can_multiple_destroy, only: [:destroy_multiple]
@@ -22,14 +25,18 @@ module Admin
       @current_page = params[:page] unless params[:page].blank?
     end
 
-    def set_setting
-      @setting = Setting.first
+    def validate_permissions
+      return if current_user.rol.eql?('keppler_admin')
+      redirect_to frontend_path unless current_user.permissions?
     end
 
-    # def close_index_show
-    # end
-
     private
+
+    def get_history(model)
+      @activities = PublicActivity::Activity.where(
+        trackable_type: model.to_s
+      ).order('created_at desc').limit(50)
+    end
 
     def tables_name
       @models = ApplicationRecord.connection.tables.map do |model|
