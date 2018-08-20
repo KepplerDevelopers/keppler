@@ -21,7 +21,6 @@ gemspec = gemspec.join("")
 
 File.write("#{ARGV[0]}/#{ARGV[0]}.gemspec", gemspec)
 
-
 engine = File.readlines("#{ARGV[0]}/lib/#{ARGV[0]}/engine.rb")
 
 engine.insert(3, "    paths['config/locales']\n")
@@ -36,7 +35,6 @@ engine.insert(10, "    end\n")
 engine = engine.join("")
 
 File.write("#{ARGV[0]}/lib/#{ARGV[0]}/engine.rb", engine)
-
 
 route = File.readlines("#{ARGV[0]}/config/routes.rb")
 
@@ -104,7 +102,6 @@ destroy = destroy.join("")
 
 File.write("#{ARGV[0]}/app/controllers/#{ARGV[0]}/concerns/destroy_multiple.rb", destroy)
 
-
 history = File.readlines("#{ARGV[0]}/app/controllers/#{ARGV[0]}/concerns/history.rb")
 
 history[0] = "module #{ARGV[0].split('_').map(&:capitalize).join('')}\n"
@@ -135,8 +132,6 @@ generator_routes = generator_routes.join("")
 
 File.write("#{ARGV[0]}/lib/generators/keppler_scaffold/keppler_scaffold_generator.rb", generator_routes)
 
-
-
 layouts = File.readlines("#{ARGV[0]}/app/views/#{ARGV[0]}/admin/layouts/application.html.haml")
 
 layouts[8] ="        = render '#{ARGV[0]}/admin/layouts/navigation', q: @q, appearance: @appearance\n"
@@ -144,8 +139,6 @@ layouts[8] ="        = render '#{ARGV[0]}/admin/layouts/navigation', q: @q, appe
 layouts = layouts.join("")
 
 File.write("#{ARGV[0]}/app/views/#{ARGV[0]}/admin/layouts/application.html.haml", layouts)
-
-
 
 layouts = File.readlines("#{ARGV[0]}/app/views/#{ARGV[0]}/admin/layouts/_navigation.html.haml")
 
