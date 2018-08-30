@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    keppler (2.0.6)
+    keppler (2.0.7)
       httparty
       thor
 
