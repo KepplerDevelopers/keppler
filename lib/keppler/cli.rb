@@ -116,6 +116,11 @@ module Keppler
       system("rails c")
     end
 
+		desc 'version', 'Show keppler version'
+    def version
+      Keppler.VERSION
+    end
+
     desc "add module NAME attr:type attr:type", "Create a new keppler module"
     subcommand "add", Add
 
