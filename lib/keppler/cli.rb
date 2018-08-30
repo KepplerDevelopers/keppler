@@ -118,7 +118,7 @@ module Keppler
 
 		desc 'version', 'Show keppler version'
     def version
-    	Keppler::VERSION
+    	puts Keppler::VERSION
     end
 
     desc "add module NAME attr:type attr:type", "Create a new keppler module"
