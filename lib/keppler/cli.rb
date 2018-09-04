@@ -131,7 +131,7 @@ module Keppler
 
     def rocket_new(plugin_name)
       plugin_name = plugin_name.downcase
-      system("rails plugin new keppler_#{plugin_name} --mountable")
+      system("rails plugin new rockets/keppler_#{plugin_name} --mountable")
       puts "> Created scaffold"
       system("cd keppler_#{plugin_name} && scp -r $GEM_HOME/gems/keppler-#{Keppler::VERSION}/installer/plugins/generators lib/generators")
       puts "> Installed generators"
