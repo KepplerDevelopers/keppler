@@ -140,8 +140,6 @@ layouts = layouts.join("")
 
 File.write("rockets/#{ARGV[0]}/app/views/#{ARGV[0]}/admin/layouts/application.html.haml", layouts)
 
-layouts = File.readlines("rockets/#{ARGV[0]}/app/views/#{ARGV[0]}/admin/layouts/_navigation.html.haml")
-
 application = File.readlines("rockets/#{ARGV[0]}/app/controllers/#{ARGV[0]}/application_controller.rb")
 
 application.insert(3, "    before_action :user_signed_in?\n")
