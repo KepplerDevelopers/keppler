@@ -149,7 +149,7 @@ module Keppler
     def rocket_build
       rocket_name = File.basename(Dir.getwd)
       system("mkdir pkg")
-      system("zip -r pkg/#{rocket_name}.rocket *")
+      system("zip -r cd pkg/#{rocket_name}.rocket *")
     end
 	end
 end
