@@ -129,27 +129,27 @@ module Keppler
 
     desc 'rocket_new NAME', 'Create a new keppler plugin'
 
-    def rocket_new(plugin_name)
-      plugin_name = plugin_name.downcase
-      system("rails plugin new rockets/keppler_#{plugin_name} --mountable")
-      puts "> Created scaffold"
-      system("cd rockets/keppler_#{plugin_name} && scp -r $GEM_HOME/gems/keppler-#{Keppler::VERSION}/installer/plugins/generators lib/generators")
-      puts "> Installed generators"
-      system("mkdir rockets/keppler_#{plugin_name}/app/views/keppler_#{plugin_name}")
-      system("mkdir rockets/keppler_#{plugin_name}/app/views/keppler_#{plugin_name}/admin")
-      system("scp -r $GEM_HOME/gems/keppler-#{Keppler::VERSION}/installer/plugins/layouts rockets/keppler_#{plugin_name}/app/views/keppler_#{plugin_name}/admin/layouts")
-      system("ruby $GEM_HOME/gems/keppler-#{Keppler::VERSION}/installer/plugins/install.rb keppler_#{plugin_name}")
-      system("mkdir rockets/keppler_#{plugin_name}/app/policies")
-      puts "> Installed policies"
-      puts "#{plugin_name} has been created"
-    end
+    # def rocket_new(plugin_name)
+    #   plugin_name = plugin_name.downcase
+    #   system("rails plugin new rockets/keppler_#{plugin_name} --mountable")
+    #   puts "> Created scaffold"
+    #   system("cd rockets/keppler_#{plugin_name} && scp -r $GEM_HOME/gems/keppler-#{Keppler::VERSION}/installer/plugins/generators lib/generators")
+    #   puts "> Installed generators"
+    #   system("mkdir rockets/keppler_#{plugin_name}/app/views/keppler_#{plugin_name}")
+    #   system("mkdir rockets/keppler_#{plugin_name}/app/views/keppler_#{plugin_name}/admin")
+    #   system("scp -r $GEM_HOME/gems/keppler-#{Keppler::VERSION}/installer/plugins/layouts rockets/keppler_#{plugin_name}/app/views/keppler_#{plugin_name}/admin/layouts")
+    #   system("ruby $GEM_HOME/gems/keppler-#{Keppler::VERSION}/installer/plugins/install.rb keppler_#{plugin_name}")
+    #   system("mkdir rockets/keppler_#{plugin_name}/app/policies")
+    #   puts "> Installed policies"
+    #   puts "#{plugin_name} has been created"
+    # end
 
-    desc 'rocket_build', 'Build a keppler plugin'
+    # desc 'rocket_build', 'Build a keppler plugin'
 
-    def rocket_build
-      rocket_name = File.basename(Dir.getwd)
-      system("mkdir pkg")
-      system("zip -r cd pkg/#{rocket_name}.rocket *")
-    end
+    # def rocket_build
+    #   rocket_name = File.basename(Dir.getwd)
+    #   system("mkdir pkg")
+    #   system("zip -r cd pkg/#{rocket_name}.rocket *")
+    # end
 	end
 end
