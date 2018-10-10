@@ -1,0 +1,8 @@
+modules:
+  keppler_languages:
+     name: Languages
+     model: KepplerLanguagesLanguage
+     actions: [
+       'index', 'create', 'update',
+       'destroy'
+     ]

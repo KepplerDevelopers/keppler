@@ -11,7 +11,7 @@
   .content-wrapper {
     background: $gray-lighten;
     min-height: 100vh;
-    padding-top: 60px;
+    padding-top: 70px;
   }
 }
 
@@ -70,8 +70,8 @@
 }
 
 .appearance-img {
-  height: 350px !important;
-  width: 100% !important;
+  height: 350px !important; // scss-lint:disable ImportantRule
+  width: 100% !important; // scss-lint:disable ImportantRule
 }
 
 .minicolors-theme-default .minicolors-input {
@@ -85,13 +85,6 @@
   background: $keppler-color;
 }
 
-//Noty
-.noty-bar {
-  background-color: $almost-black;
-  color: $white;
-  text-align: center;
-}
-
 .content-wrapper,
 .right-side {
   background-color: $almost-white;
@@ -102,5 +95,30 @@
 .box-body {
   @include respond-to(xs) {
     padding: 0 0 20px;
+  }
+
+  thead {
+    background-color: $ededed;
+
+    th {
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: .1px;
+      text-transform: uppercase;
+    }
+
+    th:first-child {
+      padding: 10px 20px;
+    }
+  }
+}
+
+.form-control {
+  border-radius: 15px;
+}
+
+.box-header {
+  @include respond-to(xs) {
+    padding: 10px 0;
   }
 }

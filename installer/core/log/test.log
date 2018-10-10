@@ -1,0 +1,1120 @@
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRole Load (0.5ms)[0m  [1m[34mSELECT "roles".* FROM "roles" WHERE "roles"."id" = $1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRole Exists (29.7ms)[0m  [1m[34mSELECT  1 AS one FROM "roles" WHERE "roles"."name" = $1 AND "roles"."id" != $2 LIMIT $3[0m  [["name", "keppler_admin"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."deleted_at" IS NULL LIMIT $2[0m  [["email", "lera@doylekub.info"], ["LIMIT", 1]]
+  [1m[36mUser Create (94.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "permalink", "username", "email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Lourdes"], ["permalink", "lourdes-408c2c77"], ["username", "Pedro"], ["email", "lera@doylekub.info"], ["encrypted_password", "$2a$04$PvXjtd5EoiHOvPyW7KKWdecrI6j.XewRtkvc0.Ft4VOJ.KUJJfURO"], ["created_at", "2018-09-14 14:12:11.890470"], ["updated_at", "2018-09-14 14:12:11.890470"]]
+  [1m[36mPublicActivity::Activity Create (1.2ms)[0m  [1m[32mINSERT INTO "activities" ("trackable_type", "trackable_id", "key", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trackable_type", "User"], ["trackable_id", 4], ["key", "user.create"], ["created_at", "2018-09-14 14:12:12.038946"], ["updated_at", "2018-09-14 14:12:12.038946"]]
+  [1m[36mUser::HABTM_Roles Create (20.6ms)[0m  [1m[32mINSERT INTO "users_roles" ("user_id", "role_id") VALUES ($1, $2)[0m  [["user_id", 4], ["role_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Admin::AdminController#root as HTML
+  [1m[36mSetting Load (2.9ms)[0m  [1m[34mSELECT  "settings".* FROM "settings" ORDER BY "settings"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mAppearance Load (0.6ms)[0m  [1m[34mSELECT "appearances".* FROM "appearances" WHERE "appearances"."setting_id" = $1[0m  [["setting_id", "1"]]
+  [1m[36mSocialAccount Load (1.5ms)[0m  [1m[34mSELECT "social_accounts".* FROM "social_accounts" WHERE "social_accounts"."setting_id" = $1[0m  [["setting_id", 1]]
+  [1m[36mKepplerLanguages::Language Load (0.7ms)[0m  [1m[34mSELECT "keppler_languages_languages".* FROM "keppler_languages_languages"[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mRole Load (0.8ms)[0m  [1m[34mSELECT  "roles".* FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = $1 ORDER BY "roles"."id" ASC LIMIT $2[0m  [["user_id", 4], ["LIMIT", 1]]
+  [1m[36mSetting Load (0.4ms)[0m  [1m[34mSELECT  "settings".* FROM "settings" ORDER BY "settings"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Redirected to http://test.host/admin/dashboard
+Completed 302 Found in 398ms (ActiveRecord: 33.2ms)
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRole Load (0.5ms)[0m  [1m[34mSELECT "roles".* FROM "roles" WHERE "roles"."id" = $1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRole Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "roles" WHERE "roles"."name" = $1 AND "roles"."id" != $2 LIMIT $3[0m  [["name", "keppler_admin"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."deleted_at" IS NULL LIMIT $2[0m  [["email", "timothy@shieldsruel.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (4.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "permalink", "username", "email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Adán"], ["permalink", "adan-75fe6d62"], ["username", "Emilia"], ["email", "timothy@shieldsruel.com"], ["encrypted_password", "$2a$04$Fs.r4uXTQEED.xUYi..CVu8EablFUD9ucMOIUQ8LE6K7GQ5KTYy/."], ["created_at", "2018-09-14 14:12:12.478048"], ["updated_at", "2018-09-14 14:12:12.478048"]]
+  [1m[36mPublicActivity::Activity Create (1.6ms)[0m  [1m[32mINSERT INTO "activities" ("trackable_type", "trackable_id", "key", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trackable_type", "User"], ["trackable_id", 5], ["key", "user.create"], ["created_at", "2018-09-14 14:12:12.504715"], ["updated_at", "2018-09-14 14:12:12.504715"]]
+  [1m[36mUser::HABTM_Roles Create (1.3ms)[0m  [1m[32mINSERT INTO "users_roles" ("user_id", "role_id") VALUES ($1, $2)[0m  [["user_id", 5], ["role_id", 1]]
+  [1m[35m (1.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Admin::UsersController#filter_by_role as JS
+  [1m[36mSetting Load (1.6ms)[0m  [1m[34mSELECT  "settings".* FROM "settings" ORDER BY "settings"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mAppearance Load (1.4ms)[0m  [1m[34mSELECT "appearances".* FROM "appearances" WHERE "appearances"."setting_id" = $1[0m  [["setting_id", "1"]]
+  [1m[36mSocialAccount Load (1.1ms)[0m  [1m[34mSELECT "social_accounts".* FROM "social_accounts" WHERE "social_accounts"."setting_id" = $1[0m  [["setting_id", 1]]
+  [1m[36mKepplerLanguages::Language Load (3.5ms)[0m  [1m[34mSELECT "keppler_languages_languages".* FROM "keppler_languages_languages"[0m
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mRole Load (1.3ms)[0m  [1m[34mSELECT  "roles".* FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = $1 ORDER BY "roles"."id" ASC LIMIT $2[0m  [["user_id", 5], ["LIMIT", 1]]
+  [1m[36mSetting Load (0.4ms)[0m  [1m[34mSELECT  "settings".* FROM "settings" ORDER BY "settings"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (13.7ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT DISTINCT "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND (id != 1) ORDER BY "users"."created_at" DESC) subquery_for_count[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  DISTINCT "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND (id != 1) ORDER BY "users"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mRole Load (0.5ms)[0m  [1m[34mSELECT  "roles".* FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = $1 ORDER BY "roles"."id" ASC LIMIT $2[0m  [["user_id", 5], ["LIMIT", 1]]
+  [1m[36mRole Load (0.9ms)[0m  [1m[34mSELECT  "roles".* FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = $1 ORDER BY "roles"."id" ASC LIMIT $2[0m  [["user_id", 3], ["LIMIT", 1]]
+  Rendering admin/users/filter_by_role.js.erb
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered admin/users/filter_by_role.js.erb (0.4ms)
+Completed 200 OK in 295ms (Views: 156.1ms | ActiveRecord: 28.8ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCustomize Create (77.0ms)[0m  [1m[32mINSERT INTO "customizes" ("file", "installed", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["file", nil], ["installed", true], ["created_at", "2018-09-14 14:12:12.989121"], ["updated_at", "2018-09-14 14:12:12.989121"]]
+  [1m[36mPublicActivity::Activity Create (0.6ms)[0m  [1m[32mINSERT INTO "activities" ("trackable_type", "trackable_id", "key", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trackable_type", "Customize"], ["trackable_id", 2], ["key", "customize.create"], ["created_at", "2018-09-14 14:12:13.068693"], ["updated_at", "2018-09-14 14:12:13.068693"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRole Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "roles" WHERE "roles"."name" = $1 AND "roles"."id" != $2 LIMIT $3[0m  [["name", "keppler_admin"], ["id", 1001], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRole Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "roles" WHERE "roles"."name" = $1 LIMIT $2[0m  [["name", "Martín"], ["LIMIT", 1]]
+  [1m[36mRole Create (17.9ms)[0m  [1m[32mINSERT INTO "roles" ("name", "position", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Martín"], ["position", 1], ["created_at", "2018-09-14 14:12:13.109536"], ["updated_at", "2018-09-14 14:12:13.109536"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mPermission Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "permissions" WHERE "permissions"."role_id" = $1 LIMIT $2[0m  [["role_id", 5], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRole Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "roles" WHERE "roles"."name" = $1 LIMIT $2[0m  [["name", "Sara"], ["LIMIT", 1]]
+  [1m[36mRole Create (0.7ms)[0m  [1m[32mINSERT INTO "roles" ("name", "position", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Sara"], ["position", 1], ["created_at", "2018-09-14 14:12:13.137172"], ["updated_at", "2018-09-14 14:12:13.137172"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mPermission Load (0.7ms)[0m  [1m[34mSELECT  "permissions".* FROM "permissions" WHERE "permissions"."role_id" = $1 ORDER BY "permissions"."id" ASC LIMIT $2[0m  [["role_id", 6], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRole Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "roles" WHERE "roles"."name" = $1 LIMIT $2[0m  [["name", "Julio"], ["LIMIT", 1]]
+  [1m[36mRole Create (0.5ms)[0m  [1m[32mINSERT INTO "roles" ("name", "position", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Julio"], ["position", 1], ["created_at", "2018-09-14 14:12:13.149977"], ["updated_at", "2018-09-14 14:12:13.149977"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRole Load (0.3ms)[0m  [1m[34mSELECT "roles".* FROM "roles" WHERE "roles"."id" = $1[0m  [["id", 7]]
+  [1m[36mPermission Create (35.8ms)[0m  [1m[32mINSERT INTO "permissions" ("modules", "role_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["modules", "{\"Script\":{\"actions\":[\"index\"]}}"], ["role_id", 7], ["created_at", "2018-09-14 14:12:13.156172"], ["updated_at", "2018-09-14 14:12:13.156172"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mPermission Load (0.4ms)[0m  [1m[34mSELECT  "permissions".* FROM "permissions" WHERE "permissions"."role_id" = $1 ORDER BY "permissions"."id" ASC LIMIT $2[0m  [["role_id", 7], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.7ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRole Exists (10.7ms)[0m  [1m[34mSELECT  1 AS one FROM "roles" WHERE "roles"."name" = $1 LIMIT $2[0m  [["name", "Marco Antonio"], ["LIMIT", 1]]
+  [1m[36mRole Create (1.4ms)[0m  [1m[32mINSERT INTO "roles" ("name", "position", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Marco Antonio"], ["position", 1], ["created_at", "2018-09-14 14:12:13.239439"], ["updated_at", "2018-09-14 14:12:13.239439"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRole Load (0.5ms)[0m  [1m[34mSELECT "roles".* FROM "roles" WHERE "roles"."id" = $1[0m  [["id", 8]]
+  [1m[36mPermission Create (0.7ms)[0m  [1m[32mINSERT INTO "permissions" ("modules", "role_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["modules", "{\"Script\":{\"actions\":[\"index\"]}}"], ["role_id", 8], ["created_at", "2018-09-14 14:12:13.249719"], ["updated_at", "2018-09-14 14:12:13.249719"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mPermission Load (0.5ms)[0m  [1m[34mSELECT  "permissions".* FROM "permissions" WHERE "permissions"."role_id" = $1 ORDER BY "permissions"."id" ASC LIMIT $2[0m  [["role_id", 8], ["LIMIT", 1]]
+  [1m[36mPermission Load (0.5ms)[0m  [1m[34mSELECT  "permissions".* FROM "permissions" WHERE "permissions"."role_id" = $1 ORDER BY "permissions"."id" ASC LIMIT $2[0m  [["role_id", 8], ["LIMIT", 1]]
+  [1m[36mPermission Load (0.5ms)[0m  [1m[34mSELECT  "permissions".* FROM "permissions" WHERE "permissions"."role_id" = $1 ORDER BY "permissions"."id" ASC LIMIT $2[0m  [["role_id", 8], ["LIMIT", 1]]
+  [1m[36mPermission Load (0.6ms)[0m  [1m[34mSELECT  "permissions".* FROM "permissions" WHERE "permissions"."role_id" = $1 ORDER BY "permissions"."id" ASC LIMIT $2[0m  [["role_id", 8], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPermission Update (0.8ms)[0m  [1m[33mUPDATE "permissions" SET "modules" = $1, "updated_at" = $2 WHERE "permissions"."id" = $3[0m  [["modules", "{\"Script\":{\"actions\":[]}}"], ["updated_at", "2018-09-14 14:12:13.260512"], ["id", 3]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mPermission Load (0.4ms)[0m  [1m[34mSELECT  "permissions".* FROM "permissions" WHERE "permissions"."role_id" = $1 ORDER BY "permissions"."id" ASC LIMIT $2[0m  [["role_id", 8], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRole Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "roles" WHERE "roles"."name" = $1 LIMIT $2[0m  [["name", "Lilia"], ["LIMIT", 1]]
+  [1m[36mRole Create (1.0ms)[0m  [1m[32mINSERT INTO "roles" ("name", "position", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Lilia"], ["position", 1], ["created_at", "2018-09-14 14:12:13.268415"], ["updated_at", "2018-09-14 14:12:13.268415"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRole Load (0.4ms)[0m  [1m[34mSELECT "roles".* FROM "roles" WHERE "roles"."id" = $1[0m  [["id", 9]]
+  [1m[36mPermission Create (0.7ms)[0m  [1m[32mINSERT INTO "permissions" ("modules", "role_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["modules", "{\"Script\":{\"actions\":[\"index\"]}}"], ["role_id", 9], ["created_at", "2018-09-14 14:12:13.273256"], ["updated_at", "2018-09-14 14:12:13.273256"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mPermission Load (0.4ms)[0m  [1m[34mSELECT  "permissions".* FROM "permissions" WHERE "permissions"."role_id" = $1 ORDER BY "permissions"."id" ASC LIMIT $2[0m  [["role_id", 9], ["LIMIT", 1]]
+  [1m[36mPermission Load (0.6ms)[0m  [1m[34mSELECT  "permissions".* FROM "permissions" WHERE "permissions"."role_id" = $1 ORDER BY "permissions"."id" ASC LIMIT $2[0m  [["role_id", 9], ["LIMIT", 1]]
+  [1m[36mPermission Load (0.5ms)[0m  [1m[34mSELECT  "permissions".* FROM "permissions" WHERE "permissions"."role_id" = $1 ORDER BY "permissions"."id" ASC LIMIT $2[0m  [["role_id", 9], ["LIMIT", 1]]
+  [1m[36mPermission Load (0.4ms)[0m  [1m[34mSELECT  "permissions".* FROM "permissions" WHERE "permissions"."role_id" = $1 ORDER BY "permissions"."id" ASC LIMIT $2[0m  [["role_id", 9], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPermission Update (0.8ms)[0m  [1m[33mUPDATE "permissions" SET "modules" = $1, "updated_at" = $2 WHERE "permissions"."id" = $3[0m  [["modules", "{\"Script\":{\"actions\":[]}}"], ["updated_at", "2018-09-14 14:12:13.282220"], ["id", 4]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mPermission Load (0.4ms)[0m  [1m[34mSELECT  "permissions".* FROM "permissions" WHERE "permissions"."role_id" = $1 ORDER BY "permissions"."id" ASC LIMIT $2[0m  [["role_id", 9], ["LIMIT", 1]]
+  [1m[36mPermission Load (0.6ms)[0m  [1m[34mSELECT  "permissions".* FROM "permissions" WHERE "permissions"."role_id" = $1 ORDER BY "permissions"."id" ASC LIMIT $2[0m  [["role_id", 9], ["LIMIT", 1]]
+  [1m[36mPermission Load (0.4ms)[0m  [1m[34mSELECT  "permissions".* FROM "permissions" WHERE "permissions"."role_id" = $1 ORDER BY "permissions"."id" ASC LIMIT $2[0m  [["role_id", 9], ["LIMIT", 1]]
+  [1m[36mPermission Load (0.4ms)[0m  [1m[34mSELECT  "permissions".* FROM "permissions" WHERE "permissions"."role_id" = $1 ORDER BY "permissions"."id" ASC LIMIT $2[0m  [["role_id", 9], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPermission Update (0.9ms)[0m  [1m[33mUPDATE "permissions" SET "modules" = $1, "updated_at" = $2 WHERE "permissions"."id" = $3[0m  [["modules", "{\"Script\":{\"actions\":[\"index\"]}}"], ["updated_at", "2018-09-14 14:12:13.290670"], ["id", 4]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mPermission Load (0.6ms)[0m  [1m[34mSELECT  "permissions".* FROM "permissions" WHERE "permissions"."role_id" = $1 ORDER BY "permissions"."id" ASC LIMIT $2[0m  [["role_id", 9], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.6ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRole Exists (2.3ms)[0m  [1m[34mSELECT  1 AS one FROM "roles" WHERE "roles"."name" = $1 LIMIT $2[0m  [["name", "Gregorio"], ["LIMIT", 1]]
+  [1m[36mRole Create (2.0ms)[0m  [1m[32mINSERT INTO "roles" ("name", "position", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Gregorio"], ["position", 1], ["created_at", "2018-09-14 14:12:13.302964"], ["updated_at", "2018-09-14 14:12:13.302964"]]
+  [1m[35m (0.8ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRole Load (1.6ms)[0m  [1m[34mSELECT "roles".* FROM "roles" WHERE "roles"."id" = $1[0m  [["id", 10]]
+  [1m[36mPermission Create (0.6ms)[0m  [1m[32mINSERT INTO "permissions" ("modules", "role_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["modules", "{\"User\":{\"actions\":[\"index\"]}}"], ["role_id", 10], ["created_at", "2018-09-14 14:12:13.310331"], ["updated_at", "2018-09-14 14:12:13.310331"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mPermission Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "permissions" WHERE "permissions"."role_id" = $1 LIMIT $2[0m  [["role_id", 10], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRole Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "roles" WHERE "roles"."name" = $1 LIMIT $2[0m  [["name", "Mariano"], ["LIMIT", 1]]
+  [1m[36mRole Create (0.4ms)[0m  [1m[32mINSERT INTO "roles" ("name", "position", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Mariano"], ["position", 1], ["created_at", "2018-09-14 14:12:13.318022"], ["updated_at", "2018-09-14 14:12:13.318022"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mPermission Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "permissions" WHERE "permissions"."role_id" = $1 LIMIT $2[0m  [["role_id", 11], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRole Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "roles" WHERE "roles"."name" = $1 LIMIT $2[0m  [["name", "Cristina"], ["LIMIT", 1]]
+  [1m[36mRole Create (0.4ms)[0m  [1m[32mINSERT INTO "roles" ("name", "position", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Cristina"], ["position", 1], ["created_at", "2018-09-14 14:12:13.327555"], ["updated_at", "2018-09-14 14:12:13.327555"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRole Load (0.5ms)[0m  [1m[34mSELECT "roles".* FROM "roles" WHERE "roles"."id" = $1[0m  [["id", 12]]
+  [1m[36mPermission Create (0.5ms)[0m  [1m[32mINSERT INTO "permissions" ("modules", "role_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["modules", "{\"Script\":{\"actions\":[\"index\"]}}"], ["role_id", 12], ["created_at", "2018-09-14 14:12:13.331677"], ["updated_at", "2018-09-14 14:12:13.331677"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mPermission Load (0.4ms)[0m  [1m[34mSELECT  "permissions".* FROM "permissions" WHERE "permissions"."role_id" = $1 ORDER BY "permissions"."id" ASC LIMIT $2[0m  [["role_id", 12], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mScript Update All (0.8ms)[0m  [1m[33mUPDATE "scripts" SET "position" = ("scripts"."position" + 1), "updated_at" = '2018-09-14 14:12:13.362221' WHERE (1 = 1) AND ("scripts"."position" >= 1)[0m
+  [1m[36mScript Create (10.7ms)[0m  [1m[32mINSERT INTO "scripts" ("name", "script", "url", "position", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Claudia"], ["script", "MyStrig"], ["url", "www.example.com"], ["position", 1], ["created_at", "2018-09-14 14:12:13.361281"], ["updated_at", "2018-09-14 14:12:13.361281"]]
+  [1m[36mPublicActivity::Activity Create (0.6ms)[0m  [1m[32mINSERT INTO "activities" ("trackable_type", "trackable_id", "key", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trackable_type", "Script"], ["trackable_id", 1], ["key", "script.create"], ["created_at", "2018-09-14 14:12:13.377286"], ["updated_at", "2018-09-14 14:12:13.377286"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mScript Load (0.3ms)[0m  [1m[34mSELECT  "scripts".* FROM "scripts" WHERE "scripts"."url" = $1 LIMIT $2[0m  [["url", "www.example.com"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.9ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mScript Update All (0.4ms)[0m  [1m[33mUPDATE "scripts" SET "position" = ("scripts"."position" + 1), "updated_at" = '2018-09-14 14:12:13.386856' WHERE (1 = 1) AND ("scripts"."position" >= 1)[0m
+  [1m[36mScript Create (0.3ms)[0m  [1m[32mINSERT INTO "scripts" ("name", "script", "url", "position", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Daniela"], ["script", "MyStrig"], ["url", "www.keppleradmin.com"], ["position", 1], ["created_at", "2018-09-14 14:12:13.386243"], ["updated_at", "2018-09-14 14:12:13.386243"]]
+  [1m[36mPublicActivity::Activity Create (0.4ms)[0m  [1m[32mINSERT INTO "activities" ("trackable_type", "trackable_id", "key", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trackable_type", "Script"], ["trackable_id", 2], ["key", "script.create"], ["created_at", "2018-09-14 14:12:13.390117"], ["updated_at", "2018-09-14 14:12:13.390117"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mScript Load (0.3ms)[0m  [1m[34mSELECT  "scripts".* FROM "scripts" WHERE "scripts"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRole Load (0.3ms)[0m  [1m[34mSELECT "roles".* FROM "roles" WHERE "roles"."id" = $1[0m  [["id", 1]]
+  [1m[36mRole Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "roles" WHERE "roles"."name" = $1 AND "roles"."id" != $2 LIMIT $3[0m  [["name", "keppler_admin"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."deleted_at" IS NULL LIMIT $2[0m  [["email", "margaretta.ohara@schuster.org"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRole Load (0.3ms)[0m  [1m[34mSELECT "roles".* FROM "roles" WHERE "roles"."id" = $1[0m  [["id", 1]]
+  [1m[36mRole Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "roles" WHERE "roles"."name" = $1 AND "roles"."id" != $2 LIMIT $3[0m  [["name", "keppler_admin"], ["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRole Load (0.3ms)[0m  [1m[34mSELECT "roles".* FROM "roles" WHERE 1=0[0m
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."deleted_at" IS NULL LIMIT $2[0m  [["email", "angelica@ko.name"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL ORDER BY "users"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mRole Load (0.7ms)[0m  [1m[34mSELECT  "roles".* FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = $1 ORDER BY "roles"."id" ASC LIMIT $2[0m  [["user_id", 3], ["LIMIT", 1]]
+  [1m[36mRole Load (0.7ms)[0m  [1m[34mSELECT  "roles".* FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = $1 ORDER BY "roles"."id" ASC LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  [1m[36mRole Load (0.3ms)[0m  [1m[34mSELECT  "roles".* FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = $1 ORDER BY "roles"."id" ASC LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRole Load (0.3ms)[0m  [1m[34mSELECT "roles".* FROM "roles" WHERE "roles"."id" = $1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRole Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "roles" WHERE "roles"."name" = $1 AND "roles"."id" != $2 LIMIT $3[0m  [["name", "keppler_admin"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."deleted_at" IS NULL LIMIT $2[0m  [["email", "felipe_bernhard@kochbradtke.biz"], ["LIMIT", 1]]
+  [1m[36mUser Create (3.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "permalink", "username", "email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Germán"], ["permalink", "german-55e6cc14"], ["username", "Verónica"], ["email", "felipe_bernhard@kochbradtke.biz"], ["encrypted_password", "$2a$04$Z0nsRvJA2E1AttG9fGtTDe/nw/NvRWbz1qxJcw08A7QKEASWw/r9u"], ["created_at", "2018-09-14 14:12:13.464558"], ["updated_at", "2018-09-14 14:12:13.464558"]]
+  [1m[36mPublicActivity::Activity Create (2.9ms)[0m  [1m[32mINSERT INTO "activities" ("trackable_type", "trackable_id", "key", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trackable_type", "User"], ["trackable_id", 6], ["key", "user.create"], ["created_at", "2018-09-14 14:12:13.470388"], ["updated_at", "2018-09-14 14:12:13.470388"]]
+  [1m[36mUser::HABTM_Roles Create (1.2ms)[0m  [1m[32mINSERT INTO "users_roles" ("user_id", "role_id") VALUES ($1, $2)[0m  [["user_id", 6], ["role_id", 1]]
+  [1m[35m (0.7ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (1.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRole Load (0.4ms)[0m  [1m[34mSELECT "roles".* FROM "roles" WHERE "roles"."id" = $1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRole Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "roles" WHERE "roles"."name" = $1 AND "roles"."id" != $2 LIMIT $3[0m  [["name", "keppler_admin"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."deleted_at" IS NULL LIMIT $2[0m  [["email", "trisha_runte@dicki.net"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "permalink", "username", "email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Pedro"], ["permalink", "pedro-18047344"], ["username", "Raúl"], ["email", "trisha_runte@dicki.net"], ["encrypted_password", "$2a$04$6sIsO5VUkDJSrDWO8iKtkOc4C608U23FMyoEI0TwXVGta5r9.S1Im"], ["created_at", "2018-09-14 14:12:13.490369"], ["updated_at", "2018-09-14 14:12:13.490369"]]
+  [1m[36mPublicActivity::Activity Create (0.5ms)[0m  [1m[32mINSERT INTO "activities" ("trackable_type", "trackable_id", "key", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trackable_type", "User"], ["trackable_id", 7], ["key", "user.create"], ["created_at", "2018-09-14 14:12:13.493081"], ["updated_at", "2018-09-14 14:12:13.493081"]]
+  [1m[36mUser::HABTM_Roles Create (0.3ms)[0m  [1m[32mINSERT INTO "users_roles" ("user_id", "role_id") VALUES ($1, $2)[0m  [["user_id", 7], ["role_id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRole Load (0.3ms)[0m  [1m[34mSELECT "roles".* FROM "roles" WHERE "roles"."id" = $1[0m  [["id", 2]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRole Load (1.5ms)[0m  [1m[34mSELECT "roles".* FROM "roles" WHERE "roles"."id" = $1[0m  [["id", 1]]
+  [1m[35m (0.7ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRole Exists (3.3ms)[0m  [1m[34mSELECT  1 AS one FROM "roles" WHERE "roles"."name" = $1 AND "roles"."id" != $2 LIMIT $3[0m  [["name", "keppler_admin"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Exists (2.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."deleted_at" IS NULL LIMIT $2[0m  [["email", "adele@heidenreichdooley.org"], ["LIMIT", 1]]
+  [1m[36mUser Create (2.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "permalink", "username", "email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Susana"], ["permalink", "susana-fb107ba3"], ["username", "Sancho"], ["email", "adele@heidenreichdooley.org"], ["encrypted_password", "$2a$04$5pKqxV/xmRrs2E.nrgAmNe1WdkDuIdDnI90mGU1zjntWfDzh3KBJ6"], ["created_at", "2018-09-14 14:12:13.521606"], ["updated_at", "2018-09-14 14:12:13.521606"]]
+  [1m[36mPublicActivity::Activity Create (2.1ms)[0m  [1m[32mINSERT INTO "activities" ("trackable_type", "trackable_id", "key", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trackable_type", "User"], ["trackable_id", 8], ["key", "user.create"], ["created_at", "2018-09-14 14:12:13.525986"], ["updated_at", "2018-09-14 14:12:13.525986"]]
+  [1m[36mUser::HABTM_Roles Create (2.1ms)[0m  [1m[32mINSERT INTO "users_roles" ("user_id", "role_id") VALUES ($1, $2)[0m  [["user_id", 8], ["role_id", 1]]
+  [1m[35m (0.7ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (10.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRole Load (5.9ms)[0m  [1m[34mSELECT "roles".* FROM "roles" WHERE "roles"."id" = $1[0m  [["id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRole Exists (28.2ms)[0m  [1m[34mSELECT  1 AS one FROM "roles" WHERE "roles"."name" = $1 AND "roles"."id" != $2 LIMIT $3[0m  [["name", "keppler_admin"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."deleted_at" IS NULL LIMIT $2[0m  [["email", "loyal.rowe@pollich.info"], ["LIMIT", 1]]
+  [1m[36mUser Create (172.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "permalink", "username", "email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Ramiro"], ["permalink", "ramiro-efacfefb"], ["username", "Jacobo"], ["email", "loyal.rowe@pollich.info"], ["encrypted_password", "$2a$04$YZORUg5DJGPFIGVf0y2Dx.dsKZXHQ0wMadGAzxTPSSs1rIDjRgu7a"], ["created_at", "2018-09-14 19:52:08.094788"], ["updated_at", "2018-09-14 19:52:08.094788"]]
+  [1m[36mPublicActivity::Activity Create (46.7ms)[0m  [1m[32mINSERT INTO "activities" ("trackable_type", "trackable_id", "key", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trackable_type", "User"], ["trackable_id", 9], ["key", "user.create"], ["created_at", "2018-09-14 19:52:08.308767"], ["updated_at", "2018-09-14 19:52:08.308767"]]
+  [1m[36mUser::HABTM_Roles Create (7.9ms)[0m  [1m[32mINSERT INTO "users_roles" ("user_id", "role_id") VALUES ($1, $2)[0m  [["user_id", 9], ["role_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Admin::AdminController#root as HTML
+  [1m[36mSetting Load (0.4ms)[0m  [1m[34mSELECT  "settings".* FROM "settings" ORDER BY "settings"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mAppearance Load (16.1ms)[0m  [1m[34mSELECT "appearances".* FROM "appearances" WHERE "appearances"."setting_id" = $1[0m  [["setting_id", "1"]]
+  [1m[36mSocialAccount Load (1.8ms)[0m  [1m[34mSELECT "social_accounts".* FROM "social_accounts" WHERE "social_accounts"."setting_id" = $1[0m  [["setting_id", 1]]
+  [1m[36mKepplerLanguages::Language Load (1.1ms)[0m  [1m[34mSELECT "keppler_languages_languages".* FROM "keppler_languages_languages"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mRole Load (0.6ms)[0m  [1m[34mSELECT  "roles".* FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = $1 ORDER BY "roles"."id" ASC LIMIT $2[0m  [["user_id", 9], ["LIMIT", 1]]
+  [1m[36mSetting Load (0.7ms)[0m  [1m[34mSELECT  "settings".* FROM "settings" ORDER BY "settings"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Redirected to http://test.host/admin/dashboard
+Completed 302 Found in 210ms (ActiveRecord: 81.1ms)
+  [1m[35m (7.8ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRole Load (1.3ms)[0m  [1m[34mSELECT "roles".* FROM "roles" WHERE "roles"."id" = $1[0m  [["id", 1]]
+  [1m[35m (1.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRole Exists (1.5ms)[0m  [1m[34mSELECT  1 AS one FROM "roles" WHERE "roles"."name" = $1 AND "roles"."id" != $2 LIMIT $3[0m  [["name", "keppler_admin"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Exists (1.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."deleted_at" IS NULL LIMIT $2[0m  [["email", "dawson@reynoldsparisian.name"], ["LIMIT", 1]]
+  [1m[36mUser Create (1.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "permalink", "username", "email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Juana"], ["permalink", "juana-afa3d24b"], ["username", "Soledad"], ["email", "dawson@reynoldsparisian.name"], ["encrypted_password", "$2a$04$GnpJycJzt6JVKeAaTYCSgOucjO9BiYNqGjClX/2yUCfoEAPUW0EZe"], ["created_at", "2018-09-14 19:52:08.678563"], ["updated_at", "2018-09-14 19:52:08.678563"]]
+  [1m[36mPublicActivity::Activity Create (1.4ms)[0m  [1m[32mINSERT INTO "activities" ("trackable_type", "trackable_id", "key", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trackable_type", "User"], ["trackable_id", 10], ["key", "user.create"], ["created_at", "2018-09-14 19:52:08.700861"], ["updated_at", "2018-09-14 19:52:08.700861"]]
+  [1m[36mUser::HABTM_Roles Create (1.4ms)[0m  [1m[32mINSERT INTO "users_roles" ("user_id", "role_id") VALUES ($1, $2)[0m  [["user_id", 10], ["role_id", 1]]
+  [1m[35m (0.9ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Admin::UsersController#filter_by_role as JS
+  [1m[36mSetting Load (0.4ms)[0m  [1m[34mSELECT  "settings".* FROM "settings" ORDER BY "settings"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mAppearance Load (0.3ms)[0m  [1m[34mSELECT "appearances".* FROM "appearances" WHERE "appearances"."setting_id" = $1[0m  [["setting_id", "1"]]
+  [1m[36mSocialAccount Load (0.3ms)[0m  [1m[34mSELECT "social_accounts".* FROM "social_accounts" WHERE "social_accounts"."setting_id" = $1[0m  [["setting_id", 1]]
+  [1m[36mKepplerLanguages::Language Load (0.3ms)[0m  [1m[34mSELECT "keppler_languages_languages".* FROM "keppler_languages_languages"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mRole Load (0.4ms)[0m  [1m[34mSELECT  "roles".* FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = $1 ORDER BY "roles"."id" ASC LIMIT $2[0m  [["user_id", 10], ["LIMIT", 1]]
+  [1m[36mSetting Load (0.2ms)[0m  [1m[34mSELECT  "settings".* FROM "settings" ORDER BY "settings"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (51.6ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT DISTINCT "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND (id != 1) ORDER BY "users"."created_at" DESC) subquery_for_count[0m
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  DISTINCT "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND (id != 1) ORDER BY "users"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mRole Load (0.7ms)[0m  [1m[34mSELECT  "roles".* FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = $1 ORDER BY "roles"."id" ASC LIMIT $2[0m  [["user_id", 10], ["LIMIT", 1]]
+  [1m[36mRole Load (0.6ms)[0m  [1m[34mSELECT  "roles".* FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = $1 ORDER BY "roles"."id" ASC LIMIT $2[0m  [["user_id", 3], ["LIMIT", 1]]
+  Rendering admin/users/filter_by_role.js.erb
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered admin/users/filter_by_role.js.erb (0.3ms)
+Completed 200 OK in 174ms (Views: 76.8ms | ActiveRecord: 56.7ms)
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCustomize Create (53.7ms)[0m  [1m[32mINSERT INTO "customizes" ("file", "installed", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["file", nil], ["installed", true], ["created_at", "2018-09-14 19:52:08.987998"], ["updated_at", "2018-09-14 19:52:08.987998"]]
+  [1m[36mPublicActivity::Activity Create (0.5ms)[0m  [1m[32mINSERT INTO "activities" ("trackable_type", "trackable_id", "key", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trackable_type", "Customize"], ["trackable_id", 3], ["key", "customize.create"], ["created_at", "2018-09-14 19:52:09.044033"], ["updated_at", "2018-09-14 19:52:09.044033"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRole Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "roles" WHERE "roles"."name" = $1 AND "roles"."id" != $2 LIMIT $3[0m  [["name", "keppler_admin"], ["id", 1001], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRole Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "roles" WHERE "roles"."name" = $1 LIMIT $2[0m  [["name", "Alfonso"], ["LIMIT", 1]]
+  [1m[36mRole Create (0.4ms)[0m  [1m[32mINSERT INTO "roles" ("name", "position", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Alfonso"], ["position", 1], ["created_at", "2018-09-14 19:52:09.099383"], ["updated_at", "2018-09-14 19:52:09.099383"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mPermission Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "permissions" WHERE "permissions"."role_id" = $1 LIMIT $2[0m  [["role_id", 13], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRole Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "roles" WHERE "roles"."name" = $1 LIMIT $2[0m  [["name", "Concepción"], ["LIMIT", 1]]
+  [1m[36mRole Create (0.3ms)[0m  [1m[32mINSERT INTO "roles" ("name", "position", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Concepción"], ["position", 1], ["created_at", "2018-09-14 19:52:09.105462"], ["updated_at", "2018-09-14 19:52:09.105462"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mPermission Load (0.2ms)[0m  [1m[34mSELECT  "permissions".* FROM "permissions" WHERE "permissions"."role_id" = $1 ORDER BY "permissions"."id" ASC LIMIT $2[0m  [["role_id", 14], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRole Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "roles" WHERE "roles"."name" = $1 LIMIT $2[0m  [["name", "Ernesto"], ["LIMIT", 1]]
+  [1m[36mRole Create (0.3ms)[0m  [1m[32mINSERT INTO "roles" ("name", "position", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Ernesto"], ["position", 1], ["created_at", "2018-09-14 19:52:09.110902"], ["updated_at", "2018-09-14 19:52:09.110902"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRole Load (0.4ms)[0m  [1m[34mSELECT "roles".* FROM "roles" WHERE "roles"."id" = $1[0m  [["id", 15]]
+  [1m[36mPermission Create (39.7ms)[0m  [1m[32mINSERT INTO "permissions" ("modules", "role_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["modules", "{\"Script\":{\"actions\":[\"index\"]}}"], ["role_id", 15], ["created_at", "2018-09-14 19:52:09.114923"], ["updated_at", "2018-09-14 19:52:09.114923"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mPermission Load (0.3ms)[0m  [1m[34mSELECT  "permissions".* FROM "permissions" WHERE "permissions"."role_id" = $1 ORDER BY "permissions"."id" ASC LIMIT $2[0m  [["role_id", 15], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRole Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "roles" WHERE "roles"."name" = $1 LIMIT $2[0m  [["name", "Patricia"], ["LIMIT", 1]]
+  [1m[36mRole Create (0.5ms)[0m  [1m[32mINSERT INTO "roles" ("name", "position", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Patricia"], ["position", 1], ["created_at", "2018-09-14 19:52:09.162233"], ["updated_at", "2018-09-14 19:52:09.162233"]]
+  [1m[35m (0.6ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRole Load (0.4ms)[0m  [1m[34mSELECT "roles".* FROM "roles" WHERE "roles"."id" = $1[0m  [["id", 16]]
+  [1m[36mPermission Create (0.6ms)[0m  [1m[32mINSERT INTO "permissions" ("modules", "role_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["modules", "{\"Script\":{\"actions\":[\"index\"]}}"], ["role_id", 16], ["created_at", "2018-09-14 19:52:09.168415"], ["updated_at", "2018-09-14 19:52:09.168415"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mPermission Load (0.4ms)[0m  [1m[34mSELECT  "permissions".* FROM "permissions" WHERE "permissions"."role_id" = $1 ORDER BY "permissions"."id" ASC LIMIT $2[0m  [["role_id", 16], ["LIMIT", 1]]
+  [1m[36mPermission Load (0.3ms)[0m  [1m[34mSELECT  "permissions".* FROM "permissions" WHERE "permissions"."role_id" = $1 ORDER BY "permissions"."id" ASC LIMIT $2[0m  [["role_id", 16], ["LIMIT", 1]]
+  [1m[36mPermission Load (0.3ms)[0m  [1m[34mSELECT  "permissions".* FROM "permissions" WHERE "permissions"."role_id" = $1 ORDER BY "permissions"."id" ASC LIMIT $2[0m  [["role_id", 16], ["LIMIT", 1]]
+  [1m[36mPermission Load (0.3ms)[0m  [1m[34mSELECT  "permissions".* FROM "permissions" WHERE "permissions"."role_id" = $1 ORDER BY "permissions"."id" ASC LIMIT $2[0m  [["role_id", 16], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPermission Update (0.6ms)[0m  [1m[33mUPDATE "permissions" SET "modules" = $1, "updated_at" = $2 WHERE "permissions"."id" = $3[0m  [["modules", "{\"Script\":{\"actions\":[]}}"], ["updated_at", "2018-09-14 19:52:09.178751"], ["id", 8]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mPermission Load (0.3ms)[0m  [1m[34mSELECT  "permissions".* FROM "permissions" WHERE "permissions"."role_id" = $1 ORDER BY "permissions"."id" ASC LIMIT $2[0m  [["role_id", 16], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRole Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "roles" WHERE "roles"."name" = $1 LIMIT $2[0m  [["name", "Magdalena"], ["LIMIT", 1]]
+  [1m[36mRole Create (0.4ms)[0m  [1m[32mINSERT INTO "roles" ("name", "position", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Magdalena"], ["position", 1], ["created_at", "2018-09-14 19:52:09.188675"], ["updated_at", "2018-09-14 19:52:09.188675"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRole Load (0.3ms)[0m  [1m[34mSELECT "roles".* FROM "roles" WHERE "roles"."id" = $1[0m  [["id", 17]]
+  [1m[36mPermission Create (0.5ms)[0m  [1m[32mINSERT INTO "permissions" ("modules", "role_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["modules", "{\"Script\":{\"actions\":[\"index\"]}}"], ["role_id", 17], ["created_at", "2018-09-14 19:52:09.193694"], ["updated_at", "2018-09-14 19:52:09.193694"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mPermission Load (0.5ms)[0m  [1m[34mSELECT  "permissions".* FROM "permissions" WHERE "permissions"."role_id" = $1 ORDER BY "permissions"."id" ASC LIMIT $2[0m  [["role_id", 17], ["LIMIT", 1]]
+  [1m[36mPermission Load (0.3ms)[0m  [1m[34mSELECT  "permissions".* FROM "permissions" WHERE "permissions"."role_id" = $1 ORDER BY "permissions"."id" ASC LIMIT $2[0m  [["role_id", 17], ["LIMIT", 1]]
+  [1m[36mPermission Load (0.3ms)[0m  [1m[34mSELECT  "permissions".* FROM "permissions" WHERE "permissions"."role_id" = $1 ORDER BY "permissions"."id" ASC LIMIT $2[0m  [["role_id", 17], ["LIMIT", 1]]
+  [1m[36mPermission Load (0.3ms)[0m  [1m[34mSELECT  "permissions".* FROM "permissions" WHERE "permissions"."role_id" = $1 ORDER BY "permissions"."id" ASC LIMIT $2[0m  [["role_id", 17], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPermission Update (0.5ms)[0m  [1m[33mUPDATE "permissions" SET "modules" = $1, "updated_at" = $2 WHERE "permissions"."id" = $3[0m  [["modules", "{\"Script\":{\"actions\":[]}}"], ["updated_at", "2018-09-14 19:52:09.204167"], ["id", 9]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mPermission Load (0.3ms)[0m  [1m[34mSELECT  "permissions".* FROM "permissions" WHERE "permissions"."role_id" = $1 ORDER BY "permissions"."id" ASC LIMIT $2[0m  [["role_id", 17], ["LIMIT", 1]]
+  [1m[36mPermission Load (0.3ms)[0m  [1m[34mSELECT  "permissions".* FROM "permissions" WHERE "permissions"."role_id" = $1 ORDER BY "permissions"."id" ASC LIMIT $2[0m  [["role_id", 17], ["LIMIT", 1]]
+  [1m[36mPermission Load (0.3ms)[0m  [1m[34mSELECT  "permissions".* FROM "permissions" WHERE "permissions"."role_id" = $1 ORDER BY "permissions"."id" ASC LIMIT $2[0m  [["role_id", 17], ["LIMIT", 1]]
+  [1m[36mPermission Load (0.3ms)[0m  [1m[34mSELECT  "permissions".* FROM "permissions" WHERE "permissions"."role_id" = $1 ORDER BY "permissions"."id" ASC LIMIT $2[0m  [["role_id", 17], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPermission Update (1.1ms)[0m  [1m[33mUPDATE "permissions" SET "modules" = $1, "updated_at" = $2 WHERE "permissions"."id" = $3[0m  [["modules", "{\"Script\":{\"actions\":[\"index\"]}}"], ["updated_at", "2018-09-14 19:52:09.213319"], ["id", 9]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mPermission Load (0.4ms)[0m  [1m[34mSELECT  "permissions".* FROM "permissions" WHERE "permissions"."role_id" = $1 ORDER BY "permissions"."id" ASC LIMIT $2[0m  [["role_id", 17], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRole Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "roles" WHERE "roles"."name" = $1 LIMIT $2[0m  [["name", "Marcos"], ["LIMIT", 1]]
+  [1m[36mRole Create (0.5ms)[0m  [1m[32mINSERT INTO "roles" ("name", "position", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Marcos"], ["position", 1], ["created_at", "2018-09-14 19:52:09.223632"], ["updated_at", "2018-09-14 19:52:09.223632"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRole Load (0.3ms)[0m  [1m[34mSELECT "roles".* FROM "roles" WHERE "roles"."id" = $1[0m  [["id", 18]]
+  [1m[36mPermission Create (0.5ms)[0m  [1m[32mINSERT INTO "permissions" ("modules", "role_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["modules", "{\"User\":{\"actions\":[\"index\"]}}"], ["role_id", 18], ["created_at", "2018-09-14 19:52:09.228814"], ["updated_at", "2018-09-14 19:52:09.228814"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mPermission Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "permissions" WHERE "permissions"."role_id" = $1 LIMIT $2[0m  [["role_id", 18], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRole Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "roles" WHERE "roles"."name" = $1 LIMIT $2[0m  [["name", "Lilia"], ["LIMIT", 1]]
+  [1m[36mRole Create (0.4ms)[0m  [1m[32mINSERT INTO "roles" ("name", "position", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Lilia"], ["position", 1], ["created_at", "2018-09-14 19:52:09.238092"], ["updated_at", "2018-09-14 19:52:09.238092"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mPermission Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "permissions" WHERE "permissions"."role_id" = $1 LIMIT $2[0m  [["role_id", 19], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRole Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "roles" WHERE "roles"."name" = $1 LIMIT $2[0m  [["name", "Juana"], ["LIMIT", 1]]
+  [1m[36mRole Create (1.1ms)[0m  [1m[32mINSERT INTO "roles" ("name", "position", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Juana"], ["position", 1], ["created_at", "2018-09-14 19:52:09.246422"], ["updated_at", "2018-09-14 19:52:09.246422"]]
+  [1m[35m (0.8ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.6ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRole Load (1.4ms)[0m  [1m[34mSELECT "roles".* FROM "roles" WHERE "roles"."id" = $1[0m  [["id", 20]]
+  [1m[36mPermission Create (1.8ms)[0m  [1m[32mINSERT INTO "permissions" ("modules", "role_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["modules", "{\"Script\":{\"actions\":[\"index\"]}}"], ["role_id", 20], ["created_at", "2018-09-14 19:52:09.269493"], ["updated_at", "2018-09-14 19:52:09.269493"]]
+  [1m[35m (0.9ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mPermission Load (1.0ms)[0m  [1m[34mSELECT  "permissions".* FROM "permissions" WHERE "permissions"."role_id" = $1 ORDER BY "permissions"."id" ASC LIMIT $2[0m  [["role_id", 20], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.9ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.9ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mScript Update All (34.6ms)[0m  [1m[33mUPDATE "scripts" SET "position" = ("scripts"."position" + 1), "updated_at" = '2018-09-14 19:52:09.431400' WHERE (1 = 1) AND ("scripts"."position" >= 1)[0m
+  [1m[36mScript Create (0.6ms)[0m  [1m[32mINSERT INTO "scripts" ("name", "script", "url", "position", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Jesús"], ["script", "MyStrig"], ["url", "www.example.com"], ["position", 1], ["created_at", "2018-09-14 19:52:09.430173"], ["updated_at", "2018-09-14 19:52:09.430173"]]
+  [1m[36mPublicActivity::Activity Create (0.5ms)[0m  [1m[32mINSERT INTO "activities" ("trackable_type", "trackable_id", "key", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trackable_type", "Script"], ["trackable_id", 3], ["key", "script.create"], ["created_at", "2018-09-14 19:52:09.471461"], ["updated_at", "2018-09-14 19:52:09.471461"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mScript Load (0.3ms)[0m  [1m[34mSELECT  "scripts".* FROM "scripts" WHERE "scripts"."url" = $1 LIMIT $2[0m  [["url", "www.example.com"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mScript Update All (0.4ms)[0m  [1m[33mUPDATE "scripts" SET "position" = ("scripts"."position" + 1), "updated_at" = '2018-09-14 19:52:09.482953' WHERE (1 = 1) AND ("scripts"."position" >= 1)[0m
+  [1m[36mScript Create (0.4ms)[0m  [1m[32mINSERT INTO "scripts" ("name", "script", "url", "position", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Benjamín"], ["script", "MyStrig"], ["url", "www.keppleradmin.com"], ["position", 1], ["created_at", "2018-09-14 19:52:09.482207"], ["updated_at", "2018-09-14 19:52:09.482207"]]
+  [1m[36mPublicActivity::Activity Create (39.6ms)[0m  [1m[32mINSERT INTO "activities" ("trackable_type", "trackable_id", "key", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trackable_type", "Script"], ["trackable_id", 4], ["key", "script.create"], ["created_at", "2018-09-14 19:52:09.487842"], ["updated_at", "2018-09-14 19:52:09.487842"]]
+  [1m[35m (1.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mScript Load (0.3ms)[0m  [1m[34mSELECT  "scripts".* FROM "scripts" WHERE "scripts"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRole Load (0.3ms)[0m  [1m[34mSELECT "roles".* FROM "roles" WHERE "roles"."id" = $1[0m  [["id", 1]]
+  [1m[36mRole Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "roles" WHERE "roles"."name" = $1 AND "roles"."id" != $2 LIMIT $3[0m  [["name", "keppler_admin"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."deleted_at" IS NULL LIMIT $2[0m  [["email", "osborne@metz.name"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRole Load (1.2ms)[0m  [1m[34mSELECT "roles".* FROM "roles" WHERE "roles"."id" = $1[0m  [["id", 1]]
+  [1m[36mRole Exists (1.9ms)[0m  [1m[34mSELECT  1 AS one FROM "roles" WHERE "roles"."name" = $1 AND "roles"."id" != $2 LIMIT $3[0m  [["name", "keppler_admin"], ["id", 1], ["LIMIT", 1]]
+  [1m[35m (1.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRole Load (1.7ms)[0m  [1m[34mSELECT "roles".* FROM "roles" WHERE 1=0[0m
+  [1m[36mUser Exists (1.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."deleted_at" IS NULL LIMIT $2[0m  [["email", "alfonso.homenick@ernser.co"], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL ORDER BY "users"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mRole Load (1.9ms)[0m  [1m[34mSELECT  "roles".* FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = $1 ORDER BY "roles"."id" ASC LIMIT $2[0m  [["user_id", 3], ["LIMIT", 1]]
+  [1m[36mRole Load (1.4ms)[0m  [1m[34mSELECT  "roles".* FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = $1 ORDER BY "roles"."id" ASC LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  [1m[36mRole Load (0.9ms)[0m  [1m[34mSELECT  "roles".* FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = $1 ORDER BY "roles"."id" ASC LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRole Load (1.3ms)[0m  [1m[34mSELECT "roles".* FROM "roles" WHERE "roles"."id" = $1[0m  [["id", 1]]
+  [1m[35m (1.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRole Exists (1.6ms)[0m  [1m[34mSELECT  1 AS one FROM "roles" WHERE "roles"."name" = $1 AND "roles"."id" != $2 LIMIT $3[0m  [["name", "keppler_admin"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Exists (1.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."deleted_at" IS NULL LIMIT $2[0m  [["email", "ephraim@herman.co"], ["LIMIT", 1]]
+  [1m[36mUser Create (1.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "permalink", "username", "email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "María Elena"], ["permalink", "maria-elena-10cfcea2"], ["username", "Emilio"], ["email", "ephraim@herman.co"], ["encrypted_password", "$2a$04$JXl0M3yTArtFMaWLxi5DFuwKNEiSmL9V24fvQz63CNYGsbK6yOtW6"], ["created_at", "2018-09-14 19:52:09.848219"], ["updated_at", "2018-09-14 19:52:09.848219"]]
+  [1m[36mPublicActivity::Activity Create (1.5ms)[0m  [1m[32mINSERT INTO "activities" ("trackable_type", "trackable_id", "key", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trackable_type", "User"], ["trackable_id", 11], ["key", "user.create"], ["created_at", "2018-09-14 19:52:09.870303"], ["updated_at", "2018-09-14 19:52:09.870303"]]
+  [1m[36mUser::HABTM_Roles Create (1.2ms)[0m  [1m[32mINSERT INTO "users_roles" ("user_id", "role_id") VALUES ($1, $2)[0m  [["user_id", 11], ["role_id", 1]]
+  [1m[35m (0.6ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (1.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRole Load (1.4ms)[0m  [1m[34mSELECT "roles".* FROM "roles" WHERE "roles"."id" = $1[0m  [["id", 1]]
+  [1m[35m (1.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRole Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "roles" WHERE "roles"."name" = $1 AND "roles"."id" != $2 LIMIT $3[0m  [["name", "keppler_admin"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."deleted_at" IS NULL LIMIT $2[0m  [["email", "toney_ohara@steuber.net"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("name", "permalink", "username", "email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Luis"], ["permalink", "luis-b8cb3582"], ["username", "Miguel Ángel"], ["email", "toney_ohara@steuber.net"], ["encrypted_password", "$2a$04$.iNOPEWzeZ5ZyjF4f1Bd2.EiuRJwTzHHZpIpxNUSIZQBhrzu1swtq"], ["created_at", "2018-09-14 19:52:09.964024"], ["updated_at", "2018-09-14 19:52:09.964024"]]
+  [1m[36mPublicActivity::Activity Create (0.5ms)[0m  [1m[32mINSERT INTO "activities" ("trackable_type", "trackable_id", "key", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trackable_type", "User"], ["trackable_id", 12], ["key", "user.create"], ["created_at", "2018-09-14 19:52:09.968939"], ["updated_at", "2018-09-14 19:52:09.968939"]]
+  [1m[36mUser::HABTM_Roles Create (0.3ms)[0m  [1m[32mINSERT INTO "users_roles" ("user_id", "role_id") VALUES ($1, $2)[0m  [["user_id", 12], ["role_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRole Load (1.2ms)[0m  [1m[34mSELECT "roles".* FROM "roles" WHERE "roles"."id" = $1[0m  [["id", 2]]
+  [1m[35m (1.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRole Load (1.2ms)[0m  [1m[34mSELECT "roles".* FROM "roles" WHERE "roles"."id" = $1[0m  [["id", 1]]
+  [1m[35m (1.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRole Exists (1.5ms)[0m  [1m[34mSELECT  1 AS one FROM "roles" WHERE "roles"."name" = $1 AND "roles"."id" != $2 LIMIT $3[0m  [["name", "keppler_admin"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Exists (1.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."deleted_at" IS NULL LIMIT $2[0m  [["email", "broderick.jaskolski@kuhlmangreen.info"], ["LIMIT", 1]]
+  [1m[36mUser Create (1.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "permalink", "username", "email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Rodrigo"], ["permalink", "rodrigo-0ea93261"], ["username", "Jerónimo"], ["email", "broderick.jaskolski@kuhlmangreen.info"], ["encrypted_password", "$2a$04$3VH1Gzewz14quHHW6tiao.d0uh57XqtRaWnaw/HHuD9bbwg348pha"], ["created_at", "2018-09-14 19:52:10.107396"], ["updated_at", "2018-09-14 19:52:10.107396"]]
+  [1m[36mPublicActivity::Activity Create (1.5ms)[0m  [1m[32mINSERT INTO "activities" ("trackable_type", "trackable_id", "key", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trackable_type", "User"], ["trackable_id", 13], ["key", "user.create"], ["created_at", "2018-09-14 19:52:10.128012"], ["updated_at", "2018-09-14 19:52:10.128012"]]
+  [1m[36mUser::HABTM_Roles Create (0.9ms)[0m  [1m[32mINSERT INTO "users_roles" ("user_id", "role_id") VALUES ($1, $2)[0m  [["user_id", 13], ["role_id", 1]]
+  [1m[35m (1.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRole Load (0.6ms)[0m  [1m[34mSELECT "roles".* FROM "roles" WHERE "roles"."id" = $1[0m  [["id", 1]]
+  [1m[35m (1.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRole Exists (31.1ms)[0m  [1m[34mSELECT  1 AS one FROM "roles" WHERE "roles"."name" = $1 AND "roles"."id" != $2 LIMIT $3[0m  [["name", "keppler_admin"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Exists (1.8ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."deleted_at" IS NULL LIMIT $2[0m  [["email", "selina.dooley@stamm.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (43.8ms)[0m  [1m[32mINSERT INTO "users" ("name", "permalink", "username", "email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Marisol"], ["permalink", "marisol-271b72e3"], ["username", "Pedro"], ["email", "selina.dooley@stamm.com"], ["encrypted_password", "$2a$04$C2tDU1KKRWj82n.wUtoLcOEBvXzHsX1R4z9MXkpc6nhO5C7vPrrVq"], ["created_at", "2018-09-17 17:50:01.765343"], ["updated_at", "2018-09-17 17:50:01.765343"]]
+  [1m[36mPublicActivity::Activity Create (1.4ms)[0m  [1m[32mINSERT INTO "activities" ("trackable_type", "trackable_id", "key", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trackable_type", "User"], ["trackable_id", 14], ["key", "user.create"], ["created_at", "2018-09-17 17:50:01.867622"], ["updated_at", "2018-09-17 17:50:01.867622"]]
+  [1m[36mUser::HABTM_Roles Create (7.3ms)[0m  [1m[32mINSERT INTO "users_roles" ("user_id", "role_id") VALUES ($1, $2)[0m  [["user_id", 14], ["role_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Admin::AdminController#root as HTML
+  [1m[36mSetting Load (1.1ms)[0m  [1m[34mSELECT  "settings".* FROM "settings" ORDER BY "settings"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mAppearance Load (0.7ms)[0m  [1m[34mSELECT "appearances".* FROM "appearances" WHERE "appearances"."setting_id" = $1[0m  [["setting_id", "1"]]
+  [1m[36mSocialAccount Load (0.5ms)[0m  [1m[34mSELECT "social_accounts".* FROM "social_accounts" WHERE "social_accounts"."setting_id" = $1[0m  [["setting_id", 1]]
+  [1m[36mKepplerLanguages::Language Load (1.7ms)[0m  [1m[34mSELECT "keppler_languages_languages".* FROM "keppler_languages_languages"[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[36mRole Load (1.0ms)[0m  [1m[34mSELECT  "roles".* FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = $1 ORDER BY "roles"."id" ASC LIMIT $2[0m  [["user_id", 14], ["LIMIT", 1]]
+  [1m[36mSetting Load (1.1ms)[0m  [1m[34mSELECT  "settings".* FROM "settings" ORDER BY "settings"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Redirected to http://test.host/admin/dashboard
+Completed 302 Found in 333ms (ActiveRecord: 24.2ms)
+  [1m[35m (1.8ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRole Load (1.3ms)[0m  [1m[34mSELECT "roles".* FROM "roles" WHERE "roles"."id" = $1[0m  [["id", 1]]
+  [1m[35m (1.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRole Exists (1.5ms)[0m  [1m[34mSELECT  1 AS one FROM "roles" WHERE "roles"."name" = $1 AND "roles"."id" != $2 LIMIT $3[0m  [["name", "keppler_admin"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Exists (4.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."deleted_at" IS NULL LIMIT $2[0m  [["email", "erik@spencer.info"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "permalink", "username", "email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Jerónimo"], ["permalink", "jeronimo-f768614a"], ["username", "Joaquín"], ["email", "erik@spencer.info"], ["encrypted_password", "$2a$04$iaysmpiMrtG82ZWmSdbxPOFAEFyJPbMG7HiToXsjkaySZij53MewW"], ["created_at", "2018-09-17 17:50:02.316066"], ["updated_at", "2018-09-17 17:50:02.316066"]]
+  [1m[36mPublicActivity::Activity Create (0.5ms)[0m  [1m[32mINSERT INTO "activities" ("trackable_type", "trackable_id", "key", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trackable_type", "User"], ["trackable_id", 15], ["key", "user.create"], ["created_at", "2018-09-17 17:50:02.320518"], ["updated_at", "2018-09-17 17:50:02.320518"]]
+  [1m[36mUser::HABTM_Roles Create (0.3ms)[0m  [1m[32mINSERT INTO "users_roles" ("user_id", "role_id") VALUES ($1, $2)[0m  [["user_id", 15], ["role_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Admin::UsersController#filter_by_role as JS
+  [1m[36mSetting Load (0.4ms)[0m  [1m[34mSELECT  "settings".* FROM "settings" ORDER BY "settings"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mAppearance Load (0.3ms)[0m  [1m[34mSELECT "appearances".* FROM "appearances" WHERE "appearances"."setting_id" = $1[0m  [["setting_id", "1"]]
+  [1m[36mSocialAccount Load (0.3ms)[0m  [1m[34mSELECT "social_accounts".* FROM "social_accounts" WHERE "social_accounts"."setting_id" = $1[0m  [["setting_id", 1]]
+  [1m[36mKepplerLanguages::Language Load (0.3ms)[0m  [1m[34mSELECT "keppler_languages_languages".* FROM "keppler_languages_languages"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[36mRole Load (0.5ms)[0m  [1m[34mSELECT  "roles".* FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = $1 ORDER BY "roles"."id" ASC LIMIT $2[0m  [["user_id", 15], ["LIMIT", 1]]
+  [1m[36mSetting Load (0.2ms)[0m  [1m[34mSELECT  "settings".* FROM "settings" ORDER BY "settings"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT DISTINCT "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND (id != 1) ORDER BY "users"."created_at" DESC) subquery_for_count[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  DISTINCT "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND (id != 1) ORDER BY "users"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mRole Load (0.4ms)[0m  [1m[34mSELECT  "roles".* FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = $1 ORDER BY "roles"."id" ASC LIMIT $2[0m  [["user_id", 15], ["LIMIT", 1]]
+  [1m[36mRole Load (0.4ms)[0m  [1m[34mSELECT  "roles".* FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = $1 ORDER BY "roles"."id" ASC LIMIT $2[0m  [["user_id", 3], ["LIMIT", 1]]
+  Rendering admin/users/filter_by_role.js.erb
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered admin/users/filter_by_role.js.erb (0.5ms)
+Completed 200 OK in 179ms (Views: 140.0ms | ActiveRecord: 6.8ms)
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCustomize Create (48.8ms)[0m  [1m[32mINSERT INTO "customizes" ("file", "installed", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["file", nil], ["installed", true], ["created_at", "2018-09-17 17:50:02.586135"], ["updated_at", "2018-09-17 17:50:02.586135"]]
+  [1m[36mPublicActivity::Activity Create (0.5ms)[0m  [1m[32mINSERT INTO "activities" ("trackable_type", "trackable_id", "key", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trackable_type", "Customize"], ["trackable_id", 4], ["key", "customize.create"], ["created_at", "2018-09-17 17:50:02.639061"], ["updated_at", "2018-09-17 17:50:02.639061"]]
+  [1m[35m (0.6ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (1.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRole Exists (1.7ms)[0m  [1m[34mSELECT  1 AS one FROM "roles" WHERE "roles"."name" = $1 AND "roles"."id" != $2 LIMIT $3[0m  [["name", "keppler_admin"], ["id", 1001], ["LIMIT", 1]]
+  [1m[35m (0.9ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRole Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "roles" WHERE "roles"."name" = $1 LIMIT $2[0m  [["name", "Reina"], ["LIMIT", 1]]
+  [1m[36mRole Create (15.5ms)[0m  [1m[32mINSERT INTO "roles" ("name", "position", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Reina"], ["position", 1], ["created_at", "2018-09-17 17:50:02.762976"], ["updated_at", "2018-09-17 17:50:02.762976"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mPermission Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "permissions" WHERE "permissions"."role_id" = $1 LIMIT $2[0m  [["role_id", 21], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRole Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "roles" WHERE "roles"."name" = $1 LIMIT $2[0m  [["name", "Lucia"], ["LIMIT", 1]]
+  [1m[36mRole Create (0.4ms)[0m  [1m[32mINSERT INTO "roles" ("name", "position", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Lucia"], ["position", 1], ["created_at", "2018-09-17 17:50:02.788251"], ["updated_at", "2018-09-17 17:50:02.788251"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mPermission Load (0.3ms)[0m  [1m[34mSELECT  "permissions".* FROM "permissions" WHERE "permissions"."role_id" = $1 ORDER BY "permissions"."id" ASC LIMIT $2[0m  [["role_id", 22], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRole Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "roles" WHERE "roles"."name" = $1 LIMIT $2[0m  [["name", "Florencia"], ["LIMIT", 1]]
+  [1m[36mRole Create (0.5ms)[0m  [1m[32mINSERT INTO "roles" ("name", "position", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Florencia"], ["position", 1], ["created_at", "2018-09-17 17:50:02.799198"], ["updated_at", "2018-09-17 17:50:02.799198"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRole Load (0.4ms)[0m  [1m[34mSELECT "roles".* FROM "roles" WHERE "roles"."id" = $1[0m  [["id", 23]]
+  [1m[36mPermission Create (40.2ms)[0m  [1m[32mINSERT INTO "permissions" ("modules", "role_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["modules", "{\"Script\":{\"actions\":[\"index\"]}}"], ["role_id", 23], ["created_at", "2018-09-17 17:50:02.805506"], ["updated_at", "2018-09-17 17:50:02.805506"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mPermission Load (0.4ms)[0m  [1m[34mSELECT  "permissions".* FROM "permissions" WHERE "permissions"."role_id" = $1 ORDER BY "permissions"."id" ASC LIMIT $2[0m  [["role_id", 23], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRole Exists (1.3ms)[0m  [1m[34mSELECT  1 AS one FROM "roles" WHERE "roles"."name" = $1 LIMIT $2[0m  [["name", "Jerónimo"], ["LIMIT", 1]]
+  [1m[36mRole Create (1.5ms)[0m  [1m[32mINSERT INTO "roles" ("name", "position", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Jerónimo"], ["position", 1], ["created_at", "2018-09-17 17:50:02.875054"], ["updated_at", "2018-09-17 17:50:02.875054"]]
+  [1m[35m (0.7ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.6ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRole Load (1.3ms)[0m  [1m[34mSELECT "roles".* FROM "roles" WHERE "roles"."id" = $1[0m  [["id", 24]]
+  [1m[36mPermission Create (1.9ms)[0m  [1m[32mINSERT INTO "permissions" ("modules", "role_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["modules", "{\"Script\":{\"actions\":[\"index\"]}}"], ["role_id", 24], ["created_at", "2018-09-17 17:50:02.907016"], ["updated_at", "2018-09-17 17:50:02.907016"]]
+  [1m[35m (0.8ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mPermission Load (1.7ms)[0m  [1m[34mSELECT  "permissions".* FROM "permissions" WHERE "permissions"."role_id" = $1 ORDER BY "permissions"."id" ASC LIMIT $2[0m  [["role_id", 24], ["LIMIT", 1]]
+  [1m[36mPermission Load (0.9ms)[0m  [1m[34mSELECT  "permissions".* FROM "permissions" WHERE "permissions"."role_id" = $1 ORDER BY "permissions"."id" ASC LIMIT $2[0m  [["role_id", 24], ["LIMIT", 1]]
+  [1m[36mPermission Load (0.5ms)[0m  [1m[34mSELECT  "permissions".* FROM "permissions" WHERE "permissions"."role_id" = $1 ORDER BY "permissions"."id" ASC LIMIT $2[0m  [["role_id", 24], ["LIMIT", 1]]
+  [1m[36mPermission Load (0.4ms)[0m  [1m[34mSELECT  "permissions".* FROM "permissions" WHERE "permissions"."role_id" = $1 ORDER BY "permissions"."id" ASC LIMIT $2[0m  [["role_id", 24], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPermission Update (0.8ms)[0m  [1m[33mUPDATE "permissions" SET "modules" = $1, "updated_at" = $2 WHERE "permissions"."id" = $3[0m  [["modules", "{\"Script\":{\"actions\":[]}}"], ["updated_at", "2018-09-17 17:50:02.942708"], ["id", 13]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mPermission Load (0.3ms)[0m  [1m[34mSELECT  "permissions".* FROM "permissions" WHERE "permissions"."role_id" = $1 ORDER BY "permissions"."id" ASC LIMIT $2[0m  [["role_id", 24], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRole Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "roles" WHERE "roles"."name" = $1 LIMIT $2[0m  [["name", "Pablo"], ["LIMIT", 1]]
+  [1m[36mRole Create (0.3ms)[0m  [1m[32mINSERT INTO "roles" ("name", "position", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Pablo"], ["position", 1], ["created_at", "2018-09-17 17:50:02.950167"], ["updated_at", "2018-09-17 17:50:02.950167"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRole Load (0.3ms)[0m  [1m[34mSELECT "roles".* FROM "roles" WHERE "roles"."id" = $1[0m  [["id", 25]]
+  [1m[36mPermission Create (0.4ms)[0m  [1m[32mINSERT INTO "permissions" ("modules", "role_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["modules", "{\"Script\":{\"actions\":[\"index\"]}}"], ["role_id", 25], ["created_at", "2018-09-17 17:50:02.953517"], ["updated_at", "2018-09-17 17:50:02.953517"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mPermission Load (0.3ms)[0m  [1m[34mSELECT  "permissions".* FROM "permissions" WHERE "permissions"."role_id" = $1 ORDER BY "permissions"."id" ASC LIMIT $2[0m  [["role_id", 25], ["LIMIT", 1]]
+  [1m[36mPermission Load (0.3ms)[0m  [1m[34mSELECT  "permissions".* FROM "permissions" WHERE "permissions"."role_id" = $1 ORDER BY "permissions"."id" ASC LIMIT $2[0m  [["role_id", 25], ["LIMIT", 1]]
+  [1m[36mPermission Load (0.3ms)[0m  [1m[34mSELECT  "permissions".* FROM "permissions" WHERE "permissions"."role_id" = $1 ORDER BY "permissions"."id" ASC LIMIT $2[0m  [["role_id", 25], ["LIMIT", 1]]
+  [1m[36mPermission Load (0.3ms)[0m  [1m[34mSELECT  "permissions".* FROM "permissions" WHERE "permissions"."role_id" = $1 ORDER BY "permissions"."id" ASC LIMIT $2[0m  [["role_id", 25], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPermission Update (0.9ms)[0m  [1m[33mUPDATE "permissions" SET "modules" = $1, "updated_at" = $2 WHERE "permissions"."id" = $3[0m  [["modules", "{\"Script\":{\"actions\":[]}}"], ["updated_at", "2018-09-17 17:50:02.960382"], ["id", 14]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mPermission Load (0.3ms)[0m  [1m[34mSELECT  "permissions".* FROM "permissions" WHERE "permissions"."role_id" = $1 ORDER BY "permissions"."id" ASC LIMIT $2[0m  [["role_id", 25], ["LIMIT", 1]]
+  [1m[36mPermission Load (0.3ms)[0m  [1m[34mSELECT  "permissions".* FROM "permissions" WHERE "permissions"."role_id" = $1 ORDER BY "permissions"."id" ASC LIMIT $2[0m  [["role_id", 25], ["LIMIT", 1]]
+  [1m[36mPermission Load (0.3ms)[0m  [1m[34mSELECT  "permissions".* FROM "permissions" WHERE "permissions"."role_id" = $1 ORDER BY "permissions"."id" ASC LIMIT $2[0m  [["role_id", 25], ["LIMIT", 1]]
+  [1m[36mPermission Load (0.3ms)[0m  [1m[34mSELECT  "permissions".* FROM "permissions" WHERE "permissions"."role_id" = $1 ORDER BY "permissions"."id" ASC LIMIT $2[0m  [["role_id", 25], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPermission Update (0.4ms)[0m  [1m[33mUPDATE "permissions" SET "modules" = $1, "updated_at" = $2 WHERE "permissions"."id" = $3[0m  [["modules", "{\"Script\":{\"actions\":[\"index\"]}}"], ["updated_at", "2018-09-17 17:50:02.967227"], ["id", 14]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mPermission Load (0.2ms)[0m  [1m[34mSELECT  "permissions".* FROM "permissions" WHERE "permissions"."role_id" = $1 ORDER BY "permissions"."id" ASC LIMIT $2[0m  [["role_id", 25], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRole Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "roles" WHERE "roles"."name" = $1 LIMIT $2[0m  [["name", "Víctor"], ["LIMIT", 1]]
+  [1m[36mRole Create (0.3ms)[0m  [1m[32mINSERT INTO "roles" ("name", "position", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Víctor"], ["position", 1], ["created_at", "2018-09-17 17:50:02.972640"], ["updated_at", "2018-09-17 17:50:02.972640"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.5ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRole Load (0.4ms)[0m  [1m[34mSELECT "roles".* FROM "roles" WHERE "roles"."id" = $1[0m  [["id", 26]]
+  [1m[36mPermission Create (1.3ms)[0m  [1m[32mINSERT INTO "permissions" ("modules", "role_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["modules", "{\"User\":{\"actions\":[\"index\"]}}"], ["role_id", 26], ["created_at", "2018-09-17 17:50:02.977551"], ["updated_at", "2018-09-17 17:50:02.977551"]]
+  [1m[35m (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mPermission Exists (2.4ms)[0m  [1m[34mSELECT  1 AS one FROM "permissions" WHERE "permissions"."role_id" = $1 LIMIT $2[0m  [["role_id", 26], ["LIMIT", 1]]
+  [1m[35m (1.9ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRole Exists (1.3ms)[0m  [1m[34mSELECT  1 AS one FROM "roles" WHERE "roles"."name" = $1 LIMIT $2[0m  [["name", "Cristina"], ["LIMIT", 1]]
+  [1m[36mRole Create (1.7ms)[0m  [1m[32mINSERT INTO "roles" ("name", "position", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Cristina"], ["position", 1], ["created_at", "2018-09-17 17:50:03.023577"], ["updated_at", "2018-09-17 17:50:03.023577"]]
+  [1m[35m (0.9ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mPermission Exists (1.2ms)[0m  [1m[34mSELECT  1 AS one FROM "permissions" WHERE "permissions"."role_id" = $1 LIMIT $2[0m  [["role_id", 27], ["LIMIT", 1]]
+  [1m[35m (1.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRole Exists (2.0ms)[0m  [1m[34mSELECT  1 AS one FROM "roles" WHERE "roles"."name" = $1 LIMIT $2[0m  [["name", "Soledad"], ["LIMIT", 1]]
+  [1m[36mRole Create (1.9ms)[0m  [1m[32mINSERT INTO "roles" ("name", "position", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Soledad"], ["position", 1], ["created_at", "2018-09-17 17:50:03.082902"], ["updated_at", "2018-09-17 17:50:03.082902"]]
+  [1m[35m (0.7ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.9ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRole Load (1.2ms)[0m  [1m[34mSELECT "roles".* FROM "roles" WHERE "roles"."id" = $1[0m  [["id", 28]]
+  [1m[36mPermission Create (1.7ms)[0m  [1m[32mINSERT INTO "permissions" ("modules", "role_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["modules", "{\"Script\":{\"actions\":[\"index\"]}}"], ["role_id", 28], ["created_at", "2018-09-17 17:50:03.118859"], ["updated_at", "2018-09-17 17:50:03.118859"]]
+  [1m[35m (1.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mPermission Load (1.1ms)[0m  [1m[34mSELECT  "permissions".* FROM "permissions" WHERE "permissions"."role_id" = $1 ORDER BY "permissions"."id" ASC LIMIT $2[0m  [["role_id", 28], ["LIMIT", 1]]
+  [1m[35m (1.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.9ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mScript Update All (1.5ms)[0m  [1m[33mUPDATE "scripts" SET "position" = ("scripts"."position" + 1), "updated_at" = '2018-09-17 17:50:03.219193' WHERE (1 = 1) AND ("scripts"."position" >= 1)[0m
+  [1m[36mScript Create (23.5ms)[0m  [1m[32mINSERT INTO "scripts" ("name", "script", "url", "position", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Elena"], ["script", "MyStrig"], ["url", "www.example.com"], ["position", 1], ["created_at", "2018-09-17 17:50:03.212841"], ["updated_at", "2018-09-17 17:50:03.212841"]]
+  [1m[36mPublicActivity::Activity Create (1.6ms)[0m  [1m[32mINSERT INTO "activities" ("trackable_type", "trackable_id", "key", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trackable_type", "Script"], ["trackable_id", 5], ["key", "script.create"], ["created_at", "2018-09-17 17:50:03.278510"], ["updated_at", "2018-09-17 17:50:03.278510"]]
+  [1m[35m (1.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mScript Load (1.1ms)[0m  [1m[34mSELECT  "scripts".* FROM "scripts" WHERE "scripts"."url" = $1 LIMIT $2[0m  [["url", "www.example.com"], ["LIMIT", 1]]
+  [1m[35m (1.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.9ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.8ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mScript Update All (1.4ms)[0m  [1m[33mUPDATE "scripts" SET "position" = ("scripts"."position" + 1), "updated_at" = '2018-09-17 17:50:03.350316' WHERE (1 = 1) AND ("scripts"."position" >= 1)[0m
+  [1m[36mScript Create (1.5ms)[0m  [1m[32mINSERT INTO "scripts" ("name", "script", "url", "position", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Alejandra"], ["script", "MyStrig"], ["url", "www.keppleradmin.com"], ["position", 1], ["created_at", "2018-09-17 17:50:03.346203"], ["updated_at", "2018-09-17 17:50:03.346203"]]
+  [1m[36mPublicActivity::Activity Create (1.5ms)[0m  [1m[32mINSERT INTO "activities" ("trackable_type", "trackable_id", "key", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trackable_type", "Script"], ["trackable_id", 6], ["key", "script.create"], ["created_at", "2018-09-17 17:50:03.379983"], ["updated_at", "2018-09-17 17:50:03.379983"]]
+  [1m[35m (0.7ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mScript Load (1.0ms)[0m  [1m[34mSELECT  "scripts".* FROM "scripts" WHERE "scripts"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[35m (1.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.8ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRole Load (1.4ms)[0m  [1m[34mSELECT "roles".* FROM "roles" WHERE "roles"."id" = $1[0m  [["id", 1]]
+  [1m[36mRole Exists (1.5ms)[0m  [1m[34mSELECT  1 AS one FROM "roles" WHERE "roles"."name" = $1 AND "roles"."id" != $2 LIMIT $3[0m  [["name", "keppler_admin"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Exists (1.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."deleted_at" IS NULL LIMIT $2[0m  [["email", "kayleigh_bradtke@keler.info"], ["LIMIT", 1]]
+  [1m[35m (1.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRole Load (1.4ms)[0m  [1m[34mSELECT "roles".* FROM "roles" WHERE "roles"."id" = $1[0m  [["id", 1]]
+  [1m[36mRole Exists (2.3ms)[0m  [1m[34mSELECT  1 AS one FROM "roles" WHERE "roles"."name" = $1 AND "roles"."id" != $2 LIMIT $3[0m  [["name", "keppler_admin"], ["id", 1], ["LIMIT", 1]]
+  [1m[35m (1.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRole Load (1.5ms)[0m  [1m[34mSELECT "roles".* FROM "roles" WHERE 1=0[0m
+  [1m[36mUser Exists (1.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."deleted_at" IS NULL LIMIT $2[0m  [["email", "samanta.quigley@keeblerschaefer.co"], ["LIMIT", 1]]
+  [1m[35m (1.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.0ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL ORDER BY "users"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mRole Load (0.9ms)[0m  [1m[34mSELECT  "roles".* FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = $1 ORDER BY "roles"."id" ASC LIMIT $2[0m  [["user_id", 3], ["LIMIT", 1]]
+  [1m[36mRole Load (0.8ms)[0m  [1m[34mSELECT  "roles".* FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = $1 ORDER BY "roles"."id" ASC LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  [1m[36mRole Load (0.3ms)[0m  [1m[34mSELECT  "roles".* FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = $1 ORDER BY "roles"."id" ASC LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRole Load (0.3ms)[0m  [1m[34mSELECT "roles".* FROM "roles" WHERE "roles"."id" = $1[0m  [["id", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRole Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "roles" WHERE "roles"."name" = $1 AND "roles"."id" != $2 LIMIT $3[0m  [["name", "keppler_admin"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."deleted_at" IS NULL LIMIT $2[0m  [["email", "deja@fritsch.biz"], ["LIMIT", 1]]
+  [1m[36mUser Create (11.9ms)[0m  [1m[32mINSERT INTO "users" ("name", "permalink", "username", "email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Hugo"], ["permalink", "hugo-e00c786d"], ["username", "Guillermina"], ["email", "deja@fritsch.biz"], ["encrypted_password", "$2a$04$PQBZPZTlVubP8xQArBR82.ngR/1A/W4FkzKNzH4JsfZH.9tjsE.ma"], ["created_at", "2018-09-17 17:50:03.786094"], ["updated_at", "2018-09-17 17:50:03.786094"]]
+  [1m[36mPublicActivity::Activity Create (0.5ms)[0m  [1m[32mINSERT INTO "activities" ("trackable_type", "trackable_id", "key", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trackable_type", "User"], ["trackable_id", 16], ["key", "user.create"], ["created_at", "2018-09-17 17:50:03.802185"], ["updated_at", "2018-09-17 17:50:03.802185"]]
+  [1m[36mUser::HABTM_Roles Create (0.8ms)[0m  [1m[32mINSERT INTO "users_roles" ("user_id", "role_id") VALUES ($1, $2)[0m  [["user_id", 16], ["role_id", 1]]
+  [1m[35m (1.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (1.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRole Load (1.4ms)[0m  [1m[34mSELECT "roles".* FROM "roles" WHERE "roles"."id" = $1[0m  [["id", 1]]
+  [1m[35m (1.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRole Exists (2.3ms)[0m  [1m[34mSELECT  1 AS one FROM "roles" WHERE "roles"."name" = $1 AND "roles"."id" != $2 LIMIT $3[0m  [["name", "keppler_admin"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Exists (1.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."deleted_at" IS NULL LIMIT $2[0m  [["email", "guie@damore.info"], ["LIMIT", 1]]
+  [1m[36mUser Create (1.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "permalink", "username", "email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Mario"], ["permalink", "mario-15f5c3a0"], ["username", "Ricardo"], ["email", "guie@damore.info"], ["encrypted_password", "$2a$04$MsDkTCBt5oS5q8OkwspyLOJ/2Yg.Lg/q73zkHUfZdnEQPI9QEoANe"], ["created_at", "2018-09-17 17:50:03.913260"], ["updated_at", "2018-09-17 17:50:03.913260"]]
+  [1m[36mPublicActivity::Activity Create (1.8ms)[0m  [1m[32mINSERT INTO "activities" ("trackable_type", "trackable_id", "key", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trackable_type", "User"], ["trackable_id", 17], ["key", "user.create"], ["created_at", "2018-09-17 17:50:03.937138"], ["updated_at", "2018-09-17 17:50:03.937138"]]
+  [1m[36mUser::HABTM_Roles Create (1.2ms)[0m  [1m[32mINSERT INTO "users_roles" ("user_id", "role_id") VALUES ($1, $2)[0m  [["user_id", 17], ["role_id", 1]]
+  [1m[35m (1.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (1.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRole Load (1.9ms)[0m  [1m[34mSELECT "roles".* FROM "roles" WHERE "roles"."id" = $1[0m  [["id", 2]]
+  [1m[35m (1.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRole Load (1.9ms)[0m  [1m[34mSELECT "roles".* FROM "roles" WHERE "roles"."id" = $1[0m  [["id", 1]]
+  [1m[35m (1.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRole Exists (1.8ms)[0m  [1m[34mSELECT  1 AS one FROM "roles" WHERE "roles"."name" = $1 AND "roles"."id" != $2 LIMIT $3[0m  [["name", "keppler_admin"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Exists (1.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."deleted_at" IS NULL LIMIT $2[0m  [["email", "kamryn@ratke.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (1.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "permalink", "username", "email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Juan"], ["permalink", "juan-058cf2a8"], ["username", "Gonzalo"], ["email", "kamryn@ratke.com"], ["encrypted_password", "$2a$04$NyIStY71wSGjB1j1nAGCDOdAxfoOh4FfmAuu8oyvOEiPXH1MV/6Mq"], ["created_at", "2018-09-17 17:50:04.123791"], ["updated_at", "2018-09-17 17:50:04.123791"]]
+  [1m[36mPublicActivity::Activity Create (1.5ms)[0m  [1m[32mINSERT INTO "activities" ("trackable_type", "trackable_id", "key", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trackable_type", "User"], ["trackable_id", 18], ["key", "user.create"], ["created_at", "2018-09-17 17:50:04.149234"], ["updated_at", "2018-09-17 17:50:04.149234"]]
+  [1m[36mUser::HABTM_Roles Create (1.3ms)[0m  [1m[32mINSERT INTO "users_roles" ("user_id", "role_id") VALUES ($1, $2)[0m  [["user_id", 18], ["role_id", 1]]
+  [1m[35m (1.5ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (1.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (49.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRole Load (0.6ms)[0m  [1m[34mSELECT "roles".* FROM "roles" WHERE "roles"."id" = $1[0m  [["id", 1]]
+  [1m[35m (1.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRole Exists (26.1ms)[0m  [1m[34mSELECT  1 AS one FROM "roles" WHERE "roles"."name" = $1 AND "roles"."id" != $2 LIMIT $3[0m  [["name", "keppler_admin"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Exists (1.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."deleted_at" IS NULL LIMIT $2[0m  [["email", "freddy_thiel@schulisthermann.info"], ["LIMIT", 1]]
+  [1m[36mUser Create (175.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "permalink", "username", "email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Eloisa"], ["permalink", "eloisa-3bd5e1e9"], ["username", "Florencia"], ["email", "freddy_thiel@schulisthermann.info"], ["encrypted_password", "$2a$04$7aPpwTDR0UDmNTCJO4fu/uLVyyD/6muDu/Vi.c828ThS.AbOpUjcC"], ["created_at", "2018-09-26 15:09:20.177406"], ["updated_at", "2018-09-26 15:09:20.177406"]]
+  [1m[36mPublicActivity::Activity Create (25.8ms)[0m  [1m[32mINSERT INTO "activities" ("trackable_type", "trackable_id", "key", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trackable_type", "User"], ["trackable_id", 19], ["key", "user.create"], ["created_at", "2018-09-26 15:09:20.401737"], ["updated_at", "2018-09-26 15:09:20.401737"]]
+  [1m[36mUser::HABTM_Roles Create (103.1ms)[0m  [1m[32mINSERT INTO "users_roles" ("user_id", "role_id") VALUES ($1, $2)[0m  [["user_id", 19], ["role_id", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Admin::AdminController#root as HTML
+  [1m[36mSetting Load (0.8ms)[0m  [1m[34mSELECT  "settings".* FROM "settings" ORDER BY "settings"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mAppearance Load (0.6ms)[0m  [1m[34mSELECT "appearances".* FROM "appearances" WHERE "appearances"."setting_id" = $1[0m  [["setting_id", "1"]]
+  [1m[36mSocialAccount Load (0.7ms)[0m  [1m[34mSELECT "social_accounts".* FROM "social_accounts" WHERE "social_accounts"."setting_id" = $1[0m  [["setting_id", 1]]
+  [1m[36mKepplerLanguages::Language Load (0.8ms)[0m  [1m[34mSELECT "keppler_languages_languages".* FROM "keppler_languages_languages"[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 19], ["LIMIT", 1]]
+  [1m[36mRole Load (0.8ms)[0m  [1m[34mSELECT  "roles".* FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = $1 ORDER BY "roles"."id" ASC LIMIT $2[0m  [["user_id", 19], ["LIMIT", 1]]
+  [1m[36mSetting Load (0.5ms)[0m  [1m[34mSELECT  "settings".* FROM "settings" ORDER BY "settings"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Redirected to http://test.host/admin/dashboard
+Completed 302 Found in 500ms (ActiveRecord: 25.3ms)
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRole Load (0.5ms)[0m  [1m[34mSELECT "roles".* FROM "roles" WHERE "roles"."id" = $1[0m  [["id", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRole Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "roles" WHERE "roles"."name" = $1 AND "roles"."id" != $2 LIMIT $3[0m  [["name", "keppler_admin"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."deleted_at" IS NULL LIMIT $2[0m  [["email", "genoveva.bartoletti@schaden.name"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("name", "permalink", "username", "email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "José Luis"], ["permalink", "jose-luis-11966d3a"], ["username", "Ana"], ["email", "genoveva.bartoletti@schaden.name"], ["encrypted_password", "$2a$04$vhZwSO43Uc9bGgWv41yWAuZeo21pDLQZj0BBsF0LTwtlO9lbqE.d2"], ["created_at", "2018-09-26 15:09:21.061162"], ["updated_at", "2018-09-26 15:09:21.061162"]]
+  [1m[36mPublicActivity::Activity Create (0.6ms)[0m  [1m[32mINSERT INTO "activities" ("trackable_type", "trackable_id", "key", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trackable_type", "User"], ["trackable_id", 20], ["key", "user.create"], ["created_at", "2018-09-26 15:09:21.066435"], ["updated_at", "2018-09-26 15:09:21.066435"]]
+  [1m[36mUser::HABTM_Roles Create (0.5ms)[0m  [1m[32mINSERT INTO "users_roles" ("user_id", "role_id") VALUES ($1, $2)[0m  [["user_id", 20], ["role_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Processing by Admin::UsersController#filter_by_role as JS
+  [1m[36mSetting Load (0.9ms)[0m  [1m[34mSELECT  "settings".* FROM "settings" ORDER BY "settings"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mAppearance Load (1.1ms)[0m  [1m[34mSELECT "appearances".* FROM "appearances" WHERE "appearances"."setting_id" = $1[0m  [["setting_id", "1"]]
+  [1m[36mSocialAccount Load (0.5ms)[0m  [1m[34mSELECT "social_accounts".* FROM "social_accounts" WHERE "social_accounts"."setting_id" = $1[0m  [["setting_id", 1]]
+  [1m[36mKepplerLanguages::Language Load (0.3ms)[0m  [1m[34mSELECT "keppler_languages_languages".* FROM "keppler_languages_languages"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 20], ["LIMIT", 1]]
+  [1m[36mRole Load (0.5ms)[0m  [1m[34mSELECT  "roles".* FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = $1 ORDER BY "roles"."id" ASC LIMIT $2[0m  [["user_id", 20], ["LIMIT", 1]]
+  [1m[36mSetting Load (0.3ms)[0m  [1m[34mSELECT  "settings".* FROM "settings" ORDER BY "settings"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT DISTINCT "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND (id != 1) ORDER BY "users"."created_at" DESC) subquery_for_count[0m
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  DISTINCT "users".* FROM "users" WHERE "users"."deleted_at" IS NULL AND (id != 1) ORDER BY "users"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mRole Load (1.5ms)[0m  [1m[34mSELECT  "roles".* FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = $1 ORDER BY "roles"."id" ASC LIMIT $2[0m  [["user_id", 20], ["LIMIT", 1]]
+  [1m[36mRole Load (1.1ms)[0m  [1m[34mSELECT  "roles".* FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = $1 ORDER BY "roles"."id" ASC LIMIT $2[0m  [["user_id", 3], ["LIMIT", 1]]
+  Rendering admin/users/filter_by_role.js.erb
+  Template rendering was prevented by rspec-rails. Use `render_views` to verify rendered view contents if necessary.
+  Rendered admin/users/filter_by_role.js.erb (0.3ms)
+Completed 200 OK in 197ms (Views: 125.5ms | ActiveRecord: 11.9ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (2.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCustomize Create (215.3ms)[0m  [1m[32mINSERT INTO "customizes" ("file", "installed", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["file", nil], ["installed", true], ["created_at", "2018-09-26 15:09:21.752514"], ["updated_at", "2018-09-26 15:09:21.752514"]]
+  [1m[36mPublicActivity::Activity Create (107.6ms)[0m  [1m[32mINSERT INTO "activities" ("trackable_type", "trackable_id", "key", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trackable_type", "Customize"], ["trackable_id", 5], ["key", "customize.create"], ["created_at", "2018-09-26 15:09:21.973394"], ["updated_at", "2018-09-26 15:09:21.973394"]]
+  [1m[35m (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.8ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRole Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "roles" WHERE "roles"."name" = $1 AND "roles"."id" != $2 LIMIT $3[0m  [["name", "keppler_admin"], ["id", 1001], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRole Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "roles" WHERE "roles"."name" = $1 LIMIT $2[0m  [["name", "Cristobal"], ["LIMIT", 1]]
+  [1m[36mRole Create (57.1ms)[0m  [1m[32mINSERT INTO "roles" ("name", "position", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Cristobal"], ["position", 1], ["created_at", "2018-09-26 15:09:22.161857"], ["updated_at", "2018-09-26 15:09:22.161857"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mPermission Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "permissions" WHERE "permissions"."role_id" = $1 LIMIT $2[0m  [["role_id", 29], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRole Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "roles" WHERE "roles"."name" = $1 LIMIT $2[0m  [["name", "Mónica"], ["LIMIT", 1]]
+  [1m[36mRole Create (20.3ms)[0m  [1m[32mINSERT INTO "roles" ("name", "position", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Mónica"], ["position", 1], ["created_at", "2018-09-26 15:09:22.227870"], ["updated_at", "2018-09-26 15:09:22.227870"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mPermission Load (0.3ms)[0m  [1m[34mSELECT  "permissions".* FROM "permissions" WHERE "permissions"."role_id" = $1 ORDER BY "permissions"."id" ASC LIMIT $2[0m  [["role_id", 30], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRole Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "roles" WHERE "roles"."name" = $1 LIMIT $2[0m  [["name", "Dorotea"], ["LIMIT", 1]]
+  [1m[36mRole Create (0.5ms)[0m  [1m[32mINSERT INTO "roles" ("name", "position", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Dorotea"], ["position", 1], ["created_at", "2018-09-26 15:09:22.254765"], ["updated_at", "2018-09-26 15:09:22.254765"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRole Load (0.5ms)[0m  [1m[34mSELECT "roles".* FROM "roles" WHERE "roles"."id" = $1[0m  [["id", 31]]
+  [1m[36mPermission Create (111.3ms)[0m  [1m[32mINSERT INTO "permissions" ("modules", "role_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["modules", "{\"Script\":{\"actions\":[\"index\"]}}"], ["role_id", 31], ["created_at", "2018-09-26 15:09:22.260341"], ["updated_at", "2018-09-26 15:09:22.260341"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mPermission Load (2.4ms)[0m  [1m[34mSELECT  "permissions".* FROM "permissions" WHERE "permissions"."role_id" = $1 ORDER BY "permissions"."id" ASC LIMIT $2[0m  [["role_id", 31], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRole Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "roles" WHERE "roles"."name" = $1 LIMIT $2[0m  [["name", "Hernán"], ["LIMIT", 1]]
+  [1m[36mRole Create (0.4ms)[0m  [1m[32mINSERT INTO "roles" ("name", "position", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Hernán"], ["position", 1], ["created_at", "2018-09-26 15:09:22.388467"], ["updated_at", "2018-09-26 15:09:22.388467"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRole Load (0.3ms)[0m  [1m[34mSELECT "roles".* FROM "roles" WHERE "roles"."id" = $1[0m  [["id", 32]]
+  [1m[36mPermission Create (0.6ms)[0m  [1m[32mINSERT INTO "permissions" ("modules", "role_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["modules", "{\"Script\":{\"actions\":[\"index\"]}}"], ["role_id", 32], ["created_at", "2018-09-26 15:09:22.392635"], ["updated_at", "2018-09-26 15:09:22.392635"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mPermission Load (0.5ms)[0m  [1m[34mSELECT  "permissions".* FROM "permissions" WHERE "permissions"."role_id" = $1 ORDER BY "permissions"."id" ASC LIMIT $2[0m  [["role_id", 32], ["LIMIT", 1]]
+  [1m[36mPermission Load (0.6ms)[0m  [1m[34mSELECT  "permissions".* FROM "permissions" WHERE "permissions"."role_id" = $1 ORDER BY "permissions"."id" ASC LIMIT $2[0m  [["role_id", 32], ["LIMIT", 1]]
+  [1m[36mPermission Load (0.5ms)[0m  [1m[34mSELECT  "permissions".* FROM "permissions" WHERE "permissions"."role_id" = $1 ORDER BY "permissions"."id" ASC LIMIT $2[0m  [["role_id", 32], ["LIMIT", 1]]
+  [1m[36mPermission Load (0.6ms)[0m  [1m[34mSELECT  "permissions".* FROM "permissions" WHERE "permissions"."role_id" = $1 ORDER BY "permissions"."id" ASC LIMIT $2[0m  [["role_id", 32], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPermission Update (0.7ms)[0m  [1m[33mUPDATE "permissions" SET "modules" = $1, "updated_at" = $2 WHERE "permissions"."id" = $3[0m  [["modules", "{\"Script\":{\"actions\":[]}}"], ["updated_at", "2018-09-26 15:09:22.405589"], ["id", 18]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mPermission Load (0.4ms)[0m  [1m[34mSELECT  "permissions".* FROM "permissions" WHERE "permissions"."role_id" = $1 ORDER BY "permissions"."id" ASC LIMIT $2[0m  [["role_id", 32], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.7ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRole Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "roles" WHERE "roles"."name" = $1 LIMIT $2[0m  [["name", "Sofia"], ["LIMIT", 1]]
+  [1m[36mRole Create (0.9ms)[0m  [1m[32mINSERT INTO "roles" ("name", "position", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Sofia"], ["position", 1], ["created_at", "2018-09-26 15:09:22.418099"], ["updated_at", "2018-09-26 15:09:22.418099"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRole Load (0.9ms)[0m  [1m[34mSELECT "roles".* FROM "roles" WHERE "roles"."id" = $1[0m  [["id", 33]]
+  [1m[36mPermission Create (1.0ms)[0m  [1m[32mINSERT INTO "permissions" ("modules", "role_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["modules", "{\"Script\":{\"actions\":[\"index\"]}}"], ["role_id", 33], ["created_at", "2018-09-26 15:09:22.423644"], ["updated_at", "2018-09-26 15:09:22.423644"]]
+  [1m[35m (2.9ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mPermission Load (1.0ms)[0m  [1m[34mSELECT  "permissions".* FROM "permissions" WHERE "permissions"."role_id" = $1 ORDER BY "permissions"."id" ASC LIMIT $2[0m  [["role_id", 33], ["LIMIT", 1]]
+  [1m[36mPermission Load (0.6ms)[0m  [1m[34mSELECT  "permissions".* FROM "permissions" WHERE "permissions"."role_id" = $1 ORDER BY "permissions"."id" ASC LIMIT $2[0m  [["role_id", 33], ["LIMIT", 1]]
+  [1m[36mPermission Load (1.0ms)[0m  [1m[34mSELECT  "permissions".* FROM "permissions" WHERE "permissions"."role_id" = $1 ORDER BY "permissions"."id" ASC LIMIT $2[0m  [["role_id", 33], ["LIMIT", 1]]
+  [1m[36mPermission Load (0.4ms)[0m  [1m[34mSELECT  "permissions".* FROM "permissions" WHERE "permissions"."role_id" = $1 ORDER BY "permissions"."id" ASC LIMIT $2[0m  [["role_id", 33], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPermission Update (0.7ms)[0m  [1m[33mUPDATE "permissions" SET "modules" = $1, "updated_at" = $2 WHERE "permissions"."id" = $3[0m  [["modules", "{\"Script\":{\"actions\":[]}}"], ["updated_at", "2018-09-26 15:09:22.442968"], ["id", 19]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mPermission Load (0.5ms)[0m  [1m[34mSELECT  "permissions".* FROM "permissions" WHERE "permissions"."role_id" = $1 ORDER BY "permissions"."id" ASC LIMIT $2[0m  [["role_id", 33], ["LIMIT", 1]]
+  [1m[36mPermission Load (0.8ms)[0m  [1m[34mSELECT  "permissions".* FROM "permissions" WHERE "permissions"."role_id" = $1 ORDER BY "permissions"."id" ASC LIMIT $2[0m  [["role_id", 33], ["LIMIT", 1]]
+  [1m[36mPermission Load (0.4ms)[0m  [1m[34mSELECT  "permissions".* FROM "permissions" WHERE "permissions"."role_id" = $1 ORDER BY "permissions"."id" ASC LIMIT $2[0m  [["role_id", 33], ["LIMIT", 1]]
+  [1m[36mPermission Load (0.3ms)[0m  [1m[34mSELECT  "permissions".* FROM "permissions" WHERE "permissions"."role_id" = $1 ORDER BY "permissions"."id" ASC LIMIT $2[0m  [["role_id", 33], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mPermission Update (1.1ms)[0m  [1m[33mUPDATE "permissions" SET "modules" = $1, "updated_at" = $2 WHERE "permissions"."id" = $3[0m  [["modules", "{\"Script\":{\"actions\":[\"index\"]}}"], ["updated_at", "2018-09-26 15:09:22.454475"], ["id", 19]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mPermission Load (0.4ms)[0m  [1m[34mSELECT  "permissions".* FROM "permissions" WHERE "permissions"."role_id" = $1 ORDER BY "permissions"."id" ASC LIMIT $2[0m  [["role_id", 33], ["LIMIT", 1]]
+  [1m[35m (1.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRole Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "roles" WHERE "roles"."name" = $1 LIMIT $2[0m  [["name", "Salvador"], ["LIMIT", 1]]
+  [1m[36mRole Create (0.6ms)[0m  [1m[32mINSERT INTO "roles" ("name", "position", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Salvador"], ["position", 1], ["created_at", "2018-09-26 15:09:22.466230"], ["updated_at", "2018-09-26 15:09:22.466230"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRole Load (0.4ms)[0m  [1m[34mSELECT "roles".* FROM "roles" WHERE "roles"."id" = $1[0m  [["id", 34]]
+  [1m[36mPermission Create (0.5ms)[0m  [1m[32mINSERT INTO "permissions" ("modules", "role_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["modules", "{\"User\":{\"actions\":[\"index\"]}}"], ["role_id", 34], ["created_at", "2018-09-26 15:09:22.470651"], ["updated_at", "2018-09-26 15:09:22.470651"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mPermission Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "permissions" WHERE "permissions"."role_id" = $1 LIMIT $2[0m  [["role_id", 34], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRole Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "roles" WHERE "roles"."name" = $1 LIMIT $2[0m  [["name", "Maricarmen"], ["LIMIT", 1]]
+  [1m[36mRole Create (0.7ms)[0m  [1m[32mINSERT INTO "roles" ("name", "position", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Maricarmen"], ["position", 1], ["created_at", "2018-09-26 15:09:22.479611"], ["updated_at", "2018-09-26 15:09:22.479611"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mPermission Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "permissions" WHERE "permissions"."role_id" = $1 LIMIT $2[0m  [["role_id", 35], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRole Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "roles" WHERE "roles"."name" = $1 LIMIT $2[0m  [["name", "Reina"], ["LIMIT", 1]]
+  [1m[36mRole Create (0.5ms)[0m  [1m[32mINSERT INTO "roles" ("name", "position", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Reina"], ["position", 1], ["created_at", "2018-09-26 15:09:22.489067"], ["updated_at", "2018-09-26 15:09:22.489067"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRole Load (0.6ms)[0m  [1m[34mSELECT "roles".* FROM "roles" WHERE "roles"."id" = $1[0m  [["id", 36]]
+  [1m[36mPermission Create (0.6ms)[0m  [1m[32mINSERT INTO "permissions" ("modules", "role_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["modules", "{\"Script\":{\"actions\":[\"index\"]}}"], ["role_id", 36], ["created_at", "2018-09-26 15:09:22.494593"], ["updated_at", "2018-09-26 15:09:22.494593"]]
+  [1m[35m (0.6ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mPermission Load (0.5ms)[0m  [1m[34mSELECT  "permissions".* FROM "permissions" WHERE "permissions"."role_id" = $1 ORDER BY "permissions"."id" ASC LIMIT $2[0m  [["role_id", 36], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mScript Update All (1.0ms)[0m  [1m[33mUPDATE "scripts" SET "position" = ("scripts"."position" + 1), "updated_at" = '2018-09-26 15:09:22.557749' WHERE (1 = 1) AND ("scripts"."position" >= 1)[0m
+  [1m[36mScript Create (140.7ms)[0m  [1m[32mINSERT INTO "scripts" ("name", "script", "url", "position", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Fernando"], ["script", "MyStrig"], ["url", "www.example.com"], ["position", 1], ["created_at", "2018-09-26 15:09:22.556038"], ["updated_at", "2018-09-26 15:09:22.556038"]]
+  [1m[36mPublicActivity::Activity Create (0.6ms)[0m  [1m[32mINSERT INTO "activities" ("trackable_type", "trackable_id", "key", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trackable_type", "Script"], ["trackable_id", 7], ["key", "script.create"], ["created_at", "2018-09-26 15:09:22.703367"], ["updated_at", "2018-09-26 15:09:22.703367"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mScript Load (0.4ms)[0m  [1m[34mSELECT  "scripts".* FROM "scripts" WHERE "scripts"."url" = $1 LIMIT $2[0m  [["url", "www.example.com"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mScript Update All (0.4ms)[0m  [1m[33mUPDATE "scripts" SET "position" = ("scripts"."position" + 1), "updated_at" = '2018-09-26 15:09:22.713190' WHERE (1 = 1) AND ("scripts"."position" >= 1)[0m
+  [1m[36mScript Create (0.4ms)[0m  [1m[32mINSERT INTO "scripts" ("name", "script", "url", "position", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Santiago"], ["script", "MyStrig"], ["url", "www.keppleradmin.com"], ["position", 1], ["created_at", "2018-09-26 15:09:22.712608"], ["updated_at", "2018-09-26 15:09:22.712608"]]
+  [1m[36mPublicActivity::Activity Create (0.5ms)[0m  [1m[32mINSERT INTO "activities" ("trackable_type", "trackable_id", "key", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trackable_type", "Script"], ["trackable_id", 8], ["key", "script.create"], ["created_at", "2018-09-26 15:09:22.717985"], ["updated_at", "2018-09-26 15:09:22.717985"]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[36mScript Load (0.3ms)[0m  [1m[34mSELECT  "scripts".* FROM "scripts" WHERE "scripts"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRole Load (1.1ms)[0m  [1m[34mSELECT "roles".* FROM "roles" WHERE "roles"."id" = $1[0m  [["id", 1]]
+  [1m[36mRole Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "roles" WHERE "roles"."name" = $1 AND "roles"."id" != $2 LIMIT $3[0m  [["name", "keppler_admin"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."deleted_at" IS NULL LIMIT $2[0m  [["email", "frederik.hand@macgyver.org"], ["LIMIT", 1]]
+  [1m[35m (0.8ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRole Load (0.4ms)[0m  [1m[34mSELECT "roles".* FROM "roles" WHERE "roles"."id" = $1[0m  [["id", 1]]
+  [1m[36mRole Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "roles" WHERE "roles"."name" = $1 AND "roles"."id" != $2 LIMIT $3[0m  [["name", "keppler_admin"], ["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRole Load (1.1ms)[0m  [1m[34mSELECT "roles".* FROM "roles" WHERE 1=0[0m
+  [1m[36mUser Exists (1.1ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."deleted_at" IS NULL LIMIT $2[0m  [["email", "caleigh_casper@fadel.net"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."deleted_at" IS NULL ORDER BY "users"."created_at" DESC LIMIT $1 OFFSET $2[0m  [["LIMIT", 10], ["OFFSET", 0]]
+  [1m[36mRole Load (2.1ms)[0m  [1m[34mSELECT  "roles".* FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = $1 ORDER BY "roles"."id" ASC LIMIT $2[0m  [["user_id", 3], ["LIMIT", 1]]
+  [1m[36mRole Load (2.8ms)[0m  [1m[34mSELECT  "roles".* FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = $1 ORDER BY "roles"."id" ASC LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  [1m[36mRole Load (0.8ms)[0m  [1m[34mSELECT  "roles".* FROM "roles" INNER JOIN "users_roles" ON "roles"."id" = "users_roles"."role_id" WHERE "users_roles"."user_id" = $1 ORDER BY "roles"."id" ASC LIMIT $2[0m  [["user_id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRole Load (0.6ms)[0m  [1m[34mSELECT "roles".* FROM "roles" WHERE "roles"."id" = $1[0m  [["id", 1]]
+  [1m[35m (0.7ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRole Exists (1.8ms)[0m  [1m[34mSELECT  1 AS one FROM "roles" WHERE "roles"."name" = $1 AND "roles"."id" != $2 LIMIT $3[0m  [["name", "keppler_admin"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."deleted_at" IS NULL LIMIT $2[0m  [["email", "kian.damore@johnston.io"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("name", "permalink", "username", "email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Clemente"], ["permalink", "clemente-9ad51277"], ["username", "Eduardo"], ["email", "kian.damore@johnston.io"], ["encrypted_password", "$2a$04$lb.1VDpLcyVsqrpBDfgz9uAi5Ngo82Kj4aaG1tsnDy27k6CNuwEc."], ["created_at", "2018-09-26 15:09:22.832503"], ["updated_at", "2018-09-26 15:09:22.832503"]]
+  [1m[36mPublicActivity::Activity Create (2.8ms)[0m  [1m[32mINSERT INTO "activities" ("trackable_type", "trackable_id", "key", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trackable_type", "User"], ["trackable_id", 21], ["key", "user.create"], ["created_at", "2018-09-26 15:09:22.837040"], ["updated_at", "2018-09-26 15:09:22.837040"]]
+  [1m[36mUser::HABTM_Roles Create (0.5ms)[0m  [1m[32mINSERT INTO "users_roles" ("user_id", "role_id") VALUES ($1, $2)[0m  [["user_id", 21], ["role_id", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRole Load (1.9ms)[0m  [1m[34mSELECT "roles".* FROM "roles" WHERE "roles"."id" = $1[0m  [["id", 1]]
+  [1m[35m (2.6ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRole Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "roles" WHERE "roles"."name" = $1 AND "roles"."id" != $2 LIMIT $3[0m  [["name", "keppler_admin"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."deleted_at" IS NULL LIMIT $2[0m  [["email", "alberta@parkerhaag.org"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("name", "permalink", "username", "email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Hernán"], ["permalink", "hernan-371529b6"], ["username", "Sergio"], ["email", "alberta@parkerhaag.org"], ["encrypted_password", "$2a$04$ycsR.KpsbZsjjT4Vsf6QuO7fyLZ2dq9m/qyoS6LcPxTvdJFLkat16"], ["created_at", "2018-09-26 15:09:22.866404"], ["updated_at", "2018-09-26 15:09:22.866404"]]
+  [1m[36mPublicActivity::Activity Create (0.9ms)[0m  [1m[32mINSERT INTO "activities" ("trackable_type", "trackable_id", "key", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trackable_type", "User"], ["trackable_id", 22], ["key", "user.create"], ["created_at", "2018-09-26 15:09:22.871590"], ["updated_at", "2018-09-26 15:09:22.871590"]]
+  [1m[36mUser::HABTM_Roles Create (0.4ms)[0m  [1m[32mINSERT INTO "users_roles" ("user_id", "role_id") VALUES ($1, $2)[0m  [["user_id", 22], ["role_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.8ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRole Load (0.6ms)[0m  [1m[34mSELECT "roles".* FROM "roles" WHERE "roles"."id" = $1[0m  [["id", 2]]
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRole Load (0.4ms)[0m  [1m[34mSELECT "roles".* FROM "roles" WHERE "roles"."id" = $1[0m  [["id", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mRole Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "roles" WHERE "roles"."name" = $1 AND "roles"."id" != $2 LIMIT $3[0m  [["name", "keppler_admin"], ["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."deleted_at" IS NULL LIMIT $2[0m  [["email", "janelle@okeefe.name"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "permalink", "username", "email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Magdalena"], ["permalink", "magdalena-2b83f754"], ["username", "Leonor"], ["email", "janelle@okeefe.name"], ["encrypted_password", "$2a$04$ly2J2eg7xQ726GCdpk358.fhwLG5ZJYpSzKVdu1qIhcDhuL/d8oHi"], ["created_at", "2018-09-26 15:09:22.908870"], ["updated_at", "2018-09-26 15:09:22.908870"]]
+  [1m[36mPublicActivity::Activity Create (1.2ms)[0m  [1m[32mINSERT INTO "activities" ("trackable_type", "trackable_id", "key", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["trackable_type", "User"], ["trackable_id", 23], ["key", "user.create"], ["created_at", "2018-09-26 15:09:22.913303"], ["updated_at", "2018-09-26 15:09:22.913303"]]
+  [1m[36mUser::HABTM_Roles Create (0.5ms)[0m  [1m[32mINSERT INTO "users_roles" ("user_id", "role_id") VALUES ($1, $2)[0m  [["user_id", 23], ["role_id", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.6ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m

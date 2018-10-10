@@ -27,9 +27,9 @@ module AdminHelper
 
   # Classify a model from a controller
   def model
-    ctrlpath = controller_path
-    klass = ctrlpath.include?('admin') ? controller_name : controller_path
-    klass.classify.constantize
+    controller_path
+      .remove('app/').remove('admin/')
+      .classify.constantize
   end
 
   # Underscore class_name from a object
@@ -38,9 +38,13 @@ module AdminHelper
   end
 
   # Messages for the crud actions
-  def actions_messages(object)
-    t("keppler.messages.successfully.#{action_convert_to_locale}",
-      model: t("keppler.models.singularize.#{underscore(object)}").humanize)
+  def actions_messages(_object)
+    t(
+      "keppler.messages.successfully.#{action_convert_to_locale}",
+      model: t(
+        "keppler.models.singularize.#{controller_name.singularize}"
+      ).humanize
+    )
   end
 
   def entries(total, objects)
@@ -59,6 +63,14 @@ module AdminHelper
     klass.delete('admin')
     klass = klass.join('/')
     klass.classify.constantize.search_field
+  end
+
+  def included_in?(array1, array2)
+    !(array1 & array2).blank?
+  end
+
+  def allowed_action?(module_name, actions)
+    !current_user.roles.first.include_actions?(module_name, actions).blank?
   end
 
   private
@@ -87,16 +99,17 @@ module AdminHelper
   end
   # ------------ preload
 
-  # ------------ action_message
+  # ------------ actions_messages(object)
   def action_convert_to_locale
     case action_name
+    when 'clone' then 'cloned'
     when 'create' then 'created'
     when 'update' then 'updated'
     when 'destroy' then 'deleted'
     when 'destroy_multiple' then 'removed'
     end
   end
-  # ------------ action_message
+  # ------------ actions_messages(object)
 
   # ------------ entries
   def message(total, objects)
