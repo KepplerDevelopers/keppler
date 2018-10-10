@@ -8,10 +8,15 @@ class ApplicationController < ActionController::Base
   before_action :set_apparience_colors
   before_action :set_sidebar
   before_action :set_modules
+  before_action :set_languages
+  before_action :set_admin_locale
+
   skip_around_action :set_locale_from_url
   include Pundit
-  include PublicActivity::StoreController
   include AdminHelper
+  include PublicActivity::StoreController
+  helper KepplerLanguages::LanguagesHelper
+  helper KepplerCapsules::CapsulesHelper
 
   rescue_from Pundit::NotAuthorizedError, with: :user_not_authorized
   # rescue_from Faraday::ConnectionFailed do |error|
@@ -25,7 +30,8 @@ class ApplicationController < ActionController::Base
   end
 
   def appearance
-    @appearance = Setting.first.appearance
+    @setting = Setting.includes(:appearance, :social_account).first
+    @appearance = @setting.appearance
   end
 
   def set_apparience_colors
@@ -44,7 +50,7 @@ class ApplicationController < ActionController::Base
 
   def user_not_authorized
     flash[:alert] = t('keppler.messages.not_authorized_action')
-    redirect_to(request.referrer || root_path)
+    redirect_to not_authorized_path
   end
 
   # block access dashboard
@@ -63,10 +69,12 @@ class ApplicationController < ActionController::Base
     ).values.each(&:symbolize_keys!)
     modules = Dir[File.join("#{Rails.root}/rockets", '*')]
     modules.each do |m|
-      module_menu = YAML.load_file(
-        "#{m}/config/menu.yml"
-      ).values.each(&:symbolize_keys!)
-      @sidebar[0] = @sidebar[0].merge(module_menu[0])
+      if File.file?("#{m}/config/menu.yml")
+        module_menu = YAML.load_file(
+          "#{m}/config/menu.yml"
+        ).values.each(&:symbolize_keys!)
+        @sidebar[0] = @sidebar[0].merge(module_menu[0])
+      end
     end
   end
 
@@ -76,13 +84,29 @@ class ApplicationController < ActionController::Base
     ).values.each(&:symbolize_keys!)
     modules = Dir[File.join("#{Rails.root}/rockets", '*')]
     modules.each do |m|
-      module_name = YAML.load_file(
-        "#{m}/config/permissions.yml"
-      ).values
-      return if module_name.first.nil?
-      module_name.each(&:symbolize_keys!)
-      @modules[0] = @modules[0].merge(module_name[0])
+      if File.file?("#{m}/config/permissions.yml")
+        module_menu = YAML.load_file(
+          "#{m}/config/permissions.yml"
+        ).values
+        unless module_menu.first.nil?
+          @modules[0] = @modules[0].merge(module_menu[0])
+        end
+      end
     end
+  end
+
+  def set_admin_locale
+    I18n.default_locale = Appearance.first.language || :en
+    if controller_path.include?('admin')
+      I18n.locale = Appearance.first.language || I18n.default_locale
+    end
+  end
+
+  def set_languages
+    languages = KepplerLanguages::Language.all.map { |l| l.name }
+    @languages = languages.push('es', 'en')
+
+    I18n.available_locales = @languages
   end
 
   protected

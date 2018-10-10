@@ -10,10 +10,31 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_17_135814) do
+ActiveRecord::Schema.define(version: 2018_10_10_150702) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "active_storage_attachments", force: :cascade do |t|
+    t.string "name", null: false
+    t.string "record_type", null: false
+    t.bigint "record_id", null: false
+    t.bigint "blob_id", null: false
+    t.datetime "created_at", null: false
+    t.index ["blob_id"], name: "index_active_storage_attachments_on_blob_id"
+    t.index ["record_type", "record_id", "name", "blob_id"], name: "index_active_storage_attachments_uniqueness", unique: true
+  end
+
+  create_table "active_storage_blobs", force: :cascade do |t|
+    t.string "key", null: false
+    t.string "filename", null: false
+    t.string "content_type"
+    t.text "metadata"
+    t.bigint "byte_size", null: false
+    t.string "checksum", null: false
+    t.datetime "created_at", null: false
+    t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
+  end
 
   create_table "activities", force: :cascade do |t|
     t.string "trackable_type"
@@ -37,9 +58,19 @@ ActiveRecord::Schema.define(version: 2018_08_17_135814) do
   create_table "appearances", force: :cascade do |t|
     t.string "image_background"
     t.string "theme_name"
+    t.string "language"
+    t.string "time_zone"
     t.string "setting_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["setting_id"], name: "index_appearances_on_setting_id"
+  end
+
+  create_table "capsules", force: :cascade do |t|
+    t.string "friends"
+    t.string "name"
+    t.integer "position"
+    t.datetime "deleted_at"
   end
 
   create_table "customizes", force: :cascade do |t|
@@ -56,15 +87,7 @@ ActiveRecord::Schema.define(version: 2018_08_17_135814) do
     t.integer "setting_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "keppler_capsules_capsule_associations", force: :cascade do |t|
-    t.string "association_type"
-    t.string "capsule_name"
-    t.boolean "dependention_destroy"
-    t.integer "capsule_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.index ["setting_id"], name: "index_google_analytics_settings_on_setting_id"
   end
 
   create_table "keppler_capsules_capsule_fields", force: :cascade do |t|
@@ -93,6 +116,45 @@ ActiveRecord::Schema.define(version: 2018_08_17_135814) do
     t.index ["deleted_at"], name: "index_keppler_capsules_capsules_on_deleted_at"
   end
 
+  create_table "keppler_frontend_callback_functions", force: :cascade do |t|
+    t.string "name"
+    t.string "description"
+    t.integer "position"
+    t.datetime "deleted_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["deleted_at"], name: "index_keppler_frontend_callback_functions_on_deleted_at"
+  end
+
+  create_table "keppler_frontend_functions", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.integer "position"
+    t.datetime "deleted_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["deleted_at"], name: "index_keppler_frontend_functions_on_deleted_at"
+  end
+
+  create_table "keppler_frontend_parameters", force: :cascade do |t|
+    t.string "name"
+    t.integer "position"
+    t.datetime "deleted_at"
+    t.string "function_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["deleted_at"], name: "index_keppler_frontend_parameters_on_deleted_at"
+  end
+
+  create_table "keppler_frontend_partials", force: :cascade do |t|
+    t.string "name"
+    t.integer "position"
+    t.datetime "deleted_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["deleted_at"], name: "index_keppler_frontend_partials_on_deleted_at"
+  end
+
   create_table "keppler_frontend_themes", force: :cascade do |t|
     t.string "name"
     t.boolean "active"
@@ -101,6 +163,14 @@ ActiveRecord::Schema.define(version: 2018_08_17_135814) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["deleted_at"], name: "index_keppler_frontend_themes_on_deleted_at"
+  end
+
+  create_table "keppler_frontend_view_callbacks", force: :cascade do |t|
+    t.string "name"
+    t.string "function_type"
+    t.integer "view_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "keppler_frontend_views", force: :cascade do |t|
@@ -114,6 +184,35 @@ ActiveRecord::Schema.define(version: 2018_08_17_135814) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["deleted_at"], name: "index_keppler_frontend_views_on_deleted_at"
+  end
+
+  create_table "keppler_language_languages", force: :cascade do |t|
+    t.string "name"
+    t.integer "position"
+    t.datetime "deleted_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["deleted_at"], name: "index_keppler_language_languages_on_deleted_at"
+  end
+
+  create_table "keppler_languages_fields", force: :cascade do |t|
+    t.string "key"
+    t.text "value"
+    t.integer "language_id"
+    t.integer "position"
+    t.datetime "deleted_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "keppler_languages_languages", force: :cascade do |t|
+    t.string "name"
+    t.string "field_ids"
+    t.integer "position"
+    t.datetime "deleted_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.boolean "active"
   end
 
   create_table "meta_tags", force: :cascade do |t|
@@ -164,6 +263,14 @@ ActiveRecord::Schema.define(version: 2018_08_17_135814) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "seos", force: :cascade do |t|
+    t.integer "position"
+    t.datetime "deleted_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["deleted_at"], name: "index_seos_on_deleted_at"
+  end
+
   create_table "settings", force: :cascade do |t|
     t.string "name"
     t.string "description"
@@ -185,6 +292,7 @@ ActiveRecord::Schema.define(version: 2018_08_17_135814) do
     t.integer "setting_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["setting_id"], name: "index_smtp_settings_on_setting_id"
   end
 
   create_table "social_accounts", force: :cascade do |t|
@@ -207,6 +315,7 @@ ActiveRecord::Schema.define(version: 2018_08_17_135814) do
     t.integer "setting_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["setting_id"], name: "index_social_accounts_on_setting_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -227,7 +336,8 @@ ActiveRecord::Schema.define(version: 2018_08_17_135814) do
     t.string "last_sign_in_ip"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["email"], name: "index_users_on_email", unique: true
+    t.integer "position"
+    t.index ["email"], name: "index_users_on_email", unique: true, where: "(deleted_at IS NULL)"
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 

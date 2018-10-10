@@ -127,7 +127,7 @@ module Keppler
     desc "delete module NAME attr:type attr:type", "Delete a keppler module"
     subcommand "delete", Delete
 
-    desc 'rocket_new NAME', 'Create a new keppler plugin'
+    # desc 'rocket_new NAME', 'Create a new keppler plugin'
 
     # def rocket_new(plugin_name)
     #   plugin_name = plugin_name.downcase

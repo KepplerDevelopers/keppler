@@ -33,7 +33,7 @@ class KepplerFileInput < SimpleForm::Inputs::Base
   private
 
   def init_preview
-    return if !object.id || @obj_attr.file.nil?
+    return if !object.id || @obj_attr.try(:file).nil?
     initializers
     if @obj_attr.is_a?(Array)
       @obj_attr.each { |img| preview_tag(img) }
@@ -45,8 +45,8 @@ class KepplerFileInput < SimpleForm::Inputs::Base
 
   def preview_tag(preview)
     tag =
-      "<img class='kv-preview-data file-preview-image' src='/uploads
-      #{preview.file.file.split('/uploads').last}'>"
+      "<img class='kv-preview-data file-preview-image'
+      src='/uploads#{preview.file.file.split('/uploads').last}'>"
     @previews.push(tag)
   end
 
@@ -100,11 +100,8 @@ class KepplerFileInput < SimpleForm::Inputs::Base
   end
 
   def dimensions
-    "minImageWidth: 300,
-    minImageHeight: 300,
-    maxImageWidth: 5000,
-    maxImageHeight: 5000,
-    maxFileSize: #{input_options[:max_size] || 225},
+    "
+    maxFileSize: #{input_options[:max_size] || 6_600},
     maxFilePreviewSize: #{input_options[:max_preview_size] || 25_600}, // 25 MB
     minFileCount: 0,
     maxFileCount: 0".html_safe + ','

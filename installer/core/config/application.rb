@@ -19,6 +19,7 @@ module InyxmaterRails
 
     # Enable the asset pipeline
     config.assets.paths << Rails.root.join('app', 'assets', 'fonts')
+    config.assets.precompile += ["codemirror*", "codemirror/**/*"]
 
     # Set Time.zone default to the specified zone and make Active Record
     #   auto-convert to this zone.
@@ -34,9 +35,7 @@ module InyxmaterRails
       '*.{rb,yml}'
     ).to_s]
 
-    I18n.available_locales = %i[en es]
-
-    config.i18n.default_locale = :es
+    # config.i18n.default_locale = KepplerLanguages::Language.where(active: true).first.name.to_sym
 
     # config.active_record.raise_in_transactional_callbacks = true
 

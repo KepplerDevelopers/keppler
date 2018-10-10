@@ -3,11 +3,12 @@ require 'thor'
 module Keppler
   class Add < Thor
 
-    desc 'module', 'Add a new keppler module'
+    desc 'module', 'Add a new keppler rocket_module'
     def module(*params)
-      module_name = params[0]
-      fields = params[1..params.length].join(" ")
-      system("rails g keppler_scaffold #{module_name} #{fields} position:integer deleted_at:datetime:index -y")
+      rocket_name = params[0]
+      module_name = params[1]
+      fields = params[2..params.length].join(" ")
+      system("rails g keppler_module #{rocket_name} #{module_name} #{fields} -y")
     end
   end
 end
