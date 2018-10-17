@@ -121,10 +121,10 @@ module Keppler
     	puts "Keppler v.#{Keppler::VERSION}"
     end
 
-    desc "add module NAME attr:type attr:type", "Create a new keppler module"
+    desc "add rocket module NAME attr:type attr:type", "Create a new keppler module"
     subcommand "add", Add
 
-    desc "delete module NAME attr:type attr:type", "Delete a keppler module"
+    desc "delete rocket module NAME attr:type attr:type", "Delete a keppler module"
     subcommand "delete", Delete
 
     # desc 'rocket_new NAME', 'Create a new keppler plugin'
