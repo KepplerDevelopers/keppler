@@ -8,7 +8,8 @@ module KepplerFrontend
       private
 
       def not_special_chars
-        ('a'..'z').to_a << '_'
+        chars = ('a'..'z').to_a << '_'
+        chars << ':'
       end
 
       def without_special_characters
