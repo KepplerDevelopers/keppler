@@ -1,6 +1,6 @@
 require "keppler/version"
 
-gemspec = File.readlines("#{ARGV[0]}/#{ARGV[0]}.gemspec")
+gemspec = File.readlines("rockets/#{ARGV[0]}/#{ARGV[0]}.gemspec")
 
 gemspec[11] = "  s.homepage    = 'http://keppler.io'\n"
 gemspec[12] = "  s.summary     = '#{ARGV[0]}'\n"
@@ -19,9 +19,9 @@ gemspec.insert(23, "  s.add_development_dependency 'pg'\n")
 gemspec.delete_at(24)
 gemspec = gemspec.join("")
 
-File.write("#{ARGV[0]}/#{ARGV[0]}.gemspec", gemspec)
+File.write("rockets/#{ARGV[0]}/#{ARGV[0]}.gemspec", gemspec)
 
-engine = File.readlines("#{ARGV[0]}/lib/#{ARGV[0]}/engine.rb")
+engine = File.readlines("rockets/#{ARGV[0]}/lib/#{ARGV[0]}/engine.rb")
 
 engine.insert(3, "    paths['config/locales']\n")
 engine.insert(4, "    config.generators do |g|\n")
@@ -34,9 +34,9 @@ engine.insert(10, "    end\n")
 
 engine = engine.join("")
 
-File.write("#{ARGV[0]}/lib/#{ARGV[0]}/engine.rb", engine)
+File.write("rockets/#{ARGV[0]}/lib/#{ARGV[0]}/engine.rb", engine)
 
-route = File.readlines("#{ARGV[0]}/config/routes.rb")
+route = File.readlines("rockets/#{ARGV[0]}/config/routes.rb")
 
 route.insert(1, "  namespace :admin do\n")
 route.insert(2, "    scope :#{ARGV[0].split('_').drop(1).join('_')}, as: :#{ARGV[0].split('_').drop(1).join('_')} do\n")
@@ -45,112 +45,102 @@ route.insert(4, "  end\n")
 
 route = route.join("")
 
-File.write("#{ARGV[0]}/config/routes.rb", route)
+File.write("rockets/#{ARGV[0]}/config/routes.rb", route)
 
-system("scp -r $GEM_HOME/gems/keppler-#{Keppler::VERSION}/installer/plugins/config/permissions.yml #{ARGV[0]}/config/permissions.yml")
+system("scp -r $GEM_HOME/gems/keppler-#{Keppler::VERSION}/installer/plugins/config/permissions.yml rockets/#{ARGV[0]}/config/permissions.yml")
 
-system("scp -r $GEM_HOME/gems/keppler-#{Keppler::VERSION}/installer/plugins/config/menu.yml #{ARGV[0]}/config/menu.yml")
+system("scp -r $GEM_HOME/gems/keppler-#{Keppler::VERSION}/installer/plugins/config/menu.yml rockets/#{ARGV[0]}/config/menu.yml")
 
-menu = File.readlines("#{ARGV[0]}/config/menu.yml")
+menu = File.readlines("rockets/#{ARGV[0]}/config/menu.yml")
 
 menu[1] = "  #{ARGV[0]}:\n"
 menu[2] = "    name: #{ARGV[0].split('_').map(&:capitalize).join(' ')}\n"
 
 menu = menu.join("")
 
-File.write("#{ARGV[0]}/config/menu.yml", menu)
+File.write("rockets/#{ARGV[0]}/config/menu.yml", menu)
 
-system("scp -r $GEM_HOME/gems/keppler-#{Keppler::VERSION}/installer/plugins/config/locales #{ARGV[0]}/config/locales")
+system("scp -r $GEM_HOME/gems/keppler-#{Keppler::VERSION}/installer/plugins/config/locales rockets/#{ARGV[0]}/config/locales")
 
 project = ARGV[0].to_s
 
-locales = File.readlines("#{ARGV[0]}/config/locales/en.yml")
+locales = File.readlines("rockets/#{ARGV[0]}/config/locales/en.yml")
 
 locales[3] = "      #{project.gsub('_', '-')}: #{ARGV[0].split('_').map(&:capitalize).join(' ')}\n"
 locales[4] = "      #{project.gsub('_', '-')}-submenu:\n"
 
 locales = locales.join("")
 
-File.write("#{ARGV[0]}/config/locales/en.yml", locales)
+File.write("rockets/#{ARGV[0]}/config/locales/en.yml", locales)
 
-locales = File.readlines("#{ARGV[0]}/config/locales/es.yml")
+locales = File.readlines("rockets/#{ARGV[0]}/config/locales/es.yml")
 
 locales[3] = "      #{project.gsub('_', '-')}: #{ARGV[0].split('_').map(&:capitalize).join(' ')}\n"
 locales[4] = "      #{project.gsub('_', '-')}-submenu:\n"
 
 locales = locales.join("")
 
-File.write("#{ARGV[0]}/config/locales/es.yml", locales)
+File.write("rockets/#{ARGV[0]}/config/locales/es.yml", locales)
 
 
-system("scp -r $GEM_HOME/gems/keppler-#{Keppler::VERSION}/installer/plugins/concerns #{ARGV[0]}/app/controllers/#{ARGV[0]}")
+system("scp -r $GEM_HOME/gems/keppler-#{Keppler::VERSION}/installer/plugins/concerns rockets/#{ARGV[0]}/app/controllers/#{ARGV[0]}")
 
-commons = File.readlines("#{ARGV[0]}/app/controllers/#{ARGV[0]}/concerns/commons.rb")
+commons = File.readlines("rockets/#{ARGV[0]}/app/controllers/#{ARGV[0]}/concerns/commons.rb")
 
 commons[0] = "module #{ARGV[0].split('_').map(&:capitalize).join('')}\n"
 
 commons = commons.join("")
 
-File.write("#{ARGV[0]}/app/controllers/#{ARGV[0]}/concerns/commons.rb", commons)
+File.write("rockets/#{ARGV[0]}/app/controllers/#{ARGV[0]}/concerns/commons.rb", commons)
 
 
-destroy = File.readlines("#{ARGV[0]}/app/controllers/#{ARGV[0]}/concerns/destroy_multiple.rb")
+destroy = File.readlines("rockets/#{ARGV[0]}/app/controllers/#{ARGV[0]}/concerns/destroy_multiple.rb")
 
 destroy[0] = "module #{ARGV[0].split('_').map(&:capitalize).join('')}\n"
 
 destroy = destroy.join("")
 
-File.write("#{ARGV[0]}/app/controllers/#{ARGV[0]}/concerns/destroy_multiple.rb", destroy)
+File.write("rockets/#{ARGV[0]}/app/controllers/#{ARGV[0]}/concerns/destroy_multiple.rb", destroy)
 
-history = File.readlines("#{ARGV[0]}/app/controllers/#{ARGV[0]}/concerns/history.rb")
+history = File.readlines("rockets/#{ARGV[0]}/app/controllers/#{ARGV[0]}/concerns/history.rb")
 
 history[0] = "module #{ARGV[0].split('_').map(&:capitalize).join('')}\n"
 
 history = history.join("")
 
-File.write("#{ARGV[0]}/app/controllers/#{ARGV[0]}/concerns/history.rb", history)
+File.write("rockets/#{ARGV[0]}/app/controllers/#{ARGV[0]}/concerns/history.rb", history)
 
-application = File.readlines("#{ARGV[0]}/app/controllers/#{ARGV[0]}/application_controller.rb")
+application = File.readlines("rockets/#{ARGV[0]}/app/controllers/#{ARGV[0]}/application_controller.rb")
 
 application[1] = "  class ApplicationController < ::ApplicationController\n"
 
 application = application.join("")
 
-File.write("#{ARGV[0]}/app/controllers/#{ARGV[0]}/application_controller.rb", application)
+File.write("rockets/#{ARGV[0]}/app/controllers/#{ARGV[0]}/application_controller.rb", application)
 
-dummy_test = File.readlines("#{ARGV[0]}/test/dummy/config/database.yml")
+dummy_test = File.readlines("rockets/#{ARGV[0]}/test/dummy/config/database.yml")
 
 dummy_test[7] = "  adapter: postgresql\n"
 dummy_test = dummy_test.join("")
 
-File.write("#{ARGV[0]}/test/dummy/config/database.yml", dummy_test)
+File.write("rockets/#{ARGV[0]}/test/dummy/config/database.yml", dummy_test)
 
-generator_routes = File.readlines("#{ARGV[0]}/lib/generators/keppler_scaffold/keppler_scaffold_generator.rb")
+generator_routes = File.readlines("rockets/#{ARGV[0]}/lib/generators/keppler_scaffold/keppler_scaffold_generator.rb")
 
 generator_routes[37] = "          after: 'scope :#{ARGV[0].split('_').drop(1).join('')}, as: :#{ARGV[0].split('_').drop(1).join('')} do'\n"
 generator_routes = generator_routes.join("")
 
-File.write("#{ARGV[0]}/lib/generators/keppler_scaffold/keppler_scaffold_generator.rb", generator_routes)
+File.write("rockets/#{ARGV[0]}/lib/generators/keppler_scaffold/keppler_scaffold_generator.rb", generator_routes)
 
-layouts = File.readlines("#{ARGV[0]}/app/views/#{ARGV[0]}/admin/layouts/application.html.haml")
+layouts = File.readlines("rockets/#{ARGV[0]}/app/views/#{ARGV[0]}/admin/layouts/application.html.haml")
 
-layouts[7] ="        = render '#{ARGV[0]}/admin/layouts/navigation', q: @q, appearance: @appearance\n"
-
-layouts = layouts.join("")
-
-File.write("#{ARGV[0]}/app/views/#{ARGV[0]}/admin/layouts/application.html.haml", layouts)
-
-layouts = File.readlines("#{ARGV[0]}/app/views/#{ARGV[0]}/admin/layouts/_navigation.html.haml")
-
-layouts[13] ="          = search_form_for [:admin, :#{ARGV[0].split('_').drop(1).join('')}, q], html: { method: :get } do |f|\n"
+layouts[7] ="  = render 'admin/layouts/navigation', q: @q, appearance: @appearance, model_obj: [:admin, :#{ARGV[0].split('_').drop(1).join('')}, @q]\n"
 
 layouts = layouts.join("")
 
-File.write("#{ARGV[0]}/app/views/#{ARGV[0]}/admin/layouts/_navigation.html.haml", layouts)
+File.write("rockets/#{ARGV[0]}/app/views/#{ARGV[0]}/admin/layouts/application.html.haml", layouts)
 
-layouts = File.readlines("#{ARGV[0]}/app/views/#{ARGV[0]}/admin/layouts/_navigation.html.haml")
-
-application = File.readlines("#{ARGV[0]}/app/controllers/#{ARGV[0]}/application_controller.rb")
+application = File.readlines("rockets/#{ARGV[0]}/app/controllers/#{ARGV[0]}/application_controller.rb")
 
 application.insert(3, "    before_action :user_signed_in?\n")
 application.insert(4, "    def user_signed_in?\n")
@@ -160,4 +150,4 @@ application.insert(7, "    end\n")
 
 application = application.join("")
 
-File.write("#{ARGV[0]}/app/controllers/#{ARGV[0]}/application_controller.rb", application)
+File.write("rockets/#{ARGV[0]}/app/controllers/#{ARGV[0]}/application_controller.rb", application)

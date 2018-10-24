@@ -11,6 +11,8 @@
   .show-row {
     img {
       border-radius: 2px;
+      cursor: zoom-in;
+      height: 25px;
       object-fit: cover;
       width: 25px;
     }
@@ -30,5 +32,9 @@
   .ui-sortable-helper {
     background-color: $almost-white;
     display: table;
+  }
+
+  .open {
+    position: relative;
   }
 }

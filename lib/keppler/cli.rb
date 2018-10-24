@@ -121,35 +121,10 @@ module Keppler
     	puts "Keppler v.#{Keppler::VERSION}"
     end
 
-    desc "add module NAME attr:type attr:type", "Create a new keppler module"
+    desc "add rocket module ROCKET_NAME NAME attr:type attr:type", "Create a new keppler module"
     subcommand "add", Add
 
-    desc "delete module NAME attr:type attr:type", "Delete a keppler module"
+    desc "delete rocket module ROCKET_NAME NAME", "Delete a keppler module"
     subcommand "delete", Delete
-
-    desc 'rocket_new NAME', 'Create a new keppler plugin'
-
-    def rocket_new(plugin_name)
-      plugin_name = plugin_name.downcase
-      system("rails plugin new keppler_#{plugin_name} --mountable")
-      puts "> Created scaffold"
-      system("cd keppler_#{plugin_name} && scp -r $GEM_HOME/gems/keppler-#{Keppler::VERSION}/installer/plugins/generators lib/generators")
-      puts "> Installed generators"
-      system("mkdir keppler_#{plugin_name}/app/views/keppler_#{plugin_name}")
-      system("mkdir keppler_#{plugin_name}/app/views/keppler_#{plugin_name}/admin")
-      system("scp -r $GEM_HOME/gems/keppler-#{Keppler::VERSION}/installer/plugins/layouts keppler_#{plugin_name}/app/views/keppler_#{plugin_name}/admin/layouts")
-      system("ruby $GEM_HOME/gems/keppler-#{Keppler::VERSION}/installer/plugins/install.rb keppler_#{plugin_name}")
-      system("mkdir keppler_#{plugin_name}/app/policies")
-      puts "> Installed policies"
-      puts "#{plugin_name} has been created"
-    end
-
-    desc 'rocket_build', 'Build a keppler plugin'
-
-    def rocket_build
-      rocket_name = File.basename(Dir.getwd)
-      system("mkdir pkg")
-      system("zip -r pkg/#{rocket_name}.rocket *")
-    end
 	end
 end

@@ -3,13 +3,43 @@ Rails.application.routes.draw do
     get '/index', to: 'app/front#index', as: :app_index
   end
 
-  root to: 'app/front#index'
+  # root to: 'app/front#index'
 
   devise_for :users, skip: KepplerConfiguration.skip_module_devise
   post '/filter', to: 'admin/users#filter_by_role', as: :filter_by_role
 
   namespace :admin do
     root to: 'admin#root'
+
+    namespace :rockets do
+      get '/', action: :rockets
+      post 'create/:rocket', action: :create, as: :create
+      post 'install', action: :install
+      post 'build/:rocket', action: :build, as: :build
+      delete 'uninstall/:rocket', action: :uninstall, as: :uninstall
+    end
+
+    get '/seo/sitemap', to: 'seos#sitemap'
+    get '/seo/robots', to: 'seos#robots'
+    post '/seo/editor/save', to: 'seos#editor_save'
+
+    resources :seos do
+      post '/sort', action: :sort, on: :collection
+      get '(page/:page)', action: :index, on: :collection, as: ''
+      get '/clone', action: 'clone'
+      post '/upload', action: 'upload', as: :upload
+      get(
+        '/reload',
+        action: :reload,
+        on: :collection,
+      )
+      delete(
+        '/destroy_multiple',
+        action: :destroy_multiple,
+        on: :collection,
+        as: :destroy_multiple
+      )
+    end
 
     resources :roles do
       get '(page/:page)', action: :index, on: :collection, as: ''
@@ -31,7 +61,7 @@ Rails.application.routes.draw do
         action: :destroy_multiple,
         on: :collection,
         as: :destroy_multiple
-      )      
+      )
       # post '/show_description/:module/:action_name', action: 'show_description', as: :show_description
       # get(
       #   '/add_permissions',
@@ -61,14 +91,19 @@ Rails.application.routes.draw do
         to: 'permissions#create',
         as: :role_create_permissions
       )
+      post(
+        ':role_id/toggle_permissions',
+        to: 'permissions#toggle_permissions',
+        as: :role_toggle_permissions
+      )
     end
 
-    resources :customizes do
-      get '(page/:page)', action: :index, on: :collection, as: ''
-      get '/clone', action: 'clone'
-      post '/upload', action: 'upload', as: :upload
-      post '/install_default', action: 'install_default'
-    end
+    # resources :customizes do
+    #   get '(page/:page)', action: :index, on: :collection, as: ''
+    #   get '/clone', action: 'clone'
+    #   post '/upload', action: 'upload', as: :upload
+    #   post '/install_default', action: 'install_default'
+    # end
 
 
     resources :users do
@@ -133,6 +168,7 @@ Rails.application.routes.draw do
 
     resources :settings, only: [] do
       collection do
+        post '/lang/:locale', to: 'settings#change_locale', as: :change_locale
         get '/:config', to: 'settings#edit', as: ''
         put '/:config', to: 'settings#update', as: 'update'
         put '/:config/appearance_default', to: 'settings#appearance_default', as: 'appearance_default'
@@ -149,7 +185,15 @@ Rails.application.routes.draw do
   # Dashboard routes engine
   mount KepplerGaDashboard::Engine, at: 'admin/dashboard', as: 'dashboard'
 
-  # Ckeditor routes engine
-  mount Ckeditor::Engine => '/ckeditor'
+  # Frontend routes engine
+  mount KepplerFrontend::Engine, at: '/', as: 'frontend'
 
+  # Language routes engine
+  mount KepplerLanguages::Engine, at: '/', as: 'languages'
+
+  # Capsules routes engine
+  mount KepplerCapsules::Engine, at: '/', as: 'capsules'
+
+  # Ckeditor routes engine
+  mount Ckeditor::Engine => '/ckeditor' 
 end

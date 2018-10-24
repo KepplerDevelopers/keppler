@@ -1,44 +1,59 @@
 es:
   keppler:
+    language: 
+      select_lang: Seleciona un idioma
+      es: Español
+      en: Inglés
+    preloader:
+      title: Es dificil trabajar en el espacio
+      message: Esto puede tardar unos segundos...
+    devise:
+      profile: Perfil
+      sign_out: Salir
+      sign_in: Entrar
     login_message: Ingresa tus datos para entrar
     powered: Desarrollado por
+    release_date: Fecha de Lanzamiento
     navigation:
       last_session: Ultima sesión
     sidebar-menu:
+      about: Información
+      seo: Seo
+      seo-submenu:
+        metatags: Meta Tags
+        sitemap: Sitemap
+        robots: Robots
       roles: Roles
       customizes: Personalización
       dashboard: Tablero
+      scripts: Scripts
+      meta_tags: Meta tags
       users: Usuarios
       users-submenu:
         users: Usuarios
         roles: Roles
         clients: Clientes
         admins: Administradores
-      development: 'Desarrollo Keppler'
-      setting: Configuración
+      roles: Roles
       keppler-design: 'Diseño Keppler'
       keppler-design-submenu:
         frontend-templates: 'Plantillas y Temas'
         admin-appearance: 'Apariencia de Keppler'
-      plugins: Plugins
-      plugins-submenu:
-        install: Instalar plugin
+      rockets: Rockets
+      setting: Configuración
       setting-submenu:
+        keppler-configuration: Ajustes de Keppler
         basic-information: 'Información básica'
         email-setting-smtp: 'Configuración SMTP'
         social-accounts: 'Redes sociales'
         google-analytics: 'Google Analytics'
         appearance: Apariencia
-      meta_tags: Meta tags
-      scripts: 'Scripts'
-      keppler-messages: Mensajes
-      keppler-messages-submenu:
-        messages: Mensajes
-        message-settings: Configuración de mensajes
-      keppler-blog: Blog
-      keppler-blog-submenu:
-        posts: Posts
-        categories: Categorías
+    customize:
+      admin-theme: Tema de Keppler
+      language: Idioma
+      location: Localización
+      time_zone: Zona Horaria
+      preview: Vista previa
     permissions:
       index: Listar
       create: Crear
@@ -47,6 +62,8 @@ es:
       upload: Cargar
       download: Descargar
       clone: Clonar
+      sitemap: Sitemap
+      robots: Robots
       descriptions:
         index: Permite al usuario ver el listado de todos los registros del módulo, y observar el detalle de cada uno de ellos
         create: Permite al usuario la creación de nuevos registros dentro del módulo
@@ -57,6 +74,7 @@ es:
         clone: Permite al usuario clonar un registro existente dentro del módulo
     models:
       singularize:
+        seo: seo
         role: role
         customize: customize
         meta_tag: meta tag
@@ -64,7 +82,9 @@ es:
         setting: configuración
         configuration: configuración
         user: usuario
+        capsule: capsule
       pluralize:
+        seos: seos
         roles: roles
         customizes: customizes
         meta_tags: meta tags
@@ -74,6 +94,7 @@ es:
         user: usuarios
         script: scripts
     modules:
+      admin/seos: Seos
       admin/roles: Roles
       admin/customizes: Customizes
       admin/meta_tags: 'Meta tags'
@@ -83,6 +104,40 @@ es:
       admin/users: 'Usuarios'
       keppler_ga_dashboard/dashboard: 'Dashboard'
       keppler_contact_us/message_settings: 'Configuración de mensajes'
+    rockets:
+      upload: Cargar rockets
+      drop: Arrastra un rocket o presiona aquí
+      install: Instalar
+      list: Lista de rockets
+      create_a_rocket: Crear un rocket
+      build: Construir
+      update: Actualizar
+      download: Descargar
+      uninstall: Desinstalar
+      empty: No hay rockets aquí :(
+      already_installed: Ese rocket ya está instalado :(
+      isnt_a_rocket: ¡Houston! Ese archivo no es un rocket :(
+      first_upload: ¡Primero carga un rocket, por favor!
+      choose_a_name: Elige un nombre
+      rocket_name: Este será el nombre de tu rocket
+      create_rocket: Crear
+      you_sure: ¿Estás seguro?
+      will_be_named: Tu rocket será llamado
+      great: ¡Genial!
+      wait_generator: Por favor espera mientras armamos tu rocket...
+      unpermitted_name: Ese nombre no está permitido
+      cancel: Cancelar
+      installed: instalado
+      uninstalled: desinstalado
+      created: creado
+      built: construido
+      success: "%{rocket} ha sido %{action} satisfactoriamente"
+      error: "Error: %{rocket} no pudo ser %{action}"
+      duplicated: "Error: %{rocket} ya existe"
+    appearance:
+      main_color: Color principal
+      admin_theme: Tema de KepplerAdmin
+      preview: Vista previa
     messages:
       not_authorized_page: Usted no tiene autorización para acceder a esta página
       not_authorized_action: Usted no tiene autorización para realizar esta acción
@@ -100,6 +155,7 @@ es:
       login_in_activity: Inicio de sesión en
       logout_in_activity: Salido del sistema en
       successfully:
+        cloned: "%{model} se ha clonado satisfactoriamente"
         created: "%{model} se ha creado satisfactoriamente"
         updated: "%{model} se ha actualizado satisfactoriamente"
         deleted: "%{model} se ha eliminado satisfactoriamente"
@@ -118,8 +174,10 @@ es:
       new: "%{model} - Nuevo"
       history: Historial
     actions:
+      documentation: Documentación
       created: Creado
       updated: Actualizado
+      add: Agregar
       new: Nuevo
       show: Ver
       edit: Editar
@@ -145,6 +203,11 @@ es:
       apply: Aplicar
       download_records: Descargar registros
       upload_records: Cargar registros
+      drop_files: Arrastra un archivo o presiona aquí
+      reload_page: Recargar página
+      download:
+        csv: Descargar CSV
+        xls: Descargar XLS
   activerecord:
     attributes:
       public: Publico
@@ -153,8 +216,8 @@ es:
       subtitle: Subtítulo
       tags: Etiquetas
       name: Nombre
-      first_name: 'Primer Nombre'
-      last_name: 'Último Nombre'
+      first_name: Nombre
+      last_name: Apellido
       full_name: 'Nombre Completo'
       email: Correo
       role: Rol
@@ -214,7 +277,7 @@ es:
       updated_at: Ultima actualización
       password: Contraseña
       password_confirmation: Confirmar contraseña
-      address: Dirección del servidor
+      address_ip: Dirección del servidor
       port: Puerto
       domain_name: Dominio
       url: URL
