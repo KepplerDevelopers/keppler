@@ -5,7 +5,7 @@
     #log
     - if loggedin?
       .wrapper{ style: 'height: auto; min-height: 100vh;' }
-        = render 'admin/layouts/navigation', q: @q, appearance: @appearance
+        = render 'admin/layouts/navigation', q: @q, appearance: @appearance, model_obj: model_object.push(@q)
         = render 'admin/layouts/sidebar', render: @render
         = render 'admin/layouts/messages'
         .content-wrapper
@@ -15,7 +15,7 @@
         = preloader
       = render 'admin/layouts/footer'
     - else
-      %main.devise{ class: "#{@appearance.image_background? ? 'devise-new-img' : 'devise-default-img'}", style: @appearance.image_background? ? "background-image: url(#{@appearance.image_background})" : nil }
+      %main.devise{ class: @appearance.image_background? ? 'devise-new-img' : 'devise-default-img', style: @appearance.image_background? ? "background-image: url(#{@appearance.image_background})" : nil }
         = yield
     - if action_name.eql?('index')
       %script{ src: '/assets/vue_admin/index.js' }

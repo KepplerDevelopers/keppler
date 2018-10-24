@@ -1,4 +1,4 @@
-### KEPPLER
+### KEPPLER ADMIN
 
 Keppler Admin es un CMS con un entorno de desarrollo que cuenta con una base de gemas ya integradas, de tal forma que acelerará el desarrollo de aplicaciones de vanguardia bajo la plataforma de Ruby on Rails.
 
@@ -15,6 +15,8 @@ Keppler Admin es un CMS con un entorno de desarrollo que cuenta con una base de 
 * Integración con framework fronte-end para el administrativo con [AdminLTE](https://adminlte.io/)
 * Integración con framework javascript [VueJS](https://vuejs.org/)
 * Integración sitemap dinamicos con [Sitemap Generator](https://github.com/kjvarga/sitemap_generator)
+
+### Gema de Keppler
 
 #### Instalación
 
@@ -37,6 +39,10 @@ Para crear un nuevo proyecto en Ruby on Rails con Keppler Admin, podemos ejecuta
 
 `keppler new NuevoProyecto`
 
+### Otros comandos:
+
+Los siguientes comandos se ejecutarán automáticamente al ejecutar `keppler new`:
+
 #### Creación del archivo secrets.yml
 
 Si detienes el proceso a la mitad o aún no tienes configurado un archivo `secrets.yml` con la configuración de
@@ -51,17 +57,21 @@ instanciadas en el `Gemfile`, ubicado en la raíz del proyecto, con el comando:
 
 `keppler dep`
 
-### Keppler Scaffolds
+#### Para acceder al proyecto recién creado:
+
+`cd NuevoProyecto`
+
+### Keppler Modules
 
 Keppler ofrece la posibilidad de realizar tareas de scaffolds totalmente
-configurados para adaptarse al administrativo. Para crear un nuevo
-módulo sólo debes llamar al siguiente comando desde la consola:
+configurados para adaptarse al administrativo dentro de un rocket ya existente.
+Para crear un nuevo módulo sólo debes llamar al siguiente comando desde la consola:
 
-`keppler add module ModuleName attribute:type`
+`keppler add module RocketName ModuleName attribute:type attribute:type ...`
 
-Por ejemplo, crearemos un scaffold de productos con diversos campos y tipos de datos:
+Por ejemplo, crearemos un módulo de productos con diversos campos y tipos de datos:
 
-`keppler add module Product title:string description:text quantity:integer price:float arrival_date:date arrival_time:time available:boolean user:references`
+`keppler add module KepplerProducts Product title:string description:text quantity:integer price:float arrival_date:date arrival_time:time available:boolean user:references`
 
 Luego debemos migrar la tabla a la base de datos con:
 
@@ -110,3 +120,12 @@ Aqui algunos ejemplos para la creación de inputs:
 ```
 
 **Nota:** *Puede revisar la documentación de [AdminLTE](https://adminlte.io) para agregar nuevas integraciones para sus formularios a través de los [Wrappers](https://github.com/plataformatec/simple_form/wiki/Custom-Wrappers) de simpleform.*
+
+### Plugins (Módulos)
+
+La plataforma permite la adaptación de módulos con facil instalación, algunos de los módulos desarrollados son:
+
+* [Keppler Google Analytics Dashboard](https://github.com/slicegroup/keppler_ga_dashboard) - *ya viene integrado*
+* [Keppler Blog](https://github.com/slicegroup/keppler_blog)
+* [Keppler Catalogs](https://github.com/slicegroup/keppler_catalogs)
+* [Keppler Contact](https://github.com/slicegroup/keppler_contact_us)

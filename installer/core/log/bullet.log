@@ -1,0 +1,44 @@
+2018-08-29 16:12:07[WARN] user: slice-d5
+GET /admin/users
+USE eager loading detected
+  PublicActivity::Activity => [:owner]
+  Add to your finder: :includes => [:owner]
+Call stack
+  /home/slice-d5/Proyectos/keppler_lab/keppler_core/app/views/public_activity/layout/_destroy.html.haml:5:in `_app_views_public_activity_layout__destroy_html_haml___1471713904213297917_70040588861340'
+  /home/slice-d5/Proyectos/keppler_lab/keppler_core/app/views/admin/users/_description.html.haml:12:in `block in _app_views_admin_users__description_html_haml__3925132880828063679_70040587707320'
+  /home/slice-d5/Proyectos/keppler_lab/keppler_core/app/views/admin/users/_description.html.haml:6:in `_app_views_admin_users__description_html_haml__3925132880828063679_70040587707320'
+  /home/slice-d5/Proyectos/keppler_lab/keppler_core/app/views/admin/users/index.html.haml:64:in `_app_views_admin_users_index_html_haml__1865993788666839696_66010120'
+
+2018-08-29 16:12:07[WARN] user: slice-d5
+GET /admin/users
+USE eager loading detected
+  PublicActivity::Activity => [:trackable]
+  Add to your finder: :includes => [:trackable]
+Call stack
+  /home/slice-d5/Proyectos/keppler_lab/keppler_core/app/views/public_activity/layout/_create.html.haml:30:in `_app_views_public_activity_layout__create_html_haml___1171460426787214080_70040589420020'
+  /home/slice-d5/Proyectos/keppler_lab/keppler_core/app/views/admin/users/_description.html.haml:12:in `block in _app_views_admin_users__description_html_haml__3925132880828063679_70040587707320'
+  /home/slice-d5/Proyectos/keppler_lab/keppler_core/app/views/admin/users/_description.html.haml:6:in `_app_views_admin_users__description_html_haml__3925132880828063679_70040587707320'
+  /home/slice-d5/Proyectos/keppler_lab/keppler_core/app/views/admin/users/index.html.haml:64:in `_app_views_admin_users_index_html_haml__1865993788666839696_66010120'
+
+2018-08-29 16:13:59[WARN] user: slice-d5
+GET /admin/users
+USE eager loading detected
+  PublicActivity::Activity => [:owner]
+  Add to your finder: :includes => [:owner]
+Call stack
+  /home/slice-d5/Proyectos/keppler_lab/keppler_core/app/views/public_activity/layout/_destroy.html.haml:5:in `_app_views_public_activity_layout__destroy_html_haml___1471713904213297917_70040607957260'
+  /home/slice-d5/Proyectos/keppler_lab/keppler_core/app/views/admin/users/_description.html.haml:12:in `block in _app_views_admin_users__description_html_haml__3925132880828063679_70040605355980'
+  /home/slice-d5/Proyectos/keppler_lab/keppler_core/app/views/admin/users/_description.html.haml:6:in `_app_views_admin_users__description_html_haml__3925132880828063679_70040605355980'
+  /home/slice-d5/Proyectos/keppler_lab/keppler_core/app/views/admin/users/index.html.haml:64:in `_app_views_admin_users_index_html_haml__1865993788666839696_70040609373840'
+
+2018-08-29 16:13:59[WARN] user: slice-d5
+GET /admin/users
+USE eager loading detected
+  PublicActivity::Activity => [:trackable]
+  Add to your finder: :includes => [:trackable]
+Call stack
+  /home/slice-d5/Proyectos/keppler_lab/keppler_core/app/views/public_activity/layout/_create.html.haml:30:in `_app_views_public_activity_layout__create_html_haml___1171460426787214080_70040607302380'
+  /home/slice-d5/Proyectos/keppler_lab/keppler_core/app/views/admin/users/_description.html.haml:12:in `block in _app_views_admin_users__description_html_haml__3925132880828063679_70040605355980'
+  /home/slice-d5/Proyectos/keppler_lab/keppler_core/app/views/admin/users/_description.html.haml:6:in `_app_views_admin_users__description_html_haml__3925132880828063679_70040605355980'
+  /home/slice-d5/Proyectos/keppler_lab/keppler_core/app/views/admin/users/index.html.haml:64:in `_app_views_admin_users_index_html_haml__1865993788666839696_70040609373840'
+

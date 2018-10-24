@@ -1,10 +1,11 @@
 .main-sidebar {
-  background-color: $gray-lighten !important;
+  background-color: $gray-lighten !important; // scss-lint:disable ImportantRule
   padding-top: 50px;
 
   .sidebar {
     margin: 0;
-    min-height: 84vh;
+    min-height: 90vh;
+    padding-top: 20px;
 
     .user-panel {
       background-position: center;
@@ -23,7 +24,7 @@
   color: $dark-grey;
   transition: .3s ease-out;
 
-  i {
+  > i {
     color: $keppler-color;
   }
 }
@@ -43,7 +44,6 @@
   &.active {
     background: $white;
     border-left-color: $keppler-color;
-    // box-shadow: 0 1px 3px $light-transparent;
     color: $dark-grey;
     transition: .3s ease-out;
 
@@ -59,26 +59,27 @@
     &.active {
       background: $white;
       border-left-color: $keppler-color;
-      // box-shadow: 0 1px 3px $light-transparent;
     }
 
     > a {
       border-left: 3px solid transparent;
     }
   }
-}
 
-.sidebar-menu {
+  .treeview-menu {
+    li {
+      margin-left: 27px;
+    }
 
-  .treeview-menu > li > a {
-    padding: 5px 5px 5px 40px;
+    a {
+      padding: 5px 5px 5px 40px;
+    }
   }
 }
 
 .treeview-menu {
   background: $white;
   border-radius: none;
-  // box-shadow: 0 1px 3px $light-transparent;
   color: $dark-grey;
   margin: 0 1px;
   padding: 7px 0;
@@ -126,12 +127,12 @@
     box-shadow: 0 1px 3px $light-transparent;
 
     a {
-      padding: 5px 5px 5px 15px;
+      padding: 5px 5px 5px 0;
     }
   }
 
-  li:hover span {
-    background: $white !important;
+  li:hover .sidebar-link {
+    background: $white !important; // scss-lint:disable ImportantRule
     box-shadow: 0 1px 3px $light-transparent;
     margin-left: -3px;
     padding: 12px 5px 12px 20px;
@@ -145,29 +146,6 @@
   position: absolute;
   right: 15%;
   z-index: 1;
-}
-
-.sidebar-footer {
-  bottom: 0;
-  opacity: .1;
-  padding: 10px;
-  position: relative;
-  transition: .2s;
-  width: 100%;
-
-  .brand img {
-    height: 25px;
-    margin: 0 10px;
-  }
-
-  span {
-    color: $white;
-    font-family: Patua One;
-    margin: 0 20px;
-    position: absolute;
-    right: 0;
-    top: 10px;
-  }
 }
 
 ::-webkit-scrollbar {
@@ -189,13 +167,41 @@
       width: 40px;
     }
   }
+}
 
-  .sidebar-footer {
-    padding: 4px;
-    transition: .2s;
+.modal-h1 {
+  color: $keppler-color;
+  font-family: 'Patua One', cursive;
+  font-size: 30px;
 
-    .pull-right {
-      display: none;
-    }
+  span {
+    color: $gray;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 25px;
+  }
+}
+
+.modal-info {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.modal-social {
+  display: inline-flex;
+  margin-bottom: 0;
+  margin-top: 30px;
+  padding-left: 0;
+
+  li {
+    list-style: none;
+    margin: 5px;
+  }
+}
+
+.modal-powered {
+  a {
+    font-weight: bold;
   }
 }

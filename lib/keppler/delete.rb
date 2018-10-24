@@ -5,9 +5,10 @@ module Keppler
 
     desc 'module', 'Delete a keppler module'
     def module(*params)
-      module_name = params[0]
+      rocket_name = params[0]
+      module_name = params[1]
       fields = params[1..params.length].join(" ")
-      system("rails d keppler_scaffold #{module_name} #{fields} position:integer deleted_at:datetime:index -y")
+      system("rails g keppler_delete_module #{rocket_name} #{module_name} -y")
     end
   end
 end

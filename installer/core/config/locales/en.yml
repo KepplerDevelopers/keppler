@@ -1,11 +1,27 @@
 en:
   keppler:
+    language: 
+      select_lang: Select a language
+      es: Spanish
+      en: English    
+    preloader:
+      title: It is difficult to work in space
+      message: This may take seconds...
     login_message: Sign in to start your session
+    powered: Powered by
+    release_date: Release Date
+    devise:
+      profile: Profile
+      sign_out: Sign Out
+      sign_in: Sign In
     sidebar-menu:
+      about: About Keppler
+      seo: Seo
       roles: Roles
       customizes: Customizes
       dashboard: Dashboard
       users: Users
+      rockets: Rockets
       users-submenu:
         users: Users
         roles: Roles
@@ -15,18 +31,26 @@ en:
       keppler-design: 'Keppler Design'
       development: 'Development'
       setting-submenu:
+        keppler-configuration: Keppler Settings
         basic-information: Basic Information
         email-setting-smtp: 'Email setup (SMTP)'
         social-accounts: 'Social accounts'
         google-analytics: 'Google Analytics'
         appearance: Appearance
       meta_tags: Meta tags
+      scripts: Scripts
       google-analytics-tracks: 'Scripts'
       keppler-messages: Messages
       keppler-blog: Blog
       keppler-blog-submenu:
         posts: Posts
         categories: Categories
+    customize:
+      admin-theme: Keppler Theme
+      time-zone: Time Zone
+      location: Location
+      language: Language
+      preview: Preview
     permissions:
       index: Index
       create: Create
@@ -45,6 +69,7 @@ en:
         clone: Permite al usuario clonar un registro existente dentro del módulo
     models:
       singularize:
+        seo: seo
         role: role
         customize: customize
         meta_tag: meta tag
@@ -52,7 +77,9 @@ en:
         setting: setting
         configuration: configuration
         user: user
+        capsule: capsule
       pluralize:
+        seos: seos
         roles: roles
         customizes: customizes
         meta_tags: meta tags
@@ -61,14 +88,49 @@ en:
         configurations: configurations
         user: users
     modules:
+      admin/seos: Seos
       admin/roles: Roles
       admin/customizes: Customizes
       admin/meta_tags: 'Meta tags'
       admin/scripts: 'Scripts'
       admin/scaffolds: 'Scaffolds'
-      admin/settings: 'Settings'
+      admin/settings..: 'Settings'
       keppler_ga_dashboard/dashboard: 'Dashboard'
       admin/users: 'Users'
+    rockets:
+      upload: Upload rockets
+      drop: Drop a rocket or press here
+      install: Install
+      list: Rockets list
+      create_a_rocket: Create a rocket
+      build: Build
+      update: Update
+      download: Download
+      uninstall: Uninstall
+      empty: There is not rockets here :(
+      already_installed: That rocket is already installed :(
+      isnt_a_rocket: Houston! That file isn't a rocket :(
+      first_upload: First upload a rocket please!
+      choose_a_name: Choose a name
+      rocket_name: This will be the name of your rocket
+      create_rocket: Create
+      you_sure: Are you sure?
+      will_be_named: Your rocket will be named
+      great: Great!
+      wait_generator: Please wait until your rocket is ready...
+      unpermitted_name: That name is not permitted
+      cancel: Cancel
+      installed: installed
+      uninstalled: uninstalled
+      created: created
+      built: built
+      success: "%{rocket} has been %{action} seccessfully"
+      error: "Error: %{rocket} cannot be %{action}"
+      duplicated: "Error: %{rocket} already exists"
+    appearance:
+      main_color: Main color
+      admin_theme: KepplerAdmin Theme
+      preview: Preview
     messages:
       not_authorized_page: You have no authorization to access this page
       not_authorized_action: You have no authorization to perform this action
@@ -79,14 +141,16 @@ en:
       record_msg: "%{from} to %{to} of %{total}"
       to: "to"
       at: "at"
+      has: 'has'
       since_been_removed: whitch has since been removed
       login_in_activity: login to system at
       logout_in_activity: logout to system at
       successfully:
+        cloned: "%{model} has been cloned successfully"
         created: "%{model} has been created successfully"
         updated: "%{model} has been updated successfully"
         deleted: "%{model} has been deleted successfully"
-        removed: "%{model} have been deleted successfully"
+        removed: "%{model} have been removed successfully"
     header_information:
       setting:
         basic_information: Basic Information
@@ -101,6 +165,8 @@ en:
       new: "%{model} - New"
       history: Activities
     actions:
+      add: Add
+      documentation: Documentation
       created: Created
       updated: Updated
       create: Create
@@ -128,6 +194,11 @@ en:
       back_history: "Back to history"
       appearance_defaut: Set default
       apply: Apply
+      drop_file: Drop a file or press here
+      reload_page: Reload page
+      download:
+        csv: Download CSV
+        xls: Download XLS
   activerecord:
     attributes:
       public: Public
