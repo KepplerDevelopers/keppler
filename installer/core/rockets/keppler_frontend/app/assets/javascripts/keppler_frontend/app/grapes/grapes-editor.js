@@ -776,8 +776,7 @@ pnm.addButton('options', [{
   command(editor, sender) {
     var confirmation = confirm("Are you sure?");
     if (confirmation===true) {
-      var route = "/admin/frontend/views/"+view_id+"/editor";
-      window.location.href = route
+      window.location.href = window.location.pathname
     }     
   },
 },
@@ -790,11 +789,13 @@ pnm.addButton('options', [{
       $(".gjs-pn-views").removeClass('gsj-hide-tools').addClass('gsj-show-tools')
       $(".gjs-pn-views-container").removeClass('gsj-hide-tools').addClass('gsj-show-tools')
       $(".gjs-pn-options > .gjs-pn-buttons > .gjs-pn-btn.fa-bars ").removeClass('fa-bars').addClass('fa-times')
+      $('.gjs-cv-canvas').addClass('gjs-cv-canvas-width')
       toogleTools=true
     } else {
       $(".gjs-pn-views").removeClass('gsj-show-tools').addClass('gsj-hide-tools')
       $(".gjs-pn-views-container").removeClass('gsj-show-tools').addClass('gsj-hide-tools')
       $(".gjs-pn-options > .gjs-pn-buttons > .gjs-pn-btn.fa-times ").removeClass('fa-times').addClass('fa-bars')
+      $('.gjs-cv-canvas').removeClass('gjs-cv-canvas-width')
       toogleTools=false
     }
   },
@@ -822,6 +823,7 @@ var noArea = false;
 editor.on('canvas:dragenter', (some, argument) => {
   // do something
   $(".gjs-pn-views").removeClass('gsj-show-tools').addClass('gsj-hide-tools')
+  $('.gjs-cv-canvas').removeClass('gjs-cv-canvas-width')
   $(".gjs-pn-views-container").removeClass('gsj-show-tools').addClass('gsj-hide-tools')
   $(".gjs-pn-options > .gjs-pn-buttons > .gjs-pn-btn.fa-bars ").removeClass('fa-times').addClass('fa-bars')
 })
@@ -829,7 +831,7 @@ editor.on('canvas:dragenter', (some, argument) => {
 editor.on('canvas:dragend', (some, argument) => {
   // do something
   noArea = extrasEditor.getIfNotArea(some);
- 
+  $('.gjs-cv-canvas').addClass('gjs-cv-canvas-width')
   $(".gjs-pn-views").removeClass('gsj-hide-tools').addClass('gsj-show-tools')
   $(".gjs-pn-views-container").removeClass('gsj-hide-tools').addClass('gsj-show-tools')
   $(".gjs-pn-options > .gjs-pn-buttons > .gjs-pn-btn.fa-times ").removeClass('fa-bars').addClass('fa-times')
