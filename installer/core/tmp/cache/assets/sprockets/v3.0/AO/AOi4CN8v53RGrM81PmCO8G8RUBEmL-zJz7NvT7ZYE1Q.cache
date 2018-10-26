@@ -1,0 +1,17 @@
+I"{(function() {
+  var upload_records;
+
+  upload_records = function() {
+    return $('#upload').click(function() {
+      $('#upload-file').click();
+      return $('#upload-file').change(function() {
+        $('.waiting').css('display', 'block');
+        return $('#upload-form').submit();
+      });
+    });
+  };
+
+  $(document).on('turbolinks:load', upload_records);
+
+}).call(this);
+:ET

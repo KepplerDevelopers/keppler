@@ -1,0 +1,5 @@
+I, [2018-10-26T12:34:37.645491 #24509]  INFO -- : Started GET "/" for 127.0.0.1 at 2018-10-26 12:34:37 -0400
+I, [2018-10-26T12:34:37.702816 #24509]  INFO -- : Processing by KepplerFrontend::App::FrontendController#index as HTML
+I, [2018-10-26T12:34:38.574980 #24509]  INFO -- :   Rendering rockets/keppler_frontend/app/views/keppler_frontend/app/frontend/index.html.erb within layouts/keppler_frontend/app/layouts/application
+I, [2018-10-26T12:34:38.575678 #24509]  INFO -- :   Rendered rockets/keppler_frontend/app/views/keppler_frontend/app/frontend/index.html.erb within layouts/keppler_frontend/app/layouts/application (0.5ms)
+I, [2018-10-26T12:34:38.612587 #24509]  INFO -- :   Rendered rockets/keppler_frontend/app/views/layouts/keppler_frontend/app/layouts/_meta_tags.html.haml (29.4ms)
