@@ -1,77 +1,0 @@
-{:uriI"ûfile://app/assets/javascripts/admin/codemirror/mode/javascript/json-ld.html?type=text/html&id=b1adcc6c73ba7896f06a3de42e6c10bc5a9d90321613593610584c7b048c2b00:ET:load_pathI"app/assets/javascripts;T:filenameI"Iapp/assets/javascripts/admin/codemirror/mode/javascript/json-ld.html;T:	nameI"-admin/codemirror/mode/javascript/json-ld;T:logical_pathI"2admin/codemirror/mode/javascript/json-ld.html;T:content_typeI"text/html;T:sourceI"f<!doctype html>
-
-<title>CodeMirror: JSON-LD mode</title>
-<meta charset="utf-8"/>
-<link rel=stylesheet href="../../doc/docs.css">
-
-<link rel="stylesheet" href="../../lib/codemirror.css">
-<script src="../../lib/codemirror.js"></script>
-<script src="../../addon/edit/matchbrackets.js"></script>
-<script src="../../addon/comment/continuecomment.js"></script>
-<script src="../../addon/comment/comment.js"></script>
-<script src="javascript.js"></script>
-<style type="text/css">.CodeMirror {border-top: 1px solid black; border-bottom: 1px solid black;}</style>
-<div id="nav">
-  <a href="http://codemirror.net"><h1>CodeMirror</h1><img id=logo src="../../doc/logo.png"/></a>
-
-  <ul>
-    <li><a href="../../index.html">Home</a>
-    <li><a href="../../doc/manual.html">Manual</a>
-    <li><a href="https://github.com/codemirror/codemirror">Code</a>
-  </ul>
-  <ul>
-    <li><a href="../index.html">Language modes</a>
-    <li><a class=active href="#">JSON-LD</a>
-  </ul>
-</div>
-
-<article>
-<h2>JSON-LD mode</h2>
-
-
-<div><textarea id="code" name="code">
-{
-  "@context": {
-    "name": "http://schema.org/name",
-    "description": "http://schema.org/description",
-    "image": {
-      "@id": "http://schema.org/image",
-      "@type": "@id"
-    },
-    "geo": "http://schema.org/geo",
-    "latitude": {
-      "@id": "http://schema.org/latitude",
-      "@type": "xsd:float"
-    },
-    "longitude": {
-      "@id": "http://schema.org/longitude",
-      "@type": "xsd:float"
-    },
-    "xsd": "http://www.w3.org/2001/XMLSchema#"
-  },
-  "name": "The Empire State Building",
-  "description": "The Empire State Building is a 102-story landmark in New York City.",
-  "image": "http://www.civil.usherbrooke.ca/cours/gci215a/empire-state-building.jpg",
-  "geo": {
-    "latitude": "40.75",
-    "longitude": "73.98"
-  }
-}
-</textarea></div>
-
-    <script>
-      var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
-        matchBrackets: true,
-        autoCloseBrackets: true,
-        mode: "application/ld+json",
-        lineWrapping: true
-      });
-    </script>
-    
-    <p>This is a specialization of the <a href="index.html">JavaScript mode</a>.</p>
-  </article>
-;T:metadata{	:dependencieso:Set:
-@hash}
-I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"2processors:type=text/html&file_type=text/html;TTI"Wfile-digest://app/assets/javascripts/admin/codemirror/mode/javascript/json-ld.html;TTF:charsetI"
-utf-8;F:digest"%¨xyAÍäáØhL°ñ©ùÕhsX}KbXjˇüπ$R:lengthif:dependencies_digest"%=[vón@N1`áÓ∆kÎ◊põ’eﬁ=¸©=ë:idI"Eb1adcc6c73ba7896f06a3de42e6c10bc5a9d90321613593610584c7b048c2b00;F:
-mtimel+ò{–[
