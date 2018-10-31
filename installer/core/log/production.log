@@ -1,0 +1,1596 @@
+I, [2018-10-26T12:34:37.645491 #24509]  INFO -- : Started GET "/" for 127.0.0.1 at 2018-10-26 12:34:37 -0400
+I, [2018-10-26T12:34:37.702816 #24509]  INFO -- : Processing by KepplerFrontend::App::FrontendController#index as HTML
+I, [2018-10-26T12:34:38.574980 #24509]  INFO -- :   Rendering rockets/keppler_frontend/app/views/keppler_frontend/app/frontend/index.html.erb within layouts/keppler_frontend/app/layouts/application
+I, [2018-10-26T12:34:38.575678 #24509]  INFO -- :   Rendered rockets/keppler_frontend/app/views/keppler_frontend/app/frontend/index.html.erb within layouts/keppler_frontend/app/layouts/application (0.5ms)
+I, [2018-10-26T12:34:38.612587 #24509]  INFO -- :   Rendered rockets/keppler_frontend/app/views/layouts/keppler_frontend/app/layouts/_meta_tags.html.haml (29.4ms)
+I, [2018-10-31T09:49:24.368900 #14556]  INFO -- : Started GET "/show" for 127.0.0.1 at 2018-10-31 09:49:24 -0400
+I, [2018-10-31T09:49:24.431730 #14556]  INFO -- : Processing by KepplerFrontend::App::FrontendController#show as HTML
+I, [2018-10-31T09:49:24.596934 #14556]  INFO -- :   Rendering rockets/keppler_frontend/app/views/keppler_frontend/app/frontend/show.html.erb within layouts/keppler_frontend/app/layouts/application
+I, [2018-10-31T09:49:24.597863 #14556]  INFO -- :   Rendered rockets/keppler_frontend/app/views/keppler_frontend/app/frontend/show.html.erb within layouts/keppler_frontend/app/layouts/application (0.7ms)
+I, [2018-10-31T09:49:24.626817 #14556]  INFO -- :   Rendered rockets/keppler_frontend/app/views/layouts/keppler_frontend/app/layouts/_meta_tags.html.haml (19.4ms)
+I, [2018-10-31T09:52:44.779214 #14556]  INFO -- :   Rendered rockets/keppler_frontend/app/views/layouts/keppler_frontend/app/layouts/_google_analytics.html.haml (85.4ms)
+I, [2018-10-31T09:52:44.780774 #14556]  INFO -- :   Rendered rockets/keppler_frontend/app/views/layouts/keppler_frontend/app/layouts/_head.html.haml (200179.8ms)
+I, [2018-10-31T09:52:44.793228 #14556]  INFO -- :   Rendered rockets/keppler_frontend/app/views/layouts/keppler_frontend/app/layouts/_keppler_editor.html.haml (9.9ms)
+I, [2018-10-31T09:52:44.793567 #14556]  INFO -- : Completed 200 OK in 200362ms (Views: 200130.3ms | ActiveRecord: 108.4ms)
+I, [2018-10-31T09:52:44.835857 #14556]  INFO -- : Started GET "/assets/keppler_frontend/app/application-25f98c6531e00856031e2a0f08a103d60990a865353eeebaddc6767f6bdd23ea.css" for 127.0.0.1 at 2018-10-31 09:52:44 -0400
+I, [2018-10-31T09:52:44.840256 #14556]  INFO -- : Started GET "/assets/keppler_frontend/app/application-475cddb8f5dc3a9763ad3361e5546abd67690969bcc20c3d719139341ff702ce.js" for 127.0.0.1 at 2018-10-31 09:52:44 -0400
+I, [2018-10-31T09:52:44.844327 #14556]  INFO -- : Started GET "/assets/keppler_frontend/app/grapes/font-awesome-5da185f066f347b66394a6651ab4cc7f86da9ed84fb3b4828f6ab3cb0ad85644.css" for 127.0.0.1 at 2018-10-31 09:52:44 -0400
+I, [2018-10-31T09:54:03.237523 #14556]  INFO -- : Started GET "/" for 127.0.0.1 at 2018-10-31 09:54:03 -0400
+I, [2018-10-31T09:54:03.239558 #14556]  INFO -- : Processing by KepplerFrontend::App::FrontendController#index as HTML
+I, [2018-10-31T09:54:03.256686 #14556]  INFO -- :   Rendering rockets/keppler_frontend/app/views/keppler_frontend/app/frontend/index.html.erb within layouts/keppler_frontend/app/layouts/application
+I, [2018-10-31T09:54:03.257547 #14556]  INFO -- :   Rendered rockets/keppler_frontend/app/views/keppler_frontend/app/frontend/index.html.erb within layouts/keppler_frontend/app/layouts/application (0.7ms)
+I, [2018-10-31T09:54:03.259119 #14556]  INFO -- :   Rendered rockets/keppler_frontend/app/views/layouts/keppler_frontend/app/layouts/_meta_tags.html.haml (0.8ms)
+I, [2018-10-31T09:54:03.266494 #14556]  INFO -- :   Rendered rockets/keppler_frontend/app/views/layouts/keppler_frontend/app/layouts/_google_analytics.html.haml (3.0ms)
+I, [2018-10-31T09:54:03.268568 #14556]  INFO -- :   Rendered rockets/keppler_frontend/app/views/layouts/keppler_frontend/app/layouts/_head.html.haml (10.6ms)
+I, [2018-10-31T09:54:03.269099 #14556]  INFO -- :   Rendered rockets/keppler_frontend/app/views/layouts/keppler_frontend/app/layouts/_keppler_editor.html.haml (0.3ms)
+I, [2018-10-31T09:54:03.269396 #14556]  INFO -- : Completed 200 OK in 30ms (Views: 12.1ms | ActiveRecord: 5.4ms)
+I, [2018-10-31T09:54:04.822913 #14556]  INFO -- : Started GET "/show" for 127.0.0.1 at 2018-10-31 09:54:04 -0400
+I, [2018-10-31T09:54:04.824778 #14556]  INFO -- : Processing by KepplerFrontend::App::FrontendController#show as HTML
+I, [2018-10-31T09:54:04.844143 #14556]  INFO -- :   Rendering rockets/keppler_frontend/app/views/keppler_frontend/app/frontend/show.html.erb within layouts/keppler_frontend/app/layouts/application
+I, [2018-10-31T09:54:04.844421 #14556]  INFO -- :   Rendered rockets/keppler_frontend/app/views/keppler_frontend/app/frontend/show.html.erb within layouts/keppler_frontend/app/layouts/application (0.1ms)
+I, [2018-10-31T09:54:04.845400 #14556]  INFO -- :   Rendered rockets/keppler_frontend/app/views/layouts/keppler_frontend/app/layouts/_meta_tags.html.haml (0.5ms)
+I, [2018-10-31T09:54:04.854037 #14556]  INFO -- :   Rendered rockets/keppler_frontend/app/views/layouts/keppler_frontend/app/layouts/_google_analytics.html.haml (3.8ms)
+I, [2018-10-31T09:54:04.856047 #14556]  INFO -- :   Rendered rockets/keppler_frontend/app/views/layouts/keppler_frontend/app/layouts/_head.html.haml (11.4ms)
+I, [2018-10-31T09:54:04.856743 #14556]  INFO -- :   Rendered rockets/keppler_frontend/app/views/layouts/keppler_frontend/app/layouts/_keppler_editor.html.haml (0.4ms)
+I, [2018-10-31T09:54:04.857142 #14556]  INFO -- : Completed 200 OK in 32ms (Views: 12.0ms | ActiveRecord: 7.4ms)
+I, [2018-10-31T09:54:06.404456 #14556]  INFO -- : Started GET "/" for 127.0.0.1 at 2018-10-31 09:54:06 -0400
+I, [2018-10-31T09:54:06.406128 #14556]  INFO -- : Processing by KepplerFrontend::App::FrontendController#index as HTML
+I, [2018-10-31T09:54:06.424481 #14556]  INFO -- :   Rendering rockets/keppler_frontend/app/views/keppler_frontend/app/frontend/index.html.erb within layouts/keppler_frontend/app/layouts/application
+I, [2018-10-31T09:54:06.424757 #14556]  INFO -- :   Rendered rockets/keppler_frontend/app/views/keppler_frontend/app/frontend/index.html.erb within layouts/keppler_frontend/app/layouts/application (0.1ms)
+I, [2018-10-31T09:54:06.426129 #14556]  INFO -- :   Rendered rockets/keppler_frontend/app/views/layouts/keppler_frontend/app/layouts/_meta_tags.html.haml (0.8ms)
+I, [2018-10-31T09:54:06.435464 #14556]  INFO -- :   Rendered rockets/keppler_frontend/app/views/layouts/keppler_frontend/app/layouts/_google_analytics.html.haml (3.8ms)
+I, [2018-10-31T09:54:06.438288 #14556]  INFO -- :   Rendered rockets/keppler_frontend/app/views/layouts/keppler_frontend/app/layouts/_head.html.haml (13.2ms)
+I, [2018-10-31T09:54:06.438993 #14556]  INFO -- :   Rendered rockets/keppler_frontend/app/views/layouts/keppler_frontend/app/layouts/_keppler_editor.html.haml (0.3ms)
+I, [2018-10-31T09:54:06.439295 #14556]  INFO -- : Completed 200 OK in 33ms (Views: 14.0ms | ActiveRecord: 6.3ms)
+I, [2018-10-31T09:54:07.878628 #14556]  INFO -- : Started GET "/show" for 127.0.0.1 at 2018-10-31 09:54:07 -0400
+I, [2018-10-31T09:54:07.880236 #14556]  INFO -- : Processing by KepplerFrontend::App::FrontendController#show as HTML
+I, [2018-10-31T09:54:07.899166 #14556]  INFO -- :   Rendering rockets/keppler_frontend/app/views/keppler_frontend/app/frontend/show.html.erb within layouts/keppler_frontend/app/layouts/application
+I, [2018-10-31T09:54:07.899451 #14556]  INFO -- :   Rendered rockets/keppler_frontend/app/views/keppler_frontend/app/frontend/show.html.erb within layouts/keppler_frontend/app/layouts/application (0.1ms)
+I, [2018-10-31T09:54:07.900591 #14556]  INFO -- :   Rendered rockets/keppler_frontend/app/views/layouts/keppler_frontend/app/layouts/_meta_tags.html.haml (0.6ms)
+I, [2018-10-31T09:54:07.907763 #14556]  INFO -- :   Rendered rockets/keppler_frontend/app/views/layouts/keppler_frontend/app/layouts/_google_analytics.html.haml (3.0ms)
+I, [2018-10-31T09:54:07.909280 #14556]  INFO -- :   Rendered rockets/keppler_frontend/app/views/layouts/keppler_frontend/app/layouts/_head.html.haml (9.5ms)
+I, [2018-10-31T09:54:07.909790 #14556]  INFO -- :   Rendered rockets/keppler_frontend/app/views/layouts/keppler_frontend/app/layouts/_keppler_editor.html.haml (0.3ms)
+I, [2018-10-31T09:54:07.910085 #14556]  INFO -- : Completed 200 OK in 30ms (Views: 10.4ms | ActiveRecord: 6.8ms)
+I, [2018-10-31T09:54:09.681013 #14556]  INFO -- : Started GET "/" for 127.0.0.1 at 2018-10-31 09:54:09 -0400
+I, [2018-10-31T09:54:09.682849 #14556]  INFO -- : Processing by KepplerFrontend::App::FrontendController#index as HTML
+I, [2018-10-31T09:54:09.693477 #14556]  INFO -- :   Rendering rockets/keppler_frontend/app/views/keppler_frontend/app/frontend/index.html.erb within layouts/keppler_frontend/app/layouts/application
+I, [2018-10-31T09:54:09.693683 #14556]  INFO -- :   Rendered rockets/keppler_frontend/app/views/keppler_frontend/app/frontend/index.html.erb within layouts/keppler_frontend/app/layouts/application (0.1ms)
+I, [2018-10-31T09:54:09.694653 #14556]  INFO -- :   Rendered rockets/keppler_frontend/app/views/layouts/keppler_frontend/app/layouts/_meta_tags.html.haml (0.6ms)
+I, [2018-10-31T09:54:09.700098 #14556]  INFO -- :   Rendered rockets/keppler_frontend/app/views/layouts/keppler_frontend/app/layouts/_google_analytics.html.haml (2.5ms)
+I, [2018-10-31T09:54:09.701283 #14556]  INFO -- :   Rendered rockets/keppler_frontend/app/views/layouts/keppler_frontend/app/layouts/_head.html.haml (7.4ms)
+I, [2018-10-31T09:54:09.701738 #14556]  INFO -- :   Rendered rockets/keppler_frontend/app/views/layouts/keppler_frontend/app/layouts/_keppler_editor.html.haml (0.2ms)
+I, [2018-10-31T09:54:09.701989 #14556]  INFO -- : Completed 200 OK in 19ms (Views: 7.9ms | ActiveRecord: 4.0ms)
+I, [2018-10-31T09:54:13.062775 #14556]  INFO -- : Started GET "/" for 127.0.0.1 at 2018-10-31 09:54:13 -0400
+I, [2018-10-31T09:54:13.064052 #14556]  INFO -- : Processing by KepplerFrontend::App::FrontendController#index as HTML
+I, [2018-10-31T09:54:13.076431 #14556]  INFO -- :   Rendering rockets/keppler_frontend/app/views/keppler_frontend/app/frontend/index.html.erb within layouts/keppler_frontend/app/layouts/application
+I, [2018-10-31T09:54:13.076671 #14556]  INFO -- :   Rendered rockets/keppler_frontend/app/views/keppler_frontend/app/frontend/index.html.erb within layouts/keppler_frontend/app/layouts/application (0.1ms)
+I, [2018-10-31T09:54:13.077637 #14556]  INFO -- :   Rendered rockets/keppler_frontend/app/views/layouts/keppler_frontend/app/layouts/_meta_tags.html.haml (0.5ms)
+I, [2018-10-31T09:54:13.083930 #14556]  INFO -- :   Rendered rockets/keppler_frontend/app/views/layouts/keppler_frontend/app/layouts/_google_analytics.html.haml (2.9ms)
+I, [2018-10-31T09:54:13.086009 #14556]  INFO -- :   Rendered rockets/keppler_frontend/app/views/layouts/keppler_frontend/app/layouts/_head.html.haml (9.0ms)
+I, [2018-10-31T09:54:13.086652 #14556]  INFO -- :   Rendered rockets/keppler_frontend/app/views/layouts/keppler_frontend/app/layouts/_keppler_editor.html.haml (0.3ms)
+I, [2018-10-31T09:54:13.087179 #14556]  INFO -- : Completed 200 OK in 23ms (Views: 9.9ms | ActiveRecord: 4.3ms)
+I, [2018-10-31T09:54:14.430827 #14556]  INFO -- : Started GET "/" for 127.0.0.1 at 2018-10-31 09:54:14 -0400
+I, [2018-10-31T09:54:14.432155 #14556]  INFO -- : Processing by KepplerFrontend::App::FrontendController#index as HTML
+I, [2018-10-31T09:54:14.444836 #14556]  INFO -- :   Rendering rockets/keppler_frontend/app/views/keppler_frontend/app/frontend/index.html.erb within layouts/keppler_frontend/app/layouts/application
+I, [2018-10-31T09:54:14.445009 #14556]  INFO -- :   Rendered rockets/keppler_frontend/app/views/keppler_frontend/app/frontend/index.html.erb within layouts/keppler_frontend/app/layouts/application (0.0ms)
+I, [2018-10-31T09:54:14.445677 #14556]  INFO -- :   Rendered rockets/keppler_frontend/app/views/layouts/keppler_frontend/app/layouts/_meta_tags.html.haml (0.4ms)
+I, [2018-10-31T09:54:14.450495 #14556]  INFO -- :   Rendered rockets/keppler_frontend/app/views/layouts/keppler_frontend/app/layouts/_google_analytics.html.haml (2.2ms)
+I, [2018-10-31T09:54:14.451808 #14556]  INFO -- :   Rendered rockets/keppler_frontend/app/views/layouts/keppler_frontend/app/layouts/_head.html.haml (6.6ms)
+I, [2018-10-31T09:54:14.452412 #14556]  INFO -- :   Rendered rockets/keppler_frontend/app/views/layouts/keppler_frontend/app/layouts/_keppler_editor.html.haml (0.3ms)
+I, [2018-10-31T09:54:14.452784 #14556]  INFO -- : Completed 200 OK in 20ms (Views: 7.4ms | ActiveRecord: 4.6ms)
+I, [2018-10-31T09:54:15.264557 #14556]  INFO -- : Started GET "/" for 127.0.0.1 at 2018-10-31 09:54:15 -0400
+I, [2018-10-31T09:54:15.265754 #14556]  INFO -- : Processing by KepplerFrontend::App::FrontendController#index as HTML
+I, [2018-10-31T09:54:15.278246 #14556]  INFO -- :   Rendering rockets/keppler_frontend/app/views/keppler_frontend/app/frontend/index.html.erb within layouts/keppler_frontend/app/layouts/application
+I, [2018-10-31T09:54:15.278454 #14556]  INFO -- :   Rendered rockets/keppler_frontend/app/views/keppler_frontend/app/frontend/index.html.erb within layouts/keppler_frontend/app/layouts/application (0.0ms)
+I, [2018-10-31T09:54:15.279317 #14556]  INFO -- :   Rendered rockets/keppler_frontend/app/views/layouts/keppler_frontend/app/layouts/_meta_tags.html.haml (0.5ms)
+I, [2018-10-31T09:54:15.284628 #14556]  INFO -- :   Rendered rockets/keppler_frontend/app/views/layouts/keppler_frontend/app/layouts/_google_analytics.html.haml (2.4ms)
+I, [2018-10-31T09:54:15.286094 #14556]  INFO -- :   Rendered rockets/keppler_frontend/app/views/layouts/keppler_frontend/app/layouts/_head.html.haml (7.4ms)
+I, [2018-10-31T09:54:15.286745 #14556]  INFO -- :   Rendered rockets/keppler_frontend/app/views/layouts/keppler_frontend/app/layouts/_keppler_editor.html.haml (0.4ms)
+I, [2018-10-31T09:54:15.287026 #14556]  INFO -- : Completed 200 OK in 21ms (Views: 8.3ms | ActiveRecord: 4.5ms)
+I, [2018-10-31T09:54:19.593599 #14556]  INFO -- : Started GET "/admin" for 127.0.0.1 at 2018-10-31 09:54:19 -0400
+I, [2018-10-31T09:54:19.594727 #14556]  INFO -- : Processing by Admin::AdminController#root as HTML
+I, [2018-10-31T09:54:19.603368 #14556]  INFO -- : Completed 401 Unauthorized in 8ms (ActiveRecord: 2.0ms)
+I, [2018-10-31T09:54:19.644705 #14556]  INFO -- : Started GET "/users/sign_in" for 127.0.0.1 at 2018-10-31 09:54:19 -0400
+I, [2018-10-31T09:54:19.646554 #14556]  INFO -- : Processing by Devise::SessionsController#new as HTML
+I, [2018-10-31T09:54:19.708888 #14556]  INFO -- :   Rendering devise/sessions/new.html.haml within admin/layouts/application
+I, [2018-10-31T09:54:19.718255 #14556]  INFO -- :   Rendered devise/sessions/new.html.haml within admin/layouts/application (9.2ms)
+I, [2018-10-31T09:54:19.736611 #14556]  INFO -- :   Rendered admin/layouts/_head.html.haml (6.9ms)
+I, [2018-10-31T09:54:19.741830 #14556]  INFO -- :   Rendered admin/layouts/_keppler_boolean_script.haml (3.3ms)
+I, [2018-10-31T09:54:19.742368 #14556]  INFO -- : Completed 200 OK in 96ms (Views: 59.7ms | ActiveRecord: 5.4ms)
+I, [2018-10-31T09:54:19.756000 #14556]  INFO -- : Started GET "/assets/admin/application-8d5881fd7664c0fa5b39a588b2c1287facd859b8ebf1d5a57ebfe734fa08f896.css" for 127.0.0.1 at 2018-10-31 09:54:19 -0400
+I, [2018-10-31T09:54:19.760199 #14556]  INFO -- : Started GET "/assets/admin/application-93af3cca68f2e1b8d177a0470db37f34f0cfac1bd07434337e3ec9e6ea5789ca.js" for 127.0.0.1 at 2018-10-31 09:54:19 -0400
+I, [2018-10-31T09:54:21.093873 #14556]  INFO -- : Started GET "/assets/admin/profile-menu.jpg" for 127.0.0.1 at 2018-10-31 09:54:21 -0400
+I, [2018-10-31T09:54:21.102410 #14556]  INFO -- : Started GET "/assets/admin/fonts-and-icons/ZXuke1cDvLCKLDcimxB44_lu.woff2" for 127.0.0.1 at 2018-10-31 09:54:21 -0400
+I, [2018-10-31T09:54:21.114713 #14556]  INFO -- : Started GET "/assetsadmin/fonts-and-icons/fonts/Simple-Line-Icons.woff2?v=2.4.0" for 127.0.0.1 at 2018-10-31 09:54:21 -0400
+I, [2018-10-31T09:54:27.330239 #14556]  INFO -- : Started POST "/users/sign_in" for 127.0.0.1 at 2018-10-31 09:54:27 -0400
+I, [2018-10-31T09:54:27.331467 #14556]  INFO -- : Processing by Devise::SessionsController#create as HTML
+I, [2018-10-31T09:54:27.331599 #14556]  INFO -- :   Parameters: {"utf8"=>"✓", "authenticity_token"=>"SaFSIo6hg0feTkcjaRBe7p5m13c32O4wjVu/44RRC7eTHIfWqa+Epc06jNoPD0uCiSs8kdYiEqKfUk8gdbnKtg==", "user"=>{"email"=>"admin@keppleradmin.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+I, [2018-10-31T09:54:28.125005 #14556]  INFO -- : Redirected to http://localhost:3000/admin
+I, [2018-10-31T09:54:28.125335 #14556]  INFO -- : Completed 302 Found in 794ms (ActiveRecord: 35.2ms)
+I, [2018-10-31T09:54:28.132109 #14556]  INFO -- : Started GET "/admin" for 127.0.0.1 at 2018-10-31 09:54:28 -0400
+I, [2018-10-31T09:54:28.133094 #14556]  INFO -- : Processing by Admin::AdminController#root as HTML
+I, [2018-10-31T09:54:28.178361 #14556]  INFO -- : Redirected to http://localhost:3000/admin/dashboard
+I, [2018-10-31T09:54:28.178649 #14556]  INFO -- : Completed 302 Found in 45ms (ActiveRecord: 12.6ms)
+I, [2018-10-31T09:54:28.188658 #14556]  INFO -- : Started GET "/admin/dashboard" for 127.0.0.1 at 2018-10-31 09:54:28 -0400
+I, [2018-10-31T09:54:28.190184 #14556]  INFO -- : Processing by KepplerGaDashboard::DashboardController#analytics as HTML
+I, [2018-10-31T09:54:30.249418 #14556]  INFO -- :   Rendering rockets/keppler_ga_dashboard/app/views/keppler_ga_dashboard/dashboard/analytics.html.haml within keppler_ga_dashboard/admin/layouts/application
+I, [2018-10-31T09:54:30.331552 #14556]  INFO -- :   Rendered rockets/keppler_ga_dashboard/app/views/keppler_ga_dashboard/dashboard/analytics.html.haml within keppler_ga_dashboard/admin/layouts/application (81.9ms)
+I, [2018-10-31T09:54:30.350785 #14556]  INFO -- :   Rendered rockets/keppler_ga_dashboard/app/views/keppler_ga_dashboard/admin/layouts/_head.html.haml (4.7ms)
+I, [2018-10-31T09:54:30.373350 #14556]  INFO -- :   Rendered admin/layouts/_navigation.html.haml (21.7ms)
+I, [2018-10-31T09:54:30.578722 #14556]  INFO -- :   Rendered admin/layouts/_sidebar.html.haml (204.6ms)
+I, [2018-10-31T09:54:30.581115 #14556]  INFO -- :   Rendered admin/layouts/_messages.html.haml (1.8ms)
+I, [2018-10-31T09:54:30.585492 #14556]  INFO -- :   Rendered admin/layouts/_preloader.html.haml (3.8ms)
+I, [2018-10-31T09:54:30.587510 #14556]  INFO -- :   Rendered admin/layouts/_footer.html.haml (1.3ms)
+I, [2018-10-31T09:54:30.587769 #14556]  INFO -- :   Rendered admin/layouts/_keppler_boolean_script.haml (0.0ms)
+I, [2018-10-31T09:54:30.588056 #14556]  INFO -- : Completed 200 OK in 2398ms (Views: 350.1ms | ActiveRecord: 10.4ms)
+I, [2018-10-31T09:54:31.051556 #14556]  INFO -- : Started GET "/assets/keppler_ga_dashboard/view-selector2.js?body=1" for 127.0.0.1 at 2018-10-31 09:54:31 -0400
+I, [2018-10-31T09:54:31.060337 #14556]  INFO -- : Started GET "/assets/keppler_ga_dashboard/date-range-selector.self.js?body=1" for 127.0.0.1 at 2018-10-31 09:54:31 -0400
+I, [2018-10-31T09:54:31.066158 #14556]  INFO -- : Started GET "/assets/keppler_ga_dashboard/active-users.self.js?body=1" for 127.0.0.1 at 2018-10-31 09:54:31 -0400
+I, [2018-10-31T09:54:31.100911 #14556]  INFO -- : Started GET "/assetsadmin/fonts-and-icons/fonts/Simple-Line-Icons.woff2?v=2.4.0" for 127.0.0.1 at 2018-10-31 09:54:31 -0400
+I, [2018-10-31T09:54:31.105567 #14556]  INFO -- : Started GET "/assets/admin/fonts-and-icons/ZXuke1cDvLCKLDcimxB44_lu.woff2" for 127.0.0.1 at 2018-10-31 09:54:31 -0400
+I, [2018-10-31T09:54:36.042936 #14556]  INFO -- : Started GET "/admin/locales/languages" for 127.0.0.1 at 2018-10-31 09:54:36 -0400
+I, [2018-10-31T09:54:36.057110 #14556]  INFO -- : Processing by KepplerLanguages::Admin::LanguagesController#index as HTML
+I, [2018-10-31T09:54:36.129922 #14556]  INFO -- :   Rendering rockets/keppler_languages/app/views/keppler_languages/admin/languages/index.html.haml within keppler_languages/admin/layouts/application
+I, [2018-10-31T09:54:36.159842 #14556]  INFO -- :   Rendered admin/layouts/_listing_preloader.haml (5.7ms)
+I, [2018-10-31T09:54:36.189828 #14556]  INFO -- :   Rendered rockets/keppler_languages/app/views/keppler_languages/admin/languages/_listing.html.haml (18.2ms)
+I, [2018-10-31T09:54:36.220017 #14556]  INFO -- :   Rendered public_activity/layout/_destroy.html.haml (11.5ms)
+I, [2018-10-31T09:54:36.220700 #14556]  INFO -- :   Rendered public_activity/layout/_destroy.html.haml (0.4ms)
+I, [2018-10-31T09:54:36.233405 #14556]  INFO -- :   Rendered public_activity/layout/_update.html.haml (12.0ms)
+I, [2018-10-31T09:54:36.234319 #14556]  INFO -- :   Rendered public_activity/layout/_update.html.haml (0.7ms)
+I, [2018-10-31T09:54:36.235091 #14556]  INFO -- :   Rendered public_activity/layout/_update.html.haml (0.6ms)
+I, [2018-10-31T09:54:36.242773 #14556]  INFO -- :   Rendered public_activity/layout/_create.html.haml (7.0ms)
+I, [2018-10-31T09:54:36.243963 #14556]  INFO -- :   Rendered public_activity/layout/_update.html.haml (0.9ms)
+I, [2018-10-31T09:54:36.245225 #14556]  INFO -- :   Rendered public_activity/layout/_create.html.haml (0.7ms)
+I, [2018-10-31T09:54:36.245871 #14556]  INFO -- :   Rendered public_activity/layout/_destroy.html.haml (0.4ms)
+I, [2018-10-31T09:54:36.246633 #14556]  INFO -- :   Rendered public_activity/layout/_update.html.haml (0.4ms)
+I, [2018-10-31T09:54:36.247221 #14556]  INFO -- :   Rendered public_activity/layout/_update.html.haml (0.4ms)
+I, [2018-10-31T09:54:36.247903 #14556]  INFO -- :   Rendered public_activity/layout/_create.html.haml (0.4ms)
+I, [2018-10-31T09:54:36.248003 #14556]  INFO -- :   Rendered rockets/keppler_languages/app/views/keppler_languages/admin/languages/_description.html.haml (47.0ms)
+I, [2018-10-31T09:54:36.248099 #14556]  INFO -- :   Rendered rockets/keppler_languages/app/views/keppler_languages/admin/languages/index.html.haml within keppler_languages/admin/layouts/application (118.0ms)
+I, [2018-10-31T09:54:36.270406 #14556]  INFO -- :   Rendered rockets/keppler_languages/app/views/keppler_languages/admin/layouts/_head.html.haml (5.9ms)
+I, [2018-10-31T09:54:36.301050 #14556]  INFO -- :   Rendered admin/layouts/_navigation.html.haml (29.8ms)
+I, [2018-10-31T09:54:36.317428 #14556]  INFO -- :   Rendered admin/layouts/_sidebar.html.haml (16.0ms)
+I, [2018-10-31T09:54:36.317803 #14556]  INFO -- :   Rendered admin/layouts/_messages.html.haml (0.1ms)
+I, [2018-10-31T09:54:36.318122 #14556]  INFO -- :   Rendered admin/layouts/_preloader.html.haml (0.2ms)
+I, [2018-10-31T09:54:36.318284 #14556]  INFO -- :   Rendered admin/layouts/_footer.html.haml (0.0ms)
+I, [2018-10-31T09:54:36.318557 #14556]  INFO -- :   Rendered admin/layouts/_keppler_boolean_script.haml (0.0ms)
+I, [2018-10-31T09:54:36.318842 #14556]  INFO -- : Completed 200 OK in 262ms (Views: 193.2ms | ActiveRecord: 10.2ms)
+I, [2018-10-31T09:54:36.380771 #14556]  INFO -- : Started GET "/admin/locales/languages" for 127.0.0.1 at 2018-10-31 09:54:36 -0400
+I, [2018-10-31T09:54:36.381884 #14556]  INFO -- : Processing by KepplerLanguages::Admin::LanguagesController#index as HTML
+I, [2018-10-31T09:54:36.405902 #14556]  INFO -- :   Rendering rockets/keppler_languages/app/views/keppler_languages/admin/languages/index.html.haml within keppler_languages/admin/layouts/application
+I, [2018-10-31T09:54:36.410349 #14556]  INFO -- :   Rendered admin/layouts/_listing_preloader.haml (0.1ms)
+I, [2018-10-31T09:54:36.412020 #14556]  INFO -- :   Rendered rockets/keppler_languages/app/views/keppler_languages/admin/languages/_listing.html.haml (1.5ms)
+I, [2018-10-31T09:54:36.420942 #14556]  INFO -- :   Rendered public_activity/layout/_destroy.html.haml (5.5ms)
+I, [2018-10-31T09:54:36.421587 #14556]  INFO -- :   Rendered public_activity/layout/_destroy.html.haml (0.4ms)
+I, [2018-10-31T09:54:36.426926 #14556]  INFO -- :   Rendered public_activity/layout/_update.html.haml (5.2ms)
+I, [2018-10-31T09:54:36.427707 #14556]  INFO -- :   Rendered public_activity/layout/_update.html.haml (0.6ms)
+I, [2018-10-31T09:54:36.428282 #14556]  INFO -- :   Rendered public_activity/layout/_update.html.haml (0.4ms)
+I, [2018-10-31T09:54:36.428954 #14556]  INFO -- :   Rendered public_activity/layout/_create.html.haml (0.4ms)
+I, [2018-10-31T09:54:36.429660 #14556]  INFO -- :   Rendered public_activity/layout/_update.html.haml (0.6ms)
+I, [2018-10-31T09:54:36.430269 #14556]  INFO -- :   Rendered public_activity/layout/_create.html.haml (0.5ms)
+I, [2018-10-31T09:54:36.430877 #14556]  INFO -- :   Rendered public_activity/layout/_destroy.html.haml (0.5ms)
+I, [2018-10-31T09:54:36.431449 #14556]  INFO -- :   Rendered public_activity/layout/_update.html.haml (0.4ms)
+I, [2018-10-31T09:54:36.432092 #14556]  INFO -- :   Rendered public_activity/layout/_update.html.haml (0.5ms)
+I, [2018-10-31T09:54:36.432645 #14556]  INFO -- :   Rendered public_activity/layout/_create.html.haml (0.4ms)
+I, [2018-10-31T09:54:36.432725 #14556]  INFO -- :   Rendered rockets/keppler_languages/app/views/keppler_languages/admin/languages/_description.html.haml (19.8ms)
+I, [2018-10-31T09:54:36.432808 #14556]  INFO -- :   Rendered rockets/keppler_languages/app/views/keppler_languages/admin/languages/index.html.haml within keppler_languages/admin/layouts/application (26.7ms)
+I, [2018-10-31T09:54:36.435271 #14556]  INFO -- :   Rendered rockets/keppler_languages/app/views/keppler_languages/admin/layouts/_head.html.haml (2.2ms)
+I, [2018-10-31T09:54:36.441072 #14556]  INFO -- :   Rendered admin/layouts/_navigation.html.haml (5.5ms)
+I, [2018-10-31T09:54:36.454852 #14556]  INFO -- :   Rendered admin/layouts/_sidebar.html.haml (13.5ms)
+I, [2018-10-31T09:54:36.455187 #14556]  INFO -- :   Rendered admin/layouts/_messages.html.haml (0.1ms)
+I, [2018-10-31T09:54:36.455471 #14556]  INFO -- :   Rendered admin/layouts/_preloader.html.haml (0.1ms)
+I, [2018-10-31T09:54:36.455629 #14556]  INFO -- :   Rendered admin/layouts/_footer.html.haml (0.0ms)
+I, [2018-10-31T09:54:36.455874 #14556]  INFO -- :   Rendered admin/layouts/_keppler_boolean_script.haml (0.0ms)
+I, [2018-10-31T09:54:36.456127 #14556]  INFO -- : Completed 200 OK in 74ms (Views: 46.0ms | ActiveRecord: 10.7ms)
+I, [2018-10-31T09:54:36.492123 #14556]  INFO -- : Started GET "/assets/vue_admin/index.js" for 127.0.0.1 at 2018-10-31 09:54:36 -0400
+I, [2018-10-31T09:54:36.692450 #14556]  INFO -- : Started GET "/assetsadmin/fonts-and-icons/fonts/Simple-Line-Icons.woff2?v=2.4.0" for 127.0.0.1 at 2018-10-31 09:54:36 -0400
+I, [2018-10-31T09:54:36.694707 #14556]  INFO -- : Started GET "/assets/admin/fonts-and-icons/ZXuke1cDvLCKLDcimxB44_lu.woff2" for 127.0.0.1 at 2018-10-31 09:54:36 -0400
+I, [2018-10-31T09:54:36.773099 #14556]  INFO -- : Started GET "/admin/locales/languages/page/1.json" for 127.0.0.1 at 2018-10-31 09:54:36 -0400
+I, [2018-10-31T09:54:36.774598 #14556]  INFO -- : Processing by KepplerLanguages::Admin::LanguagesController#index as JSON
+I, [2018-10-31T09:54:36.774702 #14556]  INFO -- :   Parameters: {"page"=>"1"}
+I, [2018-10-31T09:54:36.804344 #14556]  INFO -- : Completed 200 OK in 29ms (Views: 1.2ms | ActiveRecord: 6.7ms)
+I, [2018-10-31T09:54:39.066413 #14556]  INFO -- : Started GET "/admin/locales/languages/new" for 127.0.0.1 at 2018-10-31 09:54:39 -0400
+I, [2018-10-31T09:54:39.068608 #14556]  INFO -- : Processing by KepplerLanguages::Admin::LanguagesController#new as HTML
+I, [2018-10-31T09:54:39.121160 #14556]  INFO -- :   Rendering rockets/keppler_languages/app/views/keppler_languages/admin/languages/new.html.haml within keppler_languages/admin/layouts/application
+I, [2018-10-31T09:54:39.207629 #14556]  INFO -- :   Rendered rockets/keppler_languages/app/views/keppler_languages/admin/languages/_field_fields.html.haml (20.6ms)
+I, [2018-10-31T09:54:39.208321 #14556]  INFO -- :   Rendered rockets/keppler_languages/app/views/keppler_languages/admin/languages/_form.html.haml (77.9ms)
+I, [2018-10-31T09:54:39.208676 #14556]  INFO -- :   Rendered rockets/keppler_languages/app/views/keppler_languages/admin/languages/new.html.haml within keppler_languages/admin/layouts/application (87.4ms)
+I, [2018-10-31T09:54:39.210457 #14556]  INFO -- :   Rendered rockets/keppler_languages/app/views/keppler_languages/admin/layouts/_head.html.haml (1.5ms)
+I, [2018-10-31T09:54:39.214349 #14556]  INFO -- :   Rendered admin/layouts/_navigation.html.haml (3.3ms)
+I, [2018-10-31T09:54:39.227536 #14556]  INFO -- :   Rendered admin/layouts/_sidebar.html.haml (13.0ms)
+I, [2018-10-31T09:54:39.227903 #14556]  INFO -- :   Rendered admin/layouts/_messages.html.haml (0.1ms)
+I, [2018-10-31T09:54:39.228181 #14556]  INFO -- :   Rendered admin/layouts/_preloader.html.haml (0.1ms)
+I, [2018-10-31T09:54:39.228344 #14556]  INFO -- :   Rendered admin/layouts/_footer.html.haml (0.0ms)
+I, [2018-10-31T09:54:39.228501 #14556]  INFO -- :   Rendered admin/layouts/_keppler_boolean_script.haml (0.0ms)
+I, [2018-10-31T09:54:39.228756 #14556]  INFO -- : Completed 200 OK in 160ms (Views: 101.5ms | ActiveRecord: 12.1ms)
+I, [2018-10-31T09:54:46.608361 #14556]  INFO -- : Started GET "/admin/settings/appearance" for 127.0.0.1 at 2018-10-31 09:54:46 -0400
+I, [2018-10-31T09:54:46.610474 #14556]  INFO -- : Processing by Admin::SettingsController#edit as HTML
+I, [2018-10-31T09:54:46.610661 #14556]  INFO -- :   Parameters: {"config"=>"appearance"}
+I, [2018-10-31T09:54:46.659733 #14556]  INFO -- :   Rendering admin/settings/edit.html.haml within admin/layouts/application
+I, [2018-10-31T09:54:46.723657 #14556]  INFO -- :   Rendered admin/settings/components/_preview.html.haml (14.7ms)
+I, [2018-10-31T09:54:46.734661 #14556]  INFO -- :   Rendered admin/settings/fields/_appearance.html.haml (51.4ms)
+I, [2018-10-31T09:54:46.735246 #14556]  INFO -- :   Rendered admin/settings/_form.html.haml (59.4ms)
+I, [2018-10-31T09:54:46.735351 #14556]  INFO -- :   Rendered admin/settings/edit.html.haml within admin/layouts/application (75.5ms)
+I, [2018-10-31T09:54:46.736959 #14556]  INFO -- :   Rendered admin/layouts/_head.html.haml (1.4ms)
+I, [2018-10-31T09:54:46.740245 #14556]  INFO -- :   Rendered admin/layouts/_navigation.html.haml (3.0ms)
+I, [2018-10-31T09:54:46.753383 #14556]  INFO -- :   Rendered admin/layouts/_sidebar.html.haml (12.9ms)
+I, [2018-10-31T09:54:46.753684 #14556]  INFO -- :   Rendered admin/layouts/_messages.html.haml (0.1ms)
+I, [2018-10-31T09:54:46.753949 #14556]  INFO -- :   Rendered admin/layouts/_preloader.html.haml (0.1ms)
+I, [2018-10-31T09:54:46.754124 #14556]  INFO -- :   Rendered admin/layouts/_footer.html.haml (0.0ms)
+I, [2018-10-31T09:54:46.754279 #14556]  INFO -- :   Rendered admin/layouts/_keppler_boolean_script.haml (0.0ms)
+I, [2018-10-31T09:54:46.754564 #14556]  INFO -- : Completed 200 OK in 144ms (Views: 94.5ms | ActiveRecord: 9.5ms)
+I, [2018-10-31T09:54:46.783816 #14556]  INFO -- : Started GET "/admin/settings/appearance" for 127.0.0.1 at 2018-10-31 09:54:46 -0400
+I, [2018-10-31T09:54:46.785018 #14556]  INFO -- : Processing by Admin::SettingsController#edit as HTML
+I, [2018-10-31T09:54:46.785126 #14556]  INFO -- :   Parameters: {"config"=>"appearance"}
+I, [2018-10-31T09:54:46.809071 #14556]  INFO -- :   Rendering admin/settings/edit.html.haml within admin/layouts/application
+I, [2018-10-31T09:54:46.811895 #14556]  INFO -- :   Rendered admin/settings/components/_preview.html.haml (0.2ms)
+I, [2018-10-31T09:54:46.817253 #14556]  INFO -- :   Rendered admin/settings/fields/_appearance.html.haml (6.9ms)
+I, [2018-10-31T09:54:46.817744 #14556]  INFO -- :   Rendered admin/settings/_form.html.haml (7.8ms)
+I, [2018-10-31T09:54:46.817873 #14556]  INFO -- :   Rendered admin/settings/edit.html.haml within admin/layouts/application (8.6ms)
+I, [2018-10-31T09:54:46.820392 #14556]  INFO -- :   Rendered admin/layouts/_head.html.haml (2.3ms)
+I, [2018-10-31T09:54:46.825424 #14556]  INFO -- :   Rendered admin/layouts/_navigation.html.haml (4.7ms)
+I, [2018-10-31T09:54:46.841226 #14556]  INFO -- :   Rendered admin/layouts/_sidebar.html.haml (15.5ms)
+I, [2018-10-31T09:54:46.841662 #14556]  INFO -- :   Rendered admin/layouts/_messages.html.haml (0.1ms)
+I, [2018-10-31T09:54:46.842122 #14556]  INFO -- :   Rendered admin/layouts/_preloader.html.haml (0.2ms)
+I, [2018-10-31T09:54:46.842319 #14556]  INFO -- :   Rendered admin/layouts/_footer.html.haml (0.0ms)
+I, [2018-10-31T09:54:46.842491 #14556]  INFO -- :   Rendered admin/layouts/_keppler_boolean_script.haml (0.0ms)
+I, [2018-10-31T09:54:46.842769 #14556]  INFO -- : Completed 200 OK in 58ms (Views: 33.1ms | ActiveRecord: 6.6ms)
+I, [2018-10-31T09:54:47.062432 #14556]  INFO -- : Started GET "/assetsadmin/fonts-and-icons/fonts/Simple-Line-Icons.woff2?v=2.4.0" for 127.0.0.1 at 2018-10-31 09:54:47 -0400
+I, [2018-10-31T09:54:47.065390 #14556]  INFO -- : Started GET "/assets/admin/fonts-and-icons/ZXuke1cDvLCKLDcimxB44_lu.woff2" for 127.0.0.1 at 2018-10-31 09:54:47 -0400
+I, [2018-10-31T09:54:47.085205 #14556]  INFO -- : Started GET "/admin/settings/appearance" for 127.0.0.1 at 2018-10-31 09:54:47 -0400
+I, [2018-10-31T09:54:47.086613 #14556]  INFO -- : Processing by Admin::SettingsController#edit as HTML
+I, [2018-10-31T09:54:47.086770 #14556]  INFO -- :   Parameters: {"config"=>"appearance"}
+I, [2018-10-31T09:54:47.094768 #14556]  INFO -- : Started GET "/assets/admin/profile-menu.jpg" for 127.0.0.1 at 2018-10-31 09:54:47 -0400
+I, [2018-10-31T09:54:47.119146 #14556]  INFO -- :   Rendering admin/settings/edit.html.haml within admin/layouts/application
+I, [2018-10-31T09:54:47.124884 #14556]  INFO -- :   Rendered admin/settings/components/_preview.html.haml (0.5ms)
+I, [2018-10-31T09:54:47.133067 #14556]  INFO -- :   Rendered admin/settings/fields/_appearance.html.haml (11.6ms)
+I, [2018-10-31T09:54:47.133593 #14556]  INFO -- :   Rendered admin/settings/_form.html.haml (12.9ms)
+I, [2018-10-31T09:54:47.133843 #14556]  INFO -- :   Rendered admin/settings/edit.html.haml within admin/layouts/application (14.5ms)
+I, [2018-10-31T09:54:47.136027 #14556]  INFO -- :   Rendered admin/layouts/_head.html.haml (1.9ms)
+I, [2018-10-31T09:54:47.141515 #14556]  INFO -- :   Rendered admin/layouts/_navigation.html.haml (5.1ms)
+I, [2018-10-31T09:54:47.163288 #14556]  INFO -- :   Rendered admin/layouts/_sidebar.html.haml (21.5ms)
+I, [2018-10-31T09:54:47.163738 #14556]  INFO -- :   Rendered admin/layouts/_messages.html.haml (0.1ms)
+I, [2018-10-31T09:54:47.164189 #14556]  INFO -- :   Rendered admin/layouts/_preloader.html.haml (0.2ms)
+I, [2018-10-31T09:54:47.164488 #14556]  INFO -- :   Rendered admin/layouts/_footer.html.haml (0.1ms)
+I, [2018-10-31T09:54:47.164717 #14556]  INFO -- :   Rendered admin/layouts/_keppler_boolean_script.haml (0.0ms)
+I, [2018-10-31T09:54:47.165441 #14556]  INFO -- : Completed 200 OK in 78ms (Views: 45.4ms | ActiveRecord: 11.0ms)
+I, [2018-10-31T09:54:54.654816 #14556]  INFO -- : Started PUT "/admin/settings/appearance" for 127.0.0.1 at 2018-10-31 09:54:54 -0400
+I, [2018-10-31T09:54:54.655913 #14556]  INFO -- : Processing by Admin::SettingsController#update as HTML
+I, [2018-10-31T09:54:54.655996 #14556]  INFO -- :   Parameters: {"utf8"=>"✓", "authenticity_token"=>"HleDMCMPOAfZyv6RuqrVG+esCi+S2FsN7TkvBtSCo7TaA0fdO38Yth4o0vCEtBV3ULz2JW3ZIalcQpIYkoJfPQ==", "user"=>{"email"=>"", "password"=>"[FILTERED]"}, "color"=>"F411E5", "commit"=>"Apply", "setting"=>{"appearance_attributes"=>{"language"=>"en", "id"=>"1"}}, "config"=>"appearance"}
+I, [2018-10-31T09:54:54.722876 #14556]  INFO -- : Redirected to http://localhost:3000/admin/settings/appearance
+I, [2018-10-31T09:54:54.781360 #14556]  INFO -- : Completed 302 Found in 125ms (ActiveRecord: 81.7ms)
+I, [2018-10-31T09:54:54.788837 #14556]  INFO -- : Started GET "/admin/settings/appearance" for 127.0.0.1 at 2018-10-31 09:54:54 -0400
+I, [2018-10-31T09:54:54.789777 #14556]  INFO -- : Processing by Admin::SettingsController#edit as HTML
+I, [2018-10-31T09:54:54.789839 #14556]  INFO -- :   Parameters: {"config"=>"appearance"}
+I, [2018-10-31T09:54:54.807215 #14556]  INFO -- :   Rendering admin/settings/edit.html.haml within admin/layouts/application
+I, [2018-10-31T09:54:54.809949 #14556]  INFO -- :   Rendered admin/settings/components/_preview.html.haml (0.2ms)
+I, [2018-10-31T09:54:54.813678 #14556]  INFO -- :   Rendered admin/settings/fields/_appearance.html.haml (5.3ms)
+I, [2018-10-31T09:54:54.814295 #14556]  INFO -- :   Rendered admin/settings/_form.html.haml (6.3ms)
+I, [2018-10-31T09:54:54.814434 #14556]  INFO -- :   Rendered admin/settings/edit.html.haml within admin/layouts/application (7.1ms)
+I, [2018-10-31T09:54:54.816518 #14556]  INFO -- :   Rendered admin/layouts/_head.html.haml (1.6ms)
+I, [2018-10-31T09:54:54.820196 #14556]  INFO -- :   Rendered admin/layouts/_navigation.html.haml (3.4ms)
+I, [2018-10-31T09:54:54.836927 #14556]  INFO -- :   Rendered admin/layouts/_sidebar.html.haml (16.4ms)
+I, [2018-10-31T09:54:54.837323 #14556]  INFO -- :   Rendered admin/layouts/_messages.html.haml (0.1ms)
+I, [2018-10-31T09:54:54.837618 #14556]  INFO -- :   Rendered admin/layouts/_preloader.html.haml (0.1ms)
+I, [2018-10-31T09:54:54.837798 #14556]  INFO -- :   Rendered admin/layouts/_footer.html.haml (0.0ms)
+I, [2018-10-31T09:54:54.837981 #14556]  INFO -- :   Rendered admin/layouts/_keppler_boolean_script.haml (0.0ms)
+I, [2018-10-31T09:54:54.838344 #14556]  INFO -- : Completed 200 OK in 48ms (Views: 30.6ms | ActiveRecord: 5.2ms)
+I, [2018-10-31T09:54:55.078729 #14556]  INFO -- : Started GET "/assetsadmin/fonts-and-icons/fonts/Simple-Line-Icons.woff2?v=2.4.0" for 127.0.0.1 at 2018-10-31 09:54:55 -0400
+I, [2018-10-31T09:54:55.083970 #14556]  INFO -- : Started GET "/assets/admin/fonts-and-icons/ZXuke1cDvLCKLDcimxB44_lu.woff2" for 127.0.0.1 at 2018-10-31 09:54:55 -0400
+I, [2018-10-31T09:54:55.106728 #14556]  INFO -- : Started GET "/admin/settings/appearance" for 127.0.0.1 at 2018-10-31 09:54:55 -0400
+I, [2018-10-31T09:54:55.107680 #14556]  INFO -- : Processing by Admin::SettingsController#edit as HTML
+I, [2018-10-31T09:54:55.107786 #14556]  INFO -- :   Parameters: {"config"=>"appearance"}
+I, [2018-10-31T09:54:55.112125 #14556]  INFO -- : Started GET "/assets/admin/profile-menu.jpg" for 127.0.0.1 at 2018-10-31 09:54:55 -0400
+I, [2018-10-31T09:54:55.136644 #14556]  INFO -- :   Rendering admin/settings/edit.html.haml within admin/layouts/application
+I, [2018-10-31T09:54:55.144000 #14556]  INFO -- :   Rendered admin/settings/components/_preview.html.haml (0.8ms)
+I, [2018-10-31T09:54:55.152378 #14556]  INFO -- :   Rendered admin/settings/fields/_appearance.html.haml (12.8ms)
+I, [2018-10-31T09:54:55.153260 #14556]  INFO -- :   Rendered admin/settings/_form.html.haml (15.2ms)
+I, [2018-10-31T09:54:55.153469 #14556]  INFO -- :   Rendered admin/settings/edit.html.haml within admin/layouts/application (16.6ms)
+I, [2018-10-31T09:54:55.156142 #14556]  INFO -- :   Rendered admin/layouts/_head.html.haml (2.3ms)
+I, [2018-10-31T09:54:55.161383 #14556]  INFO -- :   Rendered admin/layouts/_navigation.html.haml (4.9ms)
+I, [2018-10-31T09:54:55.187098 #14556]  INFO -- :   Rendered admin/layouts/_sidebar.html.haml (25.4ms)
+I, [2018-10-31T09:54:55.187493 #14556]  INFO -- :   Rendered admin/layouts/_messages.html.haml (0.1ms)
+I, [2018-10-31T09:54:55.188018 #14556]  INFO -- :   Rendered admin/layouts/_preloader.html.haml (0.3ms)
+I, [2018-10-31T09:54:55.188249 #14556]  INFO -- :   Rendered admin/layouts/_footer.html.haml (0.0ms)
+I, [2018-10-31T09:54:55.188467 #14556]  INFO -- :   Rendered admin/layouts/_keppler_boolean_script.haml (0.1ms)
+I, [2018-10-31T09:54:55.188765 #14556]  INFO -- : Completed 200 OK in 81ms (Views: 50.9ms | ActiveRecord: 9.1ms)
+I, [2018-10-31T09:55:01.175968 #14556]  INFO -- : Started PUT "/admin/settings/appearance" for 127.0.0.1 at 2018-10-31 09:55:01 -0400
+I, [2018-10-31T09:55:01.177582 #14556]  INFO -- : Processing by Admin::SettingsController#update as HTML
+I, [2018-10-31T09:55:01.177746 #14556]  INFO -- :   Parameters: {"utf8"=>"✓", "authenticity_token"=>"EOwlnFqqWK9XSez47MsqhJybhT+GIsawmh5/SXe1vtLUuOFxQtp4HpCrwJnS1eroK4t5NXkjvBQrZcJXMbVCWw==", "user"=>{"email"=>"", "password"=>"[FILTERED]"}, "color"=>"F40000", "commit"=>"Apply", "setting"=>{"appearance_attributes"=>{"language"=>"en", "id"=>"1"}}, "config"=>"appearance"}
+I, [2018-10-31T09:55:01.224638 #14556]  INFO -- : Redirected to http://localhost:3000/admin/settings/appearance
+I, [2018-10-31T09:55:01.239477 #14556]  INFO -- : Completed 302 Found in 62ms (ActiveRecord: 22.7ms)
+I, [2018-10-31T09:55:01.244512 #14556]  INFO -- : Started GET "/admin/settings/appearance" for 127.0.0.1 at 2018-10-31 09:55:01 -0400
+I, [2018-10-31T09:55:01.245240 #14556]  INFO -- : Processing by Admin::SettingsController#edit as HTML
+I, [2018-10-31T09:55:01.245303 #14556]  INFO -- :   Parameters: {"config"=>"appearance"}
+I, [2018-10-31T09:55:01.263914 #14556]  INFO -- :   Rendering admin/settings/edit.html.haml within admin/layouts/application
+I, [2018-10-31T09:55:01.268200 #14556]  INFO -- :   Rendered admin/settings/components/_preview.html.haml (0.4ms)
+I, [2018-10-31T09:55:01.274165 #14556]  INFO -- :   Rendered admin/settings/fields/_appearance.html.haml (8.8ms)
+I, [2018-10-31T09:55:01.274611 #14556]  INFO -- :   Rendered admin/settings/_form.html.haml (9.8ms)
+I, [2018-10-31T09:55:01.274704 #14556]  INFO -- :   Rendered admin/settings/edit.html.haml within admin/layouts/application (10.6ms)
+I, [2018-10-31T09:55:01.276255 #14556]  INFO -- :   Rendered admin/layouts/_head.html.haml (1.4ms)
+I, [2018-10-31T09:55:01.279791 #14556]  INFO -- :   Rendered admin/layouts/_navigation.html.haml (3.3ms)
+I, [2018-10-31T09:55:01.296668 #14556]  INFO -- :   Rendered admin/layouts/_sidebar.html.haml (16.6ms)
+I, [2018-10-31T09:55:01.297085 #14556]  INFO -- :   Rendered admin/layouts/_messages.html.haml (0.2ms)
+I, [2018-10-31T09:55:01.297682 #14556]  INFO -- :   Rendered admin/layouts/_preloader.html.haml (0.3ms)
+I, [2018-10-31T09:55:01.297894 #14556]  INFO -- :   Rendered admin/layouts/_footer.html.haml (0.0ms)
+I, [2018-10-31T09:55:01.298080 #14556]  INFO -- :   Rendered admin/layouts/_keppler_boolean_script.haml (0.0ms)
+I, [2018-10-31T09:55:01.298352 #14556]  INFO -- : Completed 200 OK in 53ms (Views: 34.5ms | ActiveRecord: 5.3ms)
+I, [2018-10-31T09:55:01.540692 #14556]  INFO -- : Started GET "/assetsadmin/fonts-and-icons/fonts/Simple-Line-Icons.woff2?v=2.4.0" for 127.0.0.1 at 2018-10-31 09:55:01 -0400
+I, [2018-10-31T09:55:01.543006 #14556]  INFO -- : Started GET "/assets/admin/fonts-and-icons/ZXuke1cDvLCKLDcimxB44_lu.woff2" for 127.0.0.1 at 2018-10-31 09:55:01 -0400
+I, [2018-10-31T09:55:01.556276 #14556]  INFO -- : Started GET "/admin/settings/appearance" for 127.0.0.1 at 2018-10-31 09:55:01 -0400
+I, [2018-10-31T09:55:01.557270 #14556]  INFO -- : Processing by Admin::SettingsController#edit as HTML
+I, [2018-10-31T09:55:01.557783 #14556]  INFO -- :   Parameters: {"config"=>"appearance"}
+I, [2018-10-31T09:55:01.558983 #14556]  INFO -- : Started GET "/assets/admin/profile-menu.jpg" for 127.0.0.1 at 2018-10-31 09:55:01 -0400
+I, [2018-10-31T09:55:01.588829 #14556]  INFO -- :   Rendering admin/settings/edit.html.haml within admin/layouts/application
+I, [2018-10-31T09:55:01.593557 #14556]  INFO -- :   Rendered admin/settings/components/_preview.html.haml (0.4ms)
+I, [2018-10-31T09:55:01.599937 #14556]  INFO -- :   Rendered admin/settings/fields/_appearance.html.haml (9.3ms)
+I, [2018-10-31T09:55:01.600724 #14556]  INFO -- :   Rendered admin/settings/_form.html.haml (10.8ms)
+I, [2018-10-31T09:55:01.600906 #14556]  INFO -- :   Rendered admin/settings/edit.html.haml within admin/layouts/application (11.9ms)
+I, [2018-10-31T09:55:01.603998 #14556]  INFO -- :   Rendered admin/layouts/_head.html.haml (2.6ms)
+I, [2018-10-31T09:55:01.611311 #14556]  INFO -- :   Rendered admin/layouts/_navigation.html.haml (6.7ms)
+I, [2018-10-31T09:55:01.640222 #14556]  INFO -- :   Rendered admin/layouts/_sidebar.html.haml (28.6ms)
+I, [2018-10-31T09:55:01.640622 #14556]  INFO -- :   Rendered admin/layouts/_messages.html.haml (0.1ms)
+I, [2018-10-31T09:55:01.641315 #14556]  INFO -- :   Rendered admin/layouts/_preloader.html.haml (0.2ms)
+I, [2018-10-31T09:55:01.641646 #14556]  INFO -- :   Rendered admin/layouts/_footer.html.haml (0.1ms)
+I, [2018-10-31T09:55:01.641913 #14556]  INFO -- :   Rendered admin/layouts/_keppler_boolean_script.haml (0.1ms)
+I, [2018-10-31T09:55:01.642279 #14556]  INFO -- : Completed 200 OK in 84ms (Views: 52.4ms | ActiveRecord: 9.2ms)
+I, [2018-10-31T09:55:02.530924 #14556]  INFO -- : Started PUT "/admin/settings/appearance/appearance_default" for 127.0.0.1 at 2018-10-31 09:55:02 -0400
+I, [2018-10-31T09:55:02.533115 #14556]  INFO -- : Processing by Admin::SettingsController#appearance_default as HTML
+I, [2018-10-31T09:55:02.533302 #14556]  INFO -- :   Parameters: {"authenticity_token"=>"+CwP2xzt6/6O3CDnlzBdyeCmVGL1Lx/DfCAfeztjDn88eMs2BJ3LT0k+DIapLp2lV7aoaAouZWfNW6JlfWPy9g==", "config"=>"appearance"}
+I, [2018-10-31T09:55:02.586025 #14556]  INFO -- : Redirected to http://localhost:3000/admin/settings/appearance
+I, [2018-10-31T09:55:02.586312 #14556]  INFO -- : Completed 302 Found in 53ms (ActiveRecord: 27.7ms)
+I, [2018-10-31T09:55:02.595207 #14556]  INFO -- : Started GET "/admin/settings/appearance" for 127.0.0.1 at 2018-10-31 09:55:02 -0400
+I, [2018-10-31T09:55:02.596237 #14556]  INFO -- : Processing by Admin::SettingsController#edit as HTML
+I, [2018-10-31T09:55:02.596361 #14556]  INFO -- :   Parameters: {"config"=>"appearance"}
+I, [2018-10-31T09:55:02.619028 #14556]  INFO -- :   Rendering admin/settings/edit.html.haml within admin/layouts/application
+I, [2018-10-31T09:55:02.624895 #14556]  INFO -- :   Rendered admin/settings/components/_preview.html.haml (0.5ms)
+I, [2018-10-31T09:55:02.629979 #14556]  INFO -- :   Rendered admin/settings/fields/_appearance.html.haml (8.4ms)
+I, [2018-10-31T09:55:02.630500 #14556]  INFO -- :   Rendered admin/settings/_form.html.haml (9.8ms)
+I, [2018-10-31T09:55:02.630635 #14556]  INFO -- :   Rendered admin/settings/edit.html.haml within admin/layouts/application (11.5ms)
+I, [2018-10-31T09:55:02.632593 #14556]  INFO -- :   Rendered admin/layouts/_head.html.haml (1.7ms)
+I, [2018-10-31T09:55:02.638128 #14556]  INFO -- :   Rendered admin/layouts/_navigation.html.haml (5.2ms)
+I, [2018-10-31T09:55:02.657158 #14556]  INFO -- :   Rendered admin/layouts/_sidebar.html.haml (18.7ms)
+I, [2018-10-31T09:55:02.657857 #14556]  INFO -- :   Rendered admin/layouts/_messages.html.haml (0.2ms)
+I, [2018-10-31T09:55:02.658604 #14556]  INFO -- :   Rendered admin/layouts/_preloader.html.haml (0.4ms)
+I, [2018-10-31T09:55:02.658979 #14556]  INFO -- :   Rendered admin/layouts/_footer.html.haml (0.1ms)
+I, [2018-10-31T09:55:02.659203 #14556]  INFO -- :   Rendered admin/layouts/_keppler_boolean_script.haml (0.0ms)
+I, [2018-10-31T09:55:02.659535 #14556]  INFO -- : Completed 200 OK in 63ms (Views: 39.8ms | ActiveRecord: 6.6ms)
+I, [2018-10-31T09:55:02.934385 #14556]  INFO -- : Started GET "/assets/admin/profile-menu.jpg" for 127.0.0.1 at 2018-10-31 09:55:02 -0400
+I, [2018-10-31T09:55:02.936348 #14556]  INFO -- : Started GET "/admin/settings/appearance" for 127.0.0.1 at 2018-10-31 09:55:02 -0400
+I, [2018-10-31T09:55:02.937701 #14556]  INFO -- : Processing by Admin::SettingsController#edit as HTML
+I, [2018-10-31T09:55:02.937838 #14556]  INFO -- :   Parameters: {"config"=>"appearance"}
+I, [2018-10-31T09:55:02.948262 #14556]  INFO -- : Started GET "/assetsadmin/fonts-and-icons/fonts/Simple-Line-Icons.woff2?v=2.4.0" for 127.0.0.1 at 2018-10-31 09:55:02 -0400
+I, [2018-10-31T09:55:02.951685 #14556]  INFO -- : Started GET "/assets/admin/fonts-and-icons/ZXuke1cDvLCKLDcimxB44_lu.woff2" for 127.0.0.1 at 2018-10-31 09:55:02 -0400
+I, [2018-10-31T09:55:02.968103 #14556]  INFO -- :   Rendering admin/settings/edit.html.haml within admin/layouts/application
+I, [2018-10-31T09:55:02.972270 #14556]  INFO -- :   Rendered admin/settings/components/_preview.html.haml (0.2ms)
+I, [2018-10-31T09:55:02.976203 #14556]  INFO -- :   Rendered admin/settings/fields/_appearance.html.haml (5.8ms)
+I, [2018-10-31T09:55:02.976665 #14556]  INFO -- :   Rendered admin/settings/_form.html.haml (7.0ms)
+I, [2018-10-31T09:55:02.976769 #14556]  INFO -- :   Rendered admin/settings/edit.html.haml within admin/layouts/application (8.5ms)
+I, [2018-10-31T09:55:02.979132 #14556]  INFO -- :   Rendered admin/layouts/_head.html.haml (2.1ms)
+I, [2018-10-31T09:55:02.985599 #14556]  INFO -- :   Rendered admin/layouts/_navigation.html.haml (6.0ms)
+I, [2018-10-31T09:55:03.014462 #14556]  INFO -- :   Rendered admin/layouts/_sidebar.html.haml (28.5ms)
+I, [2018-10-31T09:55:03.014967 #14556]  INFO -- :   Rendered admin/layouts/_messages.html.haml (0.1ms)
+I, [2018-10-31T09:55:03.015750 #14556]  INFO -- :   Rendered admin/layouts/_preloader.html.haml (0.5ms)
+I, [2018-10-31T09:55:03.016130 #14556]  INFO -- :   Rendered admin/layouts/_footer.html.haml (0.1ms)
+I, [2018-10-31T09:55:03.016405 #14556]  INFO -- :   Rendered admin/layouts/_keppler_boolean_script.haml (0.1ms)
+I, [2018-10-31T09:55:03.017098 #14556]  INFO -- : Completed 200 OK in 79ms (Views: 47.9ms | ActiveRecord: 11.8ms)
+I, [2018-10-31T09:55:08.942021 #14556]  INFO -- : Started GET "/admin/users" for 127.0.0.1 at 2018-10-31 09:55:08 -0400
+I, [2018-10-31T09:55:08.943933 #14556]  INFO -- : Processing by Admin::UsersController#index as HTML
+I, [2018-10-31T09:55:08.996453 #14556]  INFO -- :   Rendering admin/users/index.html.haml within admin/layouts/application
+I, [2018-10-31T09:55:09.025772 #14556]  INFO -- :   Rendered admin/layouts/_listing_preloader.haml (0.1ms)
+I, [2018-10-31T09:55:09.050959 #14556]  INFO -- :   Rendered admin/users/_listing.html.haml (14.6ms)
+I, [2018-10-31T09:55:09.080005 #14556]  INFO -- :   Rendered public_activity/layout/_update.html.haml (12.5ms)
+I, [2018-10-31T09:55:09.080766 #14556]  INFO -- :   Rendered public_activity/layout/_update.html.haml (0.5ms)
+I, [2018-10-31T09:55:09.081528 #14556]  INFO -- :   Rendered public_activity/layout/_update.html.haml (0.6ms)
+I, [2018-10-31T09:55:09.082132 #14556]  INFO -- :   Rendered public_activity/layout/_update.html.haml (0.4ms)
+I, [2018-10-31T09:55:09.082702 #14556]  INFO -- :   Rendered public_activity/layout/_update.html.haml (0.4ms)
+I, [2018-10-31T09:55:09.083407 #14556]  INFO -- :   Rendered public_activity/layout/_update.html.haml (0.4ms)
+I, [2018-10-31T09:55:09.083972 #14556]  INFO -- :   Rendered public_activity/layout/_update.html.haml (0.4ms)
+I, [2018-10-31T09:55:09.084659 #14556]  INFO -- :   Rendered public_activity/layout/_update.html.haml (0.4ms)
+I, [2018-10-31T09:55:09.085400 #14556]  INFO -- :   Rendered public_activity/layout/_update.html.haml (0.6ms)
+I, [2018-10-31T09:55:09.086328 #14556]  INFO -- :   Rendered public_activity/layout/_update.html.haml (0.7ms)
+I, [2018-10-31T09:55:09.087506 #14556]  INFO -- :   Rendered public_activity/layout/_update.html.haml (0.9ms)
+I, [2018-10-31T09:55:09.088590 #14556]  INFO -- :   Rendered public_activity/layout/_update.html.haml (0.8ms)
+I, [2018-10-31T09:55:09.089796 #14556]  INFO -- :   Rendered public_activity/layout/_update.html.haml (0.9ms)
+I, [2018-10-31T09:55:09.090904 #14556]  INFO -- :   Rendered public_activity/layout/_update.html.haml (0.7ms)
+I, [2018-10-31T09:55:09.091551 #14556]  INFO -- :   Rendered public_activity/layout/_create.html.haml (0.5ms)
+I, [2018-10-31T09:55:09.091639 #14556]  INFO -- :   Rendered admin/users/_description.html.haml (30.6ms)
+I, [2018-10-31T09:55:09.091730 #14556]  INFO -- :   Rendered admin/users/index.html.haml within admin/layouts/application (95.1ms)
+I, [2018-10-31T09:55:09.093595 #14556]  INFO -- :   Rendered admin/layouts/_head.html.haml (1.7ms)
+I, [2018-10-31T09:55:09.098132 #14556]  INFO -- :   Rendered admin/layouts/_navigation.html.haml (4.3ms)
+I, [2018-10-31T09:55:09.113140 #14556]  INFO -- :   Rendered admin/layouts/_sidebar.html.haml (14.8ms)
+I, [2018-10-31T09:55:09.113471 #14556]  INFO -- :   Rendered admin/layouts/_messages.html.haml (0.1ms)
+I, [2018-10-31T09:55:09.113748 #14556]  INFO -- :   Rendered admin/layouts/_preloader.html.haml (0.1ms)
+I, [2018-10-31T09:55:09.113905 #14556]  INFO -- :   Rendered admin/layouts/_footer.html.haml (0.0ms)
+I, [2018-10-31T09:55:09.114235 #14556]  INFO -- :   Rendered admin/layouts/_keppler_boolean_script.haml (0.0ms)
+I, [2018-10-31T09:55:09.114468 #14556]  INFO -- : Completed 200 OK in 170ms (Views: 114.4ms | ActiveRecord: 12.5ms)
+I, [2018-10-31T09:55:09.149943 #14556]  INFO -- : Started GET "/assets/vue_admin/index.js" for 127.0.0.1 at 2018-10-31 09:55:09 -0400
+I, [2018-10-31T09:55:09.226444 #14556]  INFO -- : Started GET "/admin/users/page/1.json" for 127.0.0.1 at 2018-10-31 09:55:09 -0400
+I, [2018-10-31T09:55:09.227624 #14556]  INFO -- : Processing by Admin::UsersController#index as JSON
+I, [2018-10-31T09:55:09.227779 #14556]  INFO -- :   Parameters: {"page"=>"1"}
+I, [2018-10-31T09:55:09.256274 #14556]  INFO -- : Completed 200 OK in 28ms (Views: 0.8ms | ActiveRecord: 7.9ms)
+I, [2018-10-31T09:55:11.650916 #14556]  INFO -- : Started GET "/admin/roles" for 127.0.0.1 at 2018-10-31 09:55:11 -0400
+I, [2018-10-31T09:55:11.652384 #14556]  INFO -- : Processing by Admin::RolesController#index as HTML
+I, [2018-10-31T09:55:11.719369 #14556]  INFO -- :   Rendering admin/roles/index.html.haml within admin/layouts/application
+I, [2018-10-31T09:55:11.747467 #14556]  INFO -- :   Rendered admin/layouts/_listing_preloader.haml (0.1ms)
+I, [2018-10-31T09:55:11.797775 #14556]  INFO -- :   Rendered admin/roles/_listing.html.haml (25.6ms)
+I, [2018-10-31T09:55:11.838162 #14556]  INFO -- :   Rendered admin/roles/_description.html.haml (6.1ms)
+I, [2018-10-31T09:55:11.838298 #14556]  INFO -- :   Rendered admin/roles/index.html.haml within admin/layouts/application (118.7ms)
+I, [2018-10-31T09:55:11.839800 #14556]  INFO -- :   Rendered admin/layouts/_head.html.haml (1.3ms)
+I, [2018-10-31T09:55:11.843475 #14556]  INFO -- :   Rendered admin/layouts/_navigation.html.haml (3.5ms)
+I, [2018-10-31T09:55:11.858214 #14556]  INFO -- :   Rendered admin/layouts/_sidebar.html.haml (14.5ms)
+I, [2018-10-31T09:55:11.858555 #14556]  INFO -- :   Rendered admin/layouts/_messages.html.haml (0.1ms)
+I, [2018-10-31T09:55:11.858822 #14556]  INFO -- :   Rendered admin/layouts/_preloader.html.haml (0.1ms)
+I, [2018-10-31T09:55:11.858976 #14556]  INFO -- :   Rendered admin/layouts/_footer.html.haml (0.0ms)
+I, [2018-10-31T09:55:11.859133 #14556]  INFO -- :   Rendered admin/layouts/_keppler_boolean_script.haml (0.0ms)
+I, [2018-10-31T09:55:11.859374 #14556]  INFO -- : Completed 200 OK in 207ms (Views: 137.6ms | ActiveRecord: 10.2ms)
+I, [2018-10-31T09:55:11.882588 #14556]  INFO -- : Started GET "/assets/vue_admin/index.js" for 127.0.0.1 at 2018-10-31 09:55:11 -0400
+I, [2018-10-31T09:55:11.956395 #14556]  INFO -- : Started GET "/admin/roles/page/1.json" for 127.0.0.1 at 2018-10-31 09:55:11 -0400
+I, [2018-10-31T09:55:11.957206 #14556]  INFO -- : Processing by Admin::RolesController#index as JSON
+I, [2018-10-31T09:55:11.957408 #14556]  INFO -- :   Parameters: {"page"=>"1"}
+I, [2018-10-31T09:55:11.975602 #14556]  INFO -- : Completed 200 OK in 18ms (Views: 1.3ms | ActiveRecord: 4.4ms)
+I, [2018-10-31T09:55:13.399678 #14556]  INFO -- : Started GET "/admin/roles/2" for 127.0.0.1 at 2018-10-31 09:55:13 -0400
+I, [2018-10-31T09:55:13.401893 #14556]  INFO -- : Processing by Admin::RolesController#show as HTML
+I, [2018-10-31T09:55:13.402161 #14556]  INFO -- :   Parameters: {"id"=>"2"}
+I, [2018-10-31T09:55:13.460886 #14556]  INFO -- :   Rendering admin/roles/show.html.haml within admin/layouts/application
+I, [2018-10-31T09:55:13.473845 #14556]  INFO -- :   Rendered admin/roles/show.html.haml within admin/layouts/application (12.8ms)
+I, [2018-10-31T09:55:13.475992 #14556]  INFO -- :   Rendered admin/layouts/_head.html.haml (1.7ms)
+I, [2018-10-31T09:55:13.479983 #14556]  INFO -- :   Rendered admin/layouts/_navigation.html.haml (3.7ms)
+I, [2018-10-31T09:55:13.495527 #14556]  INFO -- :   Rendered admin/layouts/_sidebar.html.haml (15.3ms)
+I, [2018-10-31T09:55:13.495872 #14556]  INFO -- :   Rendered admin/layouts/_messages.html.haml (0.1ms)
+I, [2018-10-31T09:55:13.496231 #14556]  INFO -- :   Rendered admin/layouts/_preloader.html.haml (0.1ms)
+I, [2018-10-31T09:55:13.496429 #14556]  INFO -- :   Rendered admin/layouts/_footer.html.haml (0.0ms)
+I, [2018-10-31T09:55:13.496619 #14556]  INFO -- :   Rendered admin/layouts/_keppler_boolean_script.haml (0.0ms)
+I, [2018-10-31T09:55:13.496890 #14556]  INFO -- : Completed 200 OK in 95ms (Views: 35.5ms | ActiveRecord: 10.3ms)
+I, [2018-10-31T09:55:14.872087 #14556]  INFO -- : Started GET "/admin/roles" for 127.0.0.1 at 2018-10-31 09:55:14 -0400
+I, [2018-10-31T09:55:14.874229 #14556]  INFO -- : Processing by Admin::RolesController#index as HTML
+I, [2018-10-31T09:55:14.897871 #14556]  INFO -- : Started GET "/assets/vue_admin/index.js" for 127.0.0.1 at 2018-10-31 09:55:14 -0400
+I, [2018-10-31T09:55:14.914514 #14556]  INFO -- :   Rendering admin/roles/index.html.haml within admin/layouts/application
+I, [2018-10-31T09:55:14.931235 #14556]  INFO -- :   Rendered admin/layouts/_listing_preloader.haml (0.1ms)
+I, [2018-10-31T09:55:14.951407 #14556]  INFO -- :   Rendered admin/roles/_listing.html.haml (19.7ms)
+I, [2018-10-31T09:55:14.960389 #14556]  INFO -- :   Rendered admin/roles/_description.html.haml (7.3ms)
+I, [2018-10-31T09:55:14.960609 #14556]  INFO -- :   Rendered admin/roles/index.html.haml within admin/layouts/application (45.9ms)
+I, [2018-10-31T09:55:14.963473 #14556]  INFO -- :   Rendered admin/layouts/_head.html.haml (2.5ms)
+I, [2018-10-31T09:55:14.970568 #14556]  INFO -- :   Rendered admin/layouts/_navigation.html.haml (6.7ms)
+I, [2018-10-31T09:55:14.976055 #14556]  INFO -- : Started GET "/admin/roles/page/1.json" for 127.0.0.1 at 2018-10-31 09:55:14 -0400
+I, [2018-10-31T09:55:14.976979 #14556]  INFO -- : Processing by Admin::RolesController#index as JSON
+I, [2018-10-31T09:55:14.977077 #14556]  INFO -- :   Parameters: {"page"=>"1"}
+I, [2018-10-31T09:55:14.994930 #14556]  INFO -- :   Rendered admin/layouts/_sidebar.html.haml (23.8ms)
+I, [2018-10-31T09:55:14.995406 #14556]  INFO -- :   Rendered admin/layouts/_messages.html.haml (0.1ms)
+I, [2018-10-31T09:55:14.995779 #14556]  INFO -- :   Rendered admin/layouts/_preloader.html.haml (0.2ms)
+I, [2018-10-31T09:55:14.995957 #14556]  INFO -- :   Rendered admin/layouts/_footer.html.haml (0.0ms)
+I, [2018-10-31T09:55:14.996368 #14556]  INFO -- :   Rendered admin/layouts/_keppler_boolean_script.haml (0.0ms)
+I, [2018-10-31T09:55:14.996638 #14556]  INFO -- : Completed 200 OK in 122ms (Views: 71.1ms | ActiveRecord: 25.1ms)
+I, [2018-10-31T09:55:15.025349 #14556]  INFO -- : Started GET "/assets/vue_admin/index.js" for 127.0.0.1 at 2018-10-31 09:55:15 -0400
+I, [2018-10-31T09:55:15.039436 #14556]  INFO -- : Completed 200 OK in 62ms (Views: 1.8ms | ActiveRecord: 20.6ms)
+I, [2018-10-31T09:55:15.073762 #14556]  INFO -- : Started GET "/admin/roles/page/1.json" for 127.0.0.1 at 2018-10-31 09:55:15 -0400
+I, [2018-10-31T09:55:15.074727 #14556]  INFO -- : Processing by Admin::RolesController#index as JSON
+I, [2018-10-31T09:55:15.074854 #14556]  INFO -- :   Parameters: {"page"=>"1"}
+I, [2018-10-31T09:55:15.098806 #14556]  INFO -- : Completed 200 OK in 24ms (Views: 1.2ms | ActiveRecord: 6.3ms)
+I, [2018-10-31T09:55:16.539981 #14556]  INFO -- : Started GET "/admin/roles/2/add_permissions" for 127.0.0.1 at 2018-10-31 09:55:16 -0400
+I, [2018-10-31T09:55:16.542437 #14556]  INFO -- : Processing by Admin::PermissionsController#add as HTML
+I, [2018-10-31T09:55:16.542960 #14556]  INFO -- :   Parameters: {"role_id"=>"2"}
+I, [2018-10-31T09:55:16.601659 #14556]  INFO -- :   Rendering admin/permissions/add.html.haml within admin/layouts/application
+I, [2018-10-31T09:55:16.697192 #14556]  INFO -- :   Rendered admin/permissions/_switch.html.haml (51.9ms)
+I, [2018-10-31T09:55:16.739589 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (16.5ms)
+I, [2018-10-31T09:55:16.742011 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (1.5ms)
+I, [2018-10-31T09:55:16.745907 #14556]  INFO -- :   Rendered admin/permissions/_switch.html.haml (3.0ms)
+I, [2018-10-31T09:55:16.747711 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (1.1ms)
+I, [2018-10-31T09:55:16.749128 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (0.9ms)
+I, [2018-10-31T09:55:16.750643 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (1.0ms)
+I, [2018-10-31T09:55:16.752331 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (1.1ms)
+I, [2018-10-31T09:55:16.753913 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (1.0ms)
+I, [2018-10-31T09:55:16.755463 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (1.0ms)
+I, [2018-10-31T09:55:16.757132 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (1.1ms)
+I, [2018-10-31T09:55:16.758892 #14556]  INFO -- :   Rendered admin/permissions/_switch.html.haml (1.4ms)
+I, [2018-10-31T09:55:16.760203 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (0.9ms)
+I, [2018-10-31T09:55:16.763081 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (2.4ms)
+I, [2018-10-31T09:55:16.764940 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (1.2ms)
+I, [2018-10-31T09:55:16.766748 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (1.2ms)
+I, [2018-10-31T09:55:16.768611 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (1.2ms)
+I, [2018-10-31T09:55:16.770231 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (1.0ms)
+I, [2018-10-31T09:55:16.771848 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (1.1ms)
+I, [2018-10-31T09:55:16.773669 #14556]  INFO -- :   Rendered admin/permissions/_switch.html.haml (1.4ms)
+I, [2018-10-31T09:55:16.775070 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (1.0ms)
+I, [2018-10-31T09:55:16.776653 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (1.1ms)
+I, [2018-10-31T09:55:16.778054 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (0.9ms)
+I, [2018-10-31T09:55:16.779398 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (0.9ms)
+I, [2018-10-31T09:55:16.780708 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (0.8ms)
+I, [2018-10-31T09:55:16.782096 #14556]  INFO -- :   Rendered admin/permissions/_switch.html.haml (0.9ms)
+I, [2018-10-31T09:55:16.783347 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (0.8ms)
+I, [2018-10-31T09:55:16.784911 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (1.0ms)
+I, [2018-10-31T09:55:16.786310 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (0.9ms)
+I, [2018-10-31T09:55:16.787586 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (0.8ms)
+I, [2018-10-31T09:55:16.789089 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (1.0ms)
+I, [2018-10-31T09:55:16.790477 #14556]  INFO -- :   Rendered admin/permissions/_switch.html.haml (0.9ms)
+I, [2018-10-31T09:55:16.791886 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (1.0ms)
+I, [2018-10-31T09:55:16.793224 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (0.8ms)
+I, [2018-10-31T09:55:16.794698 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (0.9ms)
+I, [2018-10-31T09:55:16.795980 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (0.8ms)
+I, [2018-10-31T09:55:16.797222 #14556]  INFO -- :   Rendered admin/permissions/_switch.html.haml (0.9ms)
+I, [2018-10-31T09:55:16.798386 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (0.8ms)
+I, [2018-10-31T09:55:16.799706 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (0.9ms)
+I, [2018-10-31T09:55:16.801340 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (1.2ms)
+I, [2018-10-31T09:55:16.802632 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (0.8ms)
+I, [2018-10-31T09:55:16.803930 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (0.9ms)
+I, [2018-10-31T09:55:16.805463 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (1.0ms)
+I, [2018-10-31T09:55:16.806851 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (0.9ms)
+I, [2018-10-31T09:55:16.808577 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (1.0ms)
+I, [2018-10-31T09:55:16.810033 #14556]  INFO -- :   Rendered admin/permissions/_switch.html.haml (0.9ms)
+I, [2018-10-31T09:55:16.811169 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (0.8ms)
+I, [2018-10-31T09:55:16.812380 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (0.8ms)
+I, [2018-10-31T09:55:16.813708 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (0.9ms)
+I, [2018-10-31T09:55:16.815170 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (1.0ms)
+I, [2018-10-31T09:55:16.816708 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (0.9ms)
+I, [2018-10-31T09:55:16.818018 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (0.8ms)
+I, [2018-10-31T09:55:16.819250 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (0.8ms)
+I, [2018-10-31T09:55:16.820617 #14556]  INFO -- :   Rendered admin/permissions/_switch.html.haml (0.9ms)
+I, [2018-10-31T09:55:16.822068 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (1.0ms)
+I, [2018-10-31T09:55:16.823725 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (1.1ms)
+I, [2018-10-31T09:55:16.825161 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (0.9ms)
+I, [2018-10-31T09:55:16.826388 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (0.8ms)
+I, [2018-10-31T09:55:16.827634 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (0.8ms)
+I, [2018-10-31T09:55:16.828924 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (0.8ms)
+I, [2018-10-31T09:55:16.830186 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (0.8ms)
+I, [2018-10-31T09:55:16.834734 #14556]  INFO -- :   Rendered admin/permissions/add.html.haml within admin/layouts/application (232.8ms)
+I, [2018-10-31T09:55:16.836285 #14556]  INFO -- :   Rendered admin/layouts/_head.html.haml (1.3ms)
+I, [2018-10-31T09:55:16.840050 #14556]  INFO -- :   Rendered admin/layouts/_navigation.html.haml (3.5ms)
+I, [2018-10-31T09:55:16.853370 #14556]  INFO -- :   Rendered admin/layouts/_sidebar.html.haml (13.1ms)
+I, [2018-10-31T09:55:16.853670 #14556]  INFO -- :   Rendered admin/layouts/_messages.html.haml (0.1ms)
+I, [2018-10-31T09:55:16.854007 #14556]  INFO -- :   Rendered admin/layouts/_preloader.html.haml (0.1ms)
+I, [2018-10-31T09:55:16.854236 #14556]  INFO -- :   Rendered admin/layouts/_footer.html.haml (0.1ms)
+I, [2018-10-31T09:55:16.854399 #14556]  INFO -- :   Rendered admin/layouts/_keppler_boolean_script.haml (0.0ms)
+I, [2018-10-31T09:55:16.854731 #14556]  INFO -- : Completed 200 OK in 311ms (Views: 218.5ms | ActiveRecord: 47.9ms)
+I, [2018-10-31T09:55:25.822779 #14556]  INFO -- : Started GET "/admin/scripts" for 127.0.0.1 at 2018-10-31 09:55:25 -0400
+I, [2018-10-31T09:55:25.825279 #14556]  INFO -- : Processing by Admin::ScriptsController#index as HTML
+I, [2018-10-31T09:55:25.877200 #14556]  INFO -- :   Rendering admin/scripts/index.html.haml within admin/layouts/application
+I, [2018-10-31T09:55:25.904083 #14556]  INFO -- :   Rendered admin/layouts/_listing_preloader.haml (0.1ms)
+I, [2018-10-31T09:55:25.920463 #14556]  INFO -- :   Rendered admin/scripts/_listing.html.haml (15.2ms)
+I, [2018-10-31T09:55:25.928208 #14556]  INFO -- :   Rendered admin/scripts/_description.html.haml (6.2ms)
+I, [2018-10-31T09:55:25.928353 #14556]  INFO -- :   Rendered admin/scripts/index.html.haml within admin/layouts/application (51.0ms)
+I, [2018-10-31T09:55:25.930056 #14556]  INFO -- :   Rendered admin/layouts/_head.html.haml (1.5ms)
+I, [2018-10-31T09:55:25.934211 #14556]  INFO -- :   Rendered admin/layouts/_navigation.html.haml (3.9ms)
+I, [2018-10-31T09:55:25.946844 #14556]  INFO -- :   Rendered admin/layouts/_sidebar.html.haml (12.4ms)
+I, [2018-10-31T09:55:25.947151 #14556]  INFO -- :   Rendered admin/layouts/_messages.html.haml (0.1ms)
+I, [2018-10-31T09:55:25.947415 #14556]  INFO -- :   Rendered admin/layouts/_preloader.html.haml (0.1ms)
+I, [2018-10-31T09:55:25.947595 #14556]  INFO -- :   Rendered admin/layouts/_footer.html.haml (0.0ms)
+I, [2018-10-31T09:55:25.947753 #14556]  INFO -- :   Rendered admin/layouts/_keppler_boolean_script.haml (0.0ms)
+I, [2018-10-31T09:55:25.947972 #14556]  INFO -- : Completed 200 OK in 122ms (Views: 68.9ms | ActiveRecord: 20.8ms)
+I, [2018-10-31T09:55:25.970495 #14556]  INFO -- : Started GET "/assets/vue_admin/index.js" for 127.0.0.1 at 2018-10-31 09:55:25 -0400
+I, [2018-10-31T09:55:26.034143 #14556]  INFO -- : Started GET "/admin/scripts/page/1.json" for 127.0.0.1 at 2018-10-31 09:55:26 -0400
+I, [2018-10-31T09:55:26.035298 #14556]  INFO -- : Processing by Admin::ScriptsController#index as JSON
+I, [2018-10-31T09:55:26.035402 #14556]  INFO -- :   Parameters: {"page"=>"1"}
+I, [2018-10-31T09:55:26.056842 #14556]  INFO -- : Completed 200 OK in 21ms (Views: 0.6ms | ActiveRecord: 6.2ms)
+I, [2018-10-31T09:55:27.291330 #14556]  INFO -- : Started GET "/admin/scripts/new" for 127.0.0.1 at 2018-10-31 09:55:27 -0400
+I, [2018-10-31T09:55:27.293438 #14556]  INFO -- : Processing by Admin::ScriptsController#new as HTML
+I, [2018-10-31T09:55:27.359680 #14556]  INFO -- :   Rendering admin/scripts/new.html.haml within admin/layouts/application
+I, [2018-10-31T09:55:27.391062 #14556]  INFO -- :   Rendered admin/scripts/_form.html.haml (21.0ms)
+I, [2018-10-31T09:55:27.391260 #14556]  INFO -- :   Rendered admin/scripts/new.html.haml within admin/layouts/application (31.4ms)
+I, [2018-10-31T09:55:27.393152 #14556]  INFO -- :   Rendered admin/layouts/_head.html.haml (1.6ms)
+I, [2018-10-31T09:55:27.396633 #14556]  INFO -- :   Rendered admin/layouts/_navigation.html.haml (3.2ms)
+I, [2018-10-31T09:55:27.409722 #14556]  INFO -- :   Rendered admin/layouts/_sidebar.html.haml (12.8ms)
+I, [2018-10-31T09:55:27.410040 #14556]  INFO -- :   Rendered admin/layouts/_messages.html.haml (0.1ms)
+I, [2018-10-31T09:55:27.410339 #14556]  INFO -- :   Rendered admin/layouts/_preloader.html.haml (0.1ms)
+I, [2018-10-31T09:55:27.410489 #14556]  INFO -- :   Rendered admin/layouts/_footer.html.haml (0.0ms)
+I, [2018-10-31T09:55:27.410649 #14556]  INFO -- :   Rendered admin/layouts/_keppler_boolean_script.haml (0.0ms)
+I, [2018-10-31T09:55:27.410888 #14556]  INFO -- : Completed 200 OK in 117ms (Views: 50.8ms | ActiveRecord: 9.2ms)
+I, [2018-10-31T09:55:30.291841 #14556]  INFO -- : Started GET "/admin/scripts" for 127.0.0.1 at 2018-10-31 09:55:30 -0400
+I, [2018-10-31T09:55:30.294642 #14556]  INFO -- : Processing by Admin::ScriptsController#index as HTML
+I, [2018-10-31T09:55:30.300896 #14556]  INFO -- : Started GET "/assets/vue_admin/index.js" for 127.0.0.1 at 2018-10-31 09:55:30 -0400
+I, [2018-10-31T09:55:30.330307 #14556]  INFO -- : Started GET "/admin/scripts/page/1.json" for 127.0.0.1 at 2018-10-31 09:55:30 -0400
+I, [2018-10-31T09:55:30.331486 #14556]  INFO -- : Processing by Admin::ScriptsController#index as JSON
+I, [2018-10-31T09:55:30.332905 #14556]  INFO -- :   Parameters: {"page"=>"1"}
+I, [2018-10-31T09:55:30.332757 #14556]  INFO -- :   Rendering admin/scripts/index.html.haml within admin/layouts/application
+I, [2018-10-31T09:55:30.344507 #14556]  INFO -- :   Rendered admin/layouts/_listing_preloader.haml (0.1ms)
+I, [2018-10-31T09:55:30.347369 #14556]  INFO -- :   Rendered admin/scripts/_listing.html.haml (2.5ms)
+I, [2018-10-31T09:55:30.354709 #14556]  INFO -- :   Rendered admin/scripts/_description.html.haml (6.5ms)
+I, [2018-10-31T09:55:30.354913 #14556]  INFO -- :   Rendered admin/scripts/index.html.haml within admin/layouts/application (20.7ms)
+I, [2018-10-31T09:55:30.357239 #14556]  INFO -- :   Rendered admin/layouts/_head.html.haml (2.0ms)
+I, [2018-10-31T09:55:30.370100 #14556]  INFO -- :   Rendered admin/layouts/_navigation.html.haml (12.4ms)
+I, [2018-10-31T09:55:30.390099 #14556]  INFO -- :   Rendered admin/layouts/_sidebar.html.haml (18.2ms)
+I, [2018-10-31T09:55:30.392011 #14556]  INFO -- :   Rendered admin/layouts/_messages.html.haml (0.1ms)
+I, [2018-10-31T09:55:30.392452 #14556]  INFO -- :   Rendered admin/layouts/_preloader.html.haml (0.2ms)
+I, [2018-10-31T09:55:30.392659 #14556]  INFO -- :   Rendered admin/layouts/_footer.html.haml (0.0ms)
+I, [2018-10-31T09:55:30.393826 #14556]  INFO -- :   Rendered admin/layouts/_keppler_boolean_script.haml (0.0ms)
+I, [2018-10-31T09:55:30.394097 #14556]  INFO -- : Completed 200 OK in 99ms (Views: 52.0ms | ActiveRecord: 21.0ms)
+I, [2018-10-31T09:55:30.401702 #14556]  INFO -- : Completed 200 OK in 69ms (Views: 1.0ms | ActiveRecord: 42.6ms)
+I, [2018-10-31T09:55:30.414661 #14556]  INFO -- : Started GET "/assets/vue_admin/index.js" for 127.0.0.1 at 2018-10-31 09:55:30 -0400
+I, [2018-10-31T09:55:30.446532 #14556]  INFO -- : Started GET "/admin/scripts/page/1.json" for 127.0.0.1 at 2018-10-31 09:55:30 -0400
+I, [2018-10-31T09:55:30.447338 #14556]  INFO -- : Processing by Admin::ScriptsController#index as JSON
+I, [2018-10-31T09:55:30.447425 #14556]  INFO -- :   Parameters: {"page"=>"1"}
+I, [2018-10-31T09:55:30.473482 #14556]  INFO -- : Completed 200 OK in 26ms (Views: 0.9ms | ActiveRecord: 7.6ms)
+I, [2018-10-31T09:55:31.634399 #14556]  INFO -- : Started GET "/admin/dashboard" for 127.0.0.1 at 2018-10-31 09:55:31 -0400
+I, [2018-10-31T09:55:31.636184 #14556]  INFO -- : Processing by KepplerGaDashboard::DashboardController#analytics as HTML
+I, [2018-10-31T09:55:32.790685 #14556]  INFO -- :   Rendering rockets/keppler_ga_dashboard/app/views/keppler_ga_dashboard/dashboard/analytics.html.haml within keppler_ga_dashboard/admin/layouts/application
+I, [2018-10-31T09:55:32.797045 #14556]  INFO -- :   Rendered rockets/keppler_ga_dashboard/app/views/keppler_ga_dashboard/dashboard/analytics.html.haml within keppler_ga_dashboard/admin/layouts/application (6.1ms)
+I, [2018-10-31T09:55:32.800108 #14556]  INFO -- :   Rendered rockets/keppler_ga_dashboard/app/views/keppler_ga_dashboard/admin/layouts/_head.html.haml (2.6ms)
+I, [2018-10-31T09:55:32.805030 #14556]  INFO -- :   Rendered admin/layouts/_navigation.html.haml (4.5ms)
+I, [2018-10-31T09:55:32.824542 #14556]  INFO -- :   Rendered admin/layouts/_sidebar.html.haml (19.0ms)
+I, [2018-10-31T09:55:32.825018 #14556]  INFO -- :   Rendered admin/layouts/_messages.html.haml (0.2ms)
+I, [2018-10-31T09:55:32.825385 #14556]  INFO -- :   Rendered admin/layouts/_preloader.html.haml (0.2ms)
+I, [2018-10-31T09:55:32.825606 #14556]  INFO -- :   Rendered admin/layouts/_footer.html.haml (0.0ms)
+I, [2018-10-31T09:55:32.825835 #14556]  INFO -- :   Rendered admin/layouts/_keppler_boolean_script.haml (0.0ms)
+I, [2018-10-31T09:55:32.826260 #14556]  INFO -- : Completed 200 OK in 1190ms (Views: 34.5ms | ActiveRecord: 6.0ms)
+I, [2018-10-31T09:55:32.950818 #14556]  INFO -- : Started GET "/assets/keppler_ga_dashboard/date-range-selector.self.js?body=1" for 127.0.0.1 at 2018-10-31 09:55:32 -0400
+I, [2018-10-31T09:55:32.954139 #14556]  INFO -- : Started GET "/assets/keppler_ga_dashboard/view-selector2.js?body=1" for 127.0.0.1 at 2018-10-31 09:55:32 -0400
+I, [2018-10-31T09:55:32.985427 #14556]  INFO -- : Started GET "/assets/keppler_ga_dashboard/active-users.self.js?body=1" for 127.0.0.1 at 2018-10-31 09:55:32 -0400
+I, [2018-10-31T09:55:33.092792 #14556]  INFO -- : Started GET "/assetsadmin/fonts-and-icons/fonts/Simple-Line-Icons.woff2?v=2.4.0" for 127.0.0.1 at 2018-10-31 09:55:33 -0400
+I, [2018-10-31T09:55:33.094533 #14556]  INFO -- : Started GET "/assets/admin/fonts-and-icons/ZXuke1cDvLCKLDcimxB44_lu.woff2" for 127.0.0.1 at 2018-10-31 09:55:33 -0400
+I, [2018-10-31T09:55:38.636952 #14556]  INFO -- : Started GET "/admin/scripts" for 127.0.0.1 at 2018-10-31 09:55:38 -0400
+I, [2018-10-31T09:55:38.638600 #14556]  INFO -- : Processing by Admin::ScriptsController#index as HTML
+I, [2018-10-31T09:55:38.673859 #14556]  INFO -- :   Rendering admin/scripts/index.html.haml within admin/layouts/application
+I, [2018-10-31T09:55:38.682033 #14556]  INFO -- :   Rendered admin/layouts/_listing_preloader.haml (0.1ms)
+I, [2018-10-31T09:55:38.683162 #14556]  INFO -- :   Rendered admin/scripts/_listing.html.haml (0.9ms)
+I, [2018-10-31T09:55:38.685772 #14556]  INFO -- :   Rendered admin/scripts/_description.html.haml (2.1ms)
+I, [2018-10-31T09:55:38.685930 #14556]  INFO -- :   Rendered admin/scripts/index.html.haml within admin/layouts/application (11.8ms)
+I, [2018-10-31T09:55:38.687839 #14556]  INFO -- :   Rendered admin/layouts/_head.html.haml (1.6ms)
+I, [2018-10-31T09:55:38.692166 #14556]  INFO -- :   Rendered admin/layouts/_navigation.html.haml (4.0ms)
+I, [2018-10-31T09:55:38.705618 #14556]  INFO -- :   Rendered admin/layouts/_sidebar.html.haml (13.2ms)
+I, [2018-10-31T09:55:38.705976 #14556]  INFO -- :   Rendered admin/layouts/_messages.html.haml (0.1ms)
+I, [2018-10-31T09:55:38.706245 #14556]  INFO -- :   Rendered admin/layouts/_preloader.html.haml (0.1ms)
+I, [2018-10-31T09:55:38.706396 #14556]  INFO -- :   Rendered admin/layouts/_footer.html.haml (0.0ms)
+I, [2018-10-31T09:55:38.706555 #14556]  INFO -- :   Rendered admin/layouts/_keppler_boolean_script.haml (0.0ms)
+I, [2018-10-31T09:55:38.706807 #14556]  INFO -- : Completed 200 OK in 68ms (Views: 30.5ms | ActiveRecord: 14.1ms)
+I, [2018-10-31T09:55:38.726862 #14556]  INFO -- : Started GET "/assets/vue_admin/index.js" for 127.0.0.1 at 2018-10-31 09:55:38 -0400
+I, [2018-10-31T09:55:38.791458 #14556]  INFO -- : Started GET "/admin/scripts/page/1.json" for 127.0.0.1 at 2018-10-31 09:55:38 -0400
+I, [2018-10-31T09:55:38.792284 #14556]  INFO -- : Processing by Admin::ScriptsController#index as JSON
+I, [2018-10-31T09:55:38.792369 #14556]  INFO -- :   Parameters: {"page"=>"1"}
+I, [2018-10-31T09:55:38.813999 #14556]  INFO -- : Completed 200 OK in 21ms (Views: 0.7ms | ActiveRecord: 6.3ms)
+I, [2018-10-31T09:55:41.367424 #14556]  INFO -- : Started POST "/admin/settings/lang/es" for 127.0.0.1 at 2018-10-31 09:55:41 -0400
+I, [2018-10-31T09:55:41.369108 #14556]  INFO -- : Processing by Admin::SettingsController#change_locale as HTML
+I, [2018-10-31T09:55:41.369272 #14556]  INFO -- :   Parameters: {"authenticity_token"=>"W/a4rwvguULZxwLcSNE2SzxM8L+9O3hNvOEy2NATWUOfonxCE5CZ8x4lLr12z/Yni1wMtUI6AukNmo/GlhOlyg==", "locale"=>"es"}
+I, [2018-10-31T09:55:41.473442 #14556]  INFO -- : Redirected to http://localhost:3000/admin/scripts
+I, [2018-10-31T09:55:41.473862 #14556]  INFO -- : Completed 302 Found in 104ms (ActiveRecord: 79.8ms)
+I, [2018-10-31T09:55:41.481167 #14556]  INFO -- : Started GET "/admin/scripts" for 127.0.0.1 at 2018-10-31 09:55:41 -0400
+I, [2018-10-31T09:55:41.482425 #14556]  INFO -- : Processing by Admin::ScriptsController#index as HTML
+I, [2018-10-31T09:55:41.505384 #14556]  INFO -- :   Rendering admin/scripts/index.html.haml within admin/layouts/application
+I, [2018-10-31T09:55:41.536282 #14556]  INFO -- :   Rendered admin/layouts/_listing_preloader.haml (5.2ms)
+I, [2018-10-31T09:55:41.550838 #14556]  INFO -- :   Rendered admin/scripts/_listing.html.haml (13.8ms)
+I, [2018-10-31T09:55:41.560320 #14556]  INFO -- :   Rendered admin/scripts/_description.html.haml (5.3ms)
+I, [2018-10-31T09:55:41.560469 #14556]  INFO -- :   Rendered admin/scripts/index.html.haml within admin/layouts/application (55.0ms)
+I, [2018-10-31T09:55:41.571167 #14556]  INFO -- :   Rendered admin/layouts/_head.html.haml (3.8ms)
+I, [2018-10-31T09:55:41.590545 #14556]  INFO -- :   Rendered admin/layouts/_navigation.html.haml (18.5ms)
+I, [2018-10-31T09:55:41.619539 #14556]  INFO -- :   Rendered admin/layouts/_sidebar.html.haml (28.3ms)
+I, [2018-10-31T09:55:41.622442 #14556]  INFO -- :   Rendered admin/layouts/_messages.html.haml (2.1ms)
+I, [2018-10-31T09:55:41.627649 #14556]  INFO -- :   Rendered admin/layouts/_preloader.html.haml (4.5ms)
+I, [2018-10-31T09:55:41.629946 #14556]  INFO -- :   Rendered admin/layouts/_footer.html.haml (1.6ms)
+I, [2018-10-31T09:55:41.633172 #14556]  INFO -- :   Rendered admin/layouts/_keppler_boolean_script.haml (2.2ms)
+I, [2018-10-31T09:55:41.633542 #14556]  INFO -- : Completed 200 OK in 151ms (Views: 126.0ms | ActiveRecord: 9.4ms)
+I, [2018-10-31T09:55:41.660958 #14556]  INFO -- : Started GET "/assets/vue_admin/index.js" for 127.0.0.1 at 2018-10-31 09:55:41 -0400
+I, [2018-10-31T09:55:41.872602 #14556]  INFO -- : Started GET "/assetsadmin/fonts-and-icons/fonts/Simple-Line-Icons.woff2?v=2.4.0" for 127.0.0.1 at 2018-10-31 09:55:41 -0400
+I, [2018-10-31T09:55:41.875115 #14556]  INFO -- : Started GET "/assets/admin/fonts-and-icons/ZXuke1cDvLCKLDcimxB44_lu.woff2" for 127.0.0.1 at 2018-10-31 09:55:41 -0400
+I, [2018-10-31T09:55:41.918499 #14556]  INFO -- : Started GET "/admin/scripts/page/1.json" for 127.0.0.1 at 2018-10-31 09:55:41 -0400
+I, [2018-10-31T09:55:41.919579 #14556]  INFO -- : Processing by Admin::ScriptsController#index as JSON
+I, [2018-10-31T09:55:41.919696 #14556]  INFO -- :   Parameters: {"page"=>"1"}
+I, [2018-10-31T09:55:41.948964 #14556]  INFO -- : Completed 200 OK in 29ms (Views: 1.0ms | ActiveRecord: 6.5ms)
+I, [2018-10-31T09:55:44.199446 #14556]  INFO -- : Started POST "/admin/settings/lang/en" for 127.0.0.1 at 2018-10-31 09:55:44 -0400
+I, [2018-10-31T09:55:44.200781 #14556]  INFO -- : Processing by Admin::SettingsController#change_locale as HTML
+I, [2018-10-31T09:55:44.200902 #14556]  INFO -- :   Parameters: {"authenticity_token"=>"znVGfxIqHLiC4Q3tvZQfDZRWe3SU3PlObWRpp1aCCz0KIYKSClo8CUUDIYyDit9hI0aHfmvdg+rcH9S5EIL3tA==", "locale"=>"en"}
+I, [2018-10-31T09:55:44.236688 #14556]  INFO -- : Redirected to http://localhost:3000/admin/scripts
+I, [2018-10-31T09:55:44.236892 #14556]  INFO -- : Completed 302 Found in 36ms (ActiveRecord: 20.7ms)
+I, [2018-10-31T09:55:44.245514 #14556]  INFO -- : Started GET "/admin/scripts" for 127.0.0.1 at 2018-10-31 09:55:44 -0400
+I, [2018-10-31T09:55:44.246377 #14556]  INFO -- : Processing by Admin::ScriptsController#index as HTML
+I, [2018-10-31T09:55:44.264099 #14556]  INFO -- :   Rendering admin/scripts/index.html.haml within admin/layouts/application
+I, [2018-10-31T09:55:44.269022 #14556]  INFO -- :   Rendered admin/layouts/_listing_preloader.haml (0.1ms)
+I, [2018-10-31T09:55:44.269934 #14556]  INFO -- :   Rendered admin/scripts/_listing.html.haml (0.7ms)
+I, [2018-10-31T09:55:44.272943 #14556]  INFO -- :   Rendered admin/scripts/_description.html.haml (2.4ms)
+I, [2018-10-31T09:55:44.273080 #14556]  INFO -- :   Rendered admin/scripts/index.html.haml within admin/layouts/application (8.9ms)
+I, [2018-10-31T09:55:44.274753 #14556]  INFO -- :   Rendered admin/layouts/_head.html.haml (1.5ms)
+I, [2018-10-31T09:55:44.280590 #14556]  INFO -- :   Rendered admin/layouts/_navigation.html.haml (5.5ms)
+I, [2018-10-31T09:55:44.293330 #14556]  INFO -- :   Rendered admin/layouts/_sidebar.html.haml (12.4ms)
+I, [2018-10-31T09:55:44.293623 #14556]  INFO -- :   Rendered admin/layouts/_messages.html.haml (0.1ms)
+I, [2018-10-31T09:55:44.293908 #14556]  INFO -- :   Rendered admin/layouts/_preloader.html.haml (0.1ms)
+I, [2018-10-31T09:55:44.294072 #14556]  INFO -- :   Rendered admin/layouts/_footer.html.haml (0.0ms)
+I, [2018-10-31T09:55:44.294233 #14556]  INFO -- :   Rendered admin/layouts/_keppler_boolean_script.haml (0.0ms)
+I, [2018-10-31T09:55:44.294445 #14556]  INFO -- : Completed 200 OK in 48ms (Views: 27.7ms | ActiveRecord: 8.2ms)
+I, [2018-10-31T09:55:44.318813 #14556]  INFO -- : Started GET "/assets/vue_admin/index.js" for 127.0.0.1 at 2018-10-31 09:55:44 -0400
+I, [2018-10-31T09:55:44.550552 #14556]  INFO -- : Started GET "/assetsadmin/fonts-and-icons/fonts/Simple-Line-Icons.woff2?v=2.4.0" for 127.0.0.1 at 2018-10-31 09:55:44 -0400
+I, [2018-10-31T09:55:44.553819 #14556]  INFO -- : Started GET "/assets/admin/fonts-and-icons/ZXuke1cDvLCKLDcimxB44_lu.woff2" for 127.0.0.1 at 2018-10-31 09:55:44 -0400
+I, [2018-10-31T09:55:44.598959 #14556]  INFO -- : Started GET "/admin/scripts/page/1.json" for 127.0.0.1 at 2018-10-31 09:55:44 -0400
+I, [2018-10-31T09:55:44.600332 #14556]  INFO -- : Processing by Admin::ScriptsController#index as JSON
+I, [2018-10-31T09:55:44.600499 #14556]  INFO -- :   Parameters: {"page"=>"1"}
+I, [2018-10-31T09:55:44.621794 #14556]  INFO -- : Completed 200 OK in 21ms (Views: 0.6ms | ActiveRecord: 5.4ms)
+I, [2018-10-31T09:55:49.124821 #14556]  INFO -- : Started GET "/admin/settings/basic_information" for 127.0.0.1 at 2018-10-31 09:55:49 -0400
+I, [2018-10-31T09:55:49.126304 #14556]  INFO -- : Processing by Admin::SettingsController#edit as HTML
+I, [2018-10-31T09:55:49.126455 #14556]  INFO -- :   Parameters: {"config"=>"basic_information"}
+I, [2018-10-31T09:55:49.161387 #14556]  INFO -- :   Rendering admin/settings/edit.html.haml within admin/layouts/application
+I, [2018-10-31T09:55:49.220733 #14556]  INFO -- :   Rendered admin/settings/fields/_basic_information.html.haml (35.3ms)
+I, [2018-10-31T09:55:49.221251 #14556]  INFO -- :   Rendered admin/settings/_form.html.haml (58.4ms)
+I, [2018-10-31T09:55:49.221350 #14556]  INFO -- :   Rendered admin/settings/edit.html.haml within admin/layouts/application (59.7ms)
+I, [2018-10-31T09:55:49.223070 #14556]  INFO -- :   Rendered admin/layouts/_head.html.haml (1.5ms)
+I, [2018-10-31T09:55:49.226463 #14556]  INFO -- :   Rendered admin/layouts/_navigation.html.haml (3.2ms)
+I, [2018-10-31T09:55:49.239676 #14556]  INFO -- :   Rendered admin/layouts/_sidebar.html.haml (13.0ms)
+I, [2018-10-31T09:55:49.239990 #14556]  INFO -- :   Rendered admin/layouts/_messages.html.haml (0.1ms)
+I, [2018-10-31T09:55:49.240260 #14556]  INFO -- :   Rendered admin/layouts/_preloader.html.haml (0.1ms)
+I, [2018-10-31T09:55:49.240423 #14556]  INFO -- :   Rendered admin/layouts/_footer.html.haml (0.0ms)
+I, [2018-10-31T09:55:49.240621 #14556]  INFO -- :   Rendered admin/layouts/_keppler_boolean_script.haml (0.0ms)
+I, [2018-10-31T09:55:49.240887 #14556]  INFO -- : Completed 200 OK in 114ms (Views: 79.3ms | ActiveRecord: 9.0ms)
+I, [2018-10-31T09:55:49.267708 #14556]  INFO -- : Started GET "/assets/admin/profile-menu.jpg" for 127.0.0.1 at 2018-10-31 09:55:49 -0400
+I, [2018-10-31T09:55:53.212525 #14556]  INFO -- : Started GET "/admin/settings/google_analytics_setting" for 127.0.0.1 at 2018-10-31 09:55:53 -0400
+I, [2018-10-31T09:55:53.213799 #14556]  INFO -- : Processing by Admin::SettingsController#edit as HTML
+I, [2018-10-31T09:55:53.213914 #14556]  INFO -- :   Parameters: {"config"=>"google_analytics_setting"}
+I, [2018-10-31T09:55:53.244860 #14556]  INFO -- :   Rendering admin/settings/edit.html.haml within admin/layouts/application
+I, [2018-10-31T09:55:53.267054 #14556]  INFO -- :   Rendered admin/settings/fields/_google_analytics_setting.html.haml (16.9ms)
+I, [2018-10-31T09:55:53.267704 #14556]  INFO -- :   Rendered admin/settings/_form.html.haml (21.4ms)
+I, [2018-10-31T09:55:53.267836 #14556]  INFO -- :   Rendered admin/settings/edit.html.haml within admin/layouts/application (22.8ms)
+I, [2018-10-31T09:55:53.270468 #14556]  INFO -- :   Rendered admin/layouts/_head.html.haml (2.3ms)
+I, [2018-10-31T09:55:53.275706 #14556]  INFO -- :   Rendered admin/layouts/_navigation.html.haml (4.8ms)
+I, [2018-10-31T09:55:53.299917 #14556]  INFO -- :   Rendered admin/layouts/_sidebar.html.haml (23.9ms)
+I, [2018-10-31T09:55:53.300336 #14556]  INFO -- :   Rendered admin/layouts/_messages.html.haml (0.1ms)
+I, [2018-10-31T09:55:53.300769 #14556]  INFO -- :   Rendered admin/layouts/_preloader.html.haml (0.2ms)
+I, [2018-10-31T09:55:53.301080 #14556]  INFO -- :   Rendered admin/layouts/_footer.html.haml (0.1ms)
+I, [2018-10-31T09:55:53.301330 #14556]  INFO -- :   Rendered admin/layouts/_keppler_boolean_script.haml (0.1ms)
+I, [2018-10-31T09:55:53.301665 #14556]  INFO -- : Completed 200 OK in 88ms (Views: 55.4ms | ActiveRecord: 8.9ms)
+I, [2018-10-31T09:55:56.920641 #14556]  INFO -- : Started GET "/admin/settings/google_analytics_setting" for 127.0.0.1 at 2018-10-31 09:55:56 -0400
+I, [2018-10-31T09:55:56.922361 #14556]  INFO -- : Processing by Admin::SettingsController#edit as HTML
+I, [2018-10-31T09:55:56.922588 #14556]  INFO -- :   Parameters: {"config"=>"google_analytics_setting"}
+I, [2018-10-31T09:55:56.963361 #14556]  INFO -- :   Rendering admin/settings/edit.html.haml within admin/layouts/application
+I, [2018-10-31T09:55:56.978404 #14556]  INFO -- :   Rendered admin/settings/fields/_google_analytics_setting.html.haml (11.6ms)
+I, [2018-10-31T09:55:56.979128 #14556]  INFO -- :   Rendered admin/settings/_form.html.haml (13.2ms)
+I, [2018-10-31T09:55:56.979261 #14556]  INFO -- :   Rendered admin/settings/edit.html.haml within admin/layouts/application (15.7ms)
+I, [2018-10-31T09:55:56.981527 #14556]  INFO -- :   Rendered admin/layouts/_head.html.haml (1.8ms)
+I, [2018-10-31T09:55:56.987678 #14556]  INFO -- :   Rendered admin/layouts/_navigation.html.haml (5.8ms)
+I, [2018-10-31T09:55:57.004688 #14556]  INFO -- :   Rendered admin/layouts/_sidebar.html.haml (16.7ms)
+I, [2018-10-31T09:55:57.005097 #14556]  INFO -- :   Rendered admin/layouts/_messages.html.haml (0.1ms)
+I, [2018-10-31T09:55:57.005425 #14556]  INFO -- :   Rendered admin/layouts/_preloader.html.haml (0.2ms)
+I, [2018-10-31T09:55:57.005613 #14556]  INFO -- :   Rendered admin/layouts/_footer.html.haml (0.0ms)
+I, [2018-10-31T09:55:57.005814 #14556]  INFO -- :   Rendered admin/layouts/_keppler_boolean_script.haml (0.0ms)
+I, [2018-10-31T09:55:57.006145 #14556]  INFO -- : Completed 200 OK in 83ms (Views: 41.4ms | ActiveRecord: 12.5ms)
+I, [2018-10-31T09:55:59.963989 #14556]  INFO -- : Started GET "/admin/settings/social_accounts" for 127.0.0.1 at 2018-10-31 09:55:59 -0400
+I, [2018-10-31T09:55:59.965668 #14556]  INFO -- : Processing by Admin::SettingsController#edit as HTML
+I, [2018-10-31T09:55:59.965848 #14556]  INFO -- :   Parameters: {"config"=>"social_accounts"}
+I, [2018-10-31T09:55:59.988560 #14556]  INFO -- :   Rendering admin/settings/edit.html.haml within admin/layouts/application
+I, [2018-10-31T09:56:00.089613 #14556]  INFO -- :   Rendered admin/settings/fields/_social_accounts.html.haml (97.6ms)
+I, [2018-10-31T09:56:00.090115 #14556]  INFO -- :   Rendered admin/settings/_form.html.haml (100.2ms)
+I, [2018-10-31T09:56:00.090229 #14556]  INFO -- :   Rendered admin/settings/edit.html.haml within admin/layouts/application (101.5ms)
+I, [2018-10-31T09:56:00.091738 #14556]  INFO -- :   Rendered admin/layouts/_head.html.haml (1.3ms)
+I, [2018-10-31T09:56:00.094933 #14556]  INFO -- :   Rendered admin/layouts/_navigation.html.haml (3.0ms)
+I, [2018-10-31T09:56:00.108266 #14556]  INFO -- :   Rendered admin/layouts/_sidebar.html.haml (13.1ms)
+I, [2018-10-31T09:56:00.108568 #14556]  INFO -- :   Rendered admin/layouts/_messages.html.haml (0.1ms)
+I, [2018-10-31T09:56:00.108876 #14556]  INFO -- :   Rendered admin/layouts/_preloader.html.haml (0.1ms)
+I, [2018-10-31T09:56:00.109040 #14556]  INFO -- :   Rendered admin/layouts/_footer.html.haml (0.0ms)
+I, [2018-10-31T09:56:00.109203 #14556]  INFO -- :   Rendered admin/layouts/_keppler_boolean_script.haml (0.0ms)
+I, [2018-10-31T09:56:00.109456 #14556]  INFO -- : Completed 200 OK in 143ms (Views: 120.4ms | ActiveRecord: 6.1ms)
+I, [2018-10-31T09:56:00.148410 #14556]  INFO -- : Started GET "/assets/font-awesome/fa-brands-400-9ae2326c389ddbc93a2636b121456333152931549bd5bd16a5cd2ee24e601c16.woff2" for 127.0.0.1 at 2018-10-31 09:56:00 -0400
+I, [2018-10-31T09:56:02.962530 #14556]  INFO -- : Started GET "/admin/meta_tags" for 127.0.0.1 at 2018-10-31 09:56:02 -0400
+I, [2018-10-31T09:56:02.964289 #14556]  INFO -- : Processing by Admin::MetaTagsController#index as HTML
+I, [2018-10-31T09:56:03.020516 #14556]  INFO -- :   Rendering admin/meta_tags/index.html.haml within admin/layouts/application
+I, [2018-10-31T09:56:03.041112 #14556]  INFO -- :   Rendered admin/layouts/_listing_preloader.haml (0.1ms)
+I, [2018-10-31T09:56:03.056669 #14556]  INFO -- :   Rendered admin/meta_tags/_listing.html.haml (14.2ms)
+I, [2018-10-31T09:56:03.071802 #14556]  INFO -- :   Rendered admin/meta_tags/_description.html.haml (6.1ms)
+I, [2018-10-31T09:56:03.071958 #14556]  INFO -- :   Rendered admin/meta_tags/index.html.haml within admin/layouts/application (51.3ms)
+I, [2018-10-31T09:56:03.073535 #14556]  INFO -- :   Rendered admin/layouts/_head.html.haml (1.4ms)
+I, [2018-10-31T09:56:03.077591 #14556]  INFO -- :   Rendered admin/layouts/_navigation.html.haml (3.8ms)
+I, [2018-10-31T09:56:03.090311 #14556]  INFO -- :   Rendered admin/layouts/_sidebar.html.haml (12.5ms)
+I, [2018-10-31T09:56:03.090615 #14556]  INFO -- :   Rendered admin/layouts/_messages.html.haml (0.1ms)
+I, [2018-10-31T09:56:03.090911 #14556]  INFO -- :   Rendered admin/layouts/_preloader.html.haml (0.1ms)
+I, [2018-10-31T09:56:03.091063 #14556]  INFO -- :   Rendered admin/layouts/_footer.html.haml (0.0ms)
+I, [2018-10-31T09:56:03.091216 #14556]  INFO -- :   Rendered admin/layouts/_keppler_boolean_script.haml (0.0ms)
+I, [2018-10-31T09:56:03.091437 #14556]  INFO -- : Completed 200 OK in 127ms (Views: 67.1ms | ActiveRecord: 14.7ms)
+I, [2018-10-31T09:56:03.133356 #14556]  INFO -- : Started GET "/assets/vue_admin/index.js" for 127.0.0.1 at 2018-10-31 09:56:03 -0400
+I, [2018-10-31T09:56:03.187394 #14556]  INFO -- : Started GET "/admin/meta_tags/page/1.json" for 127.0.0.1 at 2018-10-31 09:56:03 -0400
+I, [2018-10-31T09:56:03.188805 #14556]  INFO -- : Processing by Admin::MetaTagsController#index as JSON
+I, [2018-10-31T09:56:03.188965 #14556]  INFO -- :   Parameters: {"page"=>"1"}
+I, [2018-10-31T09:56:03.213156 #14556]  INFO -- : Completed 200 OK in 24ms (Views: 0.6ms | ActiveRecord: 6.7ms)
+I, [2018-10-31T09:56:05.327162 #14556]  INFO -- : Started GET "/admin/meta_tags/new" for 127.0.0.1 at 2018-10-31 09:56:05 -0400
+I, [2018-10-31T09:56:05.328481 #14556]  INFO -- : Processing by Admin::MetaTagsController#new as HTML
+I, [2018-10-31T09:56:05.373391 #14556]  INFO -- :   Rendering admin/meta_tags/new.html.haml within admin/layouts/application
+I, [2018-10-31T09:56:05.411896 #14556]  INFO -- :   Rendered admin/meta_tags/_form.html.haml (15.2ms)
+I, [2018-10-31T09:56:05.412038 #14556]  INFO -- :   Rendered admin/meta_tags/new.html.haml within admin/layouts/application (38.5ms)
+I, [2018-10-31T09:56:05.413596 #14556]  INFO -- :   Rendered admin/layouts/_head.html.haml (1.3ms)
+I, [2018-10-31T09:56:05.416935 #14556]  INFO -- :   Rendered admin/layouts/_navigation.html.haml (3.1ms)
+I, [2018-10-31T09:56:05.429460 #14556]  INFO -- :   Rendered admin/layouts/_sidebar.html.haml (12.3ms)
+I, [2018-10-31T09:56:05.429835 #14556]  INFO -- :   Rendered admin/layouts/_messages.html.haml (0.1ms)
+I, [2018-10-31T09:56:05.430126 #14556]  INFO -- :   Rendered admin/layouts/_preloader.html.haml (0.1ms)
+I, [2018-10-31T09:56:05.430290 #14556]  INFO -- :   Rendered admin/layouts/_footer.html.haml (0.0ms)
+I, [2018-10-31T09:56:05.430495 #14556]  INFO -- :   Rendered admin/layouts/_keppler_boolean_script.haml (0.0ms)
+I, [2018-10-31T09:56:05.430821 #14556]  INFO -- : Completed 200 OK in 102ms (Views: 56.9ms | ActiveRecord: 8.0ms)
+I, [2018-10-31T09:56:07.122773 #14556]  INFO -- : Started GET "/admin/meta_tags" for 127.0.0.1 at 2018-10-31 09:56:07 -0400
+I, [2018-10-31T09:56:07.124090 #14556]  INFO -- : Processing by Admin::MetaTagsController#index as HTML
+I, [2018-10-31T09:56:07.157219 #14556]  INFO -- :   Rendering admin/meta_tags/index.html.haml within admin/layouts/application
+I, [2018-10-31T09:56:07.167215 #14556]  INFO -- :   Rendered admin/layouts/_listing_preloader.haml (0.1ms)
+I, [2018-10-31T09:56:07.170082 #14556]  INFO -- :   Rendered admin/meta_tags/_listing.html.haml (2.2ms)
+I, [2018-10-31T09:56:07.175164 #14556]  INFO -- :   Rendered admin/meta_tags/_description.html.haml (4.1ms)
+I, [2018-10-31T09:56:07.175784 #14556]  INFO -- :   Rendered admin/meta_tags/index.html.haml within admin/layouts/application (18.3ms)
+I, [2018-10-31T09:56:07.179036 #14556]  INFO -- :   Rendered admin/layouts/_head.html.haml (2.9ms)
+I, [2018-10-31T09:56:07.186715 #14556]  INFO -- :   Rendered admin/layouts/_navigation.html.haml (7.2ms)
+I, [2018-10-31T09:56:07.175616 #14556]  INFO -- : Started GET "/assets/vue_admin/index.js" for 127.0.0.1 at 2018-10-31 09:56:07 -0400
+I, [2018-10-31T09:56:07.206572 #14556]  INFO -- :   Rendered admin/layouts/_sidebar.html.haml (19.5ms)
+I, [2018-10-31T09:56:07.207117 #14556]  INFO -- :   Rendered admin/layouts/_messages.html.haml (0.1ms)
+I, [2018-10-31T09:56:07.207468 #14556]  INFO -- :   Rendered admin/layouts/_preloader.html.haml (0.1ms)
+I, [2018-10-31T09:56:07.207646 #14556]  INFO -- :   Rendered admin/layouts/_footer.html.haml (0.0ms)
+I, [2018-10-31T09:56:07.207813 #14556]  INFO -- :   Rendered admin/layouts/_keppler_boolean_script.haml (0.0ms)
+I, [2018-10-31T09:56:07.208045 #14556]  INFO -- : Completed 200 OK in 84ms (Views: 46.2ms | ActiveRecord: 12.7ms)
+I, [2018-10-31T09:56:07.223282 #14556]  INFO -- : Started GET "/admin/meta_tags/page/1.json" for 127.0.0.1 at 2018-10-31 09:56:07 -0400
+I, [2018-10-31T09:56:07.224113 #14556]  INFO -- : Processing by Admin::MetaTagsController#index as JSON
+I, [2018-10-31T09:56:07.224187 #14556]  INFO -- :   Parameters: {"page"=>"1"}
+I, [2018-10-31T09:56:07.238355 #14556]  INFO -- : Started GET "/assets/vue_admin/index.js" for 127.0.0.1 at 2018-10-31 09:56:07 -0400
+I, [2018-10-31T09:56:07.248129 #14556]  INFO -- : Completed 200 OK in 24ms (Views: 0.6ms | ActiveRecord: 7.6ms)
+I, [2018-10-31T09:56:07.269602 #14556]  INFO -- : Started GET "/admin/meta_tags/page/1.json" for 127.0.0.1 at 2018-10-31 09:56:07 -0400
+I, [2018-10-31T09:56:07.270514 #14556]  INFO -- : Processing by Admin::MetaTagsController#index as JSON
+I, [2018-10-31T09:56:07.270728 #14556]  INFO -- :   Parameters: {"page"=>"1"}
+I, [2018-10-31T09:56:07.291748 #14556]  INFO -- : Completed 200 OK in 21ms (Views: 0.6ms | ActiveRecord: 5.6ms)
+I, [2018-10-31T09:56:11.228549 #14556]  INFO -- : Started GET "/show" for 127.0.0.1 at 2018-10-31 09:56:11 -0400
+I, [2018-10-31T09:56:11.229952 #14556]  INFO -- : Processing by KepplerFrontend::App::FrontendController#show as HTML
+I, [2018-10-31T09:56:11.243835 #14556]  INFO -- :   Rendering rockets/keppler_frontend/app/views/keppler_frontend/app/frontend/show.html.erb within layouts/keppler_frontend/app/layouts/application
+I, [2018-10-31T09:56:11.244017 #14556]  INFO -- :   Rendered rockets/keppler_frontend/app/views/keppler_frontend/app/frontend/show.html.erb within layouts/keppler_frontend/app/layouts/application (0.0ms)
+I, [2018-10-31T09:56:11.244811 #14556]  INFO -- :   Rendered rockets/keppler_frontend/app/views/layouts/keppler_frontend/app/layouts/_meta_tags.html.haml (0.5ms)
+I, [2018-10-31T09:56:11.251010 #14556]  INFO -- :   Rendered rockets/keppler_frontend/app/views/layouts/keppler_frontend/app/layouts/_google_analytics.html.haml (2.8ms)
+I, [2018-10-31T09:56:11.252518 #14556]  INFO -- :   Rendered rockets/keppler_frontend/app/views/layouts/keppler_frontend/app/layouts/_head.html.haml (8.3ms)
+I, [2018-10-31T09:56:11.258267 #14556]  INFO -- :   Rendered rockets/keppler_frontend/app/views/layouts/keppler_frontend/app/layouts/_keppler_editor.html.haml (5.5ms)
+I, [2018-10-31T09:56:11.258712 #14556]  INFO -- : Completed 200 OK in 29ms (Views: 12.7ms | ActiveRecord: 7.0ms)
+I, [2018-10-31T09:56:12.528181 #14556]  INFO -- : Started GET "/" for 127.0.0.1 at 2018-10-31 09:56:12 -0400
+I, [2018-10-31T09:56:12.529729 #14556]  INFO -- : Processing by KepplerFrontend::App::FrontendController#index as HTML
+I, [2018-10-31T09:56:12.547762 #14556]  INFO -- :   Rendering rockets/keppler_frontend/app/views/keppler_frontend/app/frontend/index.html.erb within layouts/keppler_frontend/app/layouts/application
+I, [2018-10-31T09:56:12.547988 #14556]  INFO -- :   Rendered rockets/keppler_frontend/app/views/keppler_frontend/app/frontend/index.html.erb within layouts/keppler_frontend/app/layouts/application (0.1ms)
+I, [2018-10-31T09:56:12.548833 #14556]  INFO -- :   Rendered rockets/keppler_frontend/app/views/layouts/keppler_frontend/app/layouts/_meta_tags.html.haml (0.4ms)
+I, [2018-10-31T09:56:12.555142 #14556]  INFO -- :   Rendered rockets/keppler_frontend/app/views/layouts/keppler_frontend/app/layouts/_google_analytics.html.haml (2.8ms)
+I, [2018-10-31T09:56:12.556848 #14556]  INFO -- :   Rendered rockets/keppler_frontend/app/views/layouts/keppler_frontend/app/layouts/_head.html.haml (8.6ms)
+I, [2018-10-31T09:56:12.563954 #14556]  INFO -- :   Rendered rockets/keppler_frontend/app/views/layouts/keppler_frontend/app/layouts/_keppler_editor.html.haml (6.7ms)
+I, [2018-10-31T09:56:12.564350 #14556]  INFO -- : Completed 200 OK in 34ms (Views: 13.7ms | ActiveRecord: 7.9ms)
+I, [2018-10-31T09:56:14.255937 #14556]  INFO -- : Started GET "/show" for 127.0.0.1 at 2018-10-31 09:56:14 -0400
+I, [2018-10-31T09:56:14.258215 #14556]  INFO -- : Processing by KepplerFrontend::App::FrontendController#show as HTML
+I, [2018-10-31T09:56:14.278133 #14556]  INFO -- :   Rendering rockets/keppler_frontend/app/views/keppler_frontend/app/frontend/show.html.erb within layouts/keppler_frontend/app/layouts/application
+I, [2018-10-31T09:56:14.278380 #14556]  INFO -- :   Rendered rockets/keppler_frontend/app/views/keppler_frontend/app/frontend/show.html.erb within layouts/keppler_frontend/app/layouts/application (0.1ms)
+I, [2018-10-31T09:56:14.279201 #14556]  INFO -- :   Rendered rockets/keppler_frontend/app/views/layouts/keppler_frontend/app/layouts/_meta_tags.html.haml (0.5ms)
+I, [2018-10-31T09:56:14.285713 #14556]  INFO -- :   Rendered rockets/keppler_frontend/app/views/layouts/keppler_frontend/app/layouts/_google_analytics.html.haml (3.1ms)
+I, [2018-10-31T09:56:14.287434 #14556]  INFO -- :   Rendered rockets/keppler_frontend/app/views/layouts/keppler_frontend/app/layouts/_head.html.haml (8.8ms)
+I, [2018-10-31T09:56:14.292837 #14556]  INFO -- :   Rendered rockets/keppler_frontend/app/views/layouts/keppler_frontend/app/layouts/_keppler_editor.html.haml (5.1ms)
+I, [2018-10-31T09:56:14.293163 #14556]  INFO -- : Completed 200 OK in 35ms (Views: 12.8ms | ActiveRecord: 8.4ms)
+I, [2018-10-31T09:56:15.547925 #14556]  INFO -- : Started GET "/" for 127.0.0.1 at 2018-10-31 09:56:15 -0400
+I, [2018-10-31T09:56:15.549289 #14556]  INFO -- : Processing by KepplerFrontend::App::FrontendController#index as HTML
+I, [2018-10-31T09:56:15.564330 #14556]  INFO -- :   Rendering rockets/keppler_frontend/app/views/keppler_frontend/app/frontend/index.html.erb within layouts/keppler_frontend/app/layouts/application
+I, [2018-10-31T09:56:15.564501 #14556]  INFO -- :   Rendered rockets/keppler_frontend/app/views/keppler_frontend/app/frontend/index.html.erb within layouts/keppler_frontend/app/layouts/application (0.0ms)
+I, [2018-10-31T09:56:15.565206 #14556]  INFO -- :   Rendered rockets/keppler_frontend/app/views/layouts/keppler_frontend/app/layouts/_meta_tags.html.haml (0.4ms)
+I, [2018-10-31T09:56:15.571377 #14556]  INFO -- :   Rendered rockets/keppler_frontend/app/views/layouts/keppler_frontend/app/layouts/_google_analytics.html.haml (3.3ms)
+I, [2018-10-31T09:56:15.572723 #14556]  INFO -- :   Rendered rockets/keppler_frontend/app/views/layouts/keppler_frontend/app/layouts/_head.html.haml (8.0ms)
+I, [2018-10-31T09:56:15.578858 #14556]  INFO -- :   Rendered rockets/keppler_frontend/app/views/layouts/keppler_frontend/app/layouts/_keppler_editor.html.haml (5.9ms)
+I, [2018-10-31T09:56:15.579515 #14556]  INFO -- : Completed 200 OK in 30ms (Views: 12.7ms | ActiveRecord: 6.8ms)
+I, [2018-10-31T09:56:16.731794 #14556]  INFO -- : Started GET "/show" for 127.0.0.1 at 2018-10-31 09:56:16 -0400
+I, [2018-10-31T09:56:16.733580 #14556]  INFO -- : Processing by KepplerFrontend::App::FrontendController#show as HTML
+I, [2018-10-31T09:56:16.750272 #14556]  INFO -- :   Rendering rockets/keppler_frontend/app/views/keppler_frontend/app/frontend/show.html.erb within layouts/keppler_frontend/app/layouts/application
+I, [2018-10-31T09:56:16.750633 #14556]  INFO -- :   Rendered rockets/keppler_frontend/app/views/keppler_frontend/app/frontend/show.html.erb within layouts/keppler_frontend/app/layouts/application (0.1ms)
+I, [2018-10-31T09:56:16.751702 #14556]  INFO -- :   Rendered rockets/keppler_frontend/app/views/layouts/keppler_frontend/app/layouts/_meta_tags.html.haml (0.6ms)
+I, [2018-10-31T09:56:16.756994 #14556]  INFO -- :   Rendered rockets/keppler_frontend/app/views/layouts/keppler_frontend/app/layouts/_google_analytics.html.haml (2.5ms)
+I, [2018-10-31T09:56:16.759105 #14556]  INFO -- :   Rendered rockets/keppler_frontend/app/views/layouts/keppler_frontend/app/layouts/_head.html.haml (8.2ms)
+I, [2018-10-31T09:56:16.763665 #14556]  INFO -- :   Rendered rockets/keppler_frontend/app/views/layouts/keppler_frontend/app/layouts/_keppler_editor.html.haml (4.2ms)
+I, [2018-10-31T09:56:16.764308 #14556]  INFO -- : Completed 200 OK in 30ms (Views: 12.3ms | ActiveRecord: 7.2ms)
+I, [2018-10-31T09:56:19.066107 #14556]  INFO -- : Started GET "/" for 127.0.0.1 at 2018-10-31 09:56:19 -0400
+I, [2018-10-31T09:56:19.067859 #14556]  INFO -- : Processing by KepplerFrontend::App::FrontendController#index as HTML
+I, [2018-10-31T09:56:19.086457 #14556]  INFO -- :   Rendering rockets/keppler_frontend/app/views/keppler_frontend/app/frontend/index.html.erb within layouts/keppler_frontend/app/layouts/application
+I, [2018-10-31T09:56:19.086694 #14556]  INFO -- :   Rendered rockets/keppler_frontend/app/views/keppler_frontend/app/frontend/index.html.erb within layouts/keppler_frontend/app/layouts/application (0.1ms)
+I, [2018-10-31T09:56:19.088018 #14556]  INFO -- :   Rendered rockets/keppler_frontend/app/views/layouts/keppler_frontend/app/layouts/_meta_tags.html.haml (0.6ms)
+I, [2018-10-31T09:56:19.096776 #14556]  INFO -- :   Rendered rockets/keppler_frontend/app/views/layouts/keppler_frontend/app/layouts/_google_analytics.html.haml (4.2ms)
+I, [2018-10-31T09:56:19.098880 #14556]  INFO -- :   Rendered rockets/keppler_frontend/app/views/layouts/keppler_frontend/app/layouts/_head.html.haml (11.7ms)
+I, [2018-10-31T09:56:19.104634 #14556]  INFO -- :   Rendered rockets/keppler_frontend/app/views/layouts/keppler_frontend/app/layouts/_keppler_editor.html.haml (5.4ms)
+I, [2018-10-31T09:56:19.105030 #14556]  INFO -- : Completed 200 OK in 37ms (Views: 16.1ms | ActiveRecord: 8.1ms)
+I, [2018-10-31T09:56:20.516308 #14556]  INFO -- : Started GET "/show" for 127.0.0.1 at 2018-10-31 09:56:20 -0400
+I, [2018-10-31T09:56:20.517677 #14556]  INFO -- : Processing by KepplerFrontend::App::FrontendController#show as HTML
+I, [2018-10-31T09:56:20.535598 #14556]  INFO -- :   Rendering rockets/keppler_frontend/app/views/keppler_frontend/app/frontend/show.html.erb within layouts/keppler_frontend/app/layouts/application
+I, [2018-10-31T09:56:20.535985 #14556]  INFO -- :   Rendered rockets/keppler_frontend/app/views/keppler_frontend/app/frontend/show.html.erb within layouts/keppler_frontend/app/layouts/application (0.1ms)
+I, [2018-10-31T09:56:20.537926 #14556]  INFO -- :   Rendered rockets/keppler_frontend/app/views/layouts/keppler_frontend/app/layouts/_meta_tags.html.haml (1.2ms)
+I, [2018-10-31T09:56:20.544074 #14556]  INFO -- :   Rendered rockets/keppler_frontend/app/views/layouts/keppler_frontend/app/layouts/_google_analytics.html.haml (3.1ms)
+I, [2018-10-31T09:56:20.545365 #14556]  INFO -- :   Rendered rockets/keppler_frontend/app/views/layouts/keppler_frontend/app/layouts/_head.html.haml (9.0ms)
+I, [2018-10-31T09:56:20.549267 #14556]  INFO -- :   Rendered rockets/keppler_frontend/app/views/layouts/keppler_frontend/app/layouts/_keppler_editor.html.haml (3.7ms)
+I, [2018-10-31T09:56:20.549612 #14556]  INFO -- : Completed 200 OK in 32ms (Views: 12.5ms | ActiveRecord: 8.5ms)
+I, [2018-10-31T09:56:22.023657 #14556]  INFO -- : Started GET "/" for 127.0.0.1 at 2018-10-31 09:56:22 -0400
+I, [2018-10-31T09:56:22.025213 #14556]  INFO -- : Processing by KepplerFrontend::App::FrontendController#index as HTML
+I, [2018-10-31T09:56:22.040925 #14556]  INFO -- :   Rendering rockets/keppler_frontend/app/views/keppler_frontend/app/frontend/index.html.erb within layouts/keppler_frontend/app/layouts/application
+I, [2018-10-31T09:56:22.041266 #14556]  INFO -- :   Rendered rockets/keppler_frontend/app/views/keppler_frontend/app/frontend/index.html.erb within layouts/keppler_frontend/app/layouts/application (0.1ms)
+I, [2018-10-31T09:56:22.042949 #14556]  INFO -- :   Rendered rockets/keppler_frontend/app/views/layouts/keppler_frontend/app/layouts/_meta_tags.html.haml (0.9ms)
+I, [2018-10-31T09:56:22.050970 #14556]  INFO -- :   Rendered rockets/keppler_frontend/app/views/layouts/keppler_frontend/app/layouts/_google_analytics.html.haml (3.2ms)
+I, [2018-10-31T09:56:22.052693 #14556]  INFO -- :   Rendered rockets/keppler_frontend/app/views/layouts/keppler_frontend/app/layouts/_head.html.haml (11.0ms)
+I, [2018-10-31T09:56:22.058517 #14556]  INFO -- :   Rendered rockets/keppler_frontend/app/views/layouts/keppler_frontend/app/layouts/_keppler_editor.html.haml (5.5ms)
+I, [2018-10-31T09:56:22.058912 #14556]  INFO -- : Completed 200 OK in 34ms (Views: 15.9ms | ActiveRecord: 7.3ms)
+I, [2018-10-31T09:56:26.993997 #14556]  INFO -- : Started GET "/admin/roles" for 127.0.0.1 at 2018-10-31 09:56:26 -0400
+I, [2018-10-31T09:56:26.995401 #14556]  INFO -- : Processing by Admin::RolesController#index as HTML
+I, [2018-10-31T09:56:27.027602 #14556]  INFO -- :   Rendering admin/roles/index.html.haml within admin/layouts/application
+I, [2018-10-31T09:56:27.041216 #14556]  INFO -- :   Rendered admin/layouts/_listing_preloader.haml (0.1ms)
+I, [2018-10-31T09:56:27.052499 #14556]  INFO -- :   Rendered admin/roles/_listing.html.haml (11.0ms)
+I, [2018-10-31T09:56:27.055388 #14556]  INFO -- :   Rendered admin/roles/_description.html.haml (1.9ms)
+I, [2018-10-31T09:56:27.055547 #14556]  INFO -- :   Rendered admin/roles/index.html.haml within admin/layouts/application (27.8ms)
+I, [2018-10-31T09:56:27.057175 #14556]  INFO -- :   Rendered admin/layouts/_head.html.haml (1.4ms)
+I, [2018-10-31T09:56:27.061156 #14556]  INFO -- :   Rendered admin/layouts/_navigation.html.haml (3.8ms)
+I, [2018-10-31T09:56:27.073227 #14556]  INFO -- :   Rendered admin/layouts/_sidebar.html.haml (11.9ms)
+I, [2018-10-31T09:56:27.073531 #14556]  INFO -- :   Rendered admin/layouts/_messages.html.haml (0.1ms)
+I, [2018-10-31T09:56:27.073801 #14556]  INFO -- :   Rendered admin/layouts/_preloader.html.haml (0.1ms)
+I, [2018-10-31T09:56:27.073955 #14556]  INFO -- :   Rendered admin/layouts/_footer.html.haml (0.0ms)
+I, [2018-10-31T09:56:27.074145 #14556]  INFO -- :   Rendered admin/layouts/_keppler_boolean_script.haml (0.0ms)
+I, [2018-10-31T09:56:27.074369 #14556]  INFO -- : Completed 200 OK in 79ms (Views: 42.9ms | ActiveRecord: 15.3ms)
+I, [2018-10-31T09:56:27.106233 #14556]  INFO -- : Started GET "/assets/vue_admin/index.js" for 127.0.0.1 at 2018-10-31 09:56:27 -0400
+I, [2018-10-31T09:56:27.155260 #14556]  INFO -- : Started GET "/admin/roles/page/1.json" for 127.0.0.1 at 2018-10-31 09:56:27 -0400
+I, [2018-10-31T09:56:27.156131 #14556]  INFO -- : Processing by Admin::RolesController#index as JSON
+I, [2018-10-31T09:56:27.156232 #14556]  INFO -- :   Parameters: {"page"=>"1"}
+I, [2018-10-31T09:56:27.180509 #14556]  INFO -- : Completed 200 OK in 24ms (Views: 1.4ms | ActiveRecord: 6.3ms)
+I, [2018-10-31T09:56:29.693246 #14556]  INFO -- : Started GET "/admin/roles/2/add_permissions" for 127.0.0.1 at 2018-10-31 09:56:29 -0400
+I, [2018-10-31T09:56:29.695552 #14556]  INFO -- : Processing by Admin::PermissionsController#add as HTML
+I, [2018-10-31T09:56:29.695712 #14556]  INFO -- :   Parameters: {"role_id"=>"2"}
+I, [2018-10-31T09:56:29.727448 #14556]  INFO -- :   Rendering admin/permissions/add.html.haml within admin/layouts/application
+I, [2018-10-31T09:56:29.732705 #14556]  INFO -- :   Rendered admin/permissions/_switch.html.haml (4.2ms)
+I, [2018-10-31T09:56:29.735568 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (1.6ms)
+I, [2018-10-31T09:56:29.737340 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (0.9ms)
+I, [2018-10-31T09:56:29.739471 #14556]  INFO -- :   Rendered admin/permissions/_switch.html.haml (1.6ms)
+I, [2018-10-31T09:56:29.740812 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (0.9ms)
+I, [2018-10-31T09:56:29.742087 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (0.8ms)
+I, [2018-10-31T09:56:29.743415 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (0.9ms)
+I, [2018-10-31T09:56:29.745102 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (1.2ms)
+I, [2018-10-31T09:56:29.746585 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (0.9ms)
+I, [2018-10-31T09:56:29.747835 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (0.8ms)
+I, [2018-10-31T09:56:29.749185 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (0.9ms)
+I, [2018-10-31T09:56:29.750851 #14556]  INFO -- :   Rendered admin/permissions/_switch.html.haml (1.4ms)
+I, [2018-10-31T09:56:29.752055 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (0.8ms)
+I, [2018-10-31T09:56:29.753293 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (0.8ms)
+I, [2018-10-31T09:56:29.754528 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (0.8ms)
+I, [2018-10-31T09:56:29.755773 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (0.8ms)
+I, [2018-10-31T09:56:29.756978 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (0.8ms)
+I, [2018-10-31T09:56:29.758264 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (0.9ms)
+I, [2018-10-31T09:56:29.759476 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (0.8ms)
+I, [2018-10-31T09:56:29.761068 #14556]  INFO -- :   Rendered admin/permissions/_switch.html.haml (1.2ms)
+I, [2018-10-31T09:56:29.762608 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (1.1ms)
+I, [2018-10-31T09:56:29.763965 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (0.8ms)
+I, [2018-10-31T09:56:29.765196 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (0.8ms)
+I, [2018-10-31T09:56:29.766429 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (0.8ms)
+I, [2018-10-31T09:56:29.767647 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (0.8ms)
+I, [2018-10-31T09:56:29.768963 #14556]  INFO -- :   Rendered admin/permissions/_switch.html.haml (0.9ms)
+I, [2018-10-31T09:56:29.770266 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (0.9ms)
+I, [2018-10-31T09:56:29.771516 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (0.8ms)
+I, [2018-10-31T09:56:29.772715 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (0.8ms)
+I, [2018-10-31T09:56:29.773886 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (0.8ms)
+I, [2018-10-31T09:56:29.775172 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (0.8ms)
+I, [2018-10-31T09:56:29.776373 #14556]  INFO -- :   Rendered admin/permissions/_switch.html.haml (0.8ms)
+I, [2018-10-31T09:56:29.777616 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (0.8ms)
+I, [2018-10-31T09:56:29.779347 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (1.1ms)
+I, [2018-10-31T09:56:29.780692 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (0.8ms)
+I, [2018-10-31T09:56:29.781910 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (0.8ms)
+I, [2018-10-31T09:56:29.783191 #14556]  INFO -- :   Rendered admin/permissions/_switch.html.haml (0.9ms)
+I, [2018-10-31T09:56:29.784382 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (0.8ms)
+I, [2018-10-31T09:56:29.785677 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (0.9ms)
+I, [2018-10-31T09:56:29.786964 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (0.8ms)
+I, [2018-10-31T09:56:29.788252 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (0.8ms)
+I, [2018-10-31T09:56:29.789850 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (1.1ms)
+I, [2018-10-31T09:56:29.791531 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (1.1ms)
+I, [2018-10-31T09:56:29.793028 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (0.9ms)
+I, [2018-10-31T09:56:29.794674 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (1.1ms)
+I, [2018-10-31T09:56:29.796244 #14556]  INFO -- :   Rendered admin/permissions/_switch.html.haml (1.0ms)
+I, [2018-10-31T09:56:29.797474 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (0.8ms)
+I, [2018-10-31T09:56:29.798822 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (0.9ms)
+I, [2018-10-31T09:56:29.800137 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (0.9ms)
+I, [2018-10-31T09:56:29.801376 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (0.8ms)
+I, [2018-10-31T09:56:29.802650 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (0.8ms)
+I, [2018-10-31T09:56:29.803932 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (0.8ms)
+I, [2018-10-31T09:56:29.805213 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (0.9ms)
+I, [2018-10-31T09:56:29.806631 #14556]  INFO -- :   Rendered admin/permissions/_switch.html.haml (0.9ms)
+I, [2018-10-31T09:56:29.807889 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (0.9ms)
+I, [2018-10-31T09:56:29.809235 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (0.9ms)
+I, [2018-10-31T09:56:29.810535 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (0.8ms)
+I, [2018-10-31T09:56:29.812089 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (1.1ms)
+I, [2018-10-31T09:56:29.813561 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (0.9ms)
+I, [2018-10-31T09:56:29.814904 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (0.9ms)
+I, [2018-10-31T09:56:29.816184 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (0.9ms)
+I, [2018-10-31T09:56:29.820581 #14556]  INFO -- :   Rendered admin/permissions/add.html.haml within admin/layouts/application (93.0ms)
+I, [2018-10-31T09:56:29.822100 #14556]  INFO -- :   Rendered admin/layouts/_head.html.haml (1.3ms)
+I, [2018-10-31T09:56:29.825101 #14556]  INFO -- :   Rendered admin/layouts/_navigation.html.haml (2.8ms)
+I, [2018-10-31T09:56:29.837435 #14556]  INFO -- :   Rendered admin/layouts/_sidebar.html.haml (12.1ms)
+I, [2018-10-31T09:56:29.837741 #14556]  INFO -- :   Rendered admin/layouts/_messages.html.haml (0.1ms)
+I, [2018-10-31T09:56:29.838059 #14556]  INFO -- :   Rendered admin/layouts/_preloader.html.haml (0.1ms)
+I, [2018-10-31T09:56:29.838214 #14556]  INFO -- :   Rendered admin/layouts/_footer.html.haml (0.0ms)
+I, [2018-10-31T09:56:29.838411 #14556]  INFO -- :   Rendered admin/layouts/_keppler_boolean_script.haml (0.0ms)
+I, [2018-10-31T09:56:29.838650 #14556]  INFO -- : Completed 200 OK in 143ms (Views: 108.7ms | ActiveRecord: 12.8ms)
+I, [2018-10-31T09:56:31.413024 #14556]  INFO -- : Started GET "/admin/roles" for 127.0.0.1 at 2018-10-31 09:56:31 -0400
+I, [2018-10-31T09:56:31.414043 #14556]  INFO -- : Processing by Admin::RolesController#index as HTML
+I, [2018-10-31T09:56:31.439110 #14556]  INFO -- : Started GET "/assets/vue_admin/index.js" for 127.0.0.1 at 2018-10-31 09:56:31 -0400
+I, [2018-10-31T09:56:31.442258 #14556]  INFO -- :   Rendering admin/roles/index.html.haml within admin/layouts/application
+I, [2018-10-31T09:56:31.457341 #14556]  INFO -- :   Rendered admin/layouts/_listing_preloader.haml (0.1ms)
+I, [2018-10-31T09:56:31.469176 #14556]  INFO -- :   Rendered admin/roles/_listing.html.haml (11.6ms)
+I, [2018-10-31T09:56:31.473906 #14556]  INFO -- :   Rendered admin/roles/_description.html.haml (3.4ms)
+I, [2018-10-31T09:56:31.474136 #14556]  INFO -- :   Rendered admin/roles/index.html.haml within admin/layouts/application (31.7ms)
+I, [2018-10-31T09:56:31.476730 #14556]  INFO -- :   Rendered admin/layouts/_head.html.haml (2.2ms)
+I, [2018-10-31T09:56:31.484888 #14556]  INFO -- :   Rendered admin/layouts/_navigation.html.haml (7.7ms)
+I, [2018-10-31T09:56:31.509309 #14556]  INFO -- :   Rendered admin/layouts/_sidebar.html.haml (24.0ms)
+I, [2018-10-31T09:56:31.510047 #14556]  INFO -- :   Rendered admin/layouts/_messages.html.haml (0.3ms)
+I, [2018-10-31T09:56:31.510693 #14556]  INFO -- :   Rendered admin/layouts/_preloader.html.haml (0.3ms)
+I, [2018-10-31T09:56:31.511153 #14556]  INFO -- :   Rendered admin/layouts/_footer.html.haml (0.1ms)
+I, [2018-10-31T09:56:31.511566 #14556]  INFO -- :   Rendered admin/layouts/_keppler_boolean_script.haml (0.1ms)
+I, [2018-10-31T09:56:31.512257 #14556]  INFO -- : Completed 200 OK in 98ms (Views: 64.9ms | ActiveRecord: 14.9ms)
+I, [2018-10-31T09:56:31.530000 #14556]  INFO -- : Started GET "/admin/roles/page/1.json" for 127.0.0.1 at 2018-10-31 09:56:31 -0400
+I, [2018-10-31T09:56:31.531131 #14556]  INFO -- : Processing by Admin::RolesController#index as JSON
+I, [2018-10-31T09:56:31.531261 #14556]  INFO -- :   Parameters: {"page"=>"1"}
+I, [2018-10-31T09:56:31.570493 #14556]  INFO -- : Completed 200 OK in 39ms (Views: 2.2ms | ActiveRecord: 12.1ms)
+I, [2018-10-31T09:56:31.571943 #14556]  INFO -- : Started GET "/assets/vue_admin/index.js" for 127.0.0.1 at 2018-10-31 09:56:31 -0400
+I, [2018-10-31T09:56:31.612096 #14556]  INFO -- : Started GET "/admin/roles/page/1.json" for 127.0.0.1 at 2018-10-31 09:56:31 -0400
+I, [2018-10-31T09:56:31.613173 #14556]  INFO -- : Processing by Admin::RolesController#index as JSON
+I, [2018-10-31T09:56:31.613294 #14556]  INFO -- :   Parameters: {"page"=>"1"}
+I, [2018-10-31T09:56:31.637740 #14556]  INFO -- : Completed 200 OK in 24ms (Views: 1.2ms | ActiveRecord: 6.2ms)
+I, [2018-10-31T09:56:32.568312 #14556]  INFO -- : Started GET "/admin/roles/3/add_permissions" for 127.0.0.1 at 2018-10-31 09:56:32 -0400
+I, [2018-10-31T09:56:32.569566 #14556]  INFO -- : Processing by Admin::PermissionsController#add as HTML
+I, [2018-10-31T09:56:32.569696 #14556]  INFO -- :   Parameters: {"role_id"=>"3"}
+I, [2018-10-31T09:56:32.596302 #14556]  INFO -- :   Rendering admin/permissions/add.html.haml within admin/layouts/application
+I, [2018-10-31T09:56:32.601135 #14556]  INFO -- :   Rendered admin/permissions/_switch.html.haml (3.3ms)
+I, [2018-10-31T09:56:32.603811 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (1.6ms)
+I, [2018-10-31T09:56:32.605715 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (1.0ms)
+I, [2018-10-31T09:56:32.608049 #14556]  INFO -- :   Rendered admin/permissions/_switch.html.haml (1.7ms)
+I, [2018-10-31T09:56:32.609312 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (0.8ms)
+I, [2018-10-31T09:56:32.610449 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (0.7ms)
+I, [2018-10-31T09:56:32.611546 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (0.7ms)
+I, [2018-10-31T09:56:32.613307 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (1.2ms)
+I, [2018-10-31T09:56:32.615370 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (1.2ms)
+I, [2018-10-31T09:56:32.616955 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (0.9ms)
+I, [2018-10-31T09:56:32.618436 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (1.0ms)
+I, [2018-10-31T09:56:32.619489 #14556]  INFO -- :   Rendered admin/permissions/_switch.html.haml (0.8ms)
+I, [2018-10-31T09:56:32.620737 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (0.9ms)
+I, [2018-10-31T09:56:32.622254 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (0.9ms)
+I, [2018-10-31T09:56:32.623779 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (1.0ms)
+I, [2018-10-31T09:56:32.625506 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (0.9ms)
+I, [2018-10-31T09:56:32.626948 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (1.0ms)
+I, [2018-10-31T09:56:32.628362 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (1.0ms)
+I, [2018-10-31T09:56:32.630346 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (1.4ms)
+I, [2018-10-31T09:56:32.632130 #14556]  INFO -- :   Rendered admin/permissions/_switch.html.haml (1.3ms)
+I, [2018-10-31T09:56:32.633888 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (1.1ms)
+I, [2018-10-31T09:56:32.635501 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (1.0ms)
+I, [2018-10-31T09:56:32.636625 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (0.7ms)
+I, [2018-10-31T09:56:32.637728 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (0.7ms)
+I, [2018-10-31T09:56:32.638876 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (0.7ms)
+I, [2018-10-31T09:56:32.639955 #14556]  INFO -- :   Rendered admin/permissions/_switch.html.haml (0.7ms)
+I, [2018-10-31T09:56:32.640983 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (0.7ms)
+I, [2018-10-31T09:56:32.642077 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (0.7ms)
+I, [2018-10-31T09:56:32.643197 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (0.7ms)
+I, [2018-10-31T09:56:32.644543 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (0.8ms)
+I, [2018-10-31T09:56:32.645912 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (0.9ms)
+I, [2018-10-31T09:56:32.647260 #14556]  INFO -- :   Rendered admin/permissions/_switch.html.haml (0.9ms)
+I, [2018-10-31T09:56:32.648361 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (0.7ms)
+I, [2018-10-31T09:56:32.650048 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (1.1ms)
+I, [2018-10-31T09:56:32.651378 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (0.8ms)
+I, [2018-10-31T09:56:32.652624 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (0.8ms)
+I, [2018-10-31T09:56:32.653822 #14556]  INFO -- :   Rendered admin/permissions/_switch.html.haml (0.8ms)
+I, [2018-10-31T09:56:32.654853 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (0.7ms)
+I, [2018-10-31T09:56:32.655973 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (0.7ms)
+I, [2018-10-31T09:56:32.657093 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (0.7ms)
+I, [2018-10-31T09:56:32.658197 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (0.7ms)
+I, [2018-10-31T09:56:32.659303 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (0.7ms)
+I, [2018-10-31T09:56:32.660403 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (0.7ms)
+I, [2018-10-31T09:56:32.661635 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (0.8ms)
+I, [2018-10-31T09:56:32.663152 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (0.9ms)
+I, [2018-10-31T09:56:32.664479 #14556]  INFO -- :   Rendered admin/permissions/_switch.html.haml (0.8ms)
+I, [2018-10-31T09:56:32.665520 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (0.7ms)
+I, [2018-10-31T09:56:32.666629 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (0.7ms)
+I, [2018-10-31T09:56:32.667745 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (0.7ms)
+I, [2018-10-31T09:56:32.668839 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (0.7ms)
+I, [2018-10-31T09:56:32.669930 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (0.7ms)
+I, [2018-10-31T09:56:32.671104 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (0.7ms)
+I, [2018-10-31T09:56:32.672304 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (0.8ms)
+I, [2018-10-31T09:56:32.673649 #14556]  INFO -- :   Rendered admin/permissions/_switch.html.haml (0.8ms)
+I, [2018-10-31T09:56:32.674706 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (0.7ms)
+I, [2018-10-31T09:56:32.675867 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (0.7ms)
+I, [2018-10-31T09:56:32.676964 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (0.7ms)
+I, [2018-10-31T09:56:32.678093 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (0.7ms)
+I, [2018-10-31T09:56:32.679488 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (0.8ms)
+I, [2018-10-31T09:56:32.681020 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (0.9ms)
+I, [2018-10-31T09:56:32.682200 #14556]  INFO -- :   Rendered admin/roles/_switch.html.haml (0.7ms)
+I, [2018-10-31T09:56:32.686585 #14556]  INFO -- :   Rendered admin/permissions/add.html.haml within admin/layouts/application (90.1ms)
+I, [2018-10-31T09:56:32.688197 #14556]  INFO -- :   Rendered admin/layouts/_head.html.haml (1.4ms)
+I, [2018-10-31T09:56:32.691246 #14556]  INFO -- :   Rendered admin/layouts/_navigation.html.haml (2.8ms)
+I, [2018-10-31T09:56:32.703455 #14556]  INFO -- :   Rendered admin/layouts/_sidebar.html.haml (12.0ms)
+I, [2018-10-31T09:56:32.703779 #14556]  INFO -- :   Rendered admin/layouts/_messages.html.haml (0.1ms)
+I, [2018-10-31T09:56:32.704091 #14556]  INFO -- :   Rendered admin/layouts/_preloader.html.haml (0.1ms)
+I, [2018-10-31T09:56:32.704242 #14556]  INFO -- :   Rendered admin/layouts/_footer.html.haml (0.0ms)
+I, [2018-10-31T09:56:32.704397 #14556]  INFO -- :   Rendered admin/layouts/_keppler_boolean_script.haml (0.0ms)
+I, [2018-10-31T09:56:32.704663 #14556]  INFO -- : Completed 200 OK in 135ms (Views: 106.0ms | ActiveRecord: 11.1ms)
+I, [2018-10-31T09:56:34.174153 #14556]  INFO -- : Started POST "/admin/roles/3/toggle_permissions" for 127.0.0.1 at 2018-10-31 09:56:34 -0400
+I, [2018-10-31T09:56:34.176708 #14556]  INFO -- : Processing by Admin::PermissionsController#toggle_permissions as JS
+I, [2018-10-31T09:56:34.176907 #14556]  INFO -- :   Parameters: {"utf8"=>"✓", "role"=>{"module"=>"Script", "actions"=>["index", "create", "update", "destroy", "upload", "download", "clone"]}, "role_id"=>"3"}
+I, [2018-10-31T09:56:34.420909 #14556]  INFO -- :   Rendering admin/permissions/toggle_permissions.js.erb
+I, [2018-10-31T09:56:34.447958 #14556]  INFO -- :   Rendered admin/permissions/_switch.html.haml (15.9ms)
+I, [2018-10-31T09:56:34.448417 #14556]  INFO -- :   Rendered admin/permissions/toggle_permissions.js.erb (27.3ms)
+I, [2018-10-31T09:56:34.448751 #14556]  INFO -- : Completed 200 OK in 272ms (Views: 42.9ms | ActiveRecord: 122.3ms)
+I, [2018-10-31T09:56:37.970649 #14556]  INFO -- : Started POST "/admin/roles/3/toggle_permissions" for 127.0.0.1 at 2018-10-31 09:56:37 -0400
+I, [2018-10-31T09:56:37.971829 #14556]  INFO -- : Processing by Admin::PermissionsController#toggle_permissions as JS
+I, [2018-10-31T09:56:37.974608 #14556]  INFO -- :   Parameters: {"utf8"=>"✓", "role"=>{"module"=>"Script", "actions"=>["index", "create", "update", "destroy", "upload", "download", "clone"]}, "role_id"=>"3"}
+I, [2018-10-31T09:56:38.119599 #14556]  INFO -- :   Rendering admin/permissions/toggle_permissions.js.erb
+I, [2018-10-31T09:56:38.124496 #14556]  INFO -- :   Rendered admin/permissions/_switch.html.haml (4.2ms)
+I, [2018-10-31T09:56:38.125091 #14556]  INFO -- :   Rendered admin/permissions/toggle_permissions.js.erb (5.2ms)
+I, [2018-10-31T09:56:38.125590 #14556]  INFO -- : Completed 200 OK in 151ms (Views: 6.2ms | ActiveRecord: 123.0ms)
+I, [2018-10-31T09:56:39.012043 #14556]  INFO -- : Started GET "/admin/roles" for 127.0.0.1 at 2018-10-31 09:56:39 -0400
+I, [2018-10-31T09:56:39.013568 #14556]  INFO -- : Processing by Admin::RolesController#index as HTML
+I, [2018-10-31T09:56:39.047029 #14556]  INFO -- :   Rendering admin/roles/index.html.haml within admin/layouts/application
+I, [2018-10-31T09:56:39.053019 #14556]  INFO -- : Started GET "/assets/vue_admin/index.js" for 127.0.0.1 at 2018-10-31 09:56:39 -0400
+I, [2018-10-31T09:56:39.062877 #14556]  INFO -- :   Rendered admin/layouts/_listing_preloader.haml (0.1ms)
+I, [2018-10-31T09:56:39.081995 #14556]  INFO -- :   Rendered admin/roles/_listing.html.haml (16.8ms)
+I, [2018-10-31T09:56:39.086825 #14556]  INFO -- :   Rendered admin/roles/_description.html.haml (3.2ms)
+I, [2018-10-31T09:56:39.087035 #14556]  INFO -- :   Rendered admin/roles/index.html.haml within admin/layouts/application (39.8ms)
+I, [2018-10-31T09:56:39.088907 #14556]  INFO -- :   Rendered admin/layouts/_head.html.haml (1.6ms)
+I, [2018-10-31T09:56:39.093898 #14556]  INFO -- :   Rendered admin/layouts/_navigation.html.haml (4.6ms)
+I, [2018-10-31T09:56:39.111491 #14556]  INFO -- :   Rendered admin/layouts/_sidebar.html.haml (17.2ms)
+I, [2018-10-31T09:56:39.111875 #14556]  INFO -- :   Rendered admin/layouts/_messages.html.haml (0.1ms)
+I, [2018-10-31T09:56:39.112171 #14556]  INFO -- :   Rendered admin/layouts/_preloader.html.haml (0.1ms)
+I, [2018-10-31T09:56:39.112336 #14556]  INFO -- :   Rendered admin/layouts/_footer.html.haml (0.0ms)
+I, [2018-10-31T09:56:39.112500 #14556]  INFO -- :   Rendered admin/layouts/_keppler_boolean_script.haml (0.0ms)
+I, [2018-10-31T09:56:39.112951 #14556]  INFO -- : Completed 200 OK in 99ms (Views: 61.6ms | ActiveRecord: 16.2ms)
+I, [2018-10-31T09:56:39.132059 #14556]  INFO -- : Started GET "/admin/roles/page/1.json" for 127.0.0.1 at 2018-10-31 09:56:39 -0400
+I, [2018-10-31T09:56:39.133002 #14556]  INFO -- : Processing by Admin::RolesController#index as JSON
+I, [2018-10-31T09:56:39.133135 #14556]  INFO -- :   Parameters: {"page"=>"1"}
+I, [2018-10-31T09:56:39.160683 #14556]  INFO -- : Completed 200 OK in 27ms (Views: 2.4ms | ActiveRecord: 8.5ms)
+I, [2018-10-31T09:56:39.161224 #14556]  INFO -- : Started GET "/assets/vue_admin/index.js" for 127.0.0.1 at 2018-10-31 09:56:39 -0400
+I, [2018-10-31T09:56:39.202146 #14556]  INFO -- : Started GET "/admin/roles/page/1.json" for 127.0.0.1 at 2018-10-31 09:56:39 -0400
+I, [2018-10-31T09:56:39.203354 #14556]  INFO -- : Processing by Admin::RolesController#index as JSON
+I, [2018-10-31T09:56:39.203453 #14556]  INFO -- :   Parameters: {"page"=>"1"}
+I, [2018-10-31T09:56:39.233232 #14556]  INFO -- : Completed 200 OK in 30ms (Views: 1.6ms | ActiveRecord: 8.3ms)
+I, [2018-10-31T09:56:42.961847 #14556]  INFO -- : Started GET "/admin/settings/appearance" for 127.0.0.1 at 2018-10-31 09:56:42 -0400
+I, [2018-10-31T09:56:42.962756 #14556]  INFO -- : Processing by Admin::SettingsController#edit as HTML
+I, [2018-10-31T09:56:42.962851 #14556]  INFO -- :   Parameters: {"config"=>"appearance"}
+I, [2018-10-31T09:56:42.986928 #14556]  INFO -- :   Rendering admin/settings/edit.html.haml within admin/layouts/application
+I, [2018-10-31T09:56:42.991227 #14556]  INFO -- :   Rendered admin/settings/components/_preview.html.haml (0.5ms)
+I, [2018-10-31T09:56:42.998464 #14556]  INFO -- :   Rendered admin/settings/fields/_appearance.html.haml (9.6ms)
+I, [2018-10-31T09:56:42.999349 #14556]  INFO -- :   Rendered admin/settings/_form.html.haml (11.1ms)
+I, [2018-10-31T09:56:42.999520 #14556]  INFO -- :   Rendered admin/settings/edit.html.haml within admin/layouts/application (12.4ms)
+I, [2018-10-31T09:56:43.002700 #14556]  INFO -- :   Rendered admin/layouts/_head.html.haml (2.9ms)
+I, [2018-10-31T09:56:43.006395 #14556]  INFO -- :   Rendered admin/layouts/_navigation.html.haml (3.3ms)
+I, [2018-10-31T09:56:43.022223 #14556]  INFO -- :   Rendered admin/layouts/_sidebar.html.haml (15.6ms)
+I, [2018-10-31T09:56:43.022596 #14556]  INFO -- :   Rendered admin/layouts/_messages.html.haml (0.1ms)
+I, [2018-10-31T09:56:43.022899 #14556]  INFO -- :   Rendered admin/layouts/_preloader.html.haml (0.2ms)
+I, [2018-10-31T09:56:43.023072 #14556]  INFO -- :   Rendered admin/layouts/_footer.html.haml (0.0ms)
+I, [2018-10-31T09:56:43.023241 #14556]  INFO -- :   Rendered admin/layouts/_keppler_boolean_script.haml (0.0ms)
+I, [2018-10-31T09:56:43.023587 #14556]  INFO -- : Completed 200 OK in 61ms (Views: 36.3ms | ActiveRecord: 6.6ms)
+I, [2018-10-31T09:56:43.051865 #14556]  INFO -- : Started GET "/admin/settings/appearance" for 127.0.0.1 at 2018-10-31 09:56:43 -0400
+I, [2018-10-31T09:56:43.053076 #14556]  INFO -- : Processing by Admin::SettingsController#edit as HTML
+I, [2018-10-31T09:56:43.053172 #14556]  INFO -- :   Parameters: {"config"=>"appearance"}
+I, [2018-10-31T09:56:43.075998 #14556]  INFO -- :   Rendering admin/settings/edit.html.haml within admin/layouts/application
+I, [2018-10-31T09:56:43.080368 #14556]  INFO -- :   Rendered admin/settings/components/_preview.html.haml (0.4ms)
+I, [2018-10-31T09:56:43.087111 #14556]  INFO -- :   Rendered admin/settings/fields/_appearance.html.haml (9.3ms)
+I, [2018-10-31T09:56:43.087949 #14556]  INFO -- :   Rendered admin/settings/_form.html.haml (10.8ms)
+I, [2018-10-31T09:56:43.088138 #14556]  INFO -- :   Rendered admin/settings/edit.html.haml within admin/layouts/application (12.0ms)
+I, [2018-10-31T09:56:43.090201 #14556]  INFO -- :   Rendered admin/layouts/_head.html.haml (1.7ms)
+I, [2018-10-31T09:56:43.094009 #14556]  INFO -- :   Rendered admin/layouts/_navigation.html.haml (3.5ms)
+I, [2018-10-31T09:56:43.114036 #14556]  INFO -- :   Rendered admin/layouts/_sidebar.html.haml (19.7ms)
+I, [2018-10-31T09:56:43.114335 #14556]  INFO -- :   Rendered admin/layouts/_messages.html.haml (0.1ms)
+I, [2018-10-31T09:56:43.114679 #14556]  INFO -- :   Rendered admin/layouts/_preloader.html.haml (0.2ms)
+I, [2018-10-31T09:56:43.114942 #14556]  INFO -- :   Rendered admin/layouts/_footer.html.haml (0.1ms)
+I, [2018-10-31T09:56:43.115201 #14556]  INFO -- :   Rendered admin/layouts/_keppler_boolean_script.haml (0.1ms)
+I, [2018-10-31T09:56:43.115614 #14556]  INFO -- : Completed 200 OK in 62ms (Views: 38.8ms | ActiveRecord: 5.9ms)
+I, [2018-10-31T09:57:45.760327 #14556]  INFO -- : Started GET "/admin/settings/appearance" for 127.0.0.1 at 2018-10-31 09:57:45 -0400
+I, [2018-10-31T09:57:45.792250 #14556]  INFO -- : Processing by Admin::SettingsController#edit as HTML
+I, [2018-10-31T09:57:45.792464 #14556]  INFO -- :   Parameters: {"config"=>"appearance"}
+I, [2018-10-31T09:57:46.039975 #14556]  INFO -- :   Rendering admin/settings/edit.html.haml within admin/layouts/application
+I, [2018-10-31T09:57:46.101841 #14556]  INFO -- :   Rendered admin/settings/components/_preview.html.haml (14.0ms)
+I, [2018-10-31T09:57:46.121926 #14556]  INFO -- :   Rendered admin/settings/fields/_appearance.html.haml (48.4ms)
+I, [2018-10-31T09:57:46.122487 #14556]  INFO -- :   Rendered admin/settings/_form.html.haml (73.9ms)
+I, [2018-10-31T09:57:46.122600 #14556]  INFO -- :   Rendered admin/settings/edit.html.haml within admin/layouts/application (82.5ms)
+I, [2018-10-31T09:57:56.391922 #14556]  INFO -- : Started GET "/show" for 127.0.0.1 at 2018-10-31 09:57:56 -0400
+I, [2018-10-31T09:57:56.417276 #14556]  INFO -- : Processing by KepplerFrontend::App::FrontendController#show as HTML
+I, [2018-10-31T09:57:56.461911 #14556]  INFO -- :   Rendering rockets/keppler_frontend/app/views/keppler_frontend/app/frontend/show.html.erb within layouts/keppler_frontend/app/layouts/application
+I, [2018-10-31T09:57:56.462494 #14556]  INFO -- :   Rendered rockets/keppler_frontend/app/views/keppler_frontend/app/frontend/show.html.erb within layouts/keppler_frontend/app/layouts/application (0.4ms)
+I, [2018-10-31T09:57:56.485804 #14556]  INFO -- :   Rendered rockets/keppler_frontend/app/views/layouts/keppler_frontend/app/layouts/_meta_tags.html.haml (17.2ms)
+I, [2018-10-31T09:58:01.498459 #14556]  INFO -- :   Rendered admin/layouts/_head.html.haml (15367.9ms)
+I, [2018-10-31T09:58:01.538288 #14556]  INFO -- :   Rendered admin/layouts/_navigation.html.haml (33.4ms)
+I, [2018-10-31T09:58:01.771309 #14556]  INFO -- :   Rendered rockets/keppler_frontend/app/views/layouts/keppler_frontend/app/layouts/_google_analytics.html.haml (241.5ms)
+I, [2018-10-31T09:58:01.772651 #14556]  INFO -- :   Rendered rockets/keppler_frontend/app/views/layouts/keppler_frontend/app/layouts/_head.html.haml (5308.3ms)
+I, [2018-10-31T09:58:01.785028 #14556]  INFO -- :   Rendered admin/layouts/_sidebar.html.haml (243.0ms)
+I, [2018-10-31T09:58:01.796258 #14556]  INFO -- :   Rendered admin/layouts/_messages.html.haml (2.0ms)
+I, [2018-10-31T09:58:01.802707 #14556]  INFO -- :   Rendered admin/layouts/_preloader.html.haml (4.0ms)
+I, [2018-10-31T09:58:01.803966 #14556]  INFO -- :   Rendered rockets/keppler_frontend/app/views/layouts/keppler_frontend/app/layouts/_keppler_editor.html.haml (16.3ms)
+I, [2018-10-31T09:58:01.805876 #14556]  INFO -- : Completed 200 OK in 5388ms (Views: 5175.9ms | ActiveRecord: 189.0ms)
+I, [2018-10-31T09:58:01.805483 #14556]  INFO -- :   Rendered admin/layouts/_footer.html.haml (1.3ms)
+I, [2018-10-31T09:58:01.811633 #14556]  INFO -- :   Rendered admin/layouts/_keppler_boolean_script.haml (2.7ms)
+I, [2018-10-31T09:58:01.812093 #14556]  INFO -- : Completed 200 OK in 16019ms (Views: 15764.2ms | ActiveRecord: 46.7ms)
+I, [2018-10-31T09:58:02.336853 #14556]  INFO -- : Started GET "/admin/settings/appearance" for 127.0.0.1 at 2018-10-31 09:58:02 -0400
+I, [2018-10-31T09:58:02.337836 #14556]  INFO -- : Processing by Admin::SettingsController#edit as HTML
+I, [2018-10-31T09:58:02.337932 #14556]  INFO -- :   Parameters: {"config"=>"appearance"}
+I, [2018-10-31T09:58:02.339321 #14556]  INFO -- : Started GET "/assets/admin/profile-menu.jpg" for 127.0.0.1 at 2018-10-31 09:58:02 -0400
+I, [2018-10-31T09:58:02.352746 #14556]  INFO -- : Started GET "/assetsadmin/fonts-and-icons/fonts/Simple-Line-Icons.woff2?v=2.4.0" for 127.0.0.1 at 2018-10-31 09:58:02 -0400
+I, [2018-10-31T09:58:02.357677 #14556]  INFO -- : Started GET "/assets/admin/fonts-and-icons/ZXuke1cDvLCKLDcimxB44_lu.woff2" for 127.0.0.1 at 2018-10-31 09:58:02 -0400
+I, [2018-10-31T09:58:02.367057 #14556]  INFO -- :   Rendering admin/settings/edit.html.haml within admin/layouts/application
+I, [2018-10-31T09:58:02.371010 #14556]  INFO -- :   Rendered admin/settings/components/_preview.html.haml (0.3ms)
+I, [2018-10-31T09:58:02.376834 #14556]  INFO -- :   Rendered admin/settings/fields/_appearance.html.haml (7.9ms)
+I, [2018-10-31T09:58:02.377409 #14556]  INFO -- :   Rendered admin/settings/_form.html.haml (9.0ms)
+I, [2018-10-31T09:58:02.377533 #14556]  INFO -- :   Rendered admin/settings/edit.html.haml within admin/layouts/application (10.3ms)
+I, [2018-10-31T09:58:02.379789 #14556]  INFO -- :   Rendered admin/layouts/_head.html.haml (2.0ms)
+I, [2018-10-31T09:58:02.383752 #14556]  INFO -- :   Rendered admin/layouts/_navigation.html.haml (3.6ms)
+I, [2018-10-31T09:58:02.401326 #14556]  INFO -- :   Rendered admin/layouts/_sidebar.html.haml (17.3ms)
+I, [2018-10-31T09:58:02.401676 #14556]  INFO -- :   Rendered admin/layouts/_messages.html.haml (0.1ms)
+I, [2018-10-31T09:58:02.402119 #14556]  INFO -- :   Rendered admin/layouts/_preloader.html.haml (0.2ms)
+I, [2018-10-31T09:58:02.402386 #14556]  INFO -- :   Rendered admin/layouts/_footer.html.haml (0.1ms)
+I, [2018-10-31T09:58:02.402565 #14556]  INFO -- :   Rendered admin/layouts/_keppler_boolean_script.haml (0.0ms)
+I, [2018-10-31T09:58:02.402840 #14556]  INFO -- : Completed 200 OK in 65ms (Views: 35.5ms | ActiveRecord: 9.6ms)
+I, [2018-10-31T09:58:03.486012 #14556]  INFO -- : Started GET "/assets/admin/favicon-8502ac8dee08af63f06b51ba4bfe7d73ad822453cd728df71ea061669dfda46d.png" for 127.0.0.1 at 2018-10-31 09:58:03 -0400
+I, [2018-10-31T10:00:49.152906 #14556]  INFO -- : Started GET "/admin/settings/appearance" for 127.0.0.1 at 2018-10-31 10:00:49 -0400
+I, [2018-10-31T10:00:49.193646 #14556]  INFO -- : Processing by Admin::SettingsController#edit as HTML
+I, [2018-10-31T10:00:49.193772 #14556]  INFO -- :   Parameters: {"config"=>"appearance"}
+I, [2018-10-31T10:00:49.369280 #14556]  INFO -- :   Rendering admin/settings/edit.html.haml within admin/layouts/application
+I, [2018-10-31T10:00:49.423482 #14556]  INFO -- :   Rendered admin/settings/components/_preview.html.haml (15.5ms)
+I, [2018-10-31T10:00:49.445182 #14556]  INFO -- :   Rendered admin/settings/fields/_appearance.html.haml (64.6ms)
+I, [2018-10-31T10:00:49.446053 #14556]  INFO -- :   Rendered admin/settings/_form.html.haml (71.5ms)
+I, [2018-10-31T10:00:49.446236 #14556]  INFO -- :   Rendered admin/settings/edit.html.haml within admin/layouts/application (76.8ms)
+I, [2018-10-31T10:00:51.209101 #14556]  INFO -- :   Rendered admin/layouts/_head.html.haml (1756.0ms)
+I, [2018-10-31T10:00:51.225715 #14556]  INFO -- :   Rendered admin/layouts/_navigation.html.haml (15.9ms)
+I, [2018-10-31T10:00:51.363665 #14556]  INFO -- :   Rendered admin/layouts/_sidebar.html.haml (137.2ms)
+I, [2018-10-31T10:00:51.366580 #14556]  INFO -- :   Rendered admin/layouts/_messages.html.haml (2.1ms)
+I, [2018-10-31T10:00:51.372803 #14556]  INFO -- :   Rendered admin/layouts/_preloader.html.haml (5.4ms)
+I, [2018-10-31T10:00:51.375290 #14556]  INFO -- :   Rendered admin/layouts/_footer.html.haml (1.8ms)
+I, [2018-10-31T10:00:51.379350 #14556]  INFO -- :   Rendered admin/layouts/_keppler_boolean_script.haml (2.8ms)
+I, [2018-10-31T10:00:51.379975 #14556]  INFO -- : Completed 200 OK in 2186ms (Views: 2008.9ms | ActiveRecord: 40.3ms)
+I, [2018-10-31T10:00:51.777585 #14556]  INFO -- : Started GET "/admin/settings/appearance" for 127.0.0.1 at 2018-10-31 10:00:51 -0400
+I, [2018-10-31T10:00:51.778828 #14556]  INFO -- : Processing by Admin::SettingsController#edit as HTML
+I, [2018-10-31T10:00:51.779031 #14556]  INFO -- :   Parameters: {"config"=>"appearance"}
+I, [2018-10-31T10:00:51.781216 #14556]  INFO -- : Started GET "/assets/admin/profile-menu.jpg" for 127.0.0.1 at 2018-10-31 10:00:51 -0400
+I, [2018-10-31T10:00:51.790395 #14556]  INFO -- : Started GET "/assetsadmin/fonts-and-icons/fonts/Simple-Line-Icons.woff2?v=2.4.0" for 127.0.0.1 at 2018-10-31 10:00:51 -0400
+I, [2018-10-31T10:00:51.791685 #14556]  INFO -- : Started GET "/assets/admin/fonts-and-icons/ZXuke1cDvLCKLDcimxB44_lu.woff2" for 127.0.0.1 at 2018-10-31 10:00:51 -0400
+I, [2018-10-31T10:00:51.813668 #14556]  INFO -- :   Rendering admin/settings/edit.html.haml within admin/layouts/application
+I, [2018-10-31T10:00:51.817882 #14556]  INFO -- :   Rendered admin/settings/components/_preview.html.haml (0.4ms)
+I, [2018-10-31T10:00:51.825048 #14556]  INFO -- :   Rendered admin/settings/fields/_appearance.html.haml (9.5ms)
+I, [2018-10-31T10:00:51.825761 #14556]  INFO -- :   Rendered admin/settings/_form.html.haml (10.9ms)
+I, [2018-10-31T10:00:51.825920 #14556]  INFO -- :   Rendered admin/settings/edit.html.haml within admin/layouts/application (12.1ms)
+I, [2018-10-31T10:00:51.829167 #14556]  INFO -- :   Rendered admin/layouts/_head.html.haml (2.9ms)
+I, [2018-10-31T10:00:51.835122 #14556]  INFO -- :   Rendered admin/layouts/_navigation.html.haml (5.2ms)
+I, [2018-10-31T10:00:51.859371 #14556]  INFO -- :   Rendered admin/layouts/_sidebar.html.haml (23.9ms)
+I, [2018-10-31T10:00:51.859762 #14556]  INFO -- :   Rendered admin/layouts/_messages.html.haml (0.1ms)
+I, [2018-10-31T10:00:51.860164 #14556]  INFO -- :   Rendered admin/layouts/_preloader.html.haml (0.2ms)
+I, [2018-10-31T10:00:51.860421 #14556]  INFO -- :   Rendered admin/layouts/_footer.html.haml (0.1ms)
+I, [2018-10-31T10:00:51.860643 #14556]  INFO -- :   Rendered admin/layouts/_keppler_boolean_script.haml (0.0ms)
+I, [2018-10-31T10:00:51.861010 #14556]  INFO -- : Completed 200 OK in 82ms (Views: 46.5ms | ActiveRecord: 16.2ms)
+I, [2018-10-31T10:00:52.525872 #14556]  INFO -- : Started GET "/assets/admin/favicon-8502ac8dee08af63f06b51ba4bfe7d73ad822453cd728df71ea061669dfda46d.png" for 127.0.0.1 at 2018-10-31 10:00:52 -0400
+I, [2018-10-31T10:01:37.154208 #14556]  INFO -- : Started GET "/admin/settings/appearance" for 127.0.0.1 at 2018-10-31 10:01:37 -0400
+I, [2018-10-31T10:01:37.156181 #14556]  INFO -- : Processing by Admin::SettingsController#edit as HTML
+I, [2018-10-31T10:01:37.156375 #14556]  INFO -- :   Parameters: {"config"=>"appearance"}
+I, [2018-10-31T10:01:37.191392 #14556]  INFO -- :   Rendering admin/settings/edit.html.haml within admin/layouts/application
+I, [2018-10-31T10:01:37.197929 #14556]  INFO -- :   Rendered admin/settings/components/_preview.html.haml (0.7ms)
+I, [2018-10-31T10:01:37.203818 #14556]  INFO -- :   Rendered admin/settings/fields/_appearance.html.haml (10.1ms)
+I, [2018-10-31T10:01:37.204459 #14556]  INFO -- :   Rendered admin/settings/_form.html.haml (11.6ms)
+I, [2018-10-31T10:01:37.204639 #14556]  INFO -- :   Rendered admin/settings/edit.html.haml within admin/layouts/application (13.0ms)
+I, [2018-10-31T10:01:37.207061 #14556]  INFO -- :   Rendered admin/layouts/_head.html.haml (2.1ms)
+I, [2018-10-31T10:01:37.213178 #14556]  INFO -- :   Rendered admin/layouts/_navigation.html.haml (5.6ms)
+I, [2018-10-31T10:01:37.229025 #14556]  INFO -- :   Rendered admin/layouts/_sidebar.html.haml (15.6ms)
+I, [2018-10-31T10:01:37.229360 #14556]  INFO -- :   Rendered admin/layouts/_messages.html.haml (0.1ms)
+I, [2018-10-31T10:01:37.229699 #14556]  INFO -- :   Rendered admin/layouts/_preloader.html.haml (0.2ms)
+I, [2018-10-31T10:01:37.229902 #14556]  INFO -- :   Rendered admin/layouts/_footer.html.haml (0.0ms)
+I, [2018-10-31T10:01:37.230129 #14556]  INFO -- :   Rendered admin/layouts/_keppler_boolean_script.haml (0.0ms)
+I, [2018-10-31T10:01:37.230420 #14556]  INFO -- : Completed 200 OK in 74ms (Views: 38.7ms | ActiveRecord: 9.5ms)
+I, [2018-10-31T10:01:37.262961 #14556]  INFO -- : Started GET "/admin/settings/appearance" for 127.0.0.1 at 2018-10-31 10:01:37 -0400
+I, [2018-10-31T10:01:37.264234 #14556]  INFO -- : Processing by Admin::SettingsController#edit as HTML
+I, [2018-10-31T10:01:37.264357 #14556]  INFO -- :   Parameters: {"config"=>"appearance"}
+I, [2018-10-31T10:01:37.284713 #14556]  INFO -- :   Rendering admin/settings/edit.html.haml within admin/layouts/application
+I, [2018-10-31T10:01:37.287725 #14556]  INFO -- :   Rendered admin/settings/components/_preview.html.haml (0.2ms)
+I, [2018-10-31T10:01:37.291516 #14556]  INFO -- :   Rendered admin/settings/fields/_appearance.html.haml (5.5ms)
+I, [2018-10-31T10:01:37.292003 #14556]  INFO -- :   Rendered admin/settings/_form.html.haml (6.4ms)
+I, [2018-10-31T10:01:37.292106 #14556]  INFO -- :   Rendered admin/settings/edit.html.haml within admin/layouts/application (7.3ms)
+I, [2018-10-31T10:01:37.294048 #14556]  INFO -- :   Rendered admin/layouts/_head.html.haml (1.7ms)
+I, [2018-10-31T10:01:37.299904 #14556]  INFO -- :   Rendered admin/layouts/_navigation.html.haml (5.4ms)
+I, [2018-10-31T10:01:37.339213 #14556]  INFO -- :   Rendered admin/layouts/_sidebar.html.haml (39.0ms)
+I, [2018-10-31T10:01:37.339656 #14556]  INFO -- :   Rendered admin/layouts/_messages.html.haml (0.1ms)
+I, [2018-10-31T10:01:37.340000 #14556]  INFO -- :   Rendered admin/layouts/_preloader.html.haml (0.2ms)
+I, [2018-10-31T10:01:37.340216 #14556]  INFO -- :   Rendered admin/layouts/_footer.html.haml (0.0ms)
+I, [2018-10-31T10:01:37.340376 #14556]  INFO -- :   Rendered admin/layouts/_keppler_boolean_script.haml (0.0ms)
+I, [2018-10-31T10:01:37.340676 #14556]  INFO -- : Completed 200 OK in 76ms (Views: 55.2ms | ActiveRecord: 5.8ms)
+I, [2018-10-31T10:01:39.674562 #14556]  INFO -- : Started GET "/admin/settings/basic_information" for 127.0.0.1 at 2018-10-31 10:01:39 -0400
+I, [2018-10-31T10:01:39.676018 #14556]  INFO -- : Processing by Admin::SettingsController#edit as HTML
+I, [2018-10-31T10:01:39.676155 #14556]  INFO -- :   Parameters: {"config"=>"basic_information"}
+I, [2018-10-31T10:01:39.701066 #14556]  INFO -- :   Rendering admin/settings/edit.html.haml within admin/layouts/application
+I, [2018-10-31T10:01:39.754806 #14556]  INFO -- :   Rendered admin/settings/fields/_basic_information.html.haml (51.7ms)
+I, [2018-10-31T10:01:39.755338 #14556]  INFO -- :   Rendered admin/settings/_form.html.haml (53.4ms)
+I, [2018-10-31T10:01:39.755444 #14556]  INFO -- :   Rendered admin/settings/edit.html.haml within admin/layouts/application (54.2ms)
+I, [2018-10-31T10:01:39.756973 #14556]  INFO -- :   Rendered admin/layouts/_head.html.haml (1.3ms)
+I, [2018-10-31T10:01:39.761307 #14556]  INFO -- :   Rendered admin/layouts/_navigation.html.haml (4.1ms)
+I, [2018-10-31T10:01:39.776188 #14556]  INFO -- :   Rendered admin/layouts/_sidebar.html.haml (14.7ms)
+I, [2018-10-31T10:01:39.776486 #14556]  INFO -- :   Rendered admin/layouts/_messages.html.haml (0.1ms)
+I, [2018-10-31T10:01:39.776778 #14556]  INFO -- :   Rendered admin/layouts/_preloader.html.haml (0.1ms)
+I, [2018-10-31T10:01:39.776936 #14556]  INFO -- :   Rendered admin/layouts/_footer.html.haml (0.0ms)
+I, [2018-10-31T10:01:39.777103 #14556]  INFO -- :   Rendered admin/layouts/_keppler_boolean_script.haml (0.0ms)
+I, [2018-10-31T10:01:39.777372 #14556]  INFO -- : Completed 200 OK in 101ms (Views: 75.8ms | ActiveRecord: 7.5ms)
+I, [2018-10-31T10:01:41.281568 #14556]  INFO -- : Started GET "/admin/settings/appearance" for 127.0.0.1 at 2018-10-31 10:01:41 -0400
+I, [2018-10-31T10:01:41.283126 #14556]  INFO -- : Processing by Admin::SettingsController#edit as HTML
+I, [2018-10-31T10:01:41.283292 #14556]  INFO -- :   Parameters: {"config"=>"appearance"}
+I, [2018-10-31T10:01:41.310444 #14556]  INFO -- :   Rendering admin/settings/edit.html.haml within admin/layouts/application
+I, [2018-10-31T10:01:41.315180 #14556]  INFO -- :   Rendered admin/settings/components/_preview.html.haml (0.8ms)
+I, [2018-10-31T10:01:41.322046 #14556]  INFO -- :   Rendered admin/settings/fields/_appearance.html.haml (9.8ms)
+I, [2018-10-31T10:01:41.322846 #14556]  INFO -- :   Rendered admin/settings/_form.html.haml (11.3ms)
+I, [2018-10-31T10:01:41.323033 #14556]  INFO -- :   Rendered admin/settings/edit.html.haml within admin/layouts/application (12.4ms)
+I, [2018-10-31T10:01:41.325544 #14556]  INFO -- :   Rendered admin/layouts/_head.html.haml (2.2ms)
+I, [2018-10-31T10:01:41.329800 #14556]  INFO -- :   Rendered admin/layouts/_navigation.html.haml (3.9ms)
+I, [2018-10-31T10:01:41.359615 #14556]  INFO -- :   Rendered admin/layouts/_sidebar.html.haml (29.4ms)
+I, [2018-10-31T10:01:41.360107 #14556]  INFO -- :   Rendered admin/layouts/_messages.html.haml (0.1ms)
+I, [2018-10-31T10:01:41.360626 #14556]  INFO -- :   Rendered admin/layouts/_preloader.html.haml (0.2ms)
+I, [2018-10-31T10:01:41.360934 #14556]  INFO -- :   Rendered admin/layouts/_footer.html.haml (0.1ms)
+I, [2018-10-31T10:01:41.361193 #14556]  INFO -- :   Rendered admin/layouts/_keppler_boolean_script.haml (0.1ms)
+I, [2018-10-31T10:01:41.361614 #14556]  INFO -- : Completed 200 OK in 78ms (Views: 49.7ms | ActiveRecord: 8.6ms)
+I, [2018-10-31T10:01:41.393446 #14556]  INFO -- : Started GET "/admin/settings/appearance" for 127.0.0.1 at 2018-10-31 10:01:41 -0400
+I, [2018-10-31T10:01:41.394614 #14556]  INFO -- : Processing by Admin::SettingsController#edit as HTML
+I, [2018-10-31T10:01:41.394704 #14556]  INFO -- :   Parameters: {"config"=>"appearance"}
+I, [2018-10-31T10:01:41.417154 #14556]  INFO -- :   Rendering admin/settings/edit.html.haml within admin/layouts/application
+I, [2018-10-31T10:01:41.422242 #14556]  INFO -- :   Rendered admin/settings/components/_preview.html.haml (0.3ms)
+I, [2018-10-31T10:01:41.426062 #14556]  INFO -- :   Rendered admin/settings/fields/_appearance.html.haml (6.7ms)
+I, [2018-10-31T10:01:41.426661 #14556]  INFO -- :   Rendered admin/settings/_form.html.haml (8.2ms)
+I, [2018-10-31T10:01:41.426785 #14556]  INFO -- :   Rendered admin/settings/edit.html.haml within admin/layouts/application (9.5ms)
+I, [2018-10-31T10:01:41.430407 #14556]  INFO -- :   Rendered admin/layouts/_head.html.haml (3.3ms)
+I, [2018-10-31T10:01:41.434220 #14556]  INFO -- :   Rendered admin/layouts/_navigation.html.haml (3.4ms)
+I, [2018-10-31T10:01:41.459328 #14556]  INFO -- :   Rendered admin/layouts/_sidebar.html.haml (24.7ms)
+I, [2018-10-31T10:01:41.460247 #14556]  INFO -- :   Rendered admin/layouts/_messages.html.haml (0.2ms)
+I, [2018-10-31T10:01:41.460921 #14556]  INFO -- :   Rendered admin/layouts/_preloader.html.haml (0.3ms)
+I, [2018-10-31T10:01:41.461136 #14556]  INFO -- :   Rendered admin/layouts/_footer.html.haml (0.0ms)
+I, [2018-10-31T10:01:41.461301 #14556]  INFO -- :   Rendered admin/layouts/_keppler_boolean_script.haml (0.0ms)
+I, [2018-10-31T10:01:41.461582 #14556]  INFO -- : Completed 200 OK in 67ms (Views: 43.6ms | ActiveRecord: 5.8ms)
+I, [2018-10-31T10:02:16.132696 #14556]  INFO -- : Started GET "/admin/settings/appearance" for 127.0.0.1 at 2018-10-31 10:02:16 -0400
+I, [2018-10-31T10:02:16.133918 #14556]  INFO -- : Processing by Admin::SettingsController#edit as HTML
+I, [2018-10-31T10:02:16.134046 #14556]  INFO -- :   Parameters: {"config"=>"appearance"}
+I, [2018-10-31T10:02:16.157615 #14556]  INFO -- :   Rendering admin/settings/edit.html.haml within admin/layouts/application
+I, [2018-10-31T10:02:16.160184 #14556]  INFO -- :   Rendered admin/settings/components/_preview.html.haml (0.2ms)
+I, [2018-10-31T10:02:16.163283 #14556]  INFO -- :   Rendered admin/settings/fields/_appearance.html.haml (4.5ms)
+I, [2018-10-31T10:02:16.163682 #14556]  INFO -- :   Rendered admin/settings/_form.html.haml (5.3ms)
+I, [2018-10-31T10:02:16.163768 #14556]  INFO -- :   Rendered admin/settings/edit.html.haml within admin/layouts/application (6.0ms)
+I, [2018-10-31T10:02:16.165142 #14556]  INFO -- :   Rendered admin/layouts/_head.html.haml (1.2ms)
+I, [2018-10-31T10:02:16.169642 #14556]  INFO -- :   Rendered admin/layouts/_navigation.html.haml (4.2ms)
+I, [2018-10-31T10:02:16.184780 #14556]  INFO -- :   Rendered admin/layouts/_sidebar.html.haml (14.6ms)
+I, [2018-10-31T10:02:16.185091 #14556]  INFO -- :   Rendered admin/layouts/_messages.html.haml (0.1ms)
+I, [2018-10-31T10:02:16.185400 #14556]  INFO -- :   Rendered admin/layouts/_preloader.html.haml (0.1ms)
+I, [2018-10-31T10:02:16.185602 #14556]  INFO -- :   Rendered admin/layouts/_footer.html.haml (0.0ms)
+I, [2018-10-31T10:02:16.185790 #14556]  INFO -- :   Rendered admin/layouts/_keppler_boolean_script.haml (0.0ms)
+I, [2018-10-31T10:02:16.186082 #14556]  INFO -- : Completed 200 OK in 52ms (Views: 27.4ms | ActiveRecord: 7.1ms)
+I, [2018-10-31T10:02:19.825102 #14556]  INFO -- : Started GET "/assetsadmin/fonts-and-icons/fonts/Simple-Line-Icons.woff2?v=2.4.0" for 127.0.0.1 at 2018-10-31 10:02:19 -0400
+I, [2018-10-31T10:02:19.825343 #14556]  INFO -- : Started GET "/assets/admin/fonts-and-icons/ZXuke1cDvLCKLDcimxB44_lu.woff2" for 127.0.0.1 at 2018-10-31 10:02:19 -0400
+I, [2018-10-31T10:02:19.825748 #14556]  INFO -- : Started GET "/assets/admin/profile-menu.jpg" for 127.0.0.1 at 2018-10-31 10:02:19 -0400
+I, [2018-10-31T10:02:20.024073 #14556]  INFO -- : Started GET "/admin/settings/appearance" for 127.0.0.1 at 2018-10-31 10:02:20 -0400
+I, [2018-10-31T10:02:20.363853 #14556]  INFO -- : Processing by Admin::SettingsController#edit as HTML
+I, [2018-10-31T10:02:20.364869 #14556]  INFO -- :   Parameters: {"config"=>"appearance"}
+I, [2018-10-31T10:02:20.536065 #14556]  INFO -- :   Rendering admin/settings/edit.html.haml within admin/layouts/application
+I, [2018-10-31T10:02:20.580083 #14556]  INFO -- :   Rendered admin/settings/components/_preview.html.haml (15.1ms)
+I, [2018-10-31T10:02:20.601753 #14556]  INFO -- :   Rendered admin/settings/fields/_appearance.html.haml (53.1ms)
+I, [2018-10-31T10:02:20.602359 #14556]  INFO -- :   Rendered admin/settings/_form.html.haml (60.1ms)
+I, [2018-10-31T10:02:20.602466 #14556]  INFO -- :   Rendered admin/settings/edit.html.haml within admin/layouts/application (66.2ms)
+I, [2018-10-31T10:02:21.936348 #14556]  INFO -- :   Rendered admin/layouts/_head.html.haml (1325.9ms)
+I, [2018-10-31T10:02:21.955114 #14556]  INFO -- :   Rendered admin/layouts/_navigation.html.haml (17.9ms)
+I, [2018-10-31T10:02:22.100239 #14556]  INFO -- :   Rendered admin/layouts/_sidebar.html.haml (144.5ms)
+I, [2018-10-31T10:02:22.102573 #14556]  INFO -- :   Rendered admin/layouts/_messages.html.haml (1.7ms)
+I, [2018-10-31T10:02:22.107336 #14556]  INFO -- :   Rendered admin/layouts/_preloader.html.haml (4.1ms)
+I, [2018-10-31T10:02:22.109279 #14556]  INFO -- :   Rendered admin/layouts/_footer.html.haml (1.3ms)
+I, [2018-10-31T10:02:22.111686 #14556]  INFO -- :   Rendered admin/layouts/_keppler_boolean_script.haml (1.6ms)
+I, [2018-10-31T10:02:22.112069 #14556]  INFO -- : Completed 200 OK in 1747ms (Views: 1573.4ms | ActiveRecord: 44.3ms)
+I, [2018-10-31T10:02:22.135429 #14556]  INFO -- : Started GET "/assets/admin/favicon-8502ac8dee08af63f06b51ba4bfe7d73ad822453cd728df71ea061669dfda46d.png" for 127.0.0.1 at 2018-10-31 10:02:22 -0400
+I, [2018-10-31T10:02:28.293584 #14556]  INFO -- : Started GET "/admin/settings/appearance" for 127.0.0.1 at 2018-10-31 10:02:28 -0400
+I, [2018-10-31T10:02:28.295340 #14556]  INFO -- : Processing by Admin::SettingsController#edit as HTML
+I, [2018-10-31T10:02:28.295533 #14556]  INFO -- :   Parameters: {"config"=>"appearance"}
+I, [2018-10-31T10:02:28.322634 #14556]  INFO -- :   Rendering admin/settings/edit.html.haml within admin/layouts/application
+I, [2018-10-31T10:02:28.328057 #14556]  INFO -- :   Rendered admin/settings/components/_preview.html.haml (0.7ms)
+I, [2018-10-31T10:02:28.331746 #14556]  INFO -- :   Rendered admin/settings/fields/_appearance.html.haml (7.1ms)
+I, [2018-10-31T10:02:28.332156 #14556]  INFO -- :   Rendered admin/settings/_form.html.haml (8.3ms)
+I, [2018-10-31T10:02:28.332243 #14556]  INFO -- :   Rendered admin/settings/edit.html.haml within admin/layouts/application (9.4ms)
+I, [2018-10-31T10:02:28.333691 #14556]  INFO -- :   Rendered admin/layouts/_head.html.haml (1.3ms)
+I, [2018-10-31T10:02:28.336801 #14556]  INFO -- :   Rendered admin/layouts/_navigation.html.haml (2.9ms)
+I, [2018-10-31T10:02:28.350944 #14556]  INFO -- :   Rendered admin/layouts/_sidebar.html.haml (14.0ms)
+I, [2018-10-31T10:02:28.351234 #14556]  INFO -- :   Rendered admin/layouts/_messages.html.haml (0.1ms)
+I, [2018-10-31T10:02:28.351534 #14556]  INFO -- :   Rendered admin/layouts/_preloader.html.haml (0.1ms)
+I, [2018-10-31T10:02:28.351699 #14556]  INFO -- :   Rendered admin/layouts/_footer.html.haml (0.0ms)
+I, [2018-10-31T10:02:28.351852 #14556]  INFO -- :   Rendered admin/layouts/_keppler_boolean_script.haml (0.0ms)
+I, [2018-10-31T10:02:28.352116 #14556]  INFO -- : Completed 200 OK in 56ms (Views: 29.2ms | ActiveRecord: 8.0ms)
+I, [2018-10-31T10:02:28.377634 #14556]  INFO -- : Started GET "/admin/settings/appearance" for 127.0.0.1 at 2018-10-31 10:02:28 -0400
+I, [2018-10-31T10:02:28.378547 #14556]  INFO -- : Processing by Admin::SettingsController#edit as HTML
+I, [2018-10-31T10:02:28.378626 #14556]  INFO -- :   Parameters: {"config"=>"appearance"}
+I, [2018-10-31T10:02:28.396577 #14556]  INFO -- :   Rendering admin/settings/edit.html.haml within admin/layouts/application
+I, [2018-10-31T10:02:28.403227 #14556]  INFO -- :   Rendered admin/settings/components/_preview.html.haml (0.4ms)
+I, [2018-10-31T10:02:28.410442 #14556]  INFO -- :   Rendered admin/settings/fields/_appearance.html.haml (9.9ms)
+I, [2018-10-31T10:02:28.411195 #14556]  INFO -- :   Rendered admin/settings/_form.html.haml (11.5ms)
+I, [2018-10-31T10:02:28.411397 #14556]  INFO -- :   Rendered admin/settings/edit.html.haml within admin/layouts/application (14.6ms)
+I, [2018-10-31T10:02:28.413211 #14556]  INFO -- :   Rendered admin/layouts/_head.html.haml (1.5ms)
+I, [2018-10-31T10:02:28.418506 #14556]  INFO -- :   Rendered admin/layouts/_navigation.html.haml (5.0ms)
+I, [2018-10-31T10:02:28.440214 #14556]  INFO -- :   Rendered admin/layouts/_sidebar.html.haml (21.4ms)
+I, [2018-10-31T10:02:28.440571 #14556]  INFO -- :   Rendered admin/layouts/_messages.html.haml (0.1ms)
+I, [2018-10-31T10:02:28.440899 #14556]  INFO -- :   Rendered admin/layouts/_preloader.html.haml (0.2ms)
+I, [2018-10-31T10:02:28.441126 #14556]  INFO -- :   Rendered admin/layouts/_footer.html.haml (0.1ms)
+I, [2018-10-31T10:02:28.441321 #14556]  INFO -- :   Rendered admin/layouts/_keppler_boolean_script.haml (0.0ms)
+I, [2018-10-31T10:02:28.441626 #14556]  INFO -- : Completed 200 OK in 63ms (Views: 44.5ms | ActiveRecord: 5.1ms)
+I, [2018-10-31T10:02:59.338975 #14556]  INFO -- : Started GET "/admin/settings/appearance" for 127.0.0.1 at 2018-10-31 10:02:59 -0400
+I, [2018-10-31T10:02:59.371301 #14556]  INFO -- : Processing by Admin::SettingsController#edit as HTML
+I, [2018-10-31T10:02:59.371535 #14556]  INFO -- :   Parameters: {"config"=>"appearance"}
+I, [2018-10-31T10:02:59.596592 #14556]  INFO -- :   Rendering admin/settings/edit.html.haml within admin/layouts/application
+I, [2018-10-31T10:02:59.632818 #14556]  INFO -- :   Rendered admin/settings/components/_preview.html.haml (12.7ms)
+I, [2018-10-31T10:02:59.653234 #14556]  INFO -- :   Rendered admin/settings/fields/_appearance.html.haml (45.7ms)
+I, [2018-10-31T10:02:59.653756 #14556]  INFO -- :   Rendered admin/settings/_form.html.haml (52.4ms)
+I, [2018-10-31T10:02:59.653891 #14556]  INFO -- :   Rendered admin/settings/edit.html.haml within admin/layouts/application (57.2ms)
+I, [2018-10-31T10:03:01.250440 #14556]  INFO -- :   Rendered admin/layouts/_head.html.haml (1590.3ms)
+I, [2018-10-31T10:03:01.274351 #14556]  INFO -- :   Rendered admin/layouts/_navigation.html.haml (23.2ms)
+I, [2018-10-31T10:03:01.451568 #14556]  INFO -- :   Rendered admin/layouts/_sidebar.html.haml (176.5ms)
+I, [2018-10-31T10:03:01.454085 #14556]  INFO -- :   Rendered admin/layouts/_messages.html.haml (1.7ms)
+I, [2018-10-31T10:03:01.458472 #14556]  INFO -- :   Rendered admin/layouts/_preloader.html.haml (3.7ms)
+I, [2018-10-31T10:03:01.460210 #14556]  INFO -- :   Rendered admin/layouts/_footer.html.haml (1.1ms)
+I, [2018-10-31T10:03:01.462487 #14556]  INFO -- :   Rendered admin/layouts/_keppler_boolean_script.haml (1.6ms)
+I, [2018-10-31T10:03:01.462845 #14556]  INFO -- : Completed 200 OK in 2091ms (Views: 1862.9ms | ActiveRecord: 61.8ms)
+I, [2018-10-31T10:03:01.782145 #14556]  INFO -- : Started GET "/assetsadmin/fonts-and-icons/fonts/Simple-Line-Icons.woff2?v=2.4.0" for 127.0.0.1 at 2018-10-31 10:03:01 -0400
+I, [2018-10-31T10:03:01.783433 #14556]  INFO -- : Started GET "/assets/admin/fonts-and-icons/ZXuke1cDvLCKLDcimxB44_lu.woff2" for 127.0.0.1 at 2018-10-31 10:03:01 -0400
+I, [2018-10-31T10:03:01.814078 #14556]  INFO -- : Started GET "/assets/admin/profile-menu.jpg" for 127.0.0.1 at 2018-10-31 10:03:01 -0400
+I, [2018-10-31T10:03:01.817589 #14556]  INFO -- : Started GET "/admin/settings/appearance" for 127.0.0.1 at 2018-10-31 10:03:01 -0400
+I, [2018-10-31T10:03:01.819468 #14556]  INFO -- : Processing by Admin::SettingsController#edit as HTML
+I, [2018-10-31T10:03:01.819637 #14556]  INFO -- :   Parameters: {"config"=>"appearance"}
+I, [2018-10-31T10:03:01.858905 #14556]  INFO -- :   Rendering admin/settings/edit.html.haml within admin/layouts/application
+I, [2018-10-31T10:03:01.864704 #14556]  INFO -- :   Rendered admin/settings/components/_preview.html.haml (0.5ms)
+I, [2018-10-31T10:03:01.874037 #14556]  INFO -- :   Rendered admin/settings/fields/_appearance.html.haml (12.6ms)
+I, [2018-10-31T10:03:01.874962 #14556]  INFO -- :   Rendered admin/settings/_form.html.haml (14.5ms)
+I, [2018-10-31T10:03:01.875179 #14556]  INFO -- :   Rendered admin/settings/edit.html.haml within admin/layouts/application (16.0ms)
+I, [2018-10-31T10:03:01.880367 #14556]  INFO -- :   Rendered admin/layouts/_head.html.haml (4.7ms)
+I, [2018-10-31T10:03:01.888258 #14556]  INFO -- :   Rendered admin/layouts/_navigation.html.haml (7.3ms)
+I, [2018-10-31T10:03:01.920605 #14556]  INFO -- :   Rendered admin/layouts/_sidebar.html.haml (31.9ms)
+I, [2018-10-31T10:03:01.921229 #14556]  INFO -- :   Rendered admin/layouts/_messages.html.haml (0.2ms)
+I, [2018-10-31T10:03:01.921926 #14556]  INFO -- :   Rendered admin/layouts/_preloader.html.haml (0.3ms)
+I, [2018-10-31T10:03:01.922424 #14556]  INFO -- :   Rendered admin/layouts/_footer.html.haml (0.1ms)
+I, [2018-10-31T10:03:01.922827 #14556]  INFO -- :   Rendered admin/layouts/_keppler_boolean_script.haml (0.1ms)
+I, [2018-10-31T10:03:01.923346 #14556]  INFO -- : Completed 200 OK in 103ms (Views: 63.5ms | ActiveRecord: 15.7ms)
+I, [2018-10-31T10:03:02.211400 #14556]  INFO -- : Started GET "/assets/admin/favicon-8502ac8dee08af63f06b51ba4bfe7d73ad822453cd728df71ea061669dfda46d.png" for 127.0.0.1 at 2018-10-31 10:03:02 -0400
+I, [2018-10-31T10:03:04.840418 #14556]  INFO -- : Started GET "/admin/settings/appearance" for 127.0.0.1 at 2018-10-31 10:03:04 -0400
+I, [2018-10-31T10:03:04.842021 #14556]  INFO -- : Processing by Admin::SettingsController#edit as HTML
+I, [2018-10-31T10:03:04.842158 #14556]  INFO -- :   Parameters: {"config"=>"appearance"}
+I, [2018-10-31T10:03:04.871780 #14556]  INFO -- :   Rendering admin/settings/edit.html.haml within admin/layouts/application
+I, [2018-10-31T10:03:04.875833 #14556]  INFO -- :   Rendered admin/settings/components/_preview.html.haml (0.3ms)
+I, [2018-10-31T10:03:04.880171 #14556]  INFO -- :   Rendered admin/settings/fields/_appearance.html.haml (6.8ms)
+I, [2018-10-31T10:03:04.880715 #14556]  INFO -- :   Rendered admin/settings/_form.html.haml (7.9ms)
+I, [2018-10-31T10:03:04.880830 #14556]  INFO -- :   Rendered admin/settings/edit.html.haml within admin/layouts/application (8.9ms)
+I, [2018-10-31T10:03:04.882525 #14556]  INFO -- :   Rendered admin/layouts/_head.html.haml (1.5ms)
+I, [2018-10-31T10:03:04.887674 #14556]  INFO -- :   Rendered admin/layouts/_navigation.html.haml (4.9ms)
+I, [2018-10-31T10:03:04.901770 #14556]  INFO -- :   Rendered admin/layouts/_sidebar.html.haml (13.8ms)
+I, [2018-10-31T10:03:04.902220 #14556]  INFO -- :   Rendered admin/layouts/_messages.html.haml (0.1ms)
+I, [2018-10-31T10:03:04.902741 #14556]  INFO -- :   Rendered admin/layouts/_preloader.html.haml (0.3ms)
+I, [2018-10-31T10:03:04.903016 #14556]  INFO -- :   Rendered admin/layouts/_footer.html.haml (0.1ms)
+I, [2018-10-31T10:03:04.903402 #14556]  INFO -- :   Rendered admin/layouts/_keppler_boolean_script.haml (0.1ms)
+I, [2018-10-31T10:03:04.904290 #14556]  INFO -- : Completed 200 OK in 62ms (Views: 31.7ms | ActiveRecord: 12.9ms)
+I, [2018-10-31T10:03:05.243645 #14556]  INFO -- : Started GET "/assets/admin/fonts-and-icons/ZXuke1cDvLCKLDcimxB44_lu.woff2" for 127.0.0.1 at 2018-10-31 10:03:05 -0400
+I, [2018-10-31T10:03:05.246414 #14556]  INFO -- : Started GET "/assets/admin/profile-menu.jpg" for 127.0.0.1 at 2018-10-31 10:03:05 -0400
+I, [2018-10-31T10:03:05.246852 #14556]  INFO -- : Started GET "/assetsadmin/fonts-and-icons/fonts/Simple-Line-Icons.woff2?v=2.4.0" for 127.0.0.1 at 2018-10-31 10:03:05 -0400
+I, [2018-10-31T10:03:05.250200 #14556]  INFO -- : Started GET "/admin/settings/appearance" for 127.0.0.1 at 2018-10-31 10:03:05 -0400
+I, [2018-10-31T10:03:05.251666 #14556]  INFO -- : Processing by Admin::SettingsController#edit as HTML
+I, [2018-10-31T10:03:05.251813 #14556]  INFO -- :   Parameters: {"config"=>"appearance"}
+I, [2018-10-31T10:03:05.277547 #14556]  INFO -- :   Rendering admin/settings/edit.html.haml within admin/layouts/application
+I, [2018-10-31T10:03:05.280567 #14556]  INFO -- :   Rendered admin/settings/components/_preview.html.haml (0.2ms)
+I, [2018-10-31T10:03:05.286025 #14556]  INFO -- :   Rendered admin/settings/fields/_appearance.html.haml (6.9ms)
+I, [2018-10-31T10:03:05.286749 #14556]  INFO -- :   Rendered admin/settings/_form.html.haml (8.2ms)
+I, [2018-10-31T10:03:05.286910 #14556]  INFO -- :   Rendered admin/settings/edit.html.haml within admin/layouts/application (9.2ms)
+I, [2018-10-31T10:03:05.289278 #14556]  INFO -- :   Rendered admin/layouts/_head.html.haml (2.1ms)
+I, [2018-10-31T10:03:05.293364 #14556]  INFO -- :   Rendered admin/layouts/_navigation.html.haml (3.8ms)
+I, [2018-10-31T10:03:05.312099 #14556]  INFO -- :   Rendered admin/layouts/_sidebar.html.haml (18.5ms)
+I, [2018-10-31T10:03:05.312551 #14556]  INFO -- :   Rendered admin/layouts/_messages.html.haml (0.1ms)
+I, [2018-10-31T10:03:05.313075 #14556]  INFO -- :   Rendered admin/layouts/_preloader.html.haml (0.2ms)
+I, [2018-10-31T10:03:05.313382 #14556]  INFO -- :   Rendered admin/layouts/_footer.html.haml (0.1ms)
+I, [2018-10-31T10:03:05.313640 #14556]  INFO -- :   Rendered admin/layouts/_keppler_boolean_script.haml (0.1ms)
+I, [2018-10-31T10:03:05.314129 #14556]  INFO -- : Completed 200 OK in 62ms (Views: 36.1ms | ActiveRecord: 6.9ms)
+I, [2018-10-31T10:03:05.536061 #14556]  INFO -- : Started GET "/assets/admin/favicon-8502ac8dee08af63f06b51ba4bfe7d73ad822453cd728df71ea061669dfda46d.png" for 127.0.0.1 at 2018-10-31 10:03:05 -0400
+I, [2018-10-31T10:03:23.382667 #14556]  INFO -- : Started GET "/admin/frontend/views" for 127.0.0.1 at 2018-10-31 10:03:23 -0400
+I, [2018-10-31T10:03:23.405238 #14556]  INFO -- : Processing by KepplerFrontend::Admin::ViewsController#index as HTML
+I, [2018-10-31T10:03:23.421472 #14556]  INFO -- : Redirected to http://localhost:3000/admin
+I, [2018-10-31T10:03:23.421647 #14556]  INFO -- : Filter chain halted as :only_development rendered or redirected
+I, [2018-10-31T10:03:23.421787 #14556]  INFO -- : Completed 302 Found in 16ms (ActiveRecord: 3.9ms)
+I, [2018-10-31T10:03:23.433815 #14556]  INFO -- : Started GET "/admin" for 127.0.0.1 at 2018-10-31 10:03:23 -0400
+I, [2018-10-31T10:03:23.434936 #14556]  INFO -- : Processing by Admin::AdminController#root as HTML
+I, [2018-10-31T10:03:23.449438 #14556]  INFO -- : Redirected to http://localhost:3000/admin/dashboard
+I, [2018-10-31T10:03:23.449643 #14556]  INFO -- : Completed 302 Found in 15ms (ActiveRecord: 4.4ms)
+I, [2018-10-31T10:03:23.470695 #14556]  INFO -- : Started GET "/admin/dashboard" for 127.0.0.1 at 2018-10-31 10:03:23 -0400
+I, [2018-10-31T10:03:23.471818 #14556]  INFO -- : Processing by KepplerGaDashboard::DashboardController#analytics as HTML
+I, [2018-10-31T10:03:24.864798 #14556]  INFO -- :   Rendering rockets/keppler_ga_dashboard/app/views/keppler_ga_dashboard/dashboard/analytics.html.haml within keppler_ga_dashboard/admin/layouts/application
+I, [2018-10-31T10:03:24.922489 #14556]  INFO -- :   Rendered rockets/keppler_ga_dashboard/app/views/keppler_ga_dashboard/dashboard/analytics.html.haml within keppler_ga_dashboard/admin/layouts/application (57.5ms)
+I, [2018-10-31T10:03:24.934261 #14556]  INFO -- :   Rendered rockets/keppler_ga_dashboard/app/views/keppler_ga_dashboard/admin/layouts/_head.html.haml (4.1ms)
+I, [2018-10-31T10:03:24.953857 #14556]  INFO -- :   Rendered admin/layouts/_navigation.html.haml (18.8ms)
+I, [2018-10-31T10:03:24.968247 #14556]  INFO -- :   Rendered admin/layouts/_sidebar.html.haml (14.1ms)
+I, [2018-10-31T10:03:24.968583 #14556]  INFO -- :   Rendered admin/layouts/_messages.html.haml (0.1ms)
+I, [2018-10-31T10:03:24.968995 #14556]  INFO -- :   Rendered admin/layouts/_preloader.html.haml (0.2ms)
+I, [2018-10-31T10:03:24.969290 #14556]  INFO -- :   Rendered admin/layouts/_footer.html.haml (0.1ms)
+I, [2018-10-31T10:03:24.969474 #14556]  INFO -- :   Rendered admin/layouts/_keppler_boolean_script.haml (0.0ms)
+I, [2018-10-31T10:03:24.969797 #14556]  INFO -- : Completed 200 OK in 1498ms (Views: 102.7ms | ActiveRecord: 8.0ms)
+I, [2018-10-31T10:03:25.129951 #14556]  INFO -- : Started GET "/assets/keppler_ga_dashboard/view-selector2.js?body=1" for 127.0.0.1 at 2018-10-31 10:03:25 -0400
+I, [2018-10-31T10:03:25.131602 #14556]  INFO -- : Started GET "/assets/keppler_ga_dashboard/date-range-selector.self.js?body=1" for 127.0.0.1 at 2018-10-31 10:03:25 -0400
+I, [2018-10-31T10:03:25.225609 #14556]  INFO -- : Started GET "/assets/keppler_ga_dashboard/active-users.self.js?body=1" for 127.0.0.1 at 2018-10-31 10:03:25 -0400
+I, [2018-10-31T10:03:25.346146 #14556]  INFO -- : Started GET "/assetsadmin/fonts-and-icons/fonts/Simple-Line-Icons.woff2?v=2.4.0" for 127.0.0.1 at 2018-10-31 10:03:25 -0400
+I, [2018-10-31T10:03:25.352789 #14556]  INFO -- : Started GET "/assets/admin/fonts-and-icons/ZXuke1cDvLCKLDcimxB44_lu.woff2" for 127.0.0.1 at 2018-10-31 10:03:25 -0400
+I, [2018-10-31T10:03:28.651710 #14556]  INFO -- : Started GET "/admin/settings/basic_information" for 127.0.0.1 at 2018-10-31 10:03:28 -0400
+I, [2018-10-31T10:03:28.653181 #14556]  INFO -- : Processing by Admin::SettingsController#edit as HTML
+I, [2018-10-31T10:03:28.653317 #14556]  INFO -- :   Parameters: {"config"=>"basic_information"}
+I, [2018-10-31T10:03:28.680032 #14556]  INFO -- :   Rendering admin/settings/edit.html.haml within admin/layouts/application
+I, [2018-10-31T10:03:28.733899 #14556]  INFO -- :   Rendered admin/settings/fields/_basic_information.html.haml (50.7ms)
+I, [2018-10-31T10:03:28.734711 #14556]  INFO -- :   Rendered admin/settings/_form.html.haml (53.0ms)
+I, [2018-10-31T10:03:28.734885 #14556]  INFO -- :   Rendered admin/settings/edit.html.haml within admin/layouts/application (54.6ms)
+I, [2018-10-31T10:03:28.737595 #14556]  INFO -- :   Rendered admin/layouts/_head.html.haml (2.4ms)
+I, [2018-10-31T10:03:28.742283 #14556]  INFO -- :   Rendered admin/layouts/_navigation.html.haml (4.2ms)
+I, [2018-10-31T10:03:28.756743 #14556]  INFO -- :   Rendered admin/layouts/_sidebar.html.haml (14.1ms)
+I, [2018-10-31T10:03:28.757066 #14556]  INFO -- :   Rendered admin/layouts/_messages.html.haml (0.1ms)
+I, [2018-10-31T10:03:28.757453 #14556]  INFO -- :   Rendered admin/layouts/_preloader.html.haml (0.2ms)
+I, [2018-10-31T10:03:28.757681 #14556]  INFO -- :   Rendered admin/layouts/_footer.html.haml (0.1ms)
+I, [2018-10-31T10:03:28.757913 #14556]  INFO -- :   Rendered admin/layouts/_keppler_boolean_script.haml (0.0ms)
+I, [2018-10-31T10:03:28.758661 #14556]  INFO -- : Completed 200 OK in 105ms (Views: 77.6ms | ActiveRecord: 7.2ms)
+I, [2018-10-31T10:03:28.815534 #14556]  INFO -- : Started GET "/assets/admin/profile-menu.jpg" for 127.0.0.1 at 2018-10-31 10:03:28 -0400
+I, [2018-10-31T10:03:31.981705 #14556]  INFO -- : Started GET "/admin/settings/appearance" for 127.0.0.1 at 2018-10-31 10:03:31 -0400
+I, [2018-10-31T10:03:31.982713 #14556]  INFO -- : Processing by Admin::SettingsController#edit as HTML
+I, [2018-10-31T10:03:31.982815 #14556]  INFO -- :   Parameters: {"config"=>"appearance"}
+I, [2018-10-31T10:03:32.004297 #14556]  INFO -- :   Rendering admin/settings/edit.html.haml within admin/layouts/application
+I, [2018-10-31T10:03:32.007694 #14556]  INFO -- :   Rendered admin/settings/components/_preview.html.haml (0.3ms)
+I, [2018-10-31T10:03:32.011609 #14556]  INFO -- :   Rendered admin/settings/fields/_appearance.html.haml (5.7ms)
+I, [2018-10-31T10:03:32.012079 #14556]  INFO -- :   Rendered admin/settings/_form.html.haml (6.7ms)
+I, [2018-10-31T10:03:32.012187 #14556]  INFO -- :   Rendered admin/settings/edit.html.haml within admin/layouts/application (7.6ms)
+I, [2018-10-31T10:03:32.013896 #14556]  INFO -- :   Rendered admin/layouts/_head.html.haml (1.5ms)
+I, [2018-10-31T10:03:32.017641 #14556]  INFO -- :   Rendered admin/layouts/_navigation.html.haml (3.5ms)
+I, [2018-10-31T10:03:32.034173 #14556]  INFO -- :   Rendered admin/layouts/_sidebar.html.haml (16.3ms)
+I, [2018-10-31T10:03:32.034551 #14556]  INFO -- :   Rendered admin/layouts/_messages.html.haml (0.1ms)
+I, [2018-10-31T10:03:32.034874 #14556]  INFO -- :   Rendered admin/layouts/_preloader.html.haml (0.1ms)
+I, [2018-10-31T10:03:32.035114 #14556]  INFO -- :   Rendered admin/layouts/_footer.html.haml (0.0ms)
+I, [2018-10-31T10:03:32.035340 #14556]  INFO -- :   Rendered admin/layouts/_keppler_boolean_script.haml (0.0ms)
+I, [2018-10-31T10:03:32.035707 #14556]  INFO -- : Completed 200 OK in 53ms (Views: 30.8ms | ActiveRecord: 5.9ms)
+I, [2018-10-31T10:03:32.359151 #14556]  INFO -- : Started GET "/assets/admin/profile-menu.jpg" for 127.0.0.1 at 2018-10-31 10:03:32 -0400
+I, [2018-10-31T10:03:32.359509 #14556]  INFO -- : Started GET "/admin/settings/appearance" for 127.0.0.1 at 2018-10-31 10:03:32 -0400
+I, [2018-10-31T10:03:32.362659 #14556]  INFO -- : Processing by Admin::SettingsController#edit as HTML
+I, [2018-10-31T10:03:32.362789 #14556]  INFO -- :   Parameters: {"config"=>"appearance"}
+I, [2018-10-31T10:03:32.375465 #14556]  INFO -- : Started GET "/assetsadmin/fonts-and-icons/fonts/Simple-Line-Icons.woff2?v=2.4.0" for 127.0.0.1 at 2018-10-31 10:03:32 -0400
+I, [2018-10-31T10:03:32.396405 #14556]  INFO -- :   Rendering admin/settings/edit.html.haml within admin/layouts/application
+I, [2018-10-31T10:03:32.401816 #14556]  INFO -- :   Rendered admin/settings/components/_preview.html.haml (0.5ms)
+I, [2018-10-31T10:03:32.406117 #14556]  INFO -- :   Rendered admin/settings/fields/_appearance.html.haml (7.8ms)
+I, [2018-10-31T10:03:32.406674 #14556]  INFO -- :   Rendered admin/settings/_form.html.haml (9.1ms)
+I, [2018-10-31T10:03:32.407335 #14556]  INFO -- :   Rendered admin/settings/edit.html.haml within admin/layouts/application (10.8ms)
+I, [2018-10-31T10:03:32.409041 #14556]  INFO -- :   Rendered admin/layouts/_head.html.haml (1.4ms)
+I, [2018-10-31T10:03:32.413579 #14556]  INFO -- :   Rendered admin/layouts/_navigation.html.haml (4.2ms)
+I, [2018-10-31T10:03:32.407172 #14556]  INFO -- : Started GET "/assets/admin/fonts-and-icons/ZXuke1cDvLCKLDcimxB44_lu.woff2" for 127.0.0.1 at 2018-10-31 10:03:32 -0400
+I, [2018-10-31T10:03:32.442224 #14556]  INFO -- :   Rendered admin/layouts/_sidebar.html.haml (28.3ms)
+I, [2018-10-31T10:03:32.442756 #14556]  INFO -- :   Rendered admin/layouts/_messages.html.haml (0.2ms)
+I, [2018-10-31T10:03:32.443291 #14556]  INFO -- :   Rendered admin/layouts/_preloader.html.haml (0.3ms)
+I, [2018-10-31T10:03:32.443570 #14556]  INFO -- :   Rendered admin/layouts/_footer.html.haml (0.1ms)
+I, [2018-10-31T10:03:32.443846 #14556]  INFO -- :   Rendered admin/layouts/_keppler_boolean_script.haml (0.1ms)
+I, [2018-10-31T10:03:32.444263 #14556]  INFO -- : Completed 200 OK in 81ms (Views: 45.5ms | ActiveRecord: 16.1ms)
+I, [2018-10-31T10:03:48.905472 #14556]  INFO -- : Started GET "/admin/frontend/themes" for 127.0.0.1 at 2018-10-31 10:03:48 -0400
+I, [2018-10-31T10:03:48.906735 #14556]  INFO -- : Processing by KepplerFrontend::Admin::ThemesController#index as HTML
+I, [2018-10-31T10:03:48.922230 #14556]  INFO -- : Redirected to http://localhost:3000/admin
+I, [2018-10-31T10:03:48.922425 #14556]  INFO -- : Filter chain halted as :only_development rendered or redirected
+I, [2018-10-31T10:03:48.922595 #14556]  INFO -- : Completed 302 Found in 16ms (ActiveRecord: 3.6ms)
+I, [2018-10-31T10:03:48.964011 #14556]  INFO -- : Started GET "/admin" for 127.0.0.1 at 2018-10-31 10:03:48 -0400
+I, [2018-10-31T10:03:48.965209 #14556]  INFO -- : Processing by Admin::AdminController#root as HTML
+I, [2018-10-31T10:03:48.982960 #14556]  INFO -- : Redirected to http://localhost:3000/admin/dashboard
+I, [2018-10-31T10:03:48.983243 #14556]  INFO -- : Completed 302 Found in 18ms (ActiveRecord: 4.5ms)
+I, [2018-10-31T10:03:48.992661 #14556]  INFO -- : Started GET "/admin/dashboard" for 127.0.0.1 at 2018-10-31 10:03:48 -0400
+I, [2018-10-31T10:03:48.993772 #14556]  INFO -- : Processing by KepplerGaDashboard::DashboardController#analytics as HTML
+I, [2018-10-31T10:03:49.979349 #14556]  INFO -- :   Rendering rockets/keppler_ga_dashboard/app/views/keppler_ga_dashboard/dashboard/analytics.html.haml within keppler_ga_dashboard/admin/layouts/application
+I, [2018-10-31T10:03:49.984506 #14556]  INFO -- :   Rendered rockets/keppler_ga_dashboard/app/views/keppler_ga_dashboard/dashboard/analytics.html.haml within keppler_ga_dashboard/admin/layouts/application (4.9ms)
+I, [2018-10-31T10:03:49.986962 #14556]  INFO -- :   Rendered rockets/keppler_ga_dashboard/app/views/keppler_ga_dashboard/admin/layouts/_head.html.haml (1.9ms)
+I, [2018-10-31T10:03:49.991202 #14556]  INFO -- :   Rendered admin/layouts/_navigation.html.haml (4.0ms)
+I, [2018-10-31T10:03:50.007462 #14556]  INFO -- :   Rendered admin/layouts/_sidebar.html.haml (15.9ms)
+I, [2018-10-31T10:03:50.007870 #14556]  INFO -- :   Rendered admin/layouts/_messages.html.haml (0.1ms)
+I, [2018-10-31T10:03:50.008212 #14556]  INFO -- :   Rendered admin/layouts/_preloader.html.haml (0.2ms)
+I, [2018-10-31T10:03:50.008405 #14556]  INFO -- :   Rendered admin/layouts/_footer.html.haml (0.0ms)
+I, [2018-10-31T10:03:50.008574 #14556]  INFO -- :   Rendered admin/layouts/_keppler_boolean_script.haml (0.0ms)
+I, [2018-10-31T10:03:50.008870 #14556]  INFO -- : Completed 200 OK in 1015ms (Views: 28.1ms | ActiveRecord: 6.0ms)
+I, [2018-10-31T10:03:50.160058 #14556]  INFO -- : Started GET "/assets/keppler_ga_dashboard/date-range-selector.self.js?body=1" for 127.0.0.1 at 2018-10-31 10:03:50 -0400
+I, [2018-10-31T10:03:50.163540 #14556]  INFO -- : Started GET "/assets/keppler_ga_dashboard/view-selector2.js?body=1" for 127.0.0.1 at 2018-10-31 10:03:50 -0400
+I, [2018-10-31T10:03:50.181418 #14556]  INFO -- : Started GET "/assets/keppler_ga_dashboard/active-users.self.js?body=1" for 127.0.0.1 at 2018-10-31 10:03:50 -0400
+I, [2018-10-31T10:03:50.391092 #14556]  INFO -- : Started GET "/assetsadmin/fonts-and-icons/fonts/Simple-Line-Icons.woff2?v=2.4.0" for 127.0.0.1 at 2018-10-31 10:03:50 -0400
+I, [2018-10-31T10:03:50.394140 #14556]  INFO -- : Started GET "/assets/admin/fonts-and-icons/ZXuke1cDvLCKLDcimxB44_lu.woff2" for 127.0.0.1 at 2018-10-31 10:03:50 -0400
+I, [2018-10-31T10:06:00.336517 #14556]  INFO -- : Started GET "/admin/dashboard" for 127.0.0.1 at 2018-10-31 10:06:00 -0400
+I, [2018-10-31T10:06:00.364774 #14556]  INFO -- : Processing by KepplerGaDashboard::DashboardController#analytics as HTML
+I, [2018-10-31T10:06:01.691703 #14556]  INFO -- :   Rendering rockets/keppler_ga_dashboard/app/views/keppler_ga_dashboard/dashboard/analytics.html.haml within keppler_ga_dashboard/admin/layouts/application
+I, [2018-10-31T10:06:01.865676 #14556]  INFO -- :   Rendered rockets/keppler_ga_dashboard/app/views/keppler_ga_dashboard/dashboard/analytics.html.haml within keppler_ga_dashboard/admin/layouts/application (173.7ms)
+I, [2018-10-31T10:06:04.179765 #14556]  INFO -- :   Rendered rockets/keppler_ga_dashboard/app/views/keppler_ga_dashboard/admin/layouts/_head.html.haml (2296.3ms)
+I, [2018-10-31T10:06:04.207866 #14556]  INFO -- :   Rendered admin/layouts/_navigation.html.haml (27.1ms)
+I, [2018-10-31T10:06:04.389147 #14556]  INFO -- :   Rendered admin/layouts/_sidebar.html.haml (180.3ms)
+I, [2018-10-31T10:06:04.392925 #14556]  INFO -- :   Rendered admin/layouts/_messages.html.haml (2.8ms)
+I, [2018-10-31T10:06:04.397843 #14556]  INFO -- :   Rendered admin/layouts/_preloader.html.haml (3.9ms)
+I, [2018-10-31T10:06:04.399933 #14556]  INFO -- :   Rendered admin/layouts/_footer.html.haml (1.4ms)
+I, [2018-10-31T10:06:04.402560 #14556]  INFO -- :   Rendered admin/layouts/_keppler_boolean_script.haml (1.7ms)
+I, [2018-10-31T10:06:04.402905 #14556]  INFO -- : Completed 200 OK in 4038ms (Views: 2655.6ms | ActiveRecord: 96.9ms)
+I, [2018-10-31T10:06:04.480530 #14556]  INFO -- : Started GET "/assets/keppler_ga_dashboard/view-selector2.js?body=1" for 127.0.0.1 at 2018-10-31 10:06:04 -0400
+I, [2018-10-31T10:06:04.480957 #14556]  INFO -- : Started GET "/assets/keppler_ga_dashboard/date-range-selector.self.js?body=1" for 127.0.0.1 at 2018-10-31 10:06:04 -0400
+I, [2018-10-31T10:06:04.580192 #14556]  INFO -- : Started GET "/assets/keppler_ga_dashboard/active-users.self.js?body=1" for 127.0.0.1 at 2018-10-31 10:06:04 -0400
+I, [2018-10-31T10:06:04.814429 #14556]  INFO -- : Started GET "/assetsadmin/fonts-and-icons/fonts/Simple-Line-Icons.woff2?v=2.4.0" for 127.0.0.1 at 2018-10-31 10:06:04 -0400
+I, [2018-10-31T10:06:04.817339 #14556]  INFO -- : Started GET "/assets/admin/fonts-and-icons/ZXuke1cDvLCKLDcimxB44_lu.woff2" for 127.0.0.1 at 2018-10-31 10:06:04 -0400
+I, [2018-10-31T10:06:05.809190 #14556]  INFO -- : Started GET "/assets/admin/favicon-8502ac8dee08af63f06b51ba4bfe7d73ad822453cd728df71ea061669dfda46d.png" for 127.0.0.1 at 2018-10-31 10:06:05 -0400
+I, [2018-10-31T10:06:08.313571 #14556]  INFO -- : Started GET "/admin/settings/appearance" for 127.0.0.1 at 2018-10-31 10:06:08 -0400
+I, [2018-10-31T10:06:08.316146 #14556]  INFO -- : Processing by Admin::SettingsController#edit as HTML
+I, [2018-10-31T10:06:08.316331 #14556]  INFO -- :   Parameters: {"config"=>"appearance"}
+I, [2018-10-31T10:06:08.369253 #14556]  INFO -- : Redirected to http://localhost:3000/admin
+I, [2018-10-31T10:06:08.369615 #14556]  INFO -- : Filter chain halted as :only_development rendered or redirected
+I, [2018-10-31T10:06:08.369918 #14556]  INFO -- : Completed 302 Found in 53ms (ActiveRecord: 19.7ms)
+I, [2018-10-31T10:06:08.378120 #14556]  INFO -- : Started GET "/admin" for 127.0.0.1 at 2018-10-31 10:06:08 -0400
+I, [2018-10-31T10:06:08.379871 #14556]  INFO -- : Processing by Admin::AdminController#root as HTML
+I, [2018-10-31T10:06:08.513802 #14556]  INFO -- : Redirected to http://localhost:3000/admin/dashboard
+I, [2018-10-31T10:06:08.516953 #14556]  INFO -- : Completed 302 Found in 136ms (ActiveRecord: 18.1ms)
+I, [2018-10-31T10:06:08.535470 #14556]  INFO -- : Started GET "/admin/dashboard" for 127.0.0.1 at 2018-10-31 10:06:08 -0400
+I, [2018-10-31T10:06:08.536349 #14556]  INFO -- : Processing by KepplerGaDashboard::DashboardController#analytics as HTML
+I, [2018-10-31T10:06:09.528252 #14556]  INFO -- :   Rendering rockets/keppler_ga_dashboard/app/views/keppler_ga_dashboard/dashboard/analytics.html.haml within keppler_ga_dashboard/admin/layouts/application
+I, [2018-10-31T10:06:09.532670 #14556]  INFO -- :   Rendered rockets/keppler_ga_dashboard/app/views/keppler_ga_dashboard/dashboard/analytics.html.haml within keppler_ga_dashboard/admin/layouts/application (4.3ms)
+I, [2018-10-31T10:06:09.535748 #14556]  INFO -- :   Rendered rockets/keppler_ga_dashboard/app/views/keppler_ga_dashboard/admin/layouts/_head.html.haml (2.7ms)
+I, [2018-10-31T10:06:09.540411 #14556]  INFO -- :   Rendered admin/layouts/_navigation.html.haml (4.3ms)
+I, [2018-10-31T10:06:09.558910 #14556]  INFO -- :   Rendered admin/layouts/_sidebar.html.haml (18.2ms)
+I, [2018-10-31T10:06:09.559373 #14556]  INFO -- :   Rendered admin/layouts/_messages.html.haml (0.1ms)
+I, [2018-10-31T10:06:09.559744 #14556]  INFO -- :   Rendered admin/layouts/_preloader.html.haml (0.2ms)
+I, [2018-10-31T10:06:09.559953 #14556]  INFO -- :   Rendered admin/layouts/_footer.html.haml (0.0ms)
+I, [2018-10-31T10:06:09.560126 #14556]  INFO -- :   Rendered admin/layouts/_keppler_boolean_script.haml (0.0ms)
+I, [2018-10-31T10:06:09.560404 #14556]  INFO -- : Completed 200 OK in 1024ms (Views: 28.4ms | ActiveRecord: 11.4ms)
+I, [2018-10-31T10:06:09.607858 #14556]  INFO -- : Started GET "/assets/keppler_ga_dashboard/view-selector2.js?body=1" for 127.0.0.1 at 2018-10-31 10:06:09 -0400
+I, [2018-10-31T10:06:09.611958 #14556]  INFO -- : Started GET "/assets/keppler_ga_dashboard/date-range-selector.self.js?body=1" for 127.0.0.1 at 2018-10-31 10:06:09 -0400
+I, [2018-10-31T10:06:09.655751 #14556]  INFO -- : Started GET "/assets/keppler_ga_dashboard/active-users.self.js?body=1" for 127.0.0.1 at 2018-10-31 10:06:09 -0400
+I, [2018-10-31T10:06:09.854880 #14556]  INFO -- : Started GET "/assetsadmin/fonts-and-icons/fonts/Simple-Line-Icons.woff2?v=2.4.0" for 127.0.0.1 at 2018-10-31 10:06:09 -0400
+I, [2018-10-31T10:06:09.861087 #14556]  INFO -- : Started GET "/assets/admin/fonts-and-icons/ZXuke1cDvLCKLDcimxB44_lu.woff2" for 127.0.0.1 at 2018-10-31 10:06:09 -0400
