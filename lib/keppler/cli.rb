@@ -98,7 +98,7 @@ module Keppler
       File.write("config/secrets.yml", new_file)
       puts '> Configured database'
 
-      system("crake db:create db:migrate db:seed")
+      system("rake db:create db:migrate db:seed")
     end
 
     desc 'reset', 'Reset to database'
