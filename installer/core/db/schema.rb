@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_10_150702) do
+ActiveRecord::Schema.define(version: 2018_09_04_144238) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -66,13 +66,6 @@ ActiveRecord::Schema.define(version: 2018_10_10_150702) do
     t.index ["setting_id"], name: "index_appearances_on_setting_id"
   end
 
-  create_table "capsules", force: :cascade do |t|
-    t.string "friends"
-    t.string "name"
-    t.integer "position"
-    t.datetime "deleted_at"
-  end
-
   create_table "customizes", force: :cascade do |t|
     t.string "file"
     t.boolean "installed"
@@ -88,6 +81,15 @@ ActiveRecord::Schema.define(version: 2018_10_10_150702) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["setting_id"], name: "index_google_analytics_settings_on_setting_id"
+  end
+
+  create_table "keppler_capsules_capsule_associations", force: :cascade do |t|
+    t.string "association_type"
+    t.string "capsule_name"
+    t.boolean "dependention_destroy"
+    t.integer "capsule_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "keppler_capsules_capsule_fields", force: :cascade do |t|
@@ -186,15 +188,6 @@ ActiveRecord::Schema.define(version: 2018_10_10_150702) do
     t.index ["deleted_at"], name: "index_keppler_frontend_views_on_deleted_at"
   end
 
-  create_table "keppler_language_languages", force: :cascade do |t|
-    t.string "name"
-    t.integer "position"
-    t.datetime "deleted_at"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["deleted_at"], name: "index_keppler_language_languages_on_deleted_at"
-  end
-
   create_table "keppler_languages_fields", force: :cascade do |t|
     t.string "key"
     t.text "value"
@@ -207,12 +200,12 @@ ActiveRecord::Schema.define(version: 2018_10_10_150702) do
 
   create_table "keppler_languages_languages", force: :cascade do |t|
     t.string "name"
+    t.boolean "active"
     t.string "field_ids"
     t.integer "position"
     t.datetime "deleted_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.boolean "active"
   end
 
   create_table "meta_tags", force: :cascade do |t|
