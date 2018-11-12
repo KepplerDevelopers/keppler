@@ -66,13 +66,6 @@ ActiveRecord::Schema.define(version: 2018_09_04_144238) do
     t.index ["setting_id"], name: "index_appearances_on_setting_id"
   end
 
-  create_table "customizes", force: :cascade do |t|
-    t.string "file"
-    t.boolean "installed"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "google_analytics_settings", force: :cascade do |t|
     t.string "ga_account_id"
     t.string "ga_tracking_id"
