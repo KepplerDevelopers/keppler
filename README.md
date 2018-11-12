@@ -1,5 +1,4 @@
-
-![keppler-footer](![keppler](http://i66.tinypic.com/2602uzb.png)
+![keppler-footer](http://i66.tinypic.com/2602uzb.png)
 
 ### KEPPLER ADMIN
 
