@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_09_04_144238) do
+ActiveRecord::Schema.define(version: 2018_11_13_122734) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -199,6 +199,13 @@ ActiveRecord::Schema.define(version: 2018_09_04_144238) do
     t.datetime "deleted_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "keppler_payments_settings", force: :cascade do |t|
+    t.string "mp_access_token"
+    t.string "stripe_login"
+    t.integer "position"
+    t.datetime "deleted_at"
   end
 
   create_table "meta_tags", force: :cascade do |t|
