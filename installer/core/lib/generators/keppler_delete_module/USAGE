@@ -1,5 +1,0 @@
-Description:
-    KepplerDeleteModule is a generator to delete a module from a Keppler Rocket.
-
-Example:
-    rails generate keppler_delete_module RocketName ModuleName
