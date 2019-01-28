@@ -1,0 +1,66 @@
+{:uriI"°file://app/assets/javascripts/admin/codemirror/mode/javascript/typescript.html?type=text/html&id=64f343d1948e6e85433529bddfacf799461cf6fb34429fe5c1d632158231851a:ET:load_pathI"app/assets/javascripts;T:filenameI"Lapp/assets/javascripts/admin/codemirror/mode/javascript/typescript.html;T:	nameI"0admin/codemirror/mode/javascript/typescript;T:logical_pathI"5admin/codemirror/mode/javascript/typescript.html;T:content_typeI"text/html;T:sourceI"<!doctype html>
+
+<title>CodeMirror: TypeScript mode</title>
+<meta charset="utf-8"/>
+<link rel=stylesheet href="../../doc/docs.css">
+
+<link rel="stylesheet" href="../../lib/codemirror.css">
+<script src="../../lib/codemirror.js"></script>
+<script src="javascript.js"></script>
+<style type="text/css">.CodeMirror {border-top: 1px solid black; border-bottom: 1px solid black;}</style>
+<div id=nav>
+  <a href="http://codemirror.net"><h1>CodeMirror</h1><img id=logo src="../../doc/logo.png"></a>
+
+  <ul>
+    <li><a href="../../index.html">Home</a>
+    <li><a href="../../doc/manual.html">Manual</a>
+    <li><a href="https://github.com/codemirror/codemirror">Code</a>
+  </ul>
+  <ul>
+    <li><a href="../index.html">Language modes</a>
+    <li><a class=active href="#">TypeScript</a>
+  </ul>
+</div>
+
+<article>
+<h2>TypeScript mode</h2>
+
+
+<div><textarea id="code" name="code">
+class Greeter {
+  greeting: string;
+  constructor (message: string) {
+    this.greeting = message;
+  }
+  greet() {
+    return "Hello, " + this.greeting;
+  }
+}   
+
+var greeter = new Greeter("world");
+
+var button = document.createElement('button')
+button.innerText = "Say Hello"
+button.onclick = function() {
+  alert(greeter.greet())
+}
+
+document.body.appendChild(button)
+
+</textarea></div>
+
+    <script>
+      var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
+        lineNumbers: true,
+        matchBrackets: true,
+        mode: "text/typescript"
+      });
+    </script>
+
+    <p>This is a specialization of the <a href="index.html">JavaScript mode</a>.</p>
+  </article>
+;T:metadata{	:dependencieso:Set:
+@hash}
+I"environment-version;TTI"environment-paths;TTI"rails-env;TTI"2processors:type=text/html&file_type=text/html;TTI"Zfile-digest://app/assets/javascripts/admin/codemirror/mode/javascript/typescript.html;TTF:charsetI"
+utf-8;F:digest"%˘0ç‡∏8‰≥ v\V«≤@π5©|—ﬁu™`Ñ:®µ:lengthi:dependencies_digest"%s”æÑﬁƒŒ»-‹J{ä"Ω3MÈÁ˜´¯πAj÷:idI"E64f343d1948e6e85433529bddfacf799461cf6fb34429fe5c1d632158231851a;F:
+mtimel+;T‰[

@@ -4,7 +4,6 @@ module KepplerFrontend
     include ActivityHistory
     include CloneRecord
     include KepplerFrontend::Concerns::StringActions
-    include KepplerFrontend::Concerns::CallbackActions
     include KepplerFrontend::Concerns::Views::Services
     require 'csv'
     acts_as_list
@@ -54,16 +53,17 @@ module KepplerFrontend
       "#{name}_path"
     end
 
-    def route
+    def routet 
       "/admin/frontend/views/#{self.id}/editor"
     end
 
     def new_callback(callbacks)
       return unless callbacks
       callbacks.each do |key, value|
-        next unless value[:name]
-        callback = ViewCallback.where(name: value[:name], function_type: value[:function_type])
-        callback_view(callback.first).add if callback.count == 1
+        if value[:name]
+          callback = ViewCallback.where(name: value[:name], function_type: value[:function_type], view_id: self.id)
+          callback_view(callback.first).change 
+        end
       end
       true
     rescue StandardError
@@ -71,7 +71,7 @@ module KepplerFrontend
     end
 
     def remove_callback(callback)
-      callback_view(callback).remove
+      callback_view(callback).change
     end
 
     private
