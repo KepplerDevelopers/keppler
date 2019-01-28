@@ -1,0 +1,51 @@
+$bg-box: rgb(26, 42, 78);
+
+.slice-box {
+  border-top: 0;
+  padding: 0;
+
+  &.file-box {
+    padding: 25px;
+  }
+}
+
+.pure-input {
+  .form-group {
+    margin-bottom: 25px;
+
+    &:last-child {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.info-box {
+  border-radius: 15px;
+  min-height: 140px;
+
+  &:first-child {
+    margin-bottom: 35px;
+  }
+
+  .info-box-img {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 15px;
+    height: 130px;
+    margin: 5px;
+    width: 130px;
+  }
+
+  .info-box-icon {
+    background-color: $bg-box;
+  }
+
+  .file {
+    padding: 12px;
+  }
+}
+
+.p-15 {
+  padding: 15px;
+}

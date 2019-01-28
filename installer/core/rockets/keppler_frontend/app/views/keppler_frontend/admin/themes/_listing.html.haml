@@ -1,0 +1,27 @@
+- objects.each do |theme|
+  %tr{ id: "row-#{theme.id}" }
+    %td.item-check{ style: 'width: 10%' }
+    %td
+      = link_to admin_frontend_theme_show_covers_path(theme), remote: true, class: 'show-row' do
+        %span
+          = theme.name
+    %td.hidden-xs
+      %span
+        = simple_form_for [:admin, :frontend, theme], url: admin_frontend_theme_path(theme) , method: :patch do |f|
+          .check_active{onclick: "installTemplate(#{theme.id})"}
+            = f.input :active, as: :keppler_boolean, label: false
+    %td
+      %span
+        %center
+          - if can?(KepplerFrontend::Theme).destroy? && !theme.name.eql?('keppler_default') && !theme.active?
+            = link_to admin_frontend_theme_path(theme), class: 'new-menu', style: "display: inline", title: t('keppler.actions.delete'), method: :delete, data: { confirm: t('keppler.messages.data_confirm') } do
+              %i.icon-trash
+          - if can?(KepplerFrontend::Theme).editor? && theme.active?
+            = link_to admin_frontend_theme_editor_path(theme), class: 'new-menu', style: "display: inline", title: t('keppler.actions.editor') do
+              %i.icon-note
+
+    :javascript
+      function installTemplate(customize_id) {
+        $('.spinner').css('display', 'block');
+        $('#edit_theme_'+customize_id).submit()
+      }

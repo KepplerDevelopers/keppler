@@ -1,0 +1,187 @@
+$gradient1: rgba(51, 51, 102, 1);
+$gradient2: rgba(30, 43, 64, 1);
+$gradient3: rgba(30, 43, 64, 1);
+$gray-color: #949494;
+
+.skin-blue {
+  .language-select {
+    .language-option {
+      height: 50px;
+      width: 55px;
+    }
+
+    .small-flat {
+      position: relative;
+      top: 5px;
+    }
+  }
+
+  .user-select {
+    .user-option {
+      height: 50px;
+    }
+  }
+
+  .dropdown a {
+    border-radius: 0;
+  }
+
+  .main-header {
+    position: fixed;
+    width: 100%;
+
+    .small-profile-img {
+      @extend %circle-img;
+      background-color: $keppler-color;
+      float: left;
+      height: 25px;
+      margin-right: 10px;
+      margin-top: -2px;
+      object-fit: cover;
+      width: 25px;
+
+      @include respond-to(xs) {
+        margin-right: 0;
+      }
+    }
+
+    .nav-profile-img {
+      @extend %circle-img;
+      background: $keppler-color;
+      height: 90px;
+      margin: 0 auto;
+      object-fit: cover;
+      width: 90px;
+    }
+
+    .navbar-static-top {
+      background: $white;
+      box-shadow: 0 1px 3px $transparent-black-12;
+      margin: 0;
+    }
+
+    .user-header {
+      align-items: center;
+      background: url('profile-menu.jpg'), linear-gradient(to bottom, $gradient1 0%, $gradient2 51%, $gradient3 100%);
+      background-position: center;
+      background-size: cover;
+      display: flex;
+      height: 150px;
+    }
+
+  }
+
+  .user-footer {
+    background-color: $white !important; // scss-lint:disable ImportantRule
+
+    .btn-default {
+      border-radius: 15px;
+      padding: 5px 20px;
+    }
+  }
+
+  .sidebar-toggle {
+    align-items: center;
+    background-color: $keppler-color;
+    color: $white;
+    display: flex;
+    padding: 15px;
+
+    i {
+      font-size: 20px;
+    }
+
+    &::before {
+      display: none;
+    }
+
+    &:hover {
+      background-color: darken($keppler-color, 10%);
+    }
+  }
+
+  .logo {
+    background: transparent;
+    border-bottom: 0 solid transparent;
+    display: flex;
+    font-size: 2.3rem;
+    justify-content: flex-start;
+    width: 185px;
+    z-index: 9;
+
+    span {
+      color: $keppler-color;
+      font-family: 'Patua One', cursive;
+      font-size: 2.6rem;
+      // text-shadow: 1px 1px 1px $logo-span-text-shadow;
+    }
+  }
+}
+
+.user-menu span,
+.navbar-nav i {
+  color: $navbar-static-top-link;
+}
+
+.navbar.navbar-static-top {
+  height: 50px;
+
+  h3 {
+    display: inline-block;
+    margin: 10px 0;
+  }
+}
+
+.sidebar-mini.sidebar-collapse {
+  .main-header .navbar {
+    margin-left: 0;
+  }
+
+  .main-header .logo {
+    width: 185px;
+  }
+
+  .logo-mini span {
+    margin-left: 15px;
+  }
+
+  .main-sidebar {
+    transform: translate(0, 0);
+    width: 50px;
+    z-index: 850;
+  }
+}
+
+.navbar-nav {
+  transition: .4s .5s ease-in-out;
+}
+
+.current-user {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-top: -15px;
+
+  p {
+    color: $keppler-color;
+    font-size: 18px;
+    font-weight: 900;
+    margin-bottom: 0;
+  }
+
+  small {
+    color: $almost-black;
+  }
+}
+
+.btn-user {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 15px 10px 10px;
+}
+
+.user-menu {
+  .dropdown-menu {
+    box-shadow: $box-shadow-collapse;
+  }
+}

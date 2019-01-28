@@ -1,0 +1,466 @@
+$git-bg: #c0c0c0;
+$git-shadow: rgba(0, 0, 0, .12);
+
+.btn {
+  border-radius: 15px;
+}
+
+.content-header.index-header {
+  margin: 0;
+  padding: 15px 0;
+
+  @include respond-to(xs) {
+    margin-top: 10px;
+  }
+
+  h1 {
+    display: inline-block;
+    font-size: 2.5rem;
+    margin: 0 10px 0 0;
+
+    @include respond-to(xs) {
+      font-size: 2rem;
+    }
+  }
+}
+
+
+.content-actions {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.callout.callout-warning {
+  background-color: $white;
+  color: $almost-black;
+}
+
+.custom-collapse {
+  background-clip: padding-box;
+  background-color: $white;
+  border: 1px solid $ccc;
+  border-radius: 4px;
+  box-shadow: $box-shadow-collapse;
+  float: left;
+  font-size: 1.4rem;
+  list-style: none;
+  margin: 2px 0 0;
+  min-width: 0;
+  padding: 2px;
+  position: absolute;
+  right: 60px;
+  text-align: left;
+  z-index: 1000;
+}
+
+.panel-body {
+  padding: 3px;
+
+  a {
+    color: $gray;
+    padding: 0 12px;
+    transition: .2s;
+
+    &:hover {
+      color: inherit;
+      transition: .2s;
+    }
+  }
+}
+
+.mixed-btn {
+  bottom: 20px;
+  margin-bottom: 0;
+  padding-top: 15px;
+  position: fixed;
+  right: 20px;
+  z-index: 997;
+
+  .btn-float {
+    background-color: $keppler-color;
+    border-radius: 50%;
+    box-shadow: $btn-float-shadow;
+    color: $white;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 3rem;
+    height: 60px;
+    line-height: 40px;
+    overflow: hidden;
+    padding: 10px 22px 22px;
+    position: relative;
+    transition: .3s;
+    vertical-align: middle;
+    width: 60px;
+    z-index: 1;
+
+    i {
+      color: $white;
+      display: inline-block;
+      text-align: center;
+      width: inherit;
+    }
+
+    &:hover {
+      box-shadow: $btn-float-shadow-hover;
+      color: $white;
+      transition: .3s;
+    }
+  }
+}
+
+.drop {
+  color: inherit;
+  cursor: pointer;
+}
+
+.actions.dropdown-menu {
+  box-shadow: $box-shadow-collapse;
+  left: auto;
+  min-width: 130px;
+  right: 45px;
+  top: 15px;
+  width: 100px;
+
+  li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+  }
+}
+
+.dropdown-menu  a {
+  overflow: hidden;
+  padding: 10px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+
+  i {
+    display: inline-block;
+    font-size: inherit;
+    -webkit-font-smoothing: antialiased;
+    margin-right: 10px;
+    text-rendering: auto;
+  }
+}
+
+.control-sidebar {
+  height: 100%;
+  overflow-y: auto;
+  position: fixed;
+
+  .timeline {
+    &::before {
+      content: none;
+    }
+  }
+
+  li {
+    margin-right: 0;
+
+    &::before {
+      content: none;
+    }
+
+    .timeline-item {
+      float: left;
+      margin: 0;
+      width: 100%;
+    }
+
+    .time {
+      font-size: 1rem;
+      padding-top: 0;
+    }
+  }
+}
+
+.index-show {
+  background: $white;
+  border-left: 1px solid $gray-lighten;
+  color: $medium-grey;
+  height: 100%;
+  overflow-y: auto;
+  padding-bottom: 50px;
+  padding-top: 50px;
+  position: fixed;
+  right: -230px;
+  top: 0;
+  transition: right .3s ease-in-out;
+  width: 230px;
+  z-index: 1010;
+
+  @include respond-to(xs) {
+    padding-top: 100px;
+  }
+
+  a {
+    color: $keppler-color;
+    cursor: pointer;
+    transition: .3s;
+
+    &:hover {
+      color: $keppler-darken;
+      transition: .3s;
+    }
+  }
+
+  img {
+    margin-bottom: 15px;
+    width: 100%;
+  }
+
+  p {
+    margin: 10px 0 0;
+  }
+}
+
+.tab-content {
+  padding: 10px;
+
+  ul {
+    &::before {
+      content: none;
+    }
+  }
+
+  li {
+    margin-right: 0;
+
+    &::before {
+      content: none;
+    }
+
+    .timeline-item {
+      margin: 0;
+    }
+  }
+
+  .actions {
+    margin: 0;
+    width: 100%;
+
+    a {
+      margin-right: 5px;
+    }
+
+    .close-index-show {
+      margin: 0;
+    }
+  }
+
+  .control-sidebar-heading {
+    padding: 20px 0;
+  }
+}
+
+.cut-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.toolbar {
+  align-items: center;
+  border-radius: 2px;
+  display: inline-flex;
+  font-size: 1.4rem;
+  padding: 0 5px;
+
+  &-item {
+    display: table-cell;
+    padding: 5px;
+    vertical-align: middle;
+  }
+
+  .disabled {
+    cursor: not-allowed;
+    opacity: .5;
+    pointer-events: none;
+  }
+
+  .mailbox-controls {
+    padding: 3px 0;
+  }
+
+  .checkbox-toggle {
+    .pretty {
+      margin-right: 0;
+      padding-right: 5px;
+    }
+  }
+
+  a {
+    &:hover {
+      color: $keppler-color;
+    }
+
+    &:focus {
+      color: inherit;
+    }
+  }
+
+  .btn-group {
+    border-right: 1px solid $gray-hover;
+    padding: 0 5px;
+
+    &:last-child {
+      border: 0;
+    }
+  }
+}
+
+.breadcrumb {
+  @include respond-to(xs) {
+    margin-top: 20px;
+  }
+
+  a {
+    &:hover {
+      color: $keppler-color;
+    }
+
+    &:focus {
+      color: inherit;
+    }
+  }
+}
+
+.objects-container {
+
+  td {
+    padding: 0;
+    padding-bottom: 0;
+    padding-top: 0;
+
+    &:first-child {
+      padding: 10px 20px;
+      vertical-align: middle;
+      width: 1px;
+    }
+
+    .item-check {
+      width: 10%;
+    }
+  }
+
+  a {
+    color: inherit;
+    display: block;
+    padding: 8px;
+
+    &:hover {
+      color: inherit;
+      cursor: pointer;
+    }
+  }
+}
+
+.tools {
+  padding-top: 5px;
+}
+
+.select-filter {
+  select {
+    border: 0;
+    border-radius: 15px;
+    color: $grey;
+    padding: 6px 10px;
+  }
+}
+
+.add {
+  align-items: center;
+  display: flex;
+  margin-left: auto;
+
+  .btn-add {
+    background-color: $keppler-color;
+    border-radius: 15px;
+    color: $white;
+    cursor: pointer;
+    font-weight: 600;
+    padding: 5px 20px;
+  }
+}
+
+.not-records {
+  background-color: $white;
+  border: 0;
+}
+
+.box.slice-box th {
+  i {
+    font-size: 10px;
+  }
+}
+
+.dev-tool {
+  background: $git-bg;
+  box-shadow: 0 1px 3px $git-shadow;
+  cursor: pointer;
+  font-size: 1.4rem;
+  padding: 5px 20px;
+  position: fixed;
+  z-index: 99999;
+
+  @include respond-to(xs) {
+    display: none;
+  }
+
+  @include respond-to(sm) {
+    display: none;
+  }
+}
+
+.console-btn {
+  align-items: center;
+  border-radius: 25px;
+  bottom: 1%;
+  display: flex;
+  justify-content: center;
+  right: 1%;
+  width: 0;
+}
+
+.console-btn:hover {
+  color: $error-color;
+}
+
+.current-branch {
+  border-radius: 15px;
+  bottom: 1%;
+  right: 4%;
+
+  .git-commit-status {
+    border-radius: 50%;
+    float: right;
+    height: 10px;
+    left: 10px;
+    position: relative;
+    top: 5px;
+    width: 10px;
+  }
+}
+
+.sidebar-mini {
+  margin-bottom: 0 !important; // scss-lint:disable ImportantRule
+  padding-bottom: 5%;
+}
+
+.console {
+  height: 0 !important; // scss-lint:disable ImportantRule
+
+  .console-actions {
+    display: none;
+  }
+}
+
+.console-close {
+  height: 0 !important; // scss-lint:disable ImportantRule
+  transition: all .5s;
+}
+
+.console-open {
+  height: 70% !important; // scss-lint:disable ImportantRule
+  transition: all .5s;
+}
