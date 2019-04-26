@@ -6,12 +6,12 @@ require "keppler/version"
 Gem::Specification.new do |spec|
   spec.name          = "keppler"
   spec.version       = Keppler::VERSION
-  spec.authors     = ["Luis Perez"]
+  spec.authors     = ["Luis Perez", "Gabriel Morillo", "Oscarlyn Costero", "Anyelo Petit", "Pedro Guerra"]
   spec.email       = 'luis.prz7@gmail.com'
   spec.summary       = "Keppler Administrator"
   spec.description   = "Keppler Administrator"
-  spec.homepage      = 'https://rubygems.org/gems/keppler'
-  spec.license       = "MIT"
+  spec.homepage      = 'https://keppleradmin.com/developers'
+  spec.license       = "GPL-3.0"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
   # to allow pushing to a single host or delete this section to allow pushing to any host.

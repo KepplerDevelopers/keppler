@@ -2,6 +2,12 @@
 
 # Role model
 class Role < ApplicationRecord
+  #
+  # include Recoverable
+  #
+  # before_create -> { create_yml('role') }
+  # # before_destroy -> { update_yml('role') }
+
   has_and_belongs_to_many :users, join_table: :users_roles
   belongs_to :resource,
              polymorphic: true,
@@ -11,11 +17,17 @@ class Role < ApplicationRecord
             inclusion: { in: Rolify.resource_types },
             allow_nil: true
   scopify
+  validates_presence_of :name
   validates_uniqueness_of :name
   has_many :permissions, dependent: :destroy
+
   def self.search_field
     :name_cont
   end
+
+  # def destroy_yml_file
+  #   destroy_yml('role')
+  # end
 
   def permissions?
     !permissions.empty?

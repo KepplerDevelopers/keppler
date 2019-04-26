@@ -2,6 +2,7 @@
 class ApplicationController < ActionController::Base
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
+  include MailerConfig
   layout :layout_by_resource
   before_action :configure_permitted_parameters, if: :devise_controller?
   before_action :appearance
@@ -10,6 +11,8 @@ class ApplicationController < ActionController::Base
   before_action :set_modules
   before_action :set_languages
   before_action :set_admin_locale
+  before_action :git_info
+  before_action :set_mailer_settings
 
   skip_around_action :set_locale_from_url
   include Pundit
@@ -17,6 +20,7 @@ class ApplicationController < ActionController::Base
   include PublicActivity::StoreController
   helper KepplerLanguages::LanguagesHelper
   helper KepplerCapsules::CapsulesHelper
+  helper KepplerGaDashboard::Admin::DashboardHelper
 
   rescue_from Pundit::NotAuthorizedError, with: :user_not_authorized
   # rescue_from Faraday::ConnectionFailed do |error|
@@ -29,9 +33,14 @@ class ApplicationController < ActionController::Base
     defined?(klass) && klass.is_a?(Class)
   end
 
+  def git_info
+    @git = Admin::GitHandler.new
+  end
+
   def appearance
     @setting = Setting.includes(:appearance, :social_account).first
     @appearance = @setting.appearance
+    Time.zone = @setting.appearance.time_zone
   end
 
   def set_apparience_colors
@@ -76,6 +85,12 @@ class ApplicationController < ActionController::Base
         @sidebar[0] = @sidebar[0].merge(module_menu[0])
       end
     end
+
+    @sidebar[0] = @sidebar[0].sort_by do |_key, value|
+      value&.dig("position") || 0
+    end
+
+    @sidebar[0] = @sidebar[0].to_h
   end
 
   def set_modules

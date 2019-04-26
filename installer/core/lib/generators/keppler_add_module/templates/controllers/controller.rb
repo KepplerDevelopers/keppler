@@ -1,3 +1,4 @@
+
 # frozen_string_literal: true
 
 require_dependency "<%= ROCKET_NAME %>/application_controller"
@@ -40,7 +41,7 @@ module <%= ROCKET_CLASS_NAME %>
 
       # PATCH/PUT <%= route_url %>/1
       def update
-        if <%= MODULE_CLASS_NAME %>.update(<%= MODULE_NAME.singularize %>_params)
+        if @<%= MODULE_NAME.singularize %>.update(<%= MODULE_NAME.singularize %>_params)
           redirect(@<%= MODULE_NAME.singularize %>, params)
         else
           render :edit
@@ -80,7 +81,7 @@ module <%= ROCKET_CLASS_NAME %>
       def index_variables
         @q = <%= MODULE_CLASS_NAME %>.ransack(params[:q])
         @<%= MODULE_NAME.pluralize %> = @q.result(distinct: true)
-        @objects = @<%= MODULE_NAME.pluralize %>.page(@current_page).order(position: :desc)
+        @objects = @<%= MODULE_NAME.pluralize %>.page(@current_page).order(position: :asc)
         @total = @<%= MODULE_NAME.pluralize %>.size
         @attributes = <%= MODULE_CLASS_NAME %>.index_attributes
       end

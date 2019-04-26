@@ -3,8 +3,10 @@ menu:
     name: keppler menu
     current: ['/']
     url_path: /
-    icon: layers
+    icon: rocket
     model: User
+    environment: all
+    position: 4
     submenu:
       # - new:
       #     name: + Add new module

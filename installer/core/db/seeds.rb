@@ -10,10 +10,8 @@
 # user = CreateAdminService.new.call
 # puts 'CREATED ADMIN USER: ' << user.email
 
-%i[keppler_admin admin client].each do |name|
-  Role.create name: name
-  puts "Role #{name} has been created"
-end
+Role.create name: 'keppler_admin'
+puts 'Role Keppler Admin has been created'
 
 User.create(
   name: 'Keppler Admin', email: 'admin@keppleradmin.com', password: '+12345678+',
@@ -22,8 +20,6 @@ User.create(
 
 puts 'admin@keppler.io has been created'
 
-Customize.create(file: '', installed: true)
-puts 'Keppler Template has been created'
 
 # Create setting deafult
 if yml = YAML.load_file("#{Rails.root}/config/settings.yml")
@@ -75,8 +71,8 @@ else
       email: 'info@keppler.com', password: '12345678'
     },
     google_analytics_setting_attributes: {
-      ga_account_id: '60688852',
-      ga_tracking_id: 'UA-60688852-1',
+      ga_account_id: '121648466',
+      ga_tracking_id: 'UA-121648466-1',
       ga_status: true
     }
   )
@@ -84,30 +80,6 @@ else
   setting.appearance = Appearance.new(theme_name: 'keppler')
   setting.save
   puts 'Setting default has been created'
-end
-
-if defined?(KepplerFrontend) && KepplerFrontend.is_a?(Module)
-  file =  File.join("#{Rails.root}/rockets/keppler_frontend/config/data/views.yml")
-  routes = YAML.load_file(file)
-  routes.each do |route|
-    KepplerFrontend::View.create(
-      name: route['name'],
-      url: route['url'],
-      method: route['method'],
-      active: route['active'],
-      format_result: route['format_result']
-    )
-  end
-
-  partials_file =  File.join("#{Rails.root}/rockets/keppler_frontend/config/partials.yml")
-  partials = YAML.load_file(partials_file)
-
-  partials.each do |partial|
-    KepplerFrontend::Partial.create(
-      name: partial['name'],
-    )
-  end
-  puts 'Views and Partials has been created'
 end
 
 if defined?(KepplerLanguages) && KepplerLanguages.is_a?(Module)
@@ -128,29 +100,6 @@ if defined?(KepplerLanguages) && KepplerLanguages.is_a?(Module)
       key: field['key'],
       value: field['value'],
       language_id: field['language_id']
-    )
-  end
-  puts 'Languages has been created'
-end
-
-if defined?(KepplerFrontend) && KepplerFrontend.is_a?(Module)
-  functions =  File.join("#{Rails.root}/rockets/keppler_frontend/config/functions.yml")
-  funcs = YAML.load_file(functions)
-
-  funcs.each do |func|
-    KepplerFrontend::Function.create(
-      name: func['name'],
-      description: func['description']
-    )
-  end
-
-  parameters_file =  File.join("#{Rails.root}/rockets/keppler_frontend/config/parameters.yml")
-  params = YAML.load_file(parameters_file)
-
-  params.each do |param|
-    KepplerFrontend::Parameter.create(
-      name: param['name'],
-      function_id: param['function_id']
     )
   end
   puts 'Languages has been created'

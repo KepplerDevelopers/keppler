@@ -22,7 +22,7 @@
       %ul.nav.navbar-nav.language-select
         %li.dropdown.messages-menu
           %a.dropdown-toggle.language-option{ 'aria-expanded' => 'false', 'data-toggle' => 'dropdown', :href => '#' }
-            = image_tag (Appearance.first.language.eql?('en') ? 'admin/en.png' : 'admin/es.png'), class: 'small-profile-img keppler-background'
+            = image_tag "admin/#{Appearance.first.language.eql?('es') ? 'es' : 'en'}.png", class: 'small-profile-img keppler-background'
           %ul.dropdown-menu
             %li.header= t('keppler.language.select_lang')
             %li
@@ -52,7 +52,7 @@
                   = current_user.updated_at.strftime('%d %b %Y')
               .btn-user
                 = link_to t('keppler.devise.profile'), "/admin/users/#{current_user.id}", class: 'btn btn-default btn-flat'
-                = link_to t('keppler.devise.sign_out'), destroy_session_path(current_user), class: 'btn btn-default btn-flat'
+                = link_to t('keppler.devise.sign_out'), keppler_destroy_session, method: :delete, class: 'btn btn-default btn-flat'
         - if listing?
           %li.hidden-xs
             %a#open-historial

@@ -60,17 +60,11 @@ ActiveRecord::Schema.define(version: 2018_09_04_144238) do
     t.string "theme_name"
     t.string "language"
     t.string "time_zone"
+    t.string "admin_code", default: "admin"
     t.string "setting_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["setting_id"], name: "index_appearances_on_setting_id"
-  end
-
-  create_table "customizes", force: :cascade do |t|
-    t.string "file"
-    t.boolean "installed"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "google_analytics_settings", force: :cascade do |t|
@@ -118,36 +112,6 @@ ActiveRecord::Schema.define(version: 2018_09_04_144238) do
     t.index ["deleted_at"], name: "index_keppler_capsules_capsules_on_deleted_at"
   end
 
-  create_table "keppler_frontend_callback_functions", force: :cascade do |t|
-    t.string "name"
-    t.string "description"
-    t.integer "position"
-    t.datetime "deleted_at"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["deleted_at"], name: "index_keppler_frontend_callback_functions_on_deleted_at"
-  end
-
-  create_table "keppler_frontend_functions", force: :cascade do |t|
-    t.string "name"
-    t.text "description"
-    t.integer "position"
-    t.datetime "deleted_at"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["deleted_at"], name: "index_keppler_frontend_functions_on_deleted_at"
-  end
-
-  create_table "keppler_frontend_parameters", force: :cascade do |t|
-    t.string "name"
-    t.integer "position"
-    t.datetime "deleted_at"
-    t.string "function_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["deleted_at"], name: "index_keppler_frontend_parameters_on_deleted_at"
-  end
-
   create_table "keppler_frontend_partials", force: :cascade do |t|
     t.string "name"
     t.integer "position"
@@ -165,27 +129,6 @@ ActiveRecord::Schema.define(version: 2018_09_04_144238) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["deleted_at"], name: "index_keppler_frontend_themes_on_deleted_at"
-  end
-
-  create_table "keppler_frontend_view_callbacks", force: :cascade do |t|
-    t.string "name"
-    t.string "function_type"
-    t.integer "view_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "keppler_frontend_views", force: :cascade do |t|
-    t.string "name"
-    t.string "url"
-    t.string "method"
-    t.boolean "active"
-    t.string "format_result"
-    t.integer "position"
-    t.datetime "deleted_at"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["deleted_at"], name: "index_keppler_frontend_views_on_deleted_at"
   end
 
   create_table "keppler_languages_fields", force: :cascade do |t|
