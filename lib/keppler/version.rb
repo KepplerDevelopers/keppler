@@ -1,3 +1,3 @@
 module Keppler
-  VERSION = "2.1.19"
+  VERSION = "2.1.20"
 end
