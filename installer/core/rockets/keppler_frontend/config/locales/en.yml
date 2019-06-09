@@ -158,6 +158,7 @@ en:
       type: Type
       address: Address
       size: Size
+      url: Url
       distance: Distance
       description: Description
       short_description: 'Short Description'
